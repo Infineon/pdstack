@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['randbase',['randBase',['../structcy__stc__pdstack__dpm__status__t.html#ae2164c3ee7d281f6510588ae0c1366aa',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['randupdt',['randUpdt',['../structcy__stc__pdstack__typec__status__t.html#aa9119f6c0785982b9649c7c50df6dd71',1,'cy_stc_pdstack_typec_status_t']]],
+  ['rapresent',['raPresent',['../structcy__stc__pdstack__dpm__status__t.html#ad4a9d38522d08ef762457932e3be79b1',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['rcvdpkt',['rcvdPkt',['../structcy__stc__pdstack__pe__status__t.html#a3bd5755f753a41d0fd874c788e5d28e0',1,'cy_stc_pdstack_pe_status_t']]],
+  ['rcvdptr',['rcvdPtr',['../structcy__stc__pdstack__pe__status__t.html#ad92c9403b5e6e6729112e0b55604e47a',1,'cy_stc_pdstack_pe_status_t']]],
+  ['rddebounce',['rdDebounce',['../structcy__stc__pdstack__typec__status__t.html#a766d12a973691562472102694e10a88a',1,'cy_stc_pdstack_typec_status_t']]],
+  ['rdo',['rdo',['../structcy__stc__pdstack__pd__contract__info__t.html#a11c8fc95dff44d1b555846d42e1bec57',1,'cy_stc_pdstack_pd_contract_info_t']]],
+  ['recmsgid',['recMsgId',['../structcy__stc__pdstack__prl__cntrs__t.html#abdf5dc726d45acb14533dbb6dca0069f',1,'cy_stc_pdstack_prl_cntrs_t']]],
+  ['reqstatus',['reqStatus',['../structapp__resp__t.html#a4515d34dcdd23ffcc39c1ba38e8de263',1,'app_resp_t']]],
+  ['request',['request',['../structcy__pdstack__extd__hdr__t_1_1_e_x_t_d___h_d_r___t.html#a8bc8855917c113cbfeef8791466b7deb',1,'cy_pdstack_extd_hdr_t::EXTD_HDR_T']]],
+  ['reserved0',['reserved0',['../structcy__stc__pdstack__port__cfg__t.html#a91be71ae2877f3bfa7e8e4229712ecf2',1,'cy_stc_pdstack_port_cfg_t']]],
+  ['reserved2',['reserved2',['../structcy__stc__pdstack__port__cfg__t.html#a98a2b899909ae799575d7707cc199ee5',1,'cy_stc_pdstack_port_cfg_t']]],
+  ['reserved3',['reserved3',['../structcy__stc__pdstack__dpm__status__t.html#a9b2bd874a2505c5952789acc1dcf61af',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['respbuf',['respBuf',['../structvdm__resp__t.html#a6569d8984e16639703ad080ad978ec90',1,'vdm_resp_t']]],
+  ['respdo',['respDo',['../structapp__resp__t.html#a427b10e49fef56b19b50a9e89d81553c',1,'app_resp_t']]],
+  ['rev3en',['rev3En',['../structcy__stc__pdstack__dpm__status__t.html#a84bc62eb7b26fafbb56a57dc18c6d7a0',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['rev3enable',['rev3Enable',['../structcy__stc__pdstack__pd__status__t.html#ae0ae12298982163d5001e50f44e89d6f',1,'cy_stc_pdstack_pd_status_t']]],
+  ['roleatconnect',['roleAtConnect',['../structcy__stc__pdstack__dpm__status__t.html#a11d5528236d68880926f93d9a55ed6fe',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['rpdetachen',['rpDetachEn',['../structcy__stc__pdstack__port__cfg__t.html#a95e50a6e12c88b0a534454861a3c398f',1,'cy_stc_pdstack_port_cfg_t']]],
+  ['rpsupported',['rpSupported',['../structcy__stc__pdstack__dpm__status__t.html#af71ae478ede1199c851d5caff2d20795',1,'cy_stc_pdstack_dpm_status_t::rpSupported()'],['../structcy__stc__pdstack__port__cfg__t.html#a33066887a18ca83fea5ac0e6e7df2004',1,'cy_stc_pdstack_port_cfg_t::rpSupported()']]],
+  ['rsvd1',['rsvd1',['../structcy__pdstack__extd__hdr__t_1_1_e_x_t_d___h_d_r___t.html#ac35d23efbecea3dc809ae55d2d463cbd',1,'cy_pdstack_extd_hdr_t::EXTD_HDR_T']]],
+  ['rxbusy',['rxBusy',['../structcy__stc__pdstack__pd__status__t.html#a51ba6fecf1f9715f3990a510f379e8e9',1,'cy_stc_pdstack_pd_status_t']]],
+  ['rxevt',['rxEvt',['../structcy__stc__pdstack__pd__status__t.html#a9857813f5261fe3e16405f8884154402',1,'cy_stc_pdstack_pd_status_t']]],
+  ['rxpacket',['rxPacket',['../structcy__stc__pdstack__pd__status__t.html#a12765fc8df67803eecec3820dd561aad',1,'cy_stc_pdstack_pd_status_t']]]
+];
