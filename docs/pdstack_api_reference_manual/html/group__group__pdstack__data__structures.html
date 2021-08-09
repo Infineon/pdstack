@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cypress PDSTACK Middleware Library 1.0: Data Structures</title>
+<title>PDStack Middleware Library 1.10: Data Structures</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="IFXCYP_one-line.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Cypress PDSTACK Middleware Library 1.0</div>
+   <div id="projectname">PDStack Middleware Library 1.10</div>
   </td>
  </tr>
  </tbody>
@@ -82,7 +82,8 @@ $(document).ready(function(){initNavTree('group__group__pdstack__data__structure
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Data Structures</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a>  </div>
   <div class="headertitle">
 <div class="title">Data Structures</div>  </div>
 </div><!--header-->
@@ -114,7 +115,7 @@ Data Structures</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold PD Contract information.  <a href="structcy__stc__pdstack__contract__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__contract__info__t.html">cy_stc_pdstack_pd_contract_info_t</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stucture to hold PD Contract information passed with APP_EVT_PD_CONTRACT_NEGOTIATION_COMPLETE event to the application.  <a href="structcy__stc__pdstack__pd__contract__info__t.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold PD Contract information passed with APP_EVT_PD_CONTRACT_NEGOTIATION_COMPLETE event to the application.  <a href="structcy__stc__pdstack__pd__contract__info__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to hold a PD packet.  <a href="structcy__stc__pdstack__pd__packet__t.html#details">More...</a><br /></td></tr>
@@ -182,6 +183,31 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ga677655f9c592cb223c59bf38678c1a1a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga677655f9c592cb223c59bf38678c1a1a">cy_cb_timer_t</a>) (<a class="el" href="group__group__pdstack__data__structures.html#ga87a37816b1bb27d6ab0f583a1ac01cdd">cy_timer_id_t</a> id, void *callbackContext)</td></tr>
 <tr class="memdesc:ga677655f9c592cb223c59bf38678c1a1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer callback function.  <a href="#ga677655f9c592cb223c59bf38678c1a1a">More...</a><br /></td></tr>
 <tr class="separator:ga677655f9c592cb223c59bf38678c1a1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:ga5acbddfbccb6ec6309a2cc1be7cd46e0"><td class="memItemLeft" align="right" valign="top"><a id="ga5acbddfbccb6ec6309a2cc1be7cd46e0"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0">typec_fsm_evt_t</a> { <br />
+&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_ERR_RECOVERY</b> = 0, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_ENTRY</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_DETACH</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_ATTACH</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_PWR_RDY</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_TIMEOUT1</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_TIMEOUT2</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_DPM_COMMAND</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_MAX_EVTS</b>
+<br />
+ }<tr class="memdesc:ga5acbddfbccb6ec6309a2cc1be7cd46e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to hold TypeC events id. <br /></td></tr>
+</td></tr>
+<tr class="separator:ga5acbddfbccb6ec6309a2cc1be7cd46e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="gaab21fd03092baf7f1511dafe8a0beff0"></a>
@@ -398,7 +424,7 @@ Typedefs</h2></td></tr>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>Cypress PDSTACK Middleware Library 1.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 1.10</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

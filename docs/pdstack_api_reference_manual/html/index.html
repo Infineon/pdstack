@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cypress PDSTACK Middleware Library 1.0: Cypress PDStack Middleware Library</title>
+<title>PDStack Middleware Library 1.10: PDStack Middleware Library</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="IFXCYP_one-line.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Cypress PDSTACK Middleware Library 1.0</div>
+   <div id="projectname">PDStack Middleware Library 1.10</div>
   </td>
  </tr>
  </tbody>
@@ -81,7 +81,7 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Cypress PDStack Middleware Library </div>  </div>
+<div class="title">PDStack Middleware Library </div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The PDStack middleware implements state machines defined in the <b>Universal Serial Bus Type-C Cable and Connector Specification</b> and the <b>Universal Serial Bus Power Delivery Specification</b>. The middleware provides a set of Device Policy Manager (DPM) APIs through which the application can initialize, monitor and configure the middleware operation.</p>
@@ -110,7 +110,7 @@ General Description</h1>
 </ol>
 <h1><a class="anchor" id="section_pdstack_quick_start"></a>
 Quick Start Guide</h1>
-<p>Cypress PDStack middleware can be used in various Development Environments such as ModusToolbox, MBED, etc. Refer to the <a class="el" href="index.html#section_pdstack_toolchain">Supported Software and Tools</a> section.</p>
+<p>PDStack middleware can be used in various Development Environments such as ModusToolbox, MBED, etc. Refer to the <a class="el" href="index.html#section_pdstack_toolchain">Supported Software and Tools</a> section.</p>
 <p>The below steps describe the simplest way of enabling the PDStack middleware in the application.</p>
 <ol type="1">
 <li>Open/Create an application where to add PDStack function</li>
@@ -169,6 +169,14 @@ Changelog</h1>
 <tr>
 <th>Version</th><th>Changes</th><th>Reason for Change </th></tr>
 <tr>
+<td rowspan="4">1.10 </td><td>Updated Type-C Error Recovery period to 250 ms. </td><td>PD compliance specification updates.  </td></tr>
+<tr>
+<td>Updated the size of the status extended message to 7 bytes. </td><td>PD compliance specification updates.  </td></tr>
+<tr>
+<td>USBPD wakeup interrupt was incorrectly getting disabled as part of the Software timer operation. This has been corrected. </td><td>Defect Fixes.  </td></tr>
+<tr>
+<td>API description updated. </td><td>Documentation update and clarification.  </td></tr>
+<tr>
 <td>1.0 </td><td>Initial Version </td><td></td></tr>
 </table>
 <h1><a class="anchor" id="section_pdstack_more_information"></a>
@@ -178,7 +186,7 @@ More Information</h1>
 <li><a href="https://www.cypress.com/products/modustoolbox-software-environment"><b>ModusToolbox Software Environment, Quick Start Guide, Documentation, and Videos</b> </a></li>
 <li><a href="http://www.cypress.com/an232553"><b>AN232553 Getting Started with PMG1 MCU on ModusToolbox</b> </a></li>
 <li><a href="http://www.cypress.com/an232565"><b>AN232565 EZ-PD PMG1 Hardware Design Guidelines and Checklist</b> </a></li>
-<li><a href="https://cypresssemiconductorco.github.io/mtb-pdl-cat2/pdl_api_reference_manual/html/index.html"><b>PDL API Reference</b></a></li>
+<li><a href="https://infineon.github.io/mtb-pdl-cat2/pdl_api_reference_manual/html/index.html"><b>PDL API Reference</b></a></li>
 <li><a href="https://www.cypress.com/documentation/technical-reference-manuals/pmg1-family-pmg1-s0-architecture-technical-reference"><b>PMG1-S0 Architecture Technical Reference Manual</b> </a></li>
 <li><a href="https://www.cypress.com/documentation/technical-reference-manuals/pmg1-family-pmg1-s0-registers-technical-reference-manual"><b>PMG1-S0 Technical Reference Manual</b> </a></li>
 <li><a href="https://www.cypress.com/documentation/technical-reference-manuals/pmg1-family-pmg1-s1-architecture-technical-reference"><b>PMG1-S1 Architecture Technical Reference Manual</b> </a></li>
@@ -197,7 +205,7 @@ More Information</h1>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>Cypress PDSTACK Middleware Library 1.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 1.10</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

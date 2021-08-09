@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_pdstack_port_config.h
-* \version 1.0
+* \version 1.10
 *
 * PD Port Configuration Structure Header File for the PDStack middleware.
 *
@@ -130,7 +130,7 @@ typedef struct
 
     /** Whether dead battery operation is supported.
      *  1 - Dead battery operation is supported.
-     *  0 - Dead battery operationis not supported. */
+     *  0 - Dead battery operation is not supported. */
     uint8_t deadBatSupp;
 
     /** Whether Type C Error Recovery is enabled.
@@ -182,6 +182,12 @@ typedef struct
     /** Reserved for future use. */
     uint16_t reserved2;
 
+    /** Get_Revision message response */
+    uint32_t pdRevision;
+
+    /** Get_Source_Info message response */
+    uint32_t srcInfo;
+
     /** Number of EPR source PDOs supported. Non-zero value enables EPR source
      * operation. Range: 0 - 6 */
     uint8_t eprSrcPdoCount;
@@ -195,12 +201,6 @@ typedef struct
 
     /** Bit-mask enabling each EPR sink PDO. */
     uint8_t eprSnkPdoMask;
-
-    /** Get_Revision message response */
-    uint32_t pdRevision;
-
-    /** Get_Source_Info message response */
-    uint32_t srcInfo;
 
     /** EPR Source PDO List */
     uint32_t eprSrcPdo[6];

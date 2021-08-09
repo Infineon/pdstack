@@ -1,4 +1,4 @@
-# Cypress PDStack Middleware Library 1.0
+# PDStack Middleware Library 1.10
 
 ### Overview
 Alpha Release content - The PDStack middleware library on ModusToolbox is currently at the Alpha level. Features may change without notice. Contact Cypress Support https://www.cypress.com/support for additional details.
@@ -25,10 +25,10 @@ The PDStack Middleware is released in the form of pre-compiled libraries. Two li
 ### More information
 The following resources contain more information:
 * [PDStack Middleware RELEASE.md](./RELEASE.md)
-* [PDStack Middleware API Reference Guide](https://cypresssemiconductorco.github.io/pdstack/pdstack_api_reference_manual/html/index.html)
+* [PDStack Middleware API Reference Guide](https://infineon.github.io/pdstack/pdstack_api_reference_manual/html/index.html)
 * [ModusToolbox Software Environment, Quick Start Guide, Documentation, and Videos](https://www.cypress.com/products/modustoolbox-software-environment)
 * [ModusToolbox Device Configurator Tool Guide](https://www.cypress.com/ModusToolboxDeviceConfig)
 * [Cypress Semiconductor](http://www.cypress.com)
  
 ---
-© Cypress Semiconductor Corporation, 2021.
+© 2021, Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation.

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['pdstack_20middleware_20library',['PDStack Middleware Library',['../index.html',1,'']]],
   ['padval',['padval',['../structcy__stc__pdstack__dpm__status__t.html#a665d69caf440bc5bd851754553e3eb55',1,'cy_stc_pdstack_dpm_status_t']]],
   ['pd1_5fcable_5ftimer',['PD1_CABLE_TIMER',['../group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a662269d3436702c11aaf462d405f45cc',1,'cy_sw_timer_id.h']]],
   ['pd1_5fcbl_5fdelay_5ftimer',['PD1_CBL_DELAY_TIMER',['../group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a8e7f10207c19e80d38a8bd635dafd497',1,'cy_sw_timer_id.h']]],

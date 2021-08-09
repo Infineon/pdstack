@@ -15,6 +15,8 @@ var group__group__pdstack__functions =
     [ "Cy_PdStack_Dpm_PeStop", "group__group__pdstack__functions.html#ga0b1ec4633e71be2e67aa9b34a52283b9", null ],
     [ "Cy_PdStack_Dpm_Pd3SrcRpFlowControl", "group__group__pdstack__functions.html#ga649792612bdbf447fd5a80098014edf3", null ],
     [ "Cy_PdStack_Dpm_IsIdle", "group__group__pdstack__functions.html#ga74d202e6caa7ed979d2429038462d53c", null ],
+    [ "Cy_PdStack_Dpm_ClearSolnBusy", "group__group__pdstack__functions.html#ga1534293c5924a4148d9669ade2c83fc5", null ],
+    [ "Cy_PdStack_Dpm_SetSolnBusy", "group__group__pdstack__functions.html#ga6bea08981f4ddf3f780383abc70f6fbd", null ],
     [ "cy_sw_timer_init", "group__group__pdstack__functions.html#ga571254a255a639c850955f2ee44a4ff6", null ],
     [ "cy_sw_timer_start", "group__group__pdstack__functions.html#ga4f7d0de989622862b23e48dd59ea4fcc", null ],
     [ "cy_sw_timer_start_wocb", "group__group__pdstack__functions.html#ga1fa158c30f555b378dc841b4964a34bd", null ],

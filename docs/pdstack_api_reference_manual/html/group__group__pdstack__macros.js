@@ -107,6 +107,7 @@ var group__group__pdstack__macros =
     [ "CY_PD_TYPEC_ERROR_RECOVERY_TIMER_PERIOD", "group__group__pdstack__macros.html#ga767cfb111bf832d40159c13658ed48d4", null ],
     [ "CY_PD_TYPEC_DRP_TRY_TIMER_PERIOD", "group__group__pdstack__macros.html#gac5c3d320e8d7bbf74b18b297469ec032", null ],
     [ "CY_PD_TYPEC_TRY_TIMEOUT_PERIOD", "group__group__pdstack__macros.html#gaf622f966bb5703047f434cf3a0438e45", null ],
+    [ "CY_PD_SLN_STATUS_CHECK_PERIOD", "group__group__pdstack__macros.html#gaefe2fe410a64ba56362bcbedd8b2f02d", null ],
     [ "CY_PD_FRS_TX_ENABLE_MASK", "group__group__pdstack__macros.html#ga51fd877866a22b6e8bd0f3518b11e9fd", null ],
     [ "CY_PD_FRS_RX_ENABLE_MASK", "group__group__pdstack__macros.html#ga29bf49d5d3b8253979dad21946526a46", null ],
     [ "CY_PD_EXT_SRCCAP_SIZE", "group__group__pdstack__macros.html#ga0bfae696ba29c007dafdf0e89a0379d4", null ],

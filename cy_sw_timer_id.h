@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_sw_timer_id.h
-* \version 1.0
+* \version 1.10
 *
 * Provides Soft Timer Identifier definitions.
 *
@@ -305,7 +305,7 @@ typedef enum ccg_timer_id {
     /**< 086: Timer used to run Vconn swap after V5V was lost and recovered while UFP. */
 
     APP_OT_DETECTION_TIMER,
-    /**< 087: Timer used to call OT measurment handler. */
+    /**< 087: Timer used to call OT measurement handler. */
 
     APP_CHUNKED_MSG_RESP_TIMER,
     /**< 088: Timer ID used to respond to chunked messages with NOT_SUPPORTED. */

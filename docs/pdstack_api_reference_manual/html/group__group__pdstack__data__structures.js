@@ -336,12 +336,12 @@ var group__group__pdstack__data__structures =
       [ "snkPdo", "structcy__stc__pdstack__port__cfg__t.html#a5674d7a4fcbd3be37fc8ddb27272efe0", null ],
       [ "snkPdoMinMaxCur", "structcy__stc__pdstack__port__cfg__t.html#a65200c4dc844ca8386f6173927b7f5bd", null ],
       [ "reserved2", "structcy__stc__pdstack__port__cfg__t.html#a98a2b899909ae799575d7707cc199ee5", null ],
+      [ "pdRevision", "structcy__stc__pdstack__port__cfg__t.html#aff08168ad3a010e981e9b2e1bbc2d0a7", null ],
+      [ "srcInfo", "structcy__stc__pdstack__port__cfg__t.html#a4566171a7f3619cd7e57aa873ddab454", null ],
       [ "eprSrcPdoCount", "structcy__stc__pdstack__port__cfg__t.html#ac21bdbebe72f8694d38ce10aa472bfd4", null ],
       [ "eprSrcPdoMask", "structcy__stc__pdstack__port__cfg__t.html#aa547ca657a7a3b95fe83a3c40e8ca474", null ],
       [ "eprSnkPdoCount", "structcy__stc__pdstack__port__cfg__t.html#a559c81c8a041cebf78fa8c4fee016edf", null ],
       [ "eprSnkPdoMask", "structcy__stc__pdstack__port__cfg__t.html#abd4cc39dbdb3c1064fd5d16ace10d83c", null ],
-      [ "pdRevision", "structcy__stc__pdstack__port__cfg__t.html#aff08168ad3a010e981e9b2e1bbc2d0a7", null ],
-      [ "srcInfo", "structcy__stc__pdstack__port__cfg__t.html#a4566171a7f3619cd7e57aa873ddab454", null ],
       [ "eprSrcPdo", "structcy__stc__pdstack__port__cfg__t.html#a86b91989cdf69c6fac6a2ba3d5085a82", null ],
       [ "eprSnkPdo", "structcy__stc__pdstack__port__cfg__t.html#ae1b948fa28ee061e24ec2918f82b7839", null ]
     ] ],
@@ -371,5 +371,6 @@ var group__group__pdstack__data__structures =
     [ "cy_pdstack_sink_discharge_off_cbk_t", "group__group__pdstack__data__structures.html#ga5534a64a195ddf2f8964c0ed77c0cc97", null ],
     [ "cy_pdstack_dpm_typec_cmd_cbk_t", "group__group__pdstack__data__structures.html#ga3f4fb1cb7b6b853659e8d2ea7db20884", null ],
     [ "cy_timer_id_t", "group__group__pdstack__data__structures.html#ga87a37816b1bb27d6ab0f583a1ac01cdd", null ],
-    [ "cy_cb_timer_t", "group__group__pdstack__data__structures.html#ga677655f9c592cb223c59bf38678c1a1a", null ]
+    [ "cy_cb_timer_t", "group__group__pdstack__data__structures.html#ga677655f9c592cb223c59bf38678c1a1a", null ],
+    [ "typec_fsm_evt_t", "group__group__pdstack__data__structures.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0", null ]
 ];

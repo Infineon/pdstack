@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_pdstack_common.h
-* \version 1.0
+* \version 1.10
 *
 * Provides Common Header File of the PDStack middleware.
 *
@@ -26,7 +26,7 @@
 
 /**
 ********************************************************************************
-* \mainpage Cypress PDStack Middleware Library
+* \mainpage PDStack Middleware Library
 *
 * The PDStack middleware implements state machines defined in the **Universal
 * Serial Bus Type-C Cable and Connector Specification** and the **Universal
@@ -85,7 +85,7 @@
 * \section section_pdstack_quick_start Quick Start Guide
 ********************************************************************************
 *
-* Cypress PDStack middleware can be used in various Development
+* PDStack middleware can be used in various Development
 * Environments such as ModusToolbox, MBED, etc. Refer to the
 * \ref section_pdstack_toolchain section.
 *
@@ -201,6 +201,23 @@
 * <table class="doxtable">
 *   <tr><th>Version</th><th>Changes</th><th>Reason for Change</th></tr>
 *   <tr>
+*     <td rowspan="4">1.10</td>
+*     <td>Updated Type-C Error Recovery period to 250 ms.</td>
+*     <td>PD compliance specification updates.</td>
+*   </tr>
+*   <tr>
+*     <td>Updated the size of the status extended message to 7 bytes.
+*     <td>PD compliance specification updates.</td>
+*   </tr>
+*   <tr>
+*     <td>USBPD wakeup interrupt was incorrectly getting disabled as part of the Software timer operation. This has been corrected.
+*     <td>Defect Fixes.</td>
+*   </tr>
+*   <tr>
+*     <td>API description updated.</td>
+*     <td>Documentation update and clarification.</td>
+*   </tr>
+*   <tr>
 *     <td>1.0</td>
 *     <td>Initial Version</td>
 *     <td></td>
@@ -226,7 +243,7 @@
 *      <b>AN232565 EZ-PD PMG1 Hardware Design Guidelines and Checklist</b>
 *   </a>
 *
-* * <a href="https://cypresssemiconductorco.github.io/mtb-pdl-cat2/pdl_api_reference_manual/html/index.html">
+* * <a href="https://infineon.github.io/mtb-pdl-cat2/pdl_api_reference_manual/html/index.html">
 *   <b>PDL API Reference</b></a>
 *
 * * <a href="https://www.cypress.com/documentation/technical-reference-manuals/pmg1-family-pmg1-s0-architecture-technical-reference">
@@ -638,13 +655,16 @@
 #define CY_PD_TYPEC_PD3_RPCHANGE_DEBOUNCE_PERIOD          (2u)
 
 /** Type-C error recovery timer period in ms. */
-#define CY_PD_TYPEC_ERROR_RECOVERY_TIMER_PERIOD           (50u)
+#define CY_PD_TYPEC_ERROR_RECOVERY_TIMER_PERIOD           (250u)
 
 /** Type-C Try DRP timer period in ms. */
 #define CY_PD_TYPEC_DRP_TRY_TIMER_PERIOD                  (110u)
 
 /** Type-C Try Timeout timer period in ms. */
 #define CY_PD_TYPEC_TRY_TIMEOUT_PERIOD                    (800u)
+
+/** Period in ms to check whether the solution state allows to move forward with Type-C connection. */
+#define CY_PD_SLN_STATUS_CHECK_PERIOD                     (10u)
 
 /** FRS transmit enable flag in config table setting. */
 #define CY_PD_FRS_TX_ENABLE_MASK                      (0x02u)
@@ -674,7 +694,7 @@
 #define CY_PD_EXT_SNKCAP_VERS_INDEX                (10u)
 
 /** Size of status extended message in bytes. */
-#define CY_PD_EXT_STATUS_SIZE                      (6u)
+#define CY_PD_EXT_STATUS_SIZE                      (7u)
 
 /** Size of PPS status extended message in bytes. */
 #define CY_PD_EXT_PPS_STATUS_SIZE                  (4u)
@@ -883,7 +903,7 @@
 #define CY_PD_PE_EVT_SOFT_RESET_RCVD              (0x00000002u)       /* Soft Reset received event pending. */
 #define CY_PD_PE_EVT_ENTRY                        (0x00000004u)       /* Entry to new state machine. */
 #define CY_PD_PE_EVT_TX_SUCCESS                   (0x00000008u)       /* PD message transmission completed. */
-#define CY_PD_PE_EVT_TX_DISCARDED                 (0x00000010u)       /* PD message discarded due to collission. */
+#define CY_PD_PE_EVT_TX_DISCARDED                 (0x00000010u)       /* PD message discarded due to collision. */
 #define CY_PD_PE_EVT_TX_FAIL                      (0x00000020u)       /* PD message transmission failed. */
 #define CY_PD_PE_EVT_PKT_RCVD                     (0x00000040u)       /* New PD message received. */
 #define CY_PD_PE_EVT_PWR_RDY                      (0x00000080u)       /* Power ready (SRC/SNK transition complete) state. */
@@ -1733,7 +1753,7 @@ typedef enum cy_en_pdstack_status
     CY_PDSTACK_STAT_BAD_PARAM,                 /**< Bad input parameter. */
     CY_PDSTACK_STAT_INVALID_COMMAND = 3,       /**< Operation failed due to invalid command. */
     CY_PDSTACK_STAT_FLASH_UPDATE_FAILED = 5,   /**< Flash write operation failed. */
-    CY_PDSTACK_STAT_INVALID_FW,                /**< Special status code indcating invalid firmware */
+    CY_PDSTACK_STAT_INVALID_FW,                /**< Special status code indicating invalid firmware */
     CY_PDSTACK_STAT_INVALID_ARGUMENT,          /**< Operation failed due to invalid arguments. */
     CY_PDSTACK_STAT_NOT_SUPPORTED,             /**< Feature not supported. */
     CY_PDSTACK_STAT_INVALID_SIGNATURE,         /**< Invalid signature parameter identified. */
@@ -1840,7 +1860,7 @@ typedef struct
 } cy_stc_pdstack_contract_t;
 
 /**
- * @brief Stucture to hold PD Contract information passed with APP_EVT_PD_CONTRACT_NEGOTIATION_COMPLETE
+ * @brief Structure to hold PD Contract information passed with APP_EVT_PD_CONTRACT_NEGOTIATION_COMPLETE
  * event to the application.
  */
 typedef struct
@@ -2281,7 +2301,7 @@ typedef struct
     /** FRS transmit disabled by EC. */
     bool frTxDisabled;
 
-    /** Flag to indicate the a fault consition exists. */
+    /** Flag to indicate the a fault condition exists. */
     volatile bool faultActive;
 
     /** Holds the current state of Policy Engine (PE). */

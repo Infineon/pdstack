@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_pdstack_dpm.h
-* \version 1.0
+* \version 1.10
 *
 * Header file of Device Policy Manager of the PDStack middleware.
 *
@@ -54,8 +54,7 @@
 *
 * \return
 * CY_PDSTACK_STAT_SUCCESS if operation is successful
-* CY_PDSTACK_STAT_BAD_PARAM if the context pointer is invalid
-* CY_PDSTACK_STAT_FAILURE if the operation fails.
+* CY_PDSTACK_STAT_BAD_PARAM if the input parameters are not valid
 *
 *******************************************************************************/
 cy_en_pdstack_status_t Cy_PdStack_Dpm_Init(
@@ -178,7 +177,6 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_PrepareDeepSleep(
 * CY_PDSTACK_STAT_SUCCESS if operation is successful
 * CY_PDSTACK_STAT_BAD_PARAM if the context pointer or the ptrResume is
 * invalid
-* CY_PDSTACK_STAT_FAILURE if the operation fails.
 *
 *******************************************************************************/
 cy_en_pdstack_status_t Cy_PdStack_Dpm_Resume(
@@ -205,7 +203,6 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_Resume(
 * CY_PDSTACK_STAT_SUCCESS if operation is successful
 * CY_PDSTACK_STAT_BAD_PARAM if the context pointer or the ptrSleepAllowed is
 * invalid
-* CY_PDSTACK_STAT_FAILURE if the operation fails.
 *
 *******************************************************************************/
 cy_en_pdstack_status_t Cy_PdStack_Dpm_IsSleepAllowed(
@@ -310,8 +307,7 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_SendTypecCommand(
 *
 * \return
 * CY_PDSTACK_STAT_SUCCESS if operation is successful
-* CY_PDSTACK_STAT_BAD_PARAM if the context parameter is invalid
-* CY_PDSTACK_STAT_FAILURE if operation fails
+* CY_PDSTACK_STAT_BAD_PARAM if the context parameter is or sop value is invalid
 *
 *******************************************************************************/
 cy_en_pdstack_status_t Cy_PdStack_Dpm_ProtReset(
@@ -334,8 +330,7 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_ProtReset(
 *
 * \return
 * CY_PDSTACK_STAT_SUCCESS if operation is successful
-* CY_PDSTACK_STAT_BAD_PARAM if the context parameter is invalid
-* CY_PDSTACK_STAT_FAILURE if operation fails
+* CY_PDSTACK_STAT_BAD_PARAM if the context parameter or sop value is invalid
 *
 *******************************************************************************/
 cy_en_pdstack_status_t Cy_PdStack_Dpm_ProtResetRx(
@@ -356,7 +351,6 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_ProtResetRx(
 * \return
 * CY_PDSTACK_STAT_SUCCESS if operation is successful
 * CY_PDSTACK_STAT_BAD_PARAM if the context parameter is invalid
-* CY_PDSTACK_STAT_FAILURE if operation fails
 *
 *******************************************************************************/
 cy_en_pdstack_status_t Cy_PdStack_Dpm_PeStop(
@@ -405,12 +399,49 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_Pd3SrcRpFlowControl(
 *
 * \return
 * CY_PDSTACK_STAT_SUCCESS if operation is successful,
-* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invaid.
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
 *
 *******************************************************************************/
 cy_en_pdstack_status_t Cy_PdStack_Dpm_IsIdle(
         cy_stc_pdstack_context_t *ptrPdStackContext,
         bool *ptrIsIdle);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_ClearSolnBusy
+****************************************************************************//**
+*
+* Function to inform the Type-C/PD stack that the solution state
+* allows Type-C transitions.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* None
+*
+*
+*******************************************************************************/
+void Cy_PdStack_Dpm_ClearSolnBusy(
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_ClearSolnBusy
+****************************************************************************//**
+*
+* Function to inform the Type-C/PD stack that the solution state does not
+* allow Type-C transitions.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* None
+*
+*
+*******************************************************************************/
+void Cy_PdStack_Dpm_SetSolnBusy(
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+
 
 /** \} group_pdstack_functions */
 

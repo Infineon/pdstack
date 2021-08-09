@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cypress PDSTACK Middleware Library 1.0: Functions</title>
+<title>PDStack Middleware Library 1.10: Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="IFXCYP_one-line.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Cypress PDSTACK Middleware Library 1.0</div>
+   <div id="projectname">PDStack Middleware Library 1.10</div>
   </td>
  </tr>
  </tbody>
@@ -136,6 +136,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga74d202e6caa7ed979d2429038462d53c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga74d202e6caa7ed979d2429038462d53c">Cy_PdStack_Dpm_IsIdle</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, bool *ptrIsIdle)</td></tr>
 <tr class="memdesc:ga74d202e6caa7ed979d2429038462d53c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to check whether the Type-C/PD stack is idle.  <a href="#ga74d202e6caa7ed979d2429038462d53c">More...</a><br /></td></tr>
 <tr class="separator:ga74d202e6caa7ed979d2429038462d53c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1534293c5924a4148d9669ade2c83fc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga1534293c5924a4148d9669ade2c83fc5">Cy_PdStack_Dpm_ClearSolnBusy</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext)</td></tr>
+<tr class="memdesc:ga1534293c5924a4148d9669ade2c83fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to inform the Type-C/PD stack that the solution state allows Type-C transitions.  <a href="#ga1534293c5924a4148d9669ade2c83fc5">More...</a><br /></td></tr>
+<tr class="separator:ga1534293c5924a4148d9669ade2c83fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6bea08981f4ddf3f780383abc70f6fbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga6bea08981f4ddf3f780383abc70f6fbd">Cy_PdStack_Dpm_SetSolnBusy</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext)</td></tr>
+<tr class="memdesc:ga6bea08981f4ddf3f780383abc70f6fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to inform the Type-C/PD stack that the solution state does not allow Type-C transitions.  <a href="#ga6bea08981f4ddf3f780383abc70f6fbd">More...</a><br /></td></tr>
+<tr class="separator:ga6bea08981f4ddf3f780383abc70f6fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga571254a255a639c850955f2ee44a4ff6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga571254a255a639c850955f2ee44a4ff6">cy_sw_timer_init</a> (<a class="el" href="structcy__stc__sw__timer__t.html">cy_stc_sw_timer_t</a> *context, uint32_t sysClkFreq)</td></tr>
 <tr class="memdesc:ga571254a255a639c850955f2ee44a4ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function initializes the software timer module.  <a href="#ga571254a255a639c850955f2ee44a4ff6">More...</a><br /></td></tr>
 <tr class="separator:ga571254a255a639c850955f2ee44a4ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -240,7 +246,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context pointer is invalid CY_PDSTACK_STAT_FAILURE if the operation fails. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the input parameters are not valid </dd></dl>
 
 </div>
 </div>
@@ -401,7 +407,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context pointer or the ptrResume is invalid CY_PDSTACK_STAT_FAILURE if the operation fails. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context pointer or the ptrResume is invalid </dd></dl>
 
 </div>
 </div>
@@ -440,7 +446,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context pointer or the ptrSleepAllowed is invalid CY_PDSTACK_STAT_FAILURE if the operation fails. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context pointer or the ptrSleepAllowed is invalid </dd></dl>
 
 </div>
 </div>
@@ -610,7 +616,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context parameter is invalid CY_PDSTACK_STAT_FAILURE if operation fails </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context parameter is or sop value is invalid </dd></dl>
 
 </div>
 </div>
@@ -649,7 +655,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context parameter is invalid CY_PDSTACK_STAT_FAILURE if operation fails </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context parameter or sop value is invalid </dd></dl>
 
 </div>
 </div>
@@ -677,7 +683,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context parameter is invalid CY_PDSTACK_STAT_FAILURE if operation fails </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context parameter is invalid </dd></dl>
 
 </div>
 </div>
@@ -754,7 +760,61 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invaid. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="ga1534293c5924a4148d9669ade2c83fc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1534293c5924a4148d9669ade2c83fc5">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_ClearSolnBusy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cy_PdStack_Dpm_ClearSolnBusy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to inform the Type-C/PD stack that the solution state allows Type-C transitions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+
+</div>
+</div>
+<a id="ga6bea08981f4ddf3f780383abc70f6fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6bea08981f4ddf3f780383abc70f6fbd">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_SetSolnBusy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cy_PdStack_Dpm_SetSolnBusy </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to inform the Type-C/PD stack that the solution state does not allow Type-C transitions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
 
 </div>
 </div>
@@ -1318,7 +1378,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>Cypress PDSTACK Middleware Library 1.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 1.10</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

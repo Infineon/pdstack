@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_sw_timer.h
-* \version 1.0
+* \version 1.10
 *
 * Provides API declarations of the Software Timer implementation.
 *
@@ -44,7 +44,7 @@
 /** The SYS_CLK frequency should match the actual hardware SYS_CLK frequency. */
 #define SYSCLK_FREQUENCY                (SystemCoreClock)
 
-/** The SYS_CLK counter theshold for 1ms timeout. Division is expected
+/** The SYS_CLK counter threshold for 1ms timeout. Division is expected
  * to be optimized out by the compiler. */
 #define SYSCLK_1MS_COUNT_VALUE          (SYSCLK_FREQUENCY / 1000u)
 

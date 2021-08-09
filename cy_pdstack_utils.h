@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_pdstack_utils.h
-* \version 1.0
+* \version 1.10
 *
 * Provides general utility macros and definitions for the PDStack Middleware.
 *
@@ -207,11 +207,11 @@ void mem_set (uint8_t* dest, uint8_t c, uint32_t size);
 uint32_t div_round_up(uint32_t x, uint32_t y);
 
 /**
- * @brief Function to caclulate threshold value based on input value and percentage which
+ * @brief Function to calculate threshold value based on input value and percentage which
  * input value should be increased
  *
  * @param val Input value.
- * @param percentage This value means how much (in percents) input value should be incresed
+ * @param percentage This value means how much (in percents) input value should be increased
  * @return Sum of input value and calculated threshold
  */
 int32_t apply_threshold(int32_t val, int8_t percentage);
