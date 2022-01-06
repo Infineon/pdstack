@@ -28,6 +28,8 @@ var searchData=
   ['contractevtresp',['contractEvtResp',['../structcy__stc__pdstack__pe__status__t.html#ae74aa2fc881507ded28bacc7d75c1be4',1,'cy_stc_pdstack_pe_status_t']]],
   ['count',['count',['../structcy__timer__t.html#a9106f4f596c08632d458caf1180e3c07',1,'cy_timer_t']]],
   ['ctrs',['ctrs',['../structcy__stc__pdstack__pd__status__t.html#a8cfffa18a0d015a4418b7c791def17d9',1,'cy_stc_pdstack_pd_status_t']]],
+  ['cureprsnkpdocount',['curEprSnkPdoCount',['../structcy__stc__pdstack__dpm__status__t.html#a59b4da4570f3c918dd0c21f229fa46a8',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['cureprsrcpdocount',['curEprSrcPdoCount',['../structcy__stc__pdstack__dpm__status__t.html#ab4ba85f778bbdb748380e3327e91d0e1',1,'cy_stc_pdstack_dpm_status_t']]],
   ['curfb',['curFb',['../structcy__stc__pdstack__dpm__status__t.html#a6cb9a2a65ee15679bb98a67b3ff488bc',1,'cy_stc_pdstack_dpm_status_t']]],
   ['curlevel',['curLevel',['../structcy__stc__pdstack__port__cfg__t.html#ad1675b675602675f8aa0d3c51bd58cca',1,'cy_stc_pdstack_port_cfg_t']]],
   ['curperiod',['curPeriod',['../structcy__stc__pdstack__typec__status__t.html#a11f4fab698d57223beebe3e745deec7e',1,'cy_stc_pdstack_typec_status_t']]],

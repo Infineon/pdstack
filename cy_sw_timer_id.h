@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_sw_timer_id.h
-* \version 1.10
+* \version 1.20
 *
 * Provides Soft Timer Identifier definitions.
 *
@@ -121,14 +121,14 @@ typedef enum ccg_timer_id {
     PD_VCONN_OCP_DEBOUNCE_TIMER,
     /**< 027: Timer used for FW debounce of VConn OCP. */
 
-    PD_TIMER_RESERVED_28,
-    /**< 028: Reserved for future use. */
+    PD_SNK_EPR_MODE_TIMER,
+    /**< 028: Timer used for Pd Sink EPR Mode. */
 
-    PD_TIMER_RESERVED_29,
-    /**< 029: Reserved for future use. */
+    PD_SRC_EPR_MODE_TIMER,
+    /**< 029: Timer used for Pd Source EPR Mode. */
 
-    PD_TIMER_RESERVED_30,
-    /**< 030: Reserved for future use. */
+    PD_EPR_KEEPALIVE_TIMER,
+    /**< 030: Timer used by EPR state machine for sending KeepAlive message. */
 
     PD_TIMER_RESERVED_31,
     /**< 031: Reserved for future use. */
@@ -220,14 +220,14 @@ typedef enum ccg_timer_id {
     PD1_VCONN_OCP_DEBOUNCE_TIMER,
     /**< 059: Timer used for FW debounce of VConn OCP. */
 
-    PD1_TIMER_RESERVED_60,
-    /**< 060: Reserved for future use. */
+    PD1_SNK_EPR_MODE_TIMER,
+    /**< 060: Timer used for Pd Sink EPR Mode. */
 
-    PD1_TIMER_RESERVED_61,
-    /**< 061: Reserved for future use. */
+    PD1_SRC_EPR_MODE_TIMER,
+    /**< 061: Timer used for Pd Source EPR Mode. */
 
-    PD1_TIMER_RESERVED_62,
-    /**< 062: Reserved for future use. */
+    PD1_EPR_KEEPALIVE_TIMER,
+    /**< 62: Timer used by EPR state machine for sending KeepAlive message. */
 
     PD1_TIMER_RESERVED_63,
     /**< 063: Reserved for future use. */
@@ -343,16 +343,19 @@ typedef enum ccg_timer_id {
     APP_CDP_DP_DM_POLL_TIMER,
     /**< 099: Timer used to initiate DP/DM voltage polling while connected as a CDP. */
 
-    APP_TIMER_RESERVED_100,
-    /**< 100: Timer ID reserved for future use. */
+    APP_EPR_MODE_TIMER,
+    /**< 100: Timer used by EPR state machine. */
 
-    APP_TIMER_RESERVED_101,
-    /**< 101: Timer ID reserved for future use. */
+    APP_EPR_EXT_CMD_TIMER,
+    /**< 101: Timer used to send enter/exit EPR mode events to EPR state machine. */
 
-    APP_TIMER_RESERVED_102,
-    /**< 102: Timer ID reserved for future use. */
+    APP_TIMER_HPD_DELAY_TIMER,
+    /**< 102: This timer is used to delay HPD events. */
 
-    APP_TIMER_RESERVED_103,
+    APP_TIMERS_RESERVED_START_ID = 103u,
+    /**< 103: Start index for Application level reserved timers. */
+
+    APP_TIMER_RESERVED_103 = APP_TIMERS_RESERVED_START_ID,
     /**< 103: Timer ID reserved for future use. */
 
     APP_TIMER_RESERVED_104,

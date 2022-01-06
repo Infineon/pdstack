@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_pdstack_dpm.h
-* \version 1.10
+* \version 1.20
 *
 * Header file of Device Policy Manager of the PDStack middleware.
 *
@@ -208,6 +208,27 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_Resume(
 cy_en_pdstack_status_t Cy_PdStack_Dpm_IsSleepAllowed(
        cy_stc_pdstack_context_t *ptrPdStackContext,
        bool *ptrSleepAllowed);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_Rtos_Init
+****************************************************************************//**
+*
+* This function initializes the device policy manager with RTOS context details.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param ptrRtosContext
+* Pointer to RTOS API's callback context
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful
+* CY_PDSTACK_STAT_BAD_PARAM if the input parameters are not valid
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_Rtos_Init(
+       cy_stc_pdstack_context_t *ptrPdStackContext,
+       cy_stc_pdstack_rtos_context_t *ptrRtosContext);
 
 /*******************************************************************************
 * Function Name: Cy_PdStack_Dpm_Task
@@ -441,6 +462,347 @@ void Cy_PdStack_Dpm_ClearSolnBusy(
 *******************************************************************************/
 void Cy_PdStack_Dpm_SetSolnBusy(
         cy_stc_pdstack_context_t *ptrPdStackContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_ChangeEprActiveFlag
+****************************************************************************//**
+*
+* Function to change state of EPR mode active flag.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param flag
+* sets/resets EPR active flag.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_ChangeEprActiveFlag(
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        bool flag);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_IsEprModeActive
+****************************************************************************//**
+*
+* Function to check whether EPR mode is active.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param isActive
+* State of EPR flag
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_IsEprModeActive(
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        bool *isActive);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_ChangeEprToSpr
+****************************************************************************//**
+*
+* Function changes the EPR to SPR indicator.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param flag
+* sets/resets EPR flag to limit PDO index.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_ChangeEprToSpr(
+        cy_stc_pdstack_context_t *ptrPdStackContext, 
+        bool flag);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_IsEprSpr
+****************************************************************************//**
+*
+* Function checks whether the EPR pdo needs to limit it to SPR.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param isSpr
+* Will contain true if eval pdo needs to limit pdo count to SPR otherwise false
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_IsEprSpr(
+        cy_stc_pdstack_context_t *ptrPdStackContext, 
+        bool *isSpr);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_IsEprAvsActive
+****************************************************************************//**
+*
+* Function to check whether EPR AVS mode is active.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param isActive
+* State of EPR flag
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_IsEprAvsModeActive(
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        bool *isActive);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_ChangeEprActiveFlag
+****************************************************************************//**
+*
+* Function to change state of EPR AVS mode active flag.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param flag
+* sets/resets EPR AVS active flag.
+*
+* \return
+* cy_en_pdstack_status_t
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_ChangeEprAvsActiveFlag(
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        bool flag);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_IsValidAvsReq
+****************************************************************************//**
+*
+* Function to change state of EPR AVS mode active flag.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param src_pdo_index
+* SRC PDO index.
+*
+* \param rdo
+* Request Data Object received from port partner.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_IsValidAvsReq(
+        cy_stc_pdstack_context_t *ptrPdStackContext, 
+        uint8_t src_pdo_index,
+        cy_pd_pd_do_t rdo);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_EprSnkSendKeepAliveCb
+****************************************************************************//**
+*
+* Function callback to initiate Keep Alive message.
+*
+* \param id
+* Timer index
+*
+* \param ptrContext
+* Callback context
+*
+* \return
+* None
+*
+*******************************************************************************/
+void Cy_PdStack_Dpm_EprSnkSendKeepAliveCb (
+        cy_timer_id_t id,
+        void *ptrContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateSnkMaxMin
+****************************************************************************//**
+*
+* Function to update the sink max/min current/power at runtime thereby overriding
+* the generated configuration by EZ-PD Configurator.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param count
+* Number of PDOs
+*
+* \param max_min
+* Pointer to max/min current/power array. 
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful.
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateSnkMaxMin (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t count,
+        uint16_t* max_min);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateSnkCapMask 
+****************************************************************************//**
+*
+* Function to update the sink PDO mask at runtime thereby overriding the 
+* generated configuration by EZ-PD Configurator.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param mask
+* PDO mask
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful.
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateSnkCapMask (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t mask);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateSnkCap 
+****************************************************************************//**
+*
+* Function to update the sink PDOs at runtime thereby overriding the generated
+* configuration by EZ-PD Configurator.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param count
+* Number of PDOs
+*
+* \param pdo
+* Pointer to the PDO array
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful.
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateSnkCap (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t count,
+        cy_pd_pd_do_t* pdo);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateSrcCapMask 
+****************************************************************************//**
+*
+* Function to update the source PDO mask at runtime thereby overriding the 
+* generated configuration by EZ-PD Configurator.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param mask
+* PDO Mask
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateSrcCapMask (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t mask);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateSrcCap 
+****************************************************************************//**
+*
+* Function to update the source PDOs at runtime thereby overriding the generated
+* configuration by EZ-PD Configurator.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param count
+* Number of PDOs
+*
+* \param pdo
+* Pointer to the PDO array
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateSrcCap (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t count,
+        cy_pd_pd_do_t* pdo);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateEprSnkCap 
+****************************************************************************//**
+*
+* Function to update the EPR sink PDOs at runtime thereby overriding the generated
+* configuration by EZ-PD Configurator.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param count
+* Number of PDOs
+*
+* \param pdo
+* Pointer to the PDO array
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateEprSnkCap (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t count,
+        cy_pd_pd_do_t* pdo);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateEprSnkCapMask 
+****************************************************************************//**
+*
+* Function to update the EPR sink PDO mask at runtime thereby overriding the 
+* generated configuration by EZ-PD Configurator.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param mask
+* PDO Mask
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateEprSnkCapMask (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t mask);
+
 
 
 /** \} group_pdstack_functions */

@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_sw_timer.h
-* \version 1.10
+* \version 1.20
 *
 * Provides API declarations of the Software Timer implementation.
 *

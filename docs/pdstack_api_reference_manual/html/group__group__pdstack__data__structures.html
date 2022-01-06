@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 1.10: Data Structures</title>
+<title>PDStack Middleware Library 1.20: Data Structures</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="IFXCYP_one-line.png"/></a></td>
+  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 1.10</div>
+   <div id="projectname">PDStack Middleware Library 1.20</div>
   </td>
  </tr>
  </tbody>
@@ -120,8 +120,14 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to hold a PD packet.  <a href="structcy__stc__pdstack__pd__packet__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__packet__epr__t.html">cy_stc_pdstack_pd_packet_epr_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to hold an EPR PD packet.  <a href="structcy__stc__pdstack__pd__packet__epr__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html">cy_stc_pdstack_app_cbk_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to hold the application interface.  <a href="structcy__stc__pdstack__app__cbk__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__epr__t.html">cy_stc_pdstack_epr_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended Power Range structure.  <a href="structcy__stc__pdstack__epr__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html">cy_stc_pdstack_dpm_status_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">PD Device Policy Status structure.  <a href="structcy__stc__pdstack__dpm__status__t.html#details">More...</a><br /></td></tr>
@@ -140,6 +146,9 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__params__t.html">cy_stc_pdstack_dpm_params_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold Device Policy Manager Parameters.  <a href="structcy__stc__pdstack__dpm__params__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__rtos__context__t.html">cy_stc_pdstack_rtos_context_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold the RTOS interface.  <a href="structcy__stc__pdstack__rtos__context__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to PDSTACK Middleware context information.  <a href="structcy__stc__pdstack__context__t.html#details">More...</a><br /></td></tr>
@@ -186,6 +195,18 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
+<tr class="memitem:ga0873d60a116607811b3cceae424e8dd2"><td class="memItemLeft" align="right" valign="top"><a id="ga0873d60a116607811b3cceae424e8dd2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga0873d60a116607811b3cceae424e8dd2">cy_en_pdstack_pwr_led_t</a> { <br />
+&#160;&#160;<b>CY_PDSTACK_LED_OFF</b> = 0UL, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_LED_ON</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_LED_BLINKING</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_LED_BREATHING</b>
+<br />
+ }<tr class="memdesc:ga0873d60a116607811b3cceae424e8dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the Power LED States. <br /></td></tr>
+</td></tr>
+<tr class="separator:ga0873d60a116607811b3cceae424e8dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5acbddfbccb6ec6309a2cc1be7cd46e0"><td class="memItemLeft" align="right" valign="top"><a id="ga5acbddfbccb6ec6309a2cc1be7cd46e0"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0">typec_fsm_evt_t</a> { <br />
 &#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_ERR_RECOVERY</b> = 0, 
 <br />
@@ -424,7 +445,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 1.10</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 1.20</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

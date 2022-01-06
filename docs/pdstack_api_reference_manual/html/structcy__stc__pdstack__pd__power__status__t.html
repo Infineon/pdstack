@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 1.10: cy_stc_pdstack_pd_power_status_t Struct Reference</title>
+<title>PDStack Middleware Library 1.20: cy_stc_pdstack_pd_power_status_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="IFXCYP_one-line.png"/></a></td>
+  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 1.10</div>
+   <div id="projectname">PDStack Middleware Library 1.20</div>
   </td>
  </tr>
  </tbody>
@@ -109,9 +109,12 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a84091d61157a2d75d6b8376662f2193d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__power__status__t.html#a84091d61157a2d75d6b8376662f2193d">powerStatus</a></td></tr>
 <tr class="memdesc:a84091d61157a2d75d6b8376662f2193d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power status.  <a href="#a84091d61157a2d75d6b8376662f2193d">More...</a><br /></td></tr>
 <tr class="separator:a84091d61157a2d75d6b8376662f2193d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac50ae2923c690752d54f6b1d68365634"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__power__status__t.html#ac50ae2923c690752d54f6b1d68365634">dummy</a> [2]</td></tr>
-<tr class="memdesc:ac50ae2923c690752d54f6b1d68365634"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserved field used for 4 byte alignment.  <a href="#ac50ae2923c690752d54f6b1d68365634">More...</a><br /></td></tr>
-<tr class="separator:ac50ae2923c690752d54f6b1d68365634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe10bc89ed3c91bbeebc333715f435f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__power__status__t.html#abbe10bc89ed3c91bbeebc333715f435f">powerStateChange</a></td></tr>
+<tr class="memdesc:abbe10bc89ed3c91bbeebc333715f435f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Power state change.  <a href="#abbe10bc89ed3c91bbeebc333715f435f">More...</a><br /></td></tr>
+<tr class="separator:abbe10bc89ed3c91bbeebc333715f435f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a690cbd53a0f324cbbc8a23c60bb24c48"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__power__status__t.html#a690cbd53a0f324cbbc8a23c60bb24c48">dummy</a></td></tr>
+<tr class="memdesc:a690cbd53a0f324cbbc8a23c60bb24c48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserved field used for 4 byte alignment.  <a href="#a690cbd53a0f324cbbc8a23c60bb24c48">More...</a><br /></td></tr>
+<tr class="separator:a690cbd53a0f324cbbc8a23c60bb24c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="a571d3c49a8d4bb29c7772d7b4c72f34f"></a>
@@ -211,14 +214,30 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="ac50ae2923c690752d54f6b1d68365634"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac50ae2923c690752d54f6b1d68365634">&#9670;&nbsp;</a></span>dummy</h2>
+<a id="abbe10bc89ed3c91bbeebc333715f435f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbe10bc89ed3c91bbeebc333715f435f">&#9670;&nbsp;</a></span>powerStateChange</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint8_t cy_stc_pdstack_pd_power_status_t::dummy[2]</td>
+          <td class="memname">uint8_t cy_stc_pdstack_pd_power_status_t::powerStateChange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Power state change. </p>
+
+</div>
+</div>
+<a id="a690cbd53a0f324cbbc8a23c60bb24c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a690cbd53a0f324cbbc8a23c60bb24c48">&#9670;&nbsp;</a></span>dummy</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pd_power_status_t::dummy</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -233,7 +252,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 1.10</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 1.20</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

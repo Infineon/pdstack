@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_pdstack_common.h
-* \version 1.10
+* \version 1.20
 *
 * Provides Common Header File of the PDStack middleware.
 *
@@ -38,16 +38,17 @@
 * the MTB PDL CAT2(mtb-pdl-cat2) Peripheral Driver Library
 *
 * <b>Features:</b>
-* 1. Support Type-C port configuration and connection detection in the Sink Role
-* 2. Support USBPD Communication with the following features:
-*    * USB PD revision 3.0 compliance
+* 1. Support Type-C port configuration and connection detection in the Sink, Source and Dual Role
+* 2. Support Extended Power Range (EPR) in Sink role.
+* 3. Support USBPD Communication with the following features:
+*    * USB PD revision 3.1 compliance
 *    * USB PD revision 2.0 compliance (backward compatibility)
 *    * Power contract negotiation in Sink Role
 *    * Ability to respond to SOP and SOP' messages to support designs with a
 *    Captive USB-C cable.
-* 3. Support configuration of the port roles and responses through the EZ-PD
+* 4. Support configuration of the port roles and responses through the EZ-PD
 * Configurator.
-* 4. Support Device Policy Manager APIs to initialize, configure, monitor and
+* 5. Support Device Policy Manager APIs to initialize, configure, monitor and
 * control the port operation; as well as to send/receive USBPD messages
 * associated with Alternate Mode discovery, Authentication, Firmware update
 * etc.
@@ -72,15 +73,19 @@
 * Also, refer to the \ref section_pdstack_miscellaneous section for
 * the different PDStack middleware restrictions and limitations.
 *
-* The PDStack Middleware is released in the form of pre-compiled libraries. Two
-* library variants with different feature set to help limit the memory
-* footprint of the stack in applications are released.
+* The PDStack Middleware is released in the form of pre-compiled libraries. The
+* following library variants with different feature set to help limit the
+* memory footprint of the stack in applications are released.
 * 1. pmg1_pd3_snk_lite - Library with support for USB Type-C sink operation and
-* USB-PD Revision 3.0 messaging.
+* USB-PD Revision 3.1 messaging.
 * 2. pmg1_pd2_snk_lite - Library with support for USB Type-C sink operation and
 * USB-PD Revision 2.0 messaging. Using this library will reduce the flash
 * (code) memory usage by the application.
-*
+* 3. pmg1_pd3_drp - Library with support for USB Type-C dual role operation and
+* USB-PD Revision 3.1 messaging. This library can be used in any Power-Delivery
+* application.
+* 4. pmg1_pd3_snk_epr - Library with support for USB Type-C sink Extended Power
+* Range(EPR) operation and USB-PD Revision 3.1 messaging.
 ********************************************************************************
 * \section section_pdstack_quick_start Quick Start Guide
 ********************************************************************************
@@ -142,6 +147,8 @@
 * user can select the library variant by editing the Code Example Makefile:
 *    * Add 'PMG1_PD3_SNK_LITE' to the COMPONENTS for using the pmg1_pd3_snk_lite library
 *    * Add 'PMG1_PD2_SNK_LITE' to the COMPONENTS for using the pmg1_pd2_snk_lite library
+*    * Add 'PMG1_PD3_DRP' to the COMPONENTS for using the pmg1_pd3_drp library
+*    * Add 'PMG1_PD3_SNK_EPR' to the COMPONENTS for using the pmg1_pd3_snk_epr library
 * 2. Configure the USB-C port properties
 *    * The USB-C port properties are controlled with the \ref
 *    cy_stc_pdstack_port_cfg_t structure. Please see its description to learn
@@ -157,8 +164,7 @@
 ********************************************************************************
 * \section section_pdstack_miscellaneous Limitations and Restrictions
 ********************************************************************************
-* 1. This version of the PDStack Middleware supports the operation of a USB-C
-* port as only a power sink/data UFP.
+* 1. The Extended Power Range (EPR) feature is supported only in the sink role.
 *
 ********************************************************************************
 * \section section_pdstack_toolchain Supported Software and Tools
@@ -174,11 +180,11 @@
 *   </tr>
 *   <tr>
 *     <td>ModusToolbox Software Environment</td>
-*     <td>2.3</td>
+*     <td>2.4</td>
 *   </tr>
 *   <tr>
 *     <td>mtb-pdl-cat2</td>
-*     <td>1.1.0</td>
+*     <td>1.5.0</td>
 *   </tr>
 *   <tr>
 *     <td>GCC Compiler</td>
@@ -200,6 +206,19 @@
 *
 * <table class="doxtable">
 *   <tr><th>Version</th><th>Changes</th><th>Reason for Change</th></tr>
+*   <tr>
+*   <td rowspan="4">1.20</td>
+*     <td> Added libraries for USB Type-C dual role and sink Extended Power Range (EPR) operation </td>
+*     <td> New feature Addition </td>
+*   </tr>
+*   <tr>
+*    <td> Updated the library to work with RTOS </td>
+*    <td> New feature addition </td>
+*   </tr>
+*   <tr>
+*     <td> Added APIs for changing source/sink pdo capabilities</td>
+*     <td> Feature Addition.
+*   </tr>
 *   <tr>
 *     <td rowspan="4">1.10</td>
 *     <td>Updated Type-C Error Recovery period to 250 ms.</td>
@@ -363,6 +382,9 @@
 /** Maximum number of PDOs in a packet. Limited by PD message definition. */
 #define CY_PD_MAX_NO_OF_PDO                       (CY_PD_MAX_NO_OF_DO)
 
+/** Maximum number of EPR PDOs in a packet. Limited by PD message definition. */    
+#define CY_PD_MAX_NO_OF_EPR_PDO                   (6u)
+
 /** Maximum number of VDOs in a packet. Limited by PD message definition. */
 #define CY_PD_MAX_NO_OF_VDO                       (CY_PD_MAX_NO_OF_DO)
 
@@ -445,10 +467,13 @@
 #define CY_PD_VOLT_PER_UNIT                    (50u)
 
 /** Voltage unit (mV) used in PPS PDOs. */
-#define CY_CY_PD_VOLT_PER_UNIT_PPS                (100u)
+#define CY_PD_VOLT_PER_UNIT_PPS                (100u)
 
 /** Multiplier used to convert from current unit used in other PDOs to that used in PPS PDO/RDO. */
-#define CY_PD_CURRENT_PPS_MULTIPLIER           (5u)
+#define CY_PD_CURRENT_PPS_MULTIPLIER              (5u)
+
+/** Multiplier used to convert from current unit used in other PDOs to that used in AVS PDO/RDO. */
+#define CY_PD_CURRENT_AVS_MULTIPLIER              (4u)
 
 /** VBus current usage = 0 A. */
 #define CY_PD_ISAFE_0A                            (0u)
@@ -460,22 +485,22 @@
 #define CY_PD_I_0P9A                              (90u)
 
 /** VBus current usage = 1.0 A. */
-#define CY_PD_I_1A                                (100)
+#define CY_PD_I_1A                                (100u)
 
 /** VBus current usage = 1.5 A. */
-#define CY_PD_I_1P5A                              (150)
+#define CY_PD_I_1P5A                              (150u)
 
 /** VBus current usage = 2.0 A. */
-#define CY_PD_I_2A                                (200)
+#define CY_PD_I_2A                                (200u)
 
 /** VBus current usage = 3.0 A. */
-#define CY_PD_I_3A                                (300)
+#define CY_PD_I_3A                                (300u)
 
 /** VBus current usage = 4.0 A. */
-#define CY_PD_I_4A                                (400)
+#define CY_PD_I_4A                                (400u)
 
 /** VBus current usage = 5.0 A. */
-#define CY_PD_I_5A                                (500)
+#define CY_PD_I_5A                                (500u)
 
 /** Current unit used in PDOs. */
 #define CY_PD_CUR_PER_UNIT                     (10u)
@@ -534,11 +559,23 @@
 /** VBus ON timer period in ms. See Table 7-22 of USBPD Spec Rev2 v1.2 */
 #define CY_PD_VBUS_TURN_ON_TIMER_PERIOD        (275u)
 
+/** VBus ON timer period in ms for EPR mode. */
+#define CY_PD_EPR_VBUS_TURN_ON_TIMER_PERIOD    (700u)
+
 /** VBus OFF timer period in ms. See Table 7-22 of USBPD Spec Rev2 v1.2 */
 #define CY_PD_VBUS_TURN_OFF_TIMER_PERIOD       (625u)
 
 /** Source transition timer period in ms. See Section 6.5.6.1 of USBPD Spec Rev2 v1.2 */
 #define CY_PD_PS_SRC_TRANS_TIMER_PERIOD        (400u)
+
+/** Src.Trans timer period in ms for EPR Fixed */
+#define CY_PD_PS_EPR_FIXED_SRC_TRANS_TIMER_PERIOD            (860u)
+
+/** Src.Trans timer period in ms for EPR AVS Large */
+#define CY_PD_PS_EPR_AVS_LARGE_SRC_TRANS_TIMER_PERIOD        (700u)
+
+/** Src.Trans timer period in ms for EPR AVS Small */
+#define CY_PD_PS_EPR_AVS_SMALL_SRC_TRANS_TIMER_PERIOD        (50u)
 
 /** Source off timer period in ms. See Section 6.5.6.2 of USBPD Spec Rev2 v1.2 */
 #define CY_PD_PS_SRC_OFF_TIMER_PERIOD          (900u)
@@ -549,8 +586,25 @@
 /** Sink transition period in ms. See Section 6.5.6.1 of USBPD Spec Rev2 v1.2 */
 #define CY_PD_PS_SNK_TRANSITION_TIMER_PERIOD   (500u)
 
+/** Src.Recover timer period in ms for EPR mode. */
+#define CY_PD_EPR_SRC_RECOVER_TIMER_PERIOD     (1250u)
+
+/** EPR Snk. transition period in ms. */
+#define CY_PD_PS_SNK_EPR_TRANSITION_TIMER_PERIOD   (925u)
+
+/** Time (in ms) allowed for source voltage to become valid.
+ * tAvsSrcTransSmall  */
+#define CY_PD_PSOURCE_AVS_TRANS_SMALL_PERIOD      (50u)
+
+/** Time (in ms) allowed for source voltage to become valid.
+ * tAvsSrcTransSmall  */
+#define CY_PD_PSOURCE_AVS_TRANS_LARGE_PERIOD      (700u)
+
 /** Source Recover timer period in ms. See Section 7.6.1 of USBPD Spec Rev2 v1.2 */
 #define CY_PD_SRC_RECOVER_TIMER_PERIOD         (800u)
+
+/** Src.Recover timer period in ms for EPR mode. */
+#define CY_PD_EPR_SRC_RECOVER_TIMER_PERIOD     (1250u)
 
 /** Sender response timeout period in ms. See Section 6.5.2 of USBPD Spec Rev2 v1.2 */
 #define CY_PD_SENDER_RESPONSE_TIMER_PERIOD     (27u)
@@ -624,83 +678,110 @@
 /** Time in ms allowed for VBus to turn on during hard reset. */
 #define CY_PD_SINK_CY_PD_VBUS_TURN_ON_TIMER_PERIOD   (1300u)
 
-/** Hard reset timer period in ms. See Section 6.5.11.2 of USBPD Spec Rev2 v1.2 */
+/** Hard reset timer period in ms. See Section 6.5.11.2 of USBPD Spec Rev2 v1.2
+ * */
 #define CY_PD_PS_HARD_RESET_TIMER_PERIOD       (27u)
 
-/** Time for which PD 3.0 source will keep Rp as SinkTxNG after returning to Ready state. */
-#define CY_PD_COLLISION_SRC_COOL_OFF_TIMER_PERIOD      (5u)
+/** Time for which PD 3.0 source will keep Rp as SinkTxNG after returning to
+ * Ready state. */
+#define CY_PD_COLLISION_SRC_COOL_OFF_TIMER_PERIOD         (5u)
 
 /** Delay between AMS initiation attempts by PD 3.0 sink while Rp = SinkTxNG. */
-#define CY_PD_SINK_TX_TIMER_PERIOD                     (18u)
+#define CY_PD_SINK_TX_TIMER_PERIOD                          (18u)
 
 /** PPS timer period in ms. */
-#define CY_PD_PPS_SRC_TIMER_PERIOD                     (14000u)
+#define CY_PD_PPS_SRC_TIMER_PERIOD                          (14000u)
 
 /** CC debounce period in ms from Type-C spec. */
-#define CY_PD_TYPEC_CC_DEBOUNCE_TIMER_PERIOD              (140u)
+#define CY_PD_TYPEC_CC_DEBOUNCE_TIMER_PERIOD                (140u)
 
 /** PD debounce period in ms. */
-#define CY_PD_TYPEC_PD_DEBOUNCE_TIMER_PERIOD              (11u)
+#define CY_PD_TYPEC_PD_DEBOUNCE_TIMER_PERIOD                (11u)
 
 /** Rd debounce period (detach detection) in ms. */
-#define CY_PD_TYPEC_RD_DEBOUNCE_TIMER_PERIOD              (12u)
+#define CY_PD_TYPEC_RD_DEBOUNCE_TIMER_PERIOD                (12u)
 
-/** Delay between Attached.Wait state entry and start of checks for detached status. */
-#define CY_PD_TYPEC_ATTACH_WAIT_ENTRY_DELAY_PERIOD        (10u)
+/** Delay between Attached.Wait state entry and start of checks for detached
+ * status. */
+#define CY_PD_TYPEC_ATTACH_WAIT_ENTRY_DELAY_PERIOD          (10u)
 
 /** Debounce period used to detect detach when we are source. */
-#define CY_PD_TYPEC_SRC_DETACH_DEBOUNCE_PERIOD            (2u)
+#define CY_PD_TYPEC_SRC_DETACH_DEBOUNCE_PERIOD              (2u)
 
 /** Period in ms used to detect Rp change in a PD 3.0 contract. */
-#define CY_PD_TYPEC_PD3_RPCHANGE_DEBOUNCE_PERIOD          (2u)
+#define CY_PD_TYPEC_PD3_RPCHANGE_DEBOUNCE_PERIOD            (2u)
 
 /** Type-C error recovery timer period in ms. */
-#define CY_PD_TYPEC_ERROR_RECOVERY_TIMER_PERIOD           (250u)
+#define CY_PD_TYPEC_ERROR_RECOVERY_TIMER_PERIOD             (250u)
 
 /** Type-C Try DRP timer period in ms. */
-#define CY_PD_TYPEC_DRP_TRY_TIMER_PERIOD                  (110u)
+#define CY_PD_TYPEC_DRP_TRY_TIMER_PERIOD                    (110u)
 
 /** Type-C Try Timeout timer period in ms. */
-#define CY_PD_TYPEC_TRY_TIMEOUT_PERIOD                    (800u)
+#define CY_PD_TYPEC_TRY_TIMEOUT_PERIOD                      (800u)
 
-/** Period in ms to check whether the solution state allows to move forward with Type-C connection. */
-#define CY_PD_SLN_STATUS_CHECK_PERIOD                     (10u)
+/** Period in ms to check whether the solution state allows to move forward
+ * with Type-C connection. */
+#define CY_PD_SLN_STATUS_CHECK_PERIOD                       (10u)
+
+/** EPR Mode Entry timeout in ms */
+#define CY_PD_EPR_MODE_ENTER_TIMEOUT_PERIOD                 (500u)
+
+/** EPR Mode Exit timeout in ms */
+#define CY_PD_EPR_MODE_EXIT_TIMEOUT_PERIOD                  (500u)
+
+/** EPR SRC KeepAlive timer period in ms */     
+#define CY_PD_EPR_SNK_KEEPALIVE_TIMER_PERIOD                (375u)
+
+/** EPR SRC KeepAlive timer period in ms */ 
+#define CY_PD_EPR_SRC_KEEPALIVE_TIMER_PERIOD                (900u)   
 
 /** FRS transmit enable flag in config table setting. */
-#define CY_PD_FRS_TX_ENABLE_MASK                      (0x02u)
+#define CY_PD_FRS_TX_ENABLE_MASK                            (0x02u)
 
 /** FRS receive enable flag in config table setting. */
-#define CY_PD_FRS_RX_ENABLE_MASK                      (0x01u)
+#define CY_PD_FRS_RX_ENABLE_MASK                            (0x01u)
 
 /** Size of extended source capabilities message in bytes. */
-#define CY_PD_EXT_SRCCAP_SIZE                      (24u)
+#define CY_PD_EXT_SRCCAP_SIZE                               (25u)
+/** Size of extended source capabilities message buffer. */
+#define CY_PD_EXT_SRCCAP_BUF_SIZE                           (28u)
 
 /** Index of Source Inputs field in extended source caps. */
-#define CY_PD_EXT_SRCCAP_INP_INDEX                 (21u)
+#define CY_PD_EXT_SRCCAP_INP_INDEX                          (21u)
 
 /** Mask for unconstrained source input in extended source caps. */
-#define CY_PD_EXT_SRCCAP_INP_UNCONSTRAINED         (0x02u)
+#define CY_PD_EXT_SRCCAP_INP_UNCONSTRAINED                  (0x02u)
 
-/** Index of PDP field in extended source caps. */
-#define CY_PD_EXT_SRCCAP_PDP_INDEX                 (23u)
+/** Index of SPR PDP field in extended source caps. */
+#define CY_PD_EXT_SPR_SRCCAP_PDP_INDEX                      (23u)
+
+/** Index of EPR PDP field in extended source caps. */
+#define CY_PD_EXT_EPR_SRCCAP_PDP_INDEX                      (24u)
 
 /** Size of extended sink cap message in bytes. */
-#define CY_PD_EXT_SNKCAP_SIZE                      (21u)
+#define CY_PD_EXT_SNKCAP_SIZE                               (25u)
 
 /** Size of buffer allocated for extended sink cap data. */
-#define CY_PD_EXT_SNKCAP_BUF_SIZE                  (24u)
+#define CY_PD_EXT_SNKCAP_BUF_SIZE                           (28u)
 
 /** Offset of SKEDB version field in Ext. Snk Cap. This field must be non-zero for a valid response. */
-#define CY_PD_EXT_SNKCAP_VERS_INDEX                (10u)
+#define CY_PD_EXT_SNKCAP_VERS_INDEX                         (10u)
 
 /** Size of status extended message in bytes. */
-#define CY_PD_EXT_STATUS_SIZE                      (7u)
+#define CY_PD_EXT_STATUS_SIZE                               (7u)
 
 /** Size of PPS status extended message in bytes. */
-#define CY_PD_EXT_PPS_STATUS_SIZE                  (4u)
+#define CY_PD_EXT_PPS_STATUS_SIZE                           (4u)
+
+/**  Size of EPR Avs Small step*/
+#define CY_PD_EPR_AVS_SMALL_STEP_VOLTAGE                    (1000u)
+
+/** Index of EPR PDP field in extended sink caps. */    
+#define CY_PD_EXT_SNKCAP_EPRPDP_INDEX                       (22u)
 
 /** Externally powered bit position in Source PDO mask. */
-#define CY_PD_EXTERNALLY_POWERED_BIT_POS       (7u)
+#define CY_PD_EXTERNALLY_POWERED_BIT_POS                    (7u)
 
 /** Mask to be applied on Fixed Supply Source PDO for PD Rev 2.0 */
 #define CY_PD_FIX_SRC_PDO_MASK_REV2                (0xFE3FFFFFu)
@@ -856,6 +937,11 @@
 #define CY_PD_DATA_MSG_VDM_MASK                   (0x1UL << CY_PDSTACK_DATA_MSG_VDM)
 #define CY_PD_DATA_MSG_ENTER_USB_MASK             (0x1UL << CY_PDSTACK_DATA_MSG_ENTER_USB)
 
+#define CY_PD_DATA_MSG_EPR_REQUEST_MASK           (0x1UL << CY_PDSTACK_DATA_MSG_EPR_REQUEST)
+#define CY_PD_DATA_MSG_EPR_MODE_MASK              (0x1UL << CY_PDSTACK_DATA_MSG_EPR_MODE)     
+#define CY_PD_DATA_MSG_SOURCE_INFO_MASK           (0x1UL << CY_PDSTACK_DATA_MSG_SOURCE_INFO)     
+#define CY_PD_DATA_MSG_REVISION_MASK              (0x1UL << CY_PDSTACK_DATA_MSG_REVISION)    
+
 /* Message masks for extended data messages. */
 #define CY_PD_EXTD_MSG_SRC_CAP_EXTD_MASK          (0x1UL << CY_PDSTACK_EXTD_MSG_SRC_CAP_EXTD)
 #define CY_PD_EXTD_MSG_STATUS_MASK                (0x1UL << CY_PDSTACK_EXTD_MSG_STATUS)
@@ -870,6 +956,10 @@
 #define CY_PD_EXTD_MSG_FW_UPDATE_RESP_MASK        (0x1UL << CY_PDSTACK_EXTD_MSG_FW_UPDATE_RESP)
 #define CY_PD_EXTD_MSG_SNK_CAP_EXTD_MASK          (0x1UL << CY_PDSTACK_EXTD_MSG_SNK_CAP_EXTD)
 
+#define CY_PD_EXTD_MSG_EXTD_CTRL_MSG_MASK         (0x1 << CY_PDSTACK_EXTD_MSG_EXTD_CTRL_MSG)
+#define CY_PD_EXTD_MSG_EPR_SRC_CAP_MASK           (0x1 << CY_PDSTACK_EXTD_MSG_EPR_SRC_CAP)
+#define CY_PD_EXTD_MSG_EPR_SNK_CAP_MASK           (0x1 << CY_PDSTACK_EXTD_MSG_EPR_SNK_CAP)
+
 #define CY_PD_CBL_CAP_0A                          (0u)        /* Cable current capability: 0 A. */
 #define CY_PD_CBL_CAP_DFLT                        (90u)       /* Cable current capability: 900 mA (Type-C default). */
 #define CY_PD_CBL_CAP_3A                          (300u)      /* Cable current capability: 3 A. */
@@ -878,6 +968,8 @@
 #define CY_PD_CBL_VDO_VERS_1_0                    (0u)        /* Active Cable VDO version 1.0 */
 #define CY_PD_CBL_VDO_VERS_1_2                    (2u)        /* Active Cable VDO version 1.2 */
 #define CY_PD_CBL_VDO_VERS_1_3                    (3u)        /* Active Cable VDO version 1.3 */
+
+#define CY_PD_MAX_CBL_VBUS_50V                    (3u)        /* Max. Cable VBUS voltage: 50V.Checked in EPR mode. */
 
 /*
  * Default cable current capability assumed by the stack. Please use
@@ -976,6 +1068,12 @@
 #define CY_PD_PD_EXTD_STATUS_EVT_CF_POS           (4u)
 #define CY_PD_PD_EXTD_PPS_STATUS_EVT_CF_POS       (3u)
 #define CY_PD_PD_EXTD_STATUS_CBL_LIMIT_POS        (1u)
+
+#define CY_PD_PD_EXTD_STATUS_PWR_SIZE             (8u)
+#define CY_PD_PD_EXTD_STATUS_PWR_LED_POS          (3u)
+#define CY_PD_PD_EXTD_STATUS_PWR_LED_MASK         (0x38u)
+
+#define CY_PD_EXTD_STATUS_PWR_STATE_CHANGE_MASK   (0x000000FFu)
 
 /** @endcond */
 
@@ -1104,6 +1202,10 @@ typedef enum
     CY_PDSTACK_DATA_MSG_ALERT,                     /**< 0x06: Alert message. */
     CY_PDSTACK_DATA_MSG_GET_COUNTRY_INFO,          /**< 0x07: Get_Country_Info message. */
     CY_PDSTACK_DATA_MSG_ENTER_USB,                 /**< 0x08: Enter_USB message. */
+    CY_PDSTACK_DATA_MSG_EPR_REQUEST,               /**< 0x09: EPR_Request message. */
+    CY_PDSTACK_DATA_MSG_EPR_MODE,                  /**< 0x0A: EPR_Mode message. */
+    CY_PDSTACK_DATA_MSG_SOURCE_INFO,               /**< 0x0B: Source_Info message. */
+    CY_PDSTACK_DATA_MSG_REVISION,                  /**< 0x0C: Revision message. */
     CY_PDSTACK_DATA_MSG_VDM = 15                   /**< 0x0F: Vendor_Defined message. */
 } cy_en_pdstack_data_msg_t;
 
@@ -1127,8 +1229,25 @@ typedef enum
     CY_PDSTACK_EXTD_MSG_PPS_STATUS,                /**< 0x0C: PPS_Status message. */
     CY_PDSTACK_EXTD_MSG_COUNTRY_INFO,              /**< 0x0D: Country_Info message. */
     CY_PDSTACK_EXTD_MSG_COUNTRY_CODES,             /**< 0x0E: Country_Codes message. */
-    CY_PDSTACK_EXTD_MSG_SNK_CAP_EXTD               /**< 0x0F: Sink_Capabilities_Extended message. */
+    CY_PDSTACK_EXTD_MSG_SNK_CAP_EXTD,              /**< 0x0F: Sink_Capabilities_Extended message. */
+    CY_PDSTACK_EXTD_MSG_EXTD_CTRL_MSG,             /**< 0x10: Extended_Control_Msg message. */
+    CY_PDSTACK_EXTD_MSG_EPR_SRC_CAP,               /**< 0x11: EPR_Source_Capabilities message. */
+    CY_PDSTACK_EXTD_MSG_EPR_SNK_CAP                /**< 0x13: EPR_Sink_Capabilities message. */ 
 } cy_en_pdstack_extd_msg_t;
+
+
+/**
+ * @typedef cy_en_pdstack_extd_ctrl_msg_t
+ * @brief Enum of the Extended Control Message Types sent in Ext. Ctrl Message Data Block (offset 0).
+ */
+typedef enum
+{
+    CY_PDSTACK_EPR_GET_SRC_CAP = 1,                /**< EPR_Get_Source_Cap ext. control msg. */
+    CY_PDSTACK_EPR_GET_SNK_CAP,                    /**< EPR_Get_Sink_Cap ext. control msg . */
+    CY_PDSTACK_EPR_KEEP_ALIVE,                     /**< EPR_KeepAlive ext. control msg. */
+    CY_PDSTACK_EPR_KEEP_ALIVE_ACK                  /**< EPR_KeepAlive_Ack ext. control msg. */
+} cy_en_pdstack_extd_ctrl_msg_t;
+
 
 /**
  * @typedef cy_en_pdstack_pdo_t
@@ -1149,10 +1268,23 @@ typedef enum
 typedef enum
 {
     CY_PDSTACK_APDO_PPS = 0,                       /**< Programmable Power Supply PDO. */
-    CY_PDSTACK_APDO_RSVD1,                         /**< Reserved for future use. */
+    CY_PDSTACK_APDO_AVS,                           /**< Reserved for future use. */
     CY_PDSTACK_APDO_RSVD2,                         /**< Reserved for future use. */
     CY_PDSTACK_APDO_RSVD3                          /**< Reserved for future use. */
 } cy_en_pdstack_apdo_t;
+
+
+/**
+ * @typedef cy_en_pdstack_epr_avs_t
+ * @brief Enum of the EPR AVS modes.
+ */
+typedef enum
+{
+    CY_PDSTACK_SPR_MODE = 0,                        /**< Standard Power Range Mode */
+    CY_PDSTACK_EPR_FIXED_MODE,                      /**< Extended Power Range Fixed Mode*/
+    CY_PDSTACK_EPR_AVS_SMALL,                       /**< EPR Adjustable Voltage Supply Small step Mode*/
+    CY_PDSTACK_EPR_AVS_LARGE,                       /**< EPR Adjustable Voltage Supply Large step Mode */
+} cy_en_pdstack_epr_avs_t;
 
 /**
  * @typedef cy_en_pdstack_peak_cur_cap_t
@@ -1250,7 +1382,13 @@ typedef enum
     CY_PDSTACK_DPM_CMD_INITIATE_CBL_DISCOVERY,     /**< 13: Initiate cable discovery (preceded by VConn Swap if required). */
     CY_PDSTACK_DPM_CMD_SEND_DATA_RESET,            /**< 14: Send a USB4 Data_Reset message. */
     CY_PDSTACK_DPM_CMD_SEND_ENTER_USB,             /**< 15: Send a USB4 Enter_USB message to port partner or cable marker. */
-    CY_PDSTACK_DPM_CMD_GET_SNK_CAP_EXTENDED,       /**< 16: Send Get_Sink_Cap_Extended message. */
+    CY_PDSTACK_DPM_CMD_GET_SNK_CAP_EXTENDED,       /**< 16: Send Get_Sink_Cap_Extended message. */   
+    CY_PDSTACK_DPM_CMD_SEND_EPR_MODE,              /**< 17: Send EPR_Mode message. */
+    CY_PDSTACK_DPM_CMD_SNK_EPR_MODE_ENTRY,         /**< 18: Send EPR_Mode Entry message. */
+    CY_PDSTACK_DPM_CMD_SNK_SEND_KEEP_ALIVE,        /**< 19: Send EPR Keep Alive message. */
+    CY_PDSTACK_DPM_CMD_SEND_EXTD_CTRL_MSG,         /**< 1A: Send EXT_CTRL_MSG message. */
+    CY_PDSTACK_DPM_CMD_SEND_GET_SOURCE_INFO,       /**< 1B: Send Get_Source_Info message. */
+    CY_PDSTACK_DPM_CMD_SEND_GET_REVISION,          /**< 1C: Send Get_Revision message. */
     CY_PDSTACK_DPM_CMD_SEND_INVALID = 0xFFu        /**< FF: Invalid command code. */
 } cy_en_pdstack_dpm_pd_cmd_t;
 
@@ -1260,7 +1398,7 @@ typedef enum
  */
 typedef enum
 {
-    CY_PDSTACK_VDM_TYPE_UNSTRUCTURED = 0,       /**< Unstructured VDM. */
+    CY_PDSTACK_VDM_TYPE_UNSTRUCTURED = 0,        /**< Unstructured VDM. */
     CY_PDSTACK_VDM_TYPE_STRUCTURED,              /**< Structured VDM. */
 } cy_en_pdstack_vdm_type_t;
 
@@ -1554,7 +1692,18 @@ typedef enum
     CY_PDSTACK_PE_FSM_EVAL_DATA_RESET,                     /**< 40: Policy Engine Handling Data_Reset request. */
     CY_PDSTACK_PE_FSM_SEND_DATA_RESET,                     /**< 41: Policy Engine initiating Data_Reset request. */
     CY_PDSTACK_PE_FSM_EVAL_ENTER_USB,                      /**< 42: Policy Engine handling Enter USB request. */
-    CY_PDSTACK_PE_FSM_MAX_STATES                           /**< 43: Invalid Policy Engine state. */
+#if (!(CY_PD_SINK_ONLY)) 
+    CY_PDSTACK_PE_FSM_SRC_EVAL_EPR_MODE_ENTRY,             /**< 43: Policy Engine handling EPR MODE request. */
+    CY_PDSTACK_PE_FSM_SRC_SEND_EPR_MODE_RESULT,            /**< 44: Policy Engine handling EPR MODE request. */
+    CY_PDSTACK_PE_FSM_SRC_SEND_EPR_SRC_CAP,                /**< 45: Policy Engine Send EPR SRC CAP. */
+#endif /* (!(CY_PD_SINK_ONLY)) */ 
+#if (!(CY_PD_SOURCE_ONLY))    
+    CY_PDSTACK_PE_FSM_SNK_SEND_EPR_MODE_ENTRY,             /**< 46: Policy Engine Request EPR Mode Entry. */
+    CY_PDSTACK_PE_FSM_SNK_EPR_ENTRY_WAIT_FOR_RESP,         /**< 47: Policy Engine handling EPR MODE request. */
+    CY_PDSTACK_PE_FSM_SNK_EPR_KEEP_ALIVE,                  /**< 48: Policy Engine send EPR MODE Keep Alive. */
+    CY_PDSTACK_PE_FSM_SNK_SEND_EPR_CAP,                    /**< 49: Policy Engine send EPR Sink Capabilities. */
+#endif /* (!(CY_PD_SOURCE_ONLY)) */
+    CY_PDSTACK_PE_FSM_MAX_STATES                           /**< 50: Invalid Policy Engine state. */
 }cy_en_pdstack_pe_fsm_state_t;
 
 /**
@@ -1654,7 +1803,16 @@ typedef enum
     APP_EVT_HR_SENT_RCVD_DEFERRED,              /**< 0x39: Deferred Hard Reset Sent/Received event handling to
                                                            accommodate retimer communication delay timing. */
     APP_EVT_BAD_SINK_APDO_SEL,                  /**< 0x3A: APDO selection in PD 2.0 or less revision */
-    APP_TOTAL_EVENTS                            /**< 0x3B: Total number of application events. */
+
+    APP_EVT_SOURCE_INFO_RECEIVED,               /**< 0x3B: Source Info message Received from Sink*/
+    APP_EVT_REVISION_RECEIVED,                  /**< 0x3C: Revision Data message Received */  
+
+    APP_EVT_EPR_MODE_ENTER_RECEIVED,            /**< 0x3D: EPR Mode Enter command Received from Sink port */
+    APP_EVT_EPR_MODE_ENTER_SUCCESS,             /**< 0x3E: EPR Mode Enter successful, Source response with Enter Succeeded */
+    APP_EVT_EPR_MODE_ENTER_FAILED,              /**< 0x3F: EPR Mode Enter failed, Source response with Fail*/
+    APP_EVT_EPR_MODE_EXIT,                      /**< 0x40: EPR Mode Exit Received*/
+    APP_EVT_VCONN_SWAP_FAILED,                  /**< 0x41: VConn_SWAP process failed in EPR Enter msg. sequence. */
+    APP_TOTAL_EVENTS                            /**< 0x41: Total number of application events. */
 } cy_en_pdstack_app_evt_t;
 
 /**
@@ -1723,6 +1881,87 @@ typedef enum
 } cy_en_pdstack_data_reset_state_t;
 
 /**
+ * @typedef cy_en_pdstack_epr_mode_state_t
+ * @brief Enumeration of sub-states associated with EPR_Mode AMS.
+ */
+typedef enum
+{
+    CY_PDSTACK_EPR_MODE_STATE_IDLE = 0,                     /**< No EPR Mode related operation pending. */
+    CY_PDSTACK_EPR_MODE_STATE_WAIT_ACK,                     /**< Sender waiting for EPR Mode Acknowledgement. */
+    CY_PDSTACK_EPR_MODE_STATE_ACKED,                        /**< Waiting for next step after sending Accept response. */    
+    CY_PDSTACK_EPR_MODE_STATE_WAIT_CBL_DSC,                 /**< Waiting for VConn swap and Cable Discovery completion before sending EPR MODE Enter/Fail. */
+    CY_PDSTACK_EPR_MODE_STATE_WAIT_COMPLETION,              /**< UFP waiting for EPR Mode completion. */
+    CY_PDSTACK_EPR_MODE_STATE_COMPLETE_DELAY                /**< DFP waiting to send EPR Mode Enter/Fail message. */
+} cy_en_pdstack_epr_mode_state_t;
+
+/**
+ * @typedef cy_en_pdstack_eprmdo_action_t
+ * @brief Enumeration of action fields in EPR Enter Mode data object.
+ */
+typedef enum
+{
+    CY_PDSTACK_EPR_MODE_ENTER = 1,                          /**< Enter cmd. */
+    CY_PDSTACK_EPR_MODE_ACK,                                /**< Enter Acknowledged. */
+    CY_PDSTACK_EPR_MODE_SUCCEEDED,                          /**< Enter Succeeded. */    
+    CY_PDSTACK_EPR_MODE_FAILED,                             /**< Enter Failed. */
+    CY_PDSTACK_EPR_MODE_EXIT                                /**< Exit cmd. */
+} cy_en_pdstack_eprmdo_action_t;
+
+/**
+ * @typedef cy_en_pdstack_eprmdo_data_t
+ * @brief Enumeration of data fields in EPR Enter Mode data object with EPR_MODE_ENTER_FAILED action field.
+ */
+typedef enum
+{
+    CY_PDSTACK_EPR_FAIL_UNKNOWN = 0,                         /**< Unknown cause. */
+    CY_PDSTACK_EPR_FAIL_EPR_CABLE,                           /**< Cable not EPR capable. */
+    CY_PDSTACK_EPR_FAIL_EPR_VCONN,                           /**< Source failed to become VCONN source. */    
+    CY_PDSTACK_EPR_FAIL_RDO,                                 /**< EPR Mode Capable bit not set in RDO. */
+    CY_PDSTACK_EPR_FAIL_UNABLE_NOW,                          /**< Unable at this time. */
+    CY_PDSTACK_EPR_FAIL_PDO,                                 /**< EPR Mode Capable bit not set in PDO. */
+    CY_PDSTACK_EPR_ENTER_SUCCESS                             /**< Enter Succeeded.No failures. */
+} cy_en_pdstack_eprmdo_data_t;
+
+
+/**
+ * @typedef cy_en_pdstack_intel_pf_type_t
+ * @brief List of Intel TBT/USB platform types in which the CCG device is used.
+ */
+typedef enum
+{
+    CY_PDSTACK_PF_THUNDERBOLT = 0,                         /**< Thunderbolt platforms like Alpine Ridge or Titan Ridge. */
+    CY_PDSTACK_PF_ICE_LAKE,                                /**< Intel IceLake platform. */
+    CY_PDSTACK_PF_TIGER_LAKE,                              /**< Intel TigerLake platform. */
+    CY_PDSTACK_PF_MAPLE_RIDGE                              /**< Intel RocketLake + Maple Ridge platform. */
+} cy_en_pdstack_intel_pf_type_t;
+
+/**
+ * @typedef cy_en_pdstack_amd_pf_type_t
+ * @brief List of AMD platform types in which the CCG device is used.
+ */
+typedef enum
+{
+    CY_PDSTACK_AMD_PF_RENOIR = 0,                         /**< AMD Renoir based platform. */
+    CY_PDSTACK_AMD_PF_REMBRANDT_A0,                       /**< AMD Rembrandt A0 based platform. */
+    CY_PDSTACK_AMD_PF_REMBRANDT_B0,                       /**< AMD Rembrandt B0 based platform. */
+} cy_en_pdstack_amd_pf_type_t;
+
+/**
+ * @typedef cy_en_pdstack_amd_rtmr_type_t
+ * @brief List of retimer types which could be used via AMD projects.
+ */
+typedef enum
+{
+    CY_PDSTACK_AMD_RETIMER_NONE = 0,                      /**< No retimer. */
+    CY_PDSTACK_AMD_RETIMER_PI3DPX1205A,                   /**< Retimer PI3DPX1205A. */
+    CY_PDSTACK_AMD_RETIMER_PS8828,                        /**< Retimer PS8828. */
+    CY_PDSTACK_AMD_RETIMER_PS8830,                        /**< Retimer PS8830. */
+    CY_PDSTACK_AMD_RETIMER_AUTO_PS8828A_OR_PS8830,        /**< Retimer type should be discovered. */
+    CY_PDSTACK_AMD_RETIMER_KB800X_B0,                     /**< Retimer KB800X B0. */
+    CY_PDSTACK_AMD_RETIMER_KB800X_B1,                     /**< Retimer KB800X B1. */
+} cy_en_pdstack_amd_rtmr_type_t;
+
+/**
  * @typedef cy_en_pdstack_pdo_sel_alg_t
  * @brief Algorithm selection for pdo evaluation.
  * Only fixed SRC_PDOs take part for current and voltage algorithms.
@@ -1785,7 +2024,7 @@ typedef union
     /** @brief Extended header broken down into respective fields. */
     struct EXTD_HDR_T
     {
-        uint16_t dataSize  : 9;                /**< Bits 08:00 - Extended message size in bytes. */
+        uint16_t dataSize   : 9;                /**< Bits 08:00 - Extended message size in bytes. */
         uint16_t rsvd1      : 1;                /**< Bit     09 - Reserved. */
         uint16_t request    : 1;                /**< Bit     10 - Chunk request. */
         uint16_t chunkNum   : 4;                /**< Bits 14:11 - Chunk number. */
@@ -1805,7 +2044,8 @@ typedef struct
     uint8_t  eventFlags;                       /**< Event flags. */
     uint8_t  tempStatus;                       /**< Temperature status. */
     uint8_t  powerStatus;                      /**< Power status. */
-    uint8_t  dummy[2];                          /**< Reserved field used for 4 byte alignment. */
+    uint8_t  powerStateChange;                 /**< Power state change. */
+    uint8_t  dummy;                            /**< Reserved field used for 4 byte alignment. */
 } cy_stc_pdstack_pd_power_status_t;
 
 /**
@@ -1881,6 +2121,19 @@ typedef struct
     cy_pd_pd_hdr_t    hdr;                    /**< Message header. */
     cy_pd_pd_do_t     dat[CY_PD_MAX_NO_OF_DO];      /**< Data objects associated with the message. */
 } cy_stc_pdstack_pd_packet_t;
+
+/**
+ * @brief Struct to hold an EPR PD packet.
+ */
+typedef struct
+{
+    uint8_t     sop;                    /**< Packet type. */
+    uint8_t     len;                    /**< Length in data objects. */
+    uint8_t     msg;                    /**< Message code. */
+    uint8_t     dataRole;              /**< Data role. */
+    cy_pd_pd_hdr_t    hdr;                    /**< Message header. */
+    cy_pd_pd_do_t     dat[CY_PD_MAX_NO_OF_DO + CY_PD_MAX_NO_OF_EPR_PDO];      /**< Data objects associated with the message. */
+} cy_stc_pdstack_pd_packet_epr_t;
 
 /* Forward declarations of structures. */
 struct cy_stc_pdstack_context;
@@ -2095,7 +2348,80 @@ typedef struct
             );                          /**< Get expected VBUS value in mV from application. This is to include any
                                               additional compensation done for drops. */
 #endif /* (!CY_PD_SINK_ONLY) */
+
+#if (CY_PD_USB4_SUPPORT_ENABLE)
+    void (*eval_enter_usb) (
+            struct cy_stc_pdstack_context *ptrPdStackContext,               /**< PD port index. */
+            const cy_stc_pdstack_pd_packet_t *eudo_p, 
+            cy_pdstack_app_resp_cbk_t app_resp_handler
+            );
+#endif /* (!CY_PD_SINK_ONLY) */
+
+#if ((CY_PD_EPR_ENABLE) && (!CY_PD_SINK_ONLY))
+    bool (*eval_epr_mode) (
+            struct cy_stc_pdstack_context *ptrPdStackContext,                /**< PdStack context. */
+            cy_en_pdstack_eprmdo_action_t eprModeState,                     /**< EPR Mode response that will be additionally checked */
+            cy_pdstack_app_resp_cbk_t appRespHandler                        /**< Callback to report response through. */
+            );                                                              /**< Function to evaluate EPR Mode Enter request. */
+    bool (*send_epr_cap) (
+            struct cy_stc_pdstack_context *ptrPdStackContext,               /**< PdStack context. */
+            cy_pdstack_app_resp_cbk_t appRespHandler                        /**< Callback to report response through. */
+            );                                                              /**< Function to send EPR Capabilities request. */
+#endif /* ((CY_PD_EPR_ENABLE) && (!CY_PD_SINK_ONLY)) */
 } cy_stc_pdstack_app_cbk_t;
+
+
+/**
+ * @brief Extended Power Range structure. This structure holds the copy of EPR configuration
+ * associated with a port on the CCG device. Values used for EPR implementation.
+ *
+ * @warning Initial elements of this structure maps directly to config table
+ * fields and hence must not be moved around or changed.
+ */
+typedef struct
+{
+    /** Length of epr in config table */
+    uint8_t  len;
+    
+    /** EPR SRC support enable/disable */
+    uint8_t  srcEnable;
+    
+    /** Default EPR SRC PDO enable mask */
+    uint8_t  srcPdoMask;
+    
+    /** Number of valid EPR SRC PDOs in the table */
+    uint8_t  srcPdoCount;
+    
+    /** EPR SRC PDO data array */
+    cy_pd_pd_do_t  srcPdo[CY_PD_MAX_NO_OF_EPR_PDO];
+    
+    /** Needed for bytes alignment with config table */
+    uint8_t  reserved;
+    
+    /** EPR SNK support enable/disable */
+    uint8_t  snkEnable;
+    
+    /** Default EPR SNK PDO enable mask */
+    uint8_t  snkPdoMask;
+    
+    /** Number of valid EPR SNK PDOs in the table */
+    uint8_t  snkPdoCount;
+    
+    /** EPR SNK PDO data array */
+    cy_pd_pd_do_t  snkPdo[CY_PD_MAX_NO_OF_EPR_PDO];
+    
+}cy_stc_pdstack_epr_t;
+
+/**
+ * @brief Enum of the Power LED States.
+ */
+typedef enum
+{
+    CY_PDSTACK_LED_OFF = 0UL,
+    CY_PDSTACK_LED_ON,
+    CY_PDSTACK_LED_BLINKING,
+    CY_PDSTACK_LED_BREATHING
+} cy_en_pdstack_pwr_led_t;
 
 /**
  * @brief PD Device Policy Status structure. This structure holds all of the
@@ -2337,6 +2663,16 @@ typedef struct
     /** Local DPM command buffer. */
     cy_stc_pdstack_dpm_pd_cmd_buf_t dpmCmdBuf;
 
+#if (CY_PD_EPR_ENABLE)
+    /** Max min current/power of current sink capabilities. */
+    uint16_t curSnkMaxMin[CY_PD_MAX_NO_OF_PDO + CY_PD_MAX_NO_OF_EPR_PDO];
+
+    /** Current source PDOs sent in source cap messages. */
+    cy_pd_pd_do_t curSrcPdo[CY_PD_MAX_NO_OF_PDO + CY_PD_MAX_NO_OF_EPR_PDO];
+
+    /** Current sink PDOs sent in sink cap messages. */
+    cy_pd_pd_do_t curSnkPdo[CY_PD_MAX_NO_OF_PDO + CY_PD_MAX_NO_OF_EPR_PDO];
+#else
     /** Max min current/power of current sink capabilities. */
     uint16_t curSnkMaxMin[CY_PD_MAX_NO_OF_PDO];
 
@@ -2345,6 +2681,7 @@ typedef struct
 
     /** Current sink PDOs sent in sink cap messages. */
     cy_pd_pd_do_t curSnkPdo[CY_PD_MAX_NO_OF_PDO];
+#endif /* CY_PD_EPR_ENABLE */
 
     /** Stores the current rdo received by source */
     cy_pd_pd_do_t srcCurRdo;
@@ -2377,7 +2714,7 @@ typedef struct
     cy_stc_pdstack_pd_power_status_t portStatus;
 
     /** Buffer to hold extended source caps. */
-    uint8_t extSrcCap[CY_PD_EXT_SRCCAP_SIZE];
+    uint8_t extSrcCap[CY_PD_EXT_SRCCAP_BUF_SIZE];
 
     /** Buffer to hold PPS status. */
     uint8_t ppsStatus[CY_PD_EXT_PPS_STATUS_SIZE];
@@ -2493,6 +2830,36 @@ typedef struct
 
     /** Manufacturer Name. Null terminated string. Should be 4-byte aligned. */
     uint8_t mfgName[26];
+    
+    /** Source info */
+    cy_pd_pd_do_t  srcInfo;
+    
+    /** PD revision */
+    cy_pd_pd_do_t  revision;
+    
+    /** EPR mode status. */
+    bool eprActive;
+    
+    /** EPR flag to indicate limit SNK PDO to SPR */
+    bool eprToSpr;
+    
+    /** EPR AVS contract status */
+    bool    eprAvsActive;
+
+    /** EPR AVS mode status */
+    uint8_t eprAvsMode;
+
+    /** EPR Source PDO count in the last sent EPR source cap. */
+    uint8_t curEprSrcPdoCount;
+    
+    /** EPR Sink PDO count in the last sent EPR sink cap. */
+    uint8_t curEprSnkPdoCount;
+    
+    /** EPR structure */
+    cy_stc_pdstack_epr_t epr;
+
+    /** Power LED state */
+    uint8_t pwrLed;
 
 } cy_stc_pdstack_dpm_status_t;
 
@@ -2641,8 +3008,13 @@ typedef struct {
     cy_stc_pdstack_pd_packet_t vdmPkt;
     /** Stores the DPM command response */
     cy_stc_pdstack_pd_packet_t dpmResp;
+#if CY_PD_EPR_ENABLE
+    /** Stores the current EPR source cap received */
+    cy_stc_pdstack_pd_packet_epr_t srcCap;
+#else
     /** Stores the current source cap received */
     cy_stc_pdstack_pd_packet_t srcCap;
+#endif /* CY_PD_EPR_ENABLE */
     /** Temporary buffer for sending VDM commands */
     cy_pd_pd_do_t tempDo;
     /** Temporary buffer for storing APP response */
@@ -2745,11 +3117,30 @@ typedef struct {
 
 #endif /* CY_PD_REV3_ENABLE */
 
+#if CY_PD_USB4_SUPPORT_ENABLE
+    uint8_t usb4DataResetState;
+#endif /* CY_PD_USB4_SUPPORT_ENABLE */
+
     /** Flag indicating PSRC enable call has been delayed. */
     bool pePsrcEnDelayed;
 
     /** Flag that indicates that Hard Reset sending is pending. */
     volatile bool peSendHrPending;
+    
+    /** Buffer that hold EPR Enter Mode Response data object. */
+    cy_pd_pd_do_t eprEnterRespDo;
+    
+    /** Variable to hold the EPR state */
+    uint8_t eprState;
+    
+    /** Flag that indicates whether EPR multi-messages are active */
+    bool eprMultiMessageFlag;
+    
+    /** Flag that indicates whether to send PDO in SPR */
+    bool eprSendcapInSpr;
+    
+    /** Buffer that hold the EPR Sink Extended Messages/Responses */
+    uint8_t eprSnkExtdChunkBuffer[26];
 
 } cy_stc_pdstack_pe_status_t;
 
@@ -2777,6 +3168,26 @@ typedef struct
     uint16_t dpmSnkWaitCapPeriod;
 
 } cy_stc_pdstack_dpm_params_t;
+
+/**
+ * @brief Structure to hold the RTOS interface. The application is expected to
+ * fill the structure with pointers to RTOS wrapper functions .
+ *
+ * @warning The application must check the callback pointer passed by the
+ * stack is not NULL.
+ */
+typedef struct
+{
+    int32_t (*dpm_rtos_evt_give) (
+            struct cy_stc_pdstack_context *ptrPdStackContext      /**< PD port index. */
+            );                          /**< DPM event give handler callback. */
+
+    int32_t (*dpm_rtos_evt_take) (
+            struct cy_stc_pdstack_context *ptrPdStackContext,     /**< PD port index. */
+            uint32_t waitTick                                    /**< Wait tick count. */
+            );                            /**< DPM event take handler callback. */
+} cy_stc_pdstack_rtos_context_t;
+
 
 /**
  * @brief Structure to PDSTACK Middleware context information.
@@ -2816,6 +3227,10 @@ typedef struct cy_stc_pdstack_context
 
     /** PdStack Timer Context */
     cy_stc_sw_timer_t *ptrTimerContext;
+
+    /** Pointer to the RTOS callback function structure. */
+    cy_stc_pdstack_rtos_context_t *ptrRtosContext;
+
 } cy_stc_pdstack_context_t;
 
 

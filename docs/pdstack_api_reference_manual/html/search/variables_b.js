@@ -19,6 +19,7 @@ var searchData=
   ['portdisable',['portDisable',['../structcy__stc__pdstack__dpm__status__t.html#ab5e5806cb5b4dd15373109c76c9d4fe8',1,'cy_stc_pdstack_dpm_status_t::portDisable()'],['../structcy__stc__pdstack__typec__status__t.html#a65ba698ac6fac995adc65d1cb7d2eab8',1,'cy_stc_pdstack_typec_status_t::portDisable()']]],
   ['portrole',['portRole',['../structcy__stc__pdstack__dpm__status__t.html#a040e2753a59eb17105471a76c9f5be79',1,'cy_stc_pdstack_dpm_status_t::portRole()'],['../structcy__stc__pdstack__port__cfg__t.html#a32c2305f18ba7d8842aaedb6410ae64d',1,'cy_stc_pdstack_port_cfg_t::portRole()']]],
   ['portstatus',['portStatus',['../structcy__stc__pdstack__dpm__status__t.html#a9fda26e590777527ec19ed25f250694b',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['powerstatechange',['powerStateChange',['../structcy__stc__pdstack__pd__power__status__t.html#abbe10bc89ed3c91bbeebc333715f435f',1,'cy_stc_pdstack_pd_power_status_t']]],
   ['powerstatus',['powerStatus',['../structcy__stc__pdstack__pd__power__status__t.html#a84091d61157a2d75d6b8376662f2193d',1,'cy_stc_pdstack_pd_power_status_t']]],
   ['ppssrcen',['ppsSrcEn',['../structcy__stc__pdstack__dpm__status__t.html#a4d049aa963f8cdb7c02e3fdf3440e901',1,'cy_stc_pdstack_dpm_status_t']]],
   ['ppsstatus',['ppsStatus',['../structcy__stc__pdstack__dpm__status__t.html#a6ca388090c82d20ff00114008bae88c5',1,'cy_stc_pdstack_dpm_status_t']]],
@@ -40,7 +41,9 @@ var searchData=
   ['ptrappcbk',['ptrAppCbk',['../structcy__stc__pdstack__context__t.html#aad333a42c5c675d3a849dbfe2b196c16',1,'cy_stc_pdstack_context_t']]],
   ['ptrdpmparams',['ptrDpmParams',['../structcy__stc__pdstack__context__t.html#a2507db902575bbee76664ae6c721c74b',1,'cy_stc_pdstack_context_t']]],
   ['ptrportcfg',['ptrPortCfg',['../structcy__stc__pdstack__context__t.html#ac7b062e413798d98b7d86bc367bb7202',1,'cy_stc_pdstack_context_t']]],
+  ['ptrrtoscontext',['ptrRtosContext',['../structcy__stc__pdstack__context__t.html#ab68de7d651d381267f1f91e6db5ca854',1,'cy_stc_pdstack_context_t']]],
   ['ptrtimercontext',['ptrTimerContext',['../structcy__stc__pdstack__context__t.html#adc68381afdd63c93dc0a4218e21ed76a',1,'cy_stc_pdstack_context_t']]],
   ['ptrusbpdcontext',['ptrUsbPdContext',['../structcy__stc__pdstack__context__t.html#a4e888ebeac403fe554c79610e0afe535',1,'cy_stc_pdstack_context_t']]],
+  ['pwrled',['pwrLed',['../structcy__stc__pdstack__dpm__status__t.html#ab3bc3d2ff9410dbaabcf4611581ddfb9',1,'cy_stc_pdstack_dpm_status_t']]],
   ['pwrlimited',['pwrLimited',['../structcy__stc__pdstack__dpm__status__t.html#ae6dde1fe9fa8e0f46357d9d1060934f9',1,'cy_stc_pdstack_dpm_status_t']]]
 ];

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 1.10: Functions</title>
+<title>PDStack Middleware Library 1.20: Functions</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="IFXCYP_one-line.png"/></a></td>
+  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 1.10</div>
+   <div id="projectname">PDStack Middleware Library 1.20</div>
   </td>
  </tr>
  </tbody>
@@ -112,6 +112,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga242623fe6b5efbf33c83ab3c3323e7be"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga242623fe6b5efbf33c83ab3c3323e7be">Cy_PdStack_Dpm_IsSleepAllowed</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, bool *ptrSleepAllowed)</td></tr>
 <tr class="memdesc:ga242623fe6b5efbf33c83ab3c3323e7be"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function checks if the PD policy engine and Type-C manager state machines corresponding to the specified Type-C port are idle.  <a href="#ga242623fe6b5efbf33c83ab3c3323e7be">More...</a><br /></td></tr>
 <tr class="separator:ga242623fe6b5efbf33c83ab3c3323e7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6351a34299af47084a316107294a50a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga6351a34299af47084a316107294a50a1">Cy_PdStack_Dpm_Rtos_Init</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, <a class="el" href="structcy__stc__pdstack__rtos__context__t.html">cy_stc_pdstack_rtos_context_t</a> *ptrRtosContext)</td></tr>
+<tr class="memdesc:ga6351a34299af47084a316107294a50a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function initializes the device policy manager with RTOS context details.  <a href="#ga6351a34299af47084a316107294a50a1">More...</a><br /></td></tr>
+<tr class="separator:ga6351a34299af47084a316107294a50a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa7461e8739b31c7c212e2af74f230c80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gaa7461e8739b31c7c212e2af74f230c80">Cy_PdStack_Dpm_Task</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext)</td></tr>
 <tr class="memdesc:gaa7461e8739b31c7c212e2af74f230c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function runs the Type-C manager and PD policy manager tasks for the specified port.  <a href="#gaa7461e8739b31c7c212e2af74f230c80">More...</a><br /></td></tr>
 <tr class="separator:gaa7461e8739b31c7c212e2af74f230c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -142,6 +145,51 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6bea08981f4ddf3f780383abc70f6fbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga6bea08981f4ddf3f780383abc70f6fbd">Cy_PdStack_Dpm_SetSolnBusy</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext)</td></tr>
 <tr class="memdesc:ga6bea08981f4ddf3f780383abc70f6fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to inform the Type-C/PD stack that the solution state does not allow Type-C transitions.  <a href="#ga6bea08981f4ddf3f780383abc70f6fbd">More...</a><br /></td></tr>
 <tr class="separator:ga6bea08981f4ddf3f780383abc70f6fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa1854d1e382cdc8a5880e525f516a40b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gaa1854d1e382cdc8a5880e525f516a40b">Cy_PdStack_Dpm_ChangeEprActiveFlag</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, bool flag)</td></tr>
+<tr class="memdesc:gaa1854d1e382cdc8a5880e525f516a40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to change state of EPR mode active flag.  <a href="#gaa1854d1e382cdc8a5880e525f516a40b">More...</a><br /></td></tr>
+<tr class="separator:gaa1854d1e382cdc8a5880e525f516a40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8323fef1fdb62cf478844a4d43f5cff8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga8323fef1fdb62cf478844a4d43f5cff8">Cy_PdStack_Dpm_IsEprModeActive</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, bool *isActive)</td></tr>
+<tr class="memdesc:ga8323fef1fdb62cf478844a4d43f5cff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to check whether EPR mode is active.  <a href="#ga8323fef1fdb62cf478844a4d43f5cff8">More...</a><br /></td></tr>
+<tr class="separator:ga8323fef1fdb62cf478844a4d43f5cff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9f31ce68e71ac99956956f429ae2d27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gaf9f31ce68e71ac99956956f429ae2d27">Cy_PdStack_Dpm_ChangeEprToSpr</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, bool flag)</td></tr>
+<tr class="memdesc:gaf9f31ce68e71ac99956956f429ae2d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function changes the EPR to SPR indicator.  <a href="#gaf9f31ce68e71ac99956956f429ae2d27">More...</a><br /></td></tr>
+<tr class="separator:gaf9f31ce68e71ac99956956f429ae2d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7f62cf570d855402af0a004702f5adb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gad7f62cf570d855402af0a004702f5adb">Cy_PdStack_Dpm_IsEprSpr</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, bool *isSpr)</td></tr>
+<tr class="memdesc:gad7f62cf570d855402af0a004702f5adb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function checks whether the EPR pdo needs to limit it to SPR.  <a href="#gad7f62cf570d855402af0a004702f5adb">More...</a><br /></td></tr>
+<tr class="separator:gad7f62cf570d855402af0a004702f5adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaae911bf71e2bf34e10ddead31588d74b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gaae911bf71e2bf34e10ddead31588d74b">Cy_PdStack_Dpm_IsEprAvsModeActive</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, bool *isActive)</td></tr>
+<tr class="memdesc:gaae911bf71e2bf34e10ddead31588d74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to check whether EPR AVS mode is active.  <a href="#gaae911bf71e2bf34e10ddead31588d74b">More...</a><br /></td></tr>
+<tr class="separator:gaae911bf71e2bf34e10ddead31588d74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1df6fdf79498cef6df1815bbdee6248b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga1df6fdf79498cef6df1815bbdee6248b">Cy_PdStack_Dpm_ChangeEprAvsActiveFlag</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, bool flag)</td></tr>
+<tr class="memdesc:ga1df6fdf79498cef6df1815bbdee6248b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to change state of EPR AVS mode active flag.  <a href="#ga1df6fdf79498cef6df1815bbdee6248b">More...</a><br /></td></tr>
+<tr class="separator:ga1df6fdf79498cef6df1815bbdee6248b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe86f56a7117cd31bf55f25ebc706e1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gabe86f56a7117cd31bf55f25ebc706e1c">Cy_PdStack_Dpm_IsValidAvsReq</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, uint8_t src_pdo_index, cy_pd_pd_do_t rdo)</td></tr>
+<tr class="memdesc:gabe86f56a7117cd31bf55f25ebc706e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to change state of EPR AVS mode active flag.  <a href="#gabe86f56a7117cd31bf55f25ebc706e1c">More...</a><br /></td></tr>
+<tr class="separator:gabe86f56a7117cd31bf55f25ebc706e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac66faebea2dbaf5915cf59d71bc94454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gac66faebea2dbaf5915cf59d71bc94454">Cy_PdStack_Dpm_EprSnkSendKeepAliveCb</a> (<a class="el" href="group__group__pdstack__data__structures.html#ga87a37816b1bb27d6ab0f583a1ac01cdd">cy_timer_id_t</a> id, void *ptrContext)</td></tr>
+<tr class="memdesc:gac66faebea2dbaf5915cf59d71bc94454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function callback to initiate Keep Alive message.  <a href="#gac66faebea2dbaf5915cf59d71bc94454">More...</a><br /></td></tr>
+<tr class="separator:gac66faebea2dbaf5915cf59d71bc94454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff5593f490badca6dc53a2d5b9941ea7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gaff5593f490badca6dc53a2d5b9941ea7">Cy_PdStack_Dpm_UpdateSnkMaxMin</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, uint8_t count, uint16_t *max_min)</td></tr>
+<tr class="memdesc:gaff5593f490badca6dc53a2d5b9941ea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to update the sink max/min current/power at runtime thereby overriding the generated configuration by EZ-PD Configurator.  <a href="#gaff5593f490badca6dc53a2d5b9941ea7">More...</a><br /></td></tr>
+<tr class="separator:gaff5593f490badca6dc53a2d5b9941ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacfa6c9ebe83b586dc059244db086ed95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gacfa6c9ebe83b586dc059244db086ed95">Cy_PdStack_Dpm_UpdateSnkCapMask</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, uint8_t mask)</td></tr>
+<tr class="memdesc:gacfa6c9ebe83b586dc059244db086ed95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to update the sink PDO mask at runtime thereby overriding the generated configuration by EZ-PD Configurator.  <a href="#gacfa6c9ebe83b586dc059244db086ed95">More...</a><br /></td></tr>
+<tr class="separator:gacfa6c9ebe83b586dc059244db086ed95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2dd874498d2c7b9e16748935541442a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gae2dd874498d2c7b9e16748935541442a">Cy_PdStack_Dpm_UpdateSnkCap</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, uint8_t count, cy_pd_pd_do_t *pdo)</td></tr>
+<tr class="memdesc:gae2dd874498d2c7b9e16748935541442a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to update the sink PDOs at runtime thereby overriding the generated configuration by EZ-PD Configurator.  <a href="#gae2dd874498d2c7b9e16748935541442a">More...</a><br /></td></tr>
+<tr class="separator:gae2dd874498d2c7b9e16748935541442a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga29165181d3ace6983fe11f11decd9254"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga29165181d3ace6983fe11f11decd9254">Cy_PdStack_Dpm_UpdateSrcCapMask</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, uint8_t mask)</td></tr>
+<tr class="memdesc:ga29165181d3ace6983fe11f11decd9254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to update the source PDO mask at runtime thereby overriding the generated configuration by EZ-PD Configurator.  <a href="#ga29165181d3ace6983fe11f11decd9254">More...</a><br /></td></tr>
+<tr class="separator:ga29165181d3ace6983fe11f11decd9254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaef57a1fc49e793766fd7f091dcdfddd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gaef57a1fc49e793766fd7f091dcdfddd8">Cy_PdStack_Dpm_UpdateSrcCap</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, uint8_t count, cy_pd_pd_do_t *pdo)</td></tr>
+<tr class="memdesc:gaef57a1fc49e793766fd7f091dcdfddd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to update the source PDOs at runtime thereby overriding the generated configuration by EZ-PD Configurator.  <a href="#gaef57a1fc49e793766fd7f091dcdfddd8">More...</a><br /></td></tr>
+<tr class="separator:gaef57a1fc49e793766fd7f091dcdfddd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81d70dcf068687970e99777d6119955a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga81d70dcf068687970e99777d6119955a">Cy_PdStack_Dpm_UpdateEprSnkCap</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, uint8_t count, cy_pd_pd_do_t *pdo)</td></tr>
+<tr class="memdesc:ga81d70dcf068687970e99777d6119955a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to update the EPR sink PDOs at runtime thereby overriding the generated configuration by EZ-PD Configurator.  <a href="#ga81d70dcf068687970e99777d6119955a">More...</a><br /></td></tr>
+<tr class="separator:ga81d70dcf068687970e99777d6119955a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga96e4125b87b56935a6772547091d19b3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga96e4125b87b56935a6772547091d19b3">Cy_PdStack_Dpm_UpdateEprSnkCapMask</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, uint8_t mask)</td></tr>
+<tr class="memdesc:ga96e4125b87b56935a6772547091d19b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to update the EPR sink PDO mask at runtime thereby overriding the generated configuration by EZ-PD Configurator.  <a href="#ga96e4125b87b56935a6772547091d19b3">More...</a><br /></td></tr>
+<tr class="separator:ga96e4125b87b56935a6772547091d19b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga571254a255a639c850955f2ee44a4ff6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga571254a255a639c850955f2ee44a4ff6">cy_sw_timer_init</a> (<a class="el" href="structcy__stc__sw__timer__t.html">cy_stc_sw_timer_t</a> *context, uint32_t sysClkFreq)</td></tr>
 <tr class="memdesc:ga571254a255a639c850955f2ee44a4ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function initializes the software timer module.  <a href="#ga571254a255a639c850955f2ee44a4ff6">More...</a><br /></td></tr>
 <tr class="separator:ga571254a255a639c850955f2ee44a4ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -447,6 +495,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the context pointer or the ptrSleepAllowed is invalid </dd></dl>
+
+</div>
+</div>
+<a id="ga6351a34299af47084a316107294a50a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6351a34299af47084a316107294a50a1">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_Rtos_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_Rtos_Init </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__rtos__context__t.html">cy_stc_pdstack_rtos_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrRtosContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function initializes the device policy manager with RTOS context details. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">ptrRtosContext</td><td>Pointer to RTOS API's callback context</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful CY_PDSTACK_STAT_BAD_PARAM if the input parameters are not valid </dd></dl>
 
 </div>
 </div>
@@ -815,6 +901,611 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+
+</div>
+</div>
+<a id="gaa1854d1e382cdc8a5880e525f516a40b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa1854d1e382cdc8a5880e525f516a40b">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_ChangeEprActiveFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_ChangeEprActiveFlag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to change state of EPR mode active flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">flag</td><td>sets/resets EPR active flag.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="ga8323fef1fdb62cf478844a4d43f5cff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8323fef1fdb62cf478844a4d43f5cff8">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_IsEprModeActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_IsEprModeActive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>isActive</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to check whether EPR mode is active. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">isActive</td><td>State of EPR flag</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="gaf9f31ce68e71ac99956956f429ae2d27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf9f31ce68e71ac99956956f429ae2d27">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_ChangeEprToSpr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_ChangeEprToSpr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function changes the EPR to SPR indicator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">flag</td><td>sets/resets EPR flag to limit PDO index.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="gad7f62cf570d855402af0a004702f5adb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7f62cf570d855402af0a004702f5adb">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_IsEprSpr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_IsEprSpr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>isSpr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function checks whether the EPR pdo needs to limit it to SPR. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">isSpr</td><td>Will contain true if eval pdo needs to limit pdo count to SPR otherwise false</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="gaae911bf71e2bf34e10ddead31588d74b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaae911bf71e2bf34e10ddead31588d74b">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_IsEprAvsModeActive()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_IsEprAvsModeActive </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>isActive</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to check whether EPR AVS mode is active. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">isActive</td><td>State of EPR flag</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="ga1df6fdf79498cef6df1815bbdee6248b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1df6fdf79498cef6df1815bbdee6248b">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_ChangeEprAvsActiveFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_ChangeEprAvsActiveFlag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>flag</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to change state of EPR AVS mode active flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">flag</td><td>sets/resets EPR AVS active flag.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>cy_en_pdstack_status_t </dd></dl>
+
+</div>
+</div>
+<a id="gabe86f56a7117cd31bf55f25ebc706e1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe86f56a7117cd31bf55f25ebc706e1c">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_IsValidAvsReq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_IsValidAvsReq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>src_pdo_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cy_pd_pd_do_t&#160;</td>
+          <td class="paramname"><em>rdo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to change state of EPR AVS mode active flag. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">src_pdo_index</td><td>SRC PDO index.</td></tr>
+    <tr><td class="paramname">rdo</td><td>Request Data Object received from port partner.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="gac66faebea2dbaf5915cf59d71bc94454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac66faebea2dbaf5915cf59d71bc94454">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_EprSnkSendKeepAliveCb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Cy_PdStack_Dpm_EprSnkSendKeepAliveCb </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__group__pdstack__data__structures.html#ga87a37816b1bb27d6ab0f583a1ac01cdd">cy_timer_id_t</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ptrContext</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function callback to initiate Keep Alive message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>Timer index</td></tr>
+    <tr><td class="paramname">ptrContext</td><td>Callback context</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>None </dd></dl>
+
+</div>
+</div>
+<a id="gaff5593f490badca6dc53a2d5b9941ea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff5593f490badca6dc53a2d5b9941ea7">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_UpdateSnkMaxMin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_UpdateSnkMaxMin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t *&#160;</td>
+          <td class="paramname"><em>max_min</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to update the sink max/min current/power at runtime thereby overriding the generated configuration by EZ-PD Configurator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">count</td><td>Number of PDOs</td></tr>
+    <tr><td class="paramname">max_min</td><td>Pointer to max/min current/power array.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful. CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="gacfa6c9ebe83b586dc059244db086ed95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacfa6c9ebe83b586dc059244db086ed95">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_UpdateSnkCapMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_UpdateSnkCapMask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to update the sink PDO mask at runtime thereby overriding the generated configuration by EZ-PD Configurator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">mask</td><td>PDO mask</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful. CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="gae2dd874498d2c7b9e16748935541442a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae2dd874498d2c7b9e16748935541442a">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_UpdateSnkCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_UpdateSnkCap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cy_pd_pd_do_t *&#160;</td>
+          <td class="paramname"><em>pdo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to update the sink PDOs at runtime thereby overriding the generated configuration by EZ-PD Configurator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">count</td><td>Number of PDOs</td></tr>
+    <tr><td class="paramname">pdo</td><td>Pointer to the PDO array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful. CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="ga29165181d3ace6983fe11f11decd9254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga29165181d3ace6983fe11f11decd9254">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_UpdateSrcCapMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_UpdateSrcCapMask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to update the source PDO mask at runtime thereby overriding the generated configuration by EZ-PD Configurator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">mask</td><td>PDO Mask</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="gaef57a1fc49e793766fd7f091dcdfddd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaef57a1fc49e793766fd7f091dcdfddd8">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_UpdateSrcCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_UpdateSrcCap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cy_pd_pd_do_t *&#160;</td>
+          <td class="paramname"><em>pdo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to update the source PDOs at runtime thereby overriding the generated configuration by EZ-PD Configurator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">count</td><td>Number of PDOs</td></tr>
+    <tr><td class="paramname">pdo</td><td>Pointer to the PDO array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="ga81d70dcf068687970e99777d6119955a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81d70dcf068687970e99777d6119955a">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_UpdateEprSnkCap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_UpdateEprSnkCap </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>count</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cy_pd_pd_do_t *&#160;</td>
+          <td class="paramname"><em>pdo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to update the EPR sink PDOs at runtime thereby overriding the generated configuration by EZ-PD Configurator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">count</td><td>Number of PDOs</td></tr>
+    <tr><td class="paramname">pdo</td><td>Pointer to the PDO array</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="ga96e4125b87b56935a6772547091d19b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga96e4125b87b56935a6772547091d19b3">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_UpdateEprSnkCapMask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_UpdateEprSnkCapMask </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to update the EPR sink PDO mask at runtime thereby overriding the generated configuration by EZ-PD Configurator. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">mask</td><td>PDO Mask</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
 
 </div>
 </div>
@@ -1378,7 +2069,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 1.10</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 1.20</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

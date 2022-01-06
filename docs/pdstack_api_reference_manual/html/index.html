@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 1.10: PDStack Middleware Library</title>
+<title>PDStack Middleware Library 1.20: PDStack Middleware Library</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="IFXCYP_one-line.png"/></a></td>
+  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 1.10</div>
+   <div id="projectname">PDStack Middleware Library 1.20</div>
   </td>
  </tr>
  </tbody>
@@ -87,9 +87,10 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="textblock"><p>The PDStack middleware implements state machines defined in the <b>Universal Serial Bus Type-C Cable and Connector Specification</b> and the <b>Universal Serial Bus Power Delivery Specification</b>. The middleware provides a set of Device Policy Manager (DPM) APIs through which the application can initialize, monitor and configure the middleware operation.</p>
 <p>The PDStack middleware operates on the top of the USBPD driver included in the MTB PDL CAT2(mtb-pdl-cat2) Peripheral Driver Library</p>
 <p><b>Features:</b></p><ol type="1">
-<li>Support Type-C port configuration and connection detection in the Sink Role</li>
+<li>Support Type-C port configuration and connection detection in the Sink, Source and Dual Role</li>
+<li>Support Extended Power Range (EPR) in Sink role.</li>
 <li>Support USBPD Communication with the following features:<ul>
-<li>USB PD revision 3.0 compliance</li>
+<li>USB PD revision 3.1 compliance</li>
 <li>USB PD revision 2.0 compliance (backward compatibility)</li>
 <li>Power contract negotiation in Sink Role</li>
 <li>Ability to respond to SOP and SOP' messages to support designs with a Captive USB-C cable.</li>
@@ -104,9 +105,11 @@ General Description</h1>
 <p>Refer to the <a class="el" href="index.html#section_pdstack_toolchain">Supported Software and Tools</a> section for compatibility information.</p>
 <p>Refer to the <a class="el" href="index.html#section_pdstack_changelog">Changelog</a> section for change history.</p>
 <p>PDStack operates on the top of the usbpd driver. The usbpd driver has some prerequisites for proper operation. Refer to the "USBPD (USB Power Delivery)" section of the MTB PDL CAT2(mtb-pdl-cat2) Peripheral Driver Library API Reference Manual. Also, refer to the <a class="el" href="index.html#section_pdstack_miscellaneous">Limitations and Restrictions</a> section for the different PDStack middleware restrictions and limitations.</p>
-<p>The PDStack Middleware is released in the form of pre-compiled libraries. Two library variants with different feature set to help limit the memory footprint of the stack in applications are released.</p><ol type="1">
-<li>pmg1_pd3_snk_lite - Library with support for USB Type-C sink operation and USB-PD Revision 3.0 messaging.</li>
+<p>The PDStack Middleware is released in the form of pre-compiled libraries. The following library variants with different feature set to help limit the memory footprint of the stack in applications are released.</p><ol type="1">
+<li>pmg1_pd3_snk_lite - Library with support for USB Type-C sink operation and USB-PD Revision 3.1 messaging.</li>
 <li>pmg1_pd2_snk_lite - Library with support for USB Type-C sink operation and USB-PD Revision 2.0 messaging. Using this library will reduce the flash (code) memory usage by the application.</li>
+<li>pmg1_pd3_drp - Library with support for USB Type-C dual role operation and USB-PD Revision 3.1 messaging. This library can be used in any Power-Delivery application.</li>
+<li>pmg1_pd3_snk_epr - Library with support for USB Type-C sink Extended Power Range(EPR) operation and USB-PD Revision 3.1 messaging.</li>
 </ol>
 <h1><a class="anchor" id="section_pdstack_quick_start"></a>
 Quick Start Guide</h1>
@@ -132,6 +135,8 @@ Configuration Considerations</h1>
 <li>After selecting the PDStack middleware through the library manager, the user can select the library variant by editing the Code Example Makefile:<ul>
 <li>Add 'PMG1_PD3_SNK_LITE' to the COMPONENTS for using the pmg1_pd3_snk_lite library</li>
 <li>Add 'PMG1_PD2_SNK_LITE' to the COMPONENTS for using the pmg1_pd2_snk_lite library</li>
+<li>Add 'PMG1_PD3_DRP' to the COMPONENTS for using the pmg1_pd3_drp library</li>
+<li>Add 'PMG1_PD3_SNK_EPR' to the COMPONENTS for using the pmg1_pd3_snk_epr library</li>
 </ul>
 </li>
 <li>Configure the USB-C port properties<ul>
@@ -144,7 +149,7 @@ Configuration Considerations</h1>
 <h1><a class="anchor" id="section_pdstack_miscellaneous"></a>
 Limitations and Restrictions</h1>
 <ol type="1">
-<li>This version of the PDStack Middleware supports the operation of a USB-C port as only a power sink/data UFP.</li>
+<li>The Extended Power Range (EPR) feature is supported only in the sink role.</li>
 </ol>
 <h1><a class="anchor" id="section_pdstack_toolchain"></a>
 Supported Software and Tools</h1>
@@ -153,9 +158,9 @@ Supported Software and Tools</h1>
 <tr>
 <th>Software and Tools </th><th>Version  </th></tr>
 <tr>
-<td>ModusToolbox Software Environment </td><td>2.3  </td></tr>
+<td>ModusToolbox Software Environment </td><td>2.4  </td></tr>
 <tr>
-<td>mtb-pdl-cat2 </td><td>1.1.0  </td></tr>
+<td>mtb-pdl-cat2 </td><td>1.5.0  </td></tr>
 <tr>
 <td>GCC Compiler </td><td>9.3.1  </td></tr>
 <tr>
@@ -168,6 +173,12 @@ Changelog</h1>
 <table class="doxtable">
 <tr>
 <th>Version</th><th>Changes</th><th>Reason for Change </th></tr>
+<tr>
+<td rowspan="4">1.20 </td><td>Added libraries for USB Type-C dual role and sink Extended Power Range (EPR) operation  </td><td>New feature Addition   </td></tr>
+<tr>
+<td>Updated the library to work with RTOS  </td><td>New feature addition   </td></tr>
+<tr>
+<td>Added APIs for changing source/sink pdo capabilities </td><td>Feature Addition.  </td></tr>
 <tr>
 <td rowspan="4">1.10 </td><td>Updated Type-C Error Recovery period to 250 ms. </td><td>PD compliance specification updates.  </td></tr>
 <tr>
@@ -205,7 +216,7 @@ More Information</h1>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 1.10</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 1.20</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

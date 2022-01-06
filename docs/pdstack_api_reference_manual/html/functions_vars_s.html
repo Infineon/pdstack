@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 1.10: Data Fields - Variables</title>
+<title>PDStack Middleware Library 1.20: Data Fields - Variables</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="IFXCYP_one-line.png"/></a></td>
+  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 1.10</div>
+   <div id="projectname">PDStack Middleware Library 1.20</div>
   </td>
  </tr>
  </tbody>
@@ -116,6 +116,9 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 <li>skedbEn
 : <a class="el" href="structcy__stc__pdstack__port__cfg__t.html#a8b5b1967ab84e34462fefedcbed6644c">cy_stc_pdstack_port_cfg_t</a>
 </li>
+<li>snkEnable
+: <a class="el" href="structcy__stc__pdstack__epr__t.html#ac2b9f2aeb814da6dcea39609842eea67">cy_stc_pdstack_epr_t</a>
+</li>
 <li>snkGoToMin
 : <a class="el" href="structcy__stc__pdstack__pe__status__t.html#a08093220bc3b664073942c7978b49588">cy_stc_pdstack_pe_status_t</a>
 </li>
@@ -124,10 +127,12 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 </li>
 <li>snkPdo
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#aa49d84d7364caf80d1274a086d7c0f26">cy_stc_pdstack_dpm_status_t</a>
+, <a class="el" href="structcy__stc__pdstack__epr__t.html#a2e7959b630578d12b35545a0cb30a114">cy_stc_pdstack_epr_t</a>
 , <a class="el" href="structcy__stc__pdstack__port__cfg__t.html#a5674d7a4fcbd3be37fc8ddb27272efe0">cy_stc_pdstack_port_cfg_t</a>
 </li>
 <li>snkPdoCount
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ab662f7a57e732fd1230fce0f7adc2083">cy_stc_pdstack_dpm_status_t</a>
+, <a class="el" href="structcy__stc__pdstack__epr__t.html#a06a62f1c9fdad1afc84a521a3d430190">cy_stc_pdstack_epr_t</a>
 , <a class="el" href="structcy__stc__pdstack__port__cfg__t.html#ad328eaff1712f62e4f3ad44bcc13948b">cy_stc_pdstack_port_cfg_t</a>
 </li>
 <li>snkPdoFlags
@@ -136,6 +141,7 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 </li>
 <li>snkPdoMask
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#af952cc4ca924ab702e43c82689186426">cy_stc_pdstack_dpm_status_t</a>
+, <a class="el" href="structcy__stc__pdstack__epr__t.html#a464fe18710d3258f64fb06166eb77c00">cy_stc_pdstack_epr_t</a>
 </li>
 <li>snkPdoMinMaxCur
 : <a class="el" href="structcy__stc__pdstack__port__cfg__t.html#a65200c4dc844ca8386f6173927b7f5bd">cy_stc_pdstack_port_cfg_t</a>
@@ -161,7 +167,8 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#aa6cd6e9b6b59c760c5c30dba12fa47dc">cy_stc_pdstack_dpm_status_t</a>
 </li>
 <li>sop
-: <a class="el" href="structcy__stc__pdstack__pd__packet__t.html#a39aea48518cf5e4ef9e1297b80b3b5e6">cy_stc_pdstack_pd_packet_t</a>
+: <a class="el" href="structcy__stc__pdstack__pd__packet__epr__t.html#a6e18250ed50dc816252f5b97a31d3d27">cy_stc_pdstack_pd_packet_epr_t</a>
+, <a class="el" href="structcy__stc__pdstack__pd__packet__t.html#a39aea48518cf5e4ef9e1297b80b3b5e6">cy_stc_pdstack_pd_packet_t</a>
 </li>
 <li>sopType
 : <a class="el" href="structcy__stc__pdstack__pe__status__t.html#a9ba02a1818cd2a788d86f3b7c0b7e3ad">cy_stc_pdstack_pe_status_t</a>
@@ -196,21 +203,27 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 <li>srcDisableWait
 : <a class="el" href="structcy__stc__pdstack__typec__status__t.html#a84372dc9aa80e6792e6a9ffb4c700549">cy_stc_pdstack_typec_status_t</a>
 </li>
+<li>srcEnable
+: <a class="el" href="structcy__stc__pdstack__epr__t.html#a70d4c8748f9dab8591c81fb8d5f25ca2">cy_stc_pdstack_epr_t</a>
+</li>
 <li>srcGoToMin
 : <a class="el" href="structcy__stc__pdstack__pe__status__t.html#ac7d3b4cedd0abc3c99a6ddd66fbad5bf">cy_stc_pdstack_pe_status_t</a>
 </li>
 <li>srcInfo
-: <a class="el" href="structcy__stc__pdstack__port__cfg__t.html#a4566171a7f3619cd7e57aa873ddab454">cy_stc_pdstack_port_cfg_t</a>
+: <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a43a1b22edaec51dc5b5360beabe48eab">cy_stc_pdstack_dpm_status_t</a>
+, <a class="el" href="structcy__stc__pdstack__port__cfg__t.html#a4566171a7f3619cd7e57aa873ddab454">cy_stc_pdstack_port_cfg_t</a>
 </li>
 <li>srcLastRdo
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a36618bfd121d287ab5ef8ff2e522a30d">cy_stc_pdstack_dpm_status_t</a>
 </li>
 <li>srcPdo
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ab8b9921fdd2d66571974a2ad5f1abc49">cy_stc_pdstack_dpm_status_t</a>
+, <a class="el" href="structcy__stc__pdstack__epr__t.html#a7f04f6d6b50e0a2691d1b65923cb2151">cy_stc_pdstack_epr_t</a>
 , <a class="el" href="structcy__stc__pdstack__port__cfg__t.html#a167710fda7d831c6f266f617bcdac217">cy_stc_pdstack_port_cfg_t</a>
 </li>
 <li>srcPdoCount
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a03a238d7c07a1823652761cce48dc60d">cy_stc_pdstack_dpm_status_t</a>
+, <a class="el" href="structcy__stc__pdstack__epr__t.html#a72ed8067ddba35d7922545672eb32f89">cy_stc_pdstack_epr_t</a>
 , <a class="el" href="structcy__stc__pdstack__port__cfg__t.html#a82c2a7f9e0e2c1b562a2da1c100063a4">cy_stc_pdstack_port_cfg_t</a>
 </li>
 <li>srcPdoFlags
@@ -219,6 +232,7 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 </li>
 <li>srcPdoMask
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#abf522cc0dfb67272e100d030d20670de">cy_stc_pdstack_dpm_status_t</a>
+, <a class="el" href="structcy__stc__pdstack__epr__t.html#a75a4e900cd4432fcdb4b3e11d3dfa320">cy_stc_pdstack_epr_t</a>
 </li>
 <li>srcPeriod
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#aef802958679f3417222dc77c50c1ed9b">cy_stc_pdstack_dpm_status_t</a>
@@ -252,7 +266,7 @@ $(document).ready(function(){initNavTree('functions_vars_s.html','');});
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 1.10</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 1.20</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

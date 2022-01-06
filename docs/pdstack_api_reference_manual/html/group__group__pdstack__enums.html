@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 1.10: Enumerated Types</title>
+<title>PDStack Middleware Library 1.20: Enumerated Types</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="IFXCYP_one-line.png"/></a></td>
+  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 1.10</div>
+   <div id="projectname">PDStack Middleware Library 1.20</div>
   </td>
  </tr>
  </tbody>
@@ -212,6 +212,14 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7a9ccb4d758ac98e43c7edb260c8320ea7">CY_PDSTACK_DATA_MSG_ENTER_USB</a>, 
 <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7abb36d7c2bafa18b1618a48e533b2b8a3">CY_PDSTACK_DATA_MSG_EPR_REQUEST</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7a672f44114283181b0e4ab7af1e71871b">CY_PDSTACK_DATA_MSG_EPR_MODE</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7a992f60a5d6f3fefa5e265279e502f4fa">CY_PDSTACK_DATA_MSG_SOURCE_INFO</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7acffbb2e69c5e7c1f06565fb8102689ee">CY_PDSTACK_DATA_MSG_REVISION</a>, 
+<br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7a00c956ca6a5a7130c86afbd82b76685b">CY_PDSTACK_DATA_MSG_VDM</a> = 15
 <br />
  }<tr class="memdesc:ga187c862611eae74da0f5b3215780bad7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the data message types.  <a href="group__group__pdstack__enums.html#ga187c862611eae74da0f5b3215780bad7">More...</a><br /></td></tr>
@@ -246,11 +254,29 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943a26ab1e4b8758337873d9923ad5578af5">CY_PDSTACK_EXTD_MSG_COUNTRY_CODES</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943a4a5c4105b21285ee5eca6f1bfd4f7e16">CY_PDSTACK_EXTD_MSG_SNK_CAP_EXTD</a>
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943a4a5c4105b21285ee5eca6f1bfd4f7e16">CY_PDSTACK_EXTD_MSG_SNK_CAP_EXTD</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943ae6c2e9bd6c57dd21a36ed7ec394dd9e8">CY_PDSTACK_EXTD_MSG_EXTD_CTRL_MSG</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943a2ee2066603b4fa176155a46daad261c5">CY_PDSTACK_EXTD_MSG_EPR_SRC_CAP</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943aad9cbfc64b0e248cb7f52081b810f8de">CY_PDSTACK_EXTD_MSG_EPR_SNK_CAP</a>
 <br />
  }<tr class="memdesc:ga24366d7f40b113729af15d81a9828943"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the extended data message types.  <a href="group__group__pdstack__enums.html#ga24366d7f40b113729af15d81a9828943">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ga24366d7f40b113729af15d81a9828943"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaddbb9940efe580ef9f127ecfe83863f5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#gaddbb9940efe580ef9f127ecfe83863f5">cy_en_pdstack_extd_ctrl_msg_t</a> { <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaddbb9940efe580ef9f127ecfe83863f5a805d2d12a7a6449c36356356f548d011">CY_PDSTACK_EPR_GET_SRC_CAP</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaddbb9940efe580ef9f127ecfe83863f5a30ffa179a1043513c47a85f20c292970">CY_PDSTACK_EPR_GET_SNK_CAP</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaddbb9940efe580ef9f127ecfe83863f5abbf9f5700d616caeeb2e89a31d1efc03">CY_PDSTACK_EPR_KEEP_ALIVE</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaddbb9940efe580ef9f127ecfe83863f5aaa6be41a5fef863d2fcad702ac37d541">CY_PDSTACK_EPR_KEEP_ALIVE_ACK</a>
+<br />
+ }<tr class="memdesc:gaddbb9940efe580ef9f127ecfe83863f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the Extended Control Message Types sent in Ext.  <a href="group__group__pdstack__enums.html#gaddbb9940efe580ef9f127ecfe83863f5">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gaddbb9940efe580ef9f127ecfe83863f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf045cdaa6d7beeacaa51b1b38aefb1d5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#gaf045cdaa6d7beeacaa51b1b38aefb1d5">cy_en_pdstack_pdo_t</a> { <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaf045cdaa6d7beeacaa51b1b38aefb1d5a102b628e3f11121bb21a2894c6715134">CY_PDSTACK_PDO_FIXED_SUPPLY</a> = 0, 
 <br />
@@ -266,7 +292,7 @@ Enumerations</h2></td></tr>
 <tr class="memitem:ga10fc7e5964a1a445042223338fe12f04"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#ga10fc7e5964a1a445042223338fe12f04">cy_en_pdstack_apdo_t</a> { <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04ad8fb66f2e273e61ccc6bc372b98dc5af">CY_PDSTACK_APDO_PPS</a> = 0, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04a58591ccb7534b900ad2864ff0f3bbd01">CY_PDSTACK_APDO_RSVD1</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04af59ec86edc5e2f08513cc2d4b9780d84">CY_PDSTACK_APDO_AVS</a>, 
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04ad94d3b4ac6d6e2a8e6dc2c9b2b573db9">CY_PDSTACK_APDO_RSVD2</a>, 
 <br />
@@ -275,6 +301,18 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:ga10fc7e5964a1a445042223338fe12f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the Augmented PDO types.  <a href="group__group__pdstack__enums.html#ga10fc7e5964a1a445042223338fe12f04">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ga10fc7e5964a1a445042223338fe12f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27c25d722a97fec720f2df80ed261b8b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#ga27c25d722a97fec720f2df80ed261b8b">cy_en_pdstack_epr_avs_t</a> { <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga27c25d722a97fec720f2df80ed261b8bacf34e9d1fa39519423a6af94ed7e602b">CY_PDSTACK_SPR_MODE</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga27c25d722a97fec720f2df80ed261b8ba14a49a6b3ba743d73a43930019da9a50">CY_PDSTACK_EPR_FIXED_MODE</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga27c25d722a97fec720f2df80ed261b8baa6f077640ea0de173aab63c23bf2e2f0">CY_PDSTACK_EPR_AVS_SMALL</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga27c25d722a97fec720f2df80ed261b8ba2f8a3f1aa5ebd4327b3ce20f44b4ed2c">CY_PDSTACK_EPR_AVS_LARGE</a>
+<br />
+ }<tr class="memdesc:ga27c25d722a97fec720f2df80ed261b8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the EPR AVS modes.  <a href="group__group__pdstack__enums.html#ga27c25d722a97fec720f2df80ed261b8b">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ga27c25d722a97fec720f2df80ed261b8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9f2035ecb735f94c631905927f6f75a3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#ga9f2035ecb735f94c631905927f6f75a3">cy_en_pdstack_peak_cur_cap_t</a> { <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga9f2035ecb735f94c631905927f6f75a3a14e0cfa63385b5389ef20248a610c91b">CY_PDSTACK_IMAX_EQ_IOC</a> = 0, 
 <br />
@@ -395,6 +433,18 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27a033fc89fbeb8963ea6e17315e7e2e5f9">CY_PDSTACK_DPM_CMD_SEND_ENTER_USB</a>, 
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27ab3a5d6c494e1b522de1d1fe0ed0d4a3a">CY_PDSTACK_DPM_CMD_GET_SNK_CAP_EXTENDED</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27a2b8659add9b793e3885c433360982cb8">CY_PDSTACK_DPM_CMD_SEND_EPR_MODE</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27aa792bc426f93ae79d0fcb4353dfd86d0">CY_PDSTACK_DPM_CMD_SNK_EPR_MODE_ENTRY</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27a5c53bd5f34b10880237390d4ff2339d9">CY_PDSTACK_DPM_CMD_SNK_SEND_KEEP_ALIVE</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27ae15a6c7c85b1fa602acf0ff40f5644cc">CY_PDSTACK_DPM_CMD_SEND_EXTD_CTRL_MSG</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27a19d4a8f7093e84a012163faf4e588bb0">CY_PDSTACK_DPM_CMD_SEND_GET_SOURCE_INFO</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27a1f89ae7545200ea8903ea50a0554c692">CY_PDSTACK_DPM_CMD_SEND_GET_REVISION</a>, 
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27aef5fe8435b9d2fd7c41c4a75928b13bb">CY_PDSTACK_DPM_CMD_SEND_INVALID</a> = 0xFFu
 <br />
@@ -710,6 +760,20 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba645d6201d79571fe15c26df58ec8a9a6">CY_PDSTACK_PE_FSM_EVAL_ENTER_USB</a>, 
 <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba88ce66a56e4aabb74f0017350b90f0c8">CY_PDSTACK_PE_FSM_SRC_EVAL_EPR_MODE_ENTRY</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba1065ae90ee56d201c187c2a4c7196b3c">CY_PDSTACK_PE_FSM_SRC_SEND_EPR_MODE_RESULT</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba69b510b32648db2a4bc126fdad2454dd">CY_PDSTACK_PE_FSM_SRC_SEND_EPR_SRC_CAP</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba94280b5ebf33a9a1c1825f12e88df47c">CY_PDSTACK_PE_FSM_SNK_SEND_EPR_MODE_ENTRY</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8bad104a1a262746fb157179779e8b46596">CY_PDSTACK_PE_FSM_SNK_EPR_ENTRY_WAIT_FOR_RESP</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8bafda9abc22c63fb9633e3d17b5ac7a259">CY_PDSTACK_PE_FSM_SNK_EPR_KEEP_ALIVE</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba9195be018f366fcbcfa3c386a1597de2">CY_PDSTACK_PE_FSM_SNK_SEND_EPR_CAP</a>, 
+<br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8bab2af47a07d3a545ba606ec2c4cabcfd9">CY_PDSTACK_PE_FSM_MAX_STATES</a>
 <br />
  }<tr class="memdesc:gadf6ec016657630c1107179e503789e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of Policy Engine states for a USB-PD port.  <a href="group__group__pdstack__enums.html#gadf6ec016657630c1107179e503789e8b">More...</a><br /></td></tr>
@@ -856,6 +920,20 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5aaa7b7c475a3b72a251d0dc9fa7761919">APP_EVT_BAD_SINK_APDO_SEL</a>, 
 <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a1ba8101fde155b75ece28b66848c41cf">APP_EVT_SOURCE_INFO_RECEIVED</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a3bfcd66eb7853179c0b104e9f5e001cb">APP_EVT_REVISION_RECEIVED</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a191a32416335fe8243e0ce35bfae84f6">APP_EVT_EPR_MODE_ENTER_RECEIVED</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5ac7da143bc677b3a1e9a156d57871f676">APP_EVT_EPR_MODE_ENTER_SUCCESS</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a7210113aa445364f4d3ecfee606350cf">APP_EVT_EPR_MODE_ENTER_FAILED</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a6a944c5edd4eb4d81dbcc04f09439245">APP_EVT_EPR_MODE_EXIT</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a4a9231c99408656dbb914aed25a969f4">APP_EVT_VCONN_SWAP_FAILED</a>, 
+<br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a34d355bf67316b12305a178a3e228e0e">APP_TOTAL_EVENTS</a>
 <br />
  }<tr class="memdesc:ga3e748bd09a1b449496b48177f30f8dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of events that are signalled to the application.  <a href="group__group__pdstack__enums.html#ga3e748bd09a1b449496b48177f30f8dc5">More...</a><br /></td></tr>
@@ -931,6 +1009,94 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:ga56b8d796e52e02f9800958a266ec2123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of sub-states associated with Data Reset AMS.  <a href="group__group__pdstack__enums.html#ga56b8d796e52e02f9800958a266ec2123">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ga56b8d796e52e02f9800958a266ec2123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac89d5db997fc80167ba950b307efb7d4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#gac89d5db997fc80167ba950b307efb7d4">cy_en_pdstack_epr_mode_state_t</a> { <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4ae32fe421f5e91bf9e27990d660aa9820">CY_PDSTACK_EPR_MODE_STATE_IDLE</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4a3bb68db79af70a87d5498a68e7bdaad5">CY_PDSTACK_EPR_MODE_STATE_WAIT_ACK</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4ab490a8d91cce6f9ad00d725a13153da1">CY_PDSTACK_EPR_MODE_STATE_ACKED</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4a1e6b429df4cb00bec3bf9a05a671391e">CY_PDSTACK_EPR_MODE_STATE_WAIT_CBL_DSC</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4af34289eef32f80b3ff840ebe5dc7fef5">CY_PDSTACK_EPR_MODE_STATE_WAIT_COMPLETION</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4a37c43d5b2e5817e7e4028f852e7880b2">CY_PDSTACK_EPR_MODE_STATE_COMPLETE_DELAY</a>
+<br />
+ }<tr class="memdesc:gac89d5db997fc80167ba950b307efb7d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of sub-states associated with EPR_Mode AMS.  <a href="group__group__pdstack__enums.html#gac89d5db997fc80167ba950b307efb7d4">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gac89d5db997fc80167ba950b307efb7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1437bc3a46bb7fbb9408221b0fcf8a35"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#ga1437bc3a46bb7fbb9408221b0fcf8a35">cy_en_pdstack_eprmdo_action_t</a> { <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga1437bc3a46bb7fbb9408221b0fcf8a35ab345fe5cd2fcf565f9916ec1c8020757">CY_PDSTACK_EPR_MODE_ENTER</a> = 1, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga1437bc3a46bb7fbb9408221b0fcf8a35a2b79c1562a61df7f3e16c8636add5982">CY_PDSTACK_EPR_MODE_ACK</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga1437bc3a46bb7fbb9408221b0fcf8a35a7d362275c5f6e9d2623af8cbac7dea87">CY_PDSTACK_EPR_MODE_SUCCEEDED</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga1437bc3a46bb7fbb9408221b0fcf8a35aab88a530f8c0182d6896906f368bf172">CY_PDSTACK_EPR_MODE_FAILED</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga1437bc3a46bb7fbb9408221b0fcf8a35afe4d0ecf1499e8b232a7bddd1817f680">CY_PDSTACK_EPR_MODE_EXIT</a>
+<br />
+ }<tr class="memdesc:ga1437bc3a46bb7fbb9408221b0fcf8a35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of action fields in EPR Enter Mode data object.  <a href="group__group__pdstack__enums.html#ga1437bc3a46bb7fbb9408221b0fcf8a35">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ga1437bc3a46bb7fbb9408221b0fcf8a35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03f6696c0f77d53184148bbaa3ea8af2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#ga03f6696c0f77d53184148bbaa3ea8af2">cy_en_pdstack_eprmdo_data_t</a> { <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a544c32379adada2ada4b6ef94e8e176b">CY_PDSTACK_EPR_FAIL_UNKNOWN</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a017d0de30d249250c32a5c658d0c3048">CY_PDSTACK_EPR_FAIL_EPR_CABLE</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a00e4a8f98f790effcd4ca11dda3beee6">CY_PDSTACK_EPR_FAIL_EPR_VCONN</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a8a23693178a4c8a5dc1d6e5f1fb41443">CY_PDSTACK_EPR_FAIL_RDO</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2ab172b877bbd736a598a972a5435e1bdd">CY_PDSTACK_EPR_FAIL_UNABLE_NOW</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a25a9995504e2b03da4339ac08ad8ce23">CY_PDSTACK_EPR_FAIL_PDO</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a48e4e3b9cdb7e81e027cb5c5661b55ce">CY_PDSTACK_EPR_ENTER_SUCCESS</a>
+<br />
+ }<tr class="memdesc:ga03f6696c0f77d53184148bbaa3ea8af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of data fields in EPR Enter Mode data object with EPR_MODE_ENTER_FAILED action field.  <a href="group__group__pdstack__enums.html#ga03f6696c0f77d53184148bbaa3ea8af2">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ga03f6696c0f77d53184148bbaa3ea8af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2472529e1b96331ec1d118a4e3f123b1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#ga2472529e1b96331ec1d118a4e3f123b1">cy_en_pdstack_intel_pf_type_t</a> { <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1a53fae429da3e3fe74a13b814d1782ae7">CY_PDSTACK_PF_THUNDERBOLT</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1a7a14d43fbabdfbe02560ec4e37861a8a">CY_PDSTACK_PF_ICE_LAKE</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1aa25f035573b9223d4fbe99fcfaeb8e85">CY_PDSTACK_PF_TIGER_LAKE</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1a627ccbfd1a7a713e2a46a0a868266fea">CY_PDSTACK_PF_MAPLE_RIDGE</a>
+<br />
+ }<tr class="memdesc:ga2472529e1b96331ec1d118a4e3f123b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of Intel TBT/USB platform types in which the CCG device is used.  <a href="group__group__pdstack__enums.html#ga2472529e1b96331ec1d118a4e3f123b1">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ga2472529e1b96331ec1d118a4e3f123b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2ef7b0b589d5cef8e46ffe5cdcaeb47"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#gab2ef7b0b589d5cef8e46ffe5cdcaeb47">cy_en_pdstack_amd_pf_type_t</a> { <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab2ef7b0b589d5cef8e46ffe5cdcaeb47a997f5cb81859bdfc7eb8d3707fb031ce">CY_PDSTACK_AMD_PF_RENOIR</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab2ef7b0b589d5cef8e46ffe5cdcaeb47ae8579b3221ba0cdb49bdc9640a77fc9e">CY_PDSTACK_AMD_PF_REMBRANDT_A0</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab2ef7b0b589d5cef8e46ffe5cdcaeb47a1cad5b01793923c67f91345d3fb1b4b7">CY_PDSTACK_AMD_PF_REMBRANDT_B0</a>
+<br />
+ }<tr class="memdesc:gab2ef7b0b589d5cef8e46ffe5cdcaeb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of AMD platform types in which the CCG device is used.  <a href="group__group__pdstack__enums.html#gab2ef7b0b589d5cef8e46ffe5cdcaeb47">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gab2ef7b0b589d5cef8e46ffe5cdcaeb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadb40c602b90b2432cdc63f8d375628b1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#gadb40c602b90b2432cdc63f8d375628b1">cy_en_pdstack_amd_rtmr_type_t</a> { <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1ab2f47056e774359ff46025fc1f1ace21">CY_PDSTACK_AMD_RETIMER_NONE</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a884f3067e6f8e07c66e287a385d93995">CY_PDSTACK_AMD_RETIMER_PI3DPX1205A</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a4bd2b2db78de9e7af59e67605daa790c">CY_PDSTACK_AMD_RETIMER_PS8828</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a851b0a7b853bbbba16e42a0de3eaaae6">CY_PDSTACK_AMD_RETIMER_PS8830</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1ab8c2b1466e3f57849e935488b01a4f39">CY_PDSTACK_AMD_RETIMER_AUTO_PS8828A_OR_PS8830</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a1441f73f24fe03547fcf66e4bad88ce5">CY_PDSTACK_AMD_RETIMER_KB800X_B0</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a9c20c9110a3fcd60682d1b6b62c6612b">CY_PDSTACK_AMD_RETIMER_KB800X_B1</a>
+<br />
+ }<tr class="memdesc:gadb40c602b90b2432cdc63f8d375628b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of retimer types which could be used via AMD projects.  <a href="group__group__pdstack__enums.html#gadb40c602b90b2432cdc63f8d375628b1">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:gadb40c602b90b2432cdc63f8d375628b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga66c076f3b12cb3f10ebd67565c690593"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#ga66c076f3b12cb3f10ebd67565c690593">cy_en_pdstack_pdo_sel_alg_t</a> { <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga66c076f3b12cb3f10ebd67565c690593a1f408d437122ed64a2d1d2958accd71e">CY_PDSTACK_HIGHEST_POWER</a> = 1, 
 <br />
@@ -1040,11 +1206,11 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a00664e76095160b580ef99941dccc5b3">PD_VCONN_OCP_DEBOUNCE_TIMER</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a18df953a9c4be3ceb7019dbf3ac5ee8b">PD_TIMER_RESERVED_28</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a18a3b3209dfb00f08340e528210260c8">PD_SNK_EPR_MODE_TIMER</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a7bee4843ac2445e89f4b1dee1a45b06c">PD_TIMER_RESERVED_29</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a091fa4ecc24cb2a6359a24e030155de8">PD_SRC_EPR_MODE_TIMER</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a5e5eea46e2c043d99fe956121cca799b">PD_TIMER_RESERVED_30</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a3d2b63ba13d70fe17d064eaa67ce2d4c">PD_EPR_KEEPALIVE_TIMER</a>, 
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a955c9a81a66b5e70cc795bbabc425cf2">PD_TIMER_RESERVED_31</a>, 
 <br />
@@ -1106,11 +1272,11 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a7ac4090c18e0bd34efdfcbd921ddd9a9">PD1_VCONN_OCP_DEBOUNCE_TIMER</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a800188ca695072c98ae589ccbadb8425">PD1_TIMER_RESERVED_60</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a580761c96173bcdc765f8495a2a14b95">PD1_SNK_EPR_MODE_TIMER</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0abe90e1392a0cdbea823814c0cb78b9cf">PD1_TIMER_RESERVED_61</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0aecbe4c80096e4d76d2a302085a0ec3e5">PD1_SRC_EPR_MODE_TIMER</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0aaa7057cbbf2abc78f627323498023146">PD1_TIMER_RESERVED_62</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a03f790547b78087e06d72ec8a558135f">PD1_EPR_KEEPALIVE_TIMER</a>, 
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a48fa901c7ade03ae980a5c4c9e67fd5d">PD1_TIMER_RESERVED_63</a>, 
 <br />
@@ -1188,13 +1354,15 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0acbcd8930ebbbe46182e000927980d22f">APP_CDP_DP_DM_POLL_TIMER</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a7937daac9abb2a4bba51e2eec905f804">APP_TIMER_RESERVED_100</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a068adbaa35935b68aedeacd0e09b2adc">APP_EPR_MODE_TIMER</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a8f06973c3a3a95c713ae6200f63e2b98">APP_TIMER_RESERVED_101</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a16854f27cab281fc103388f0abae9612">APP_EPR_EXT_CMD_TIMER</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a2976a5d8d4c8c7687db619b949152875">APP_TIMER_RESERVED_102</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a468c37852236867bc5ff12d8e145a833">APP_TIMER_HPD_DELAY_TIMER</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0af2d25cdb84a4b94d85a4e50374c79d0e">APP_TIMER_RESERVED_103</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0af322195e3c15f726edcba60dd0defbf8">APP_TIMERS_RESERVED_START_ID</a> = 103u, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0af2d25cdb84a4b94d85a4e50374c79d0e">APP_TIMER_RESERVED_103</a> = APP_TIMERS_RESERVED_START_ID, 
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0aa5b5f99fd3f7a972df32e5025bfafea1">APP_TIMER_RESERVED_104</a>, 
 <br />
@@ -1500,6 +1668,14 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga187c862611eae74da0f5b3215780bad7a9ccb4d758ac98e43c7edb260c8320ea7"></a>CY_PDSTACK_DATA_MSG_ENTER_USB&#160;</td><td class="fielddoc"><p>0x08: Enter_USB message. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="gga187c862611eae74da0f5b3215780bad7abb36d7c2bafa18b1618a48e533b2b8a3"></a>CY_PDSTACK_DATA_MSG_EPR_REQUEST&#160;</td><td class="fielddoc"><p>0x09: EPR_Request message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga187c862611eae74da0f5b3215780bad7a672f44114283181b0e4ab7af1e71871b"></a>CY_PDSTACK_DATA_MSG_EPR_MODE&#160;</td><td class="fielddoc"><p>0x0A: EPR_Mode message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga187c862611eae74da0f5b3215780bad7a992f60a5d6f3fefa5e265279e502f4fa"></a>CY_PDSTACK_DATA_MSG_SOURCE_INFO&#160;</td><td class="fielddoc"><p>0x0B: Source_Info message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga187c862611eae74da0f5b3215780bad7acffbb2e69c5e7c1f06565fb8102689ee"></a>CY_PDSTACK_DATA_MSG_REVISION&#160;</td><td class="fielddoc"><p>0x0C: Revision message. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="gga187c862611eae74da0f5b3215780bad7a00c956ca6a5a7130c86afbd82b76685b"></a>CY_PDSTACK_DATA_MSG_VDM&#160;</td><td class="fielddoc"><p>0x0F: Vendor_Defined message. </p>
 </td></tr>
 </table>
@@ -1550,6 +1726,43 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga24366d7f40b113729af15d81a9828943a4a5c4105b21285ee5eca6f1bfd4f7e16"></a>CY_PDSTACK_EXTD_MSG_SNK_CAP_EXTD&#160;</td><td class="fielddoc"><p>0x0F: Sink_Capabilities_Extended message. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="gga24366d7f40b113729af15d81a9828943ae6c2e9bd6c57dd21a36ed7ec394dd9e8"></a>CY_PDSTACK_EXTD_MSG_EXTD_CTRL_MSG&#160;</td><td class="fielddoc"><p>0x10: Extended_Control_Msg message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga24366d7f40b113729af15d81a9828943a2ee2066603b4fa176155a46daad261c5"></a>CY_PDSTACK_EXTD_MSG_EPR_SRC_CAP&#160;</td><td class="fielddoc"><p>0x11: EPR_Source_Capabilities message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga24366d7f40b113729af15d81a9828943aad9cbfc64b0e248cb7f52081b810f8de"></a>CY_PDSTACK_EXTD_MSG_EPR_SNK_CAP&#160;</td><td class="fielddoc"><p>0x13: EPR_Sink_Capabilities message. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gaddbb9940efe580ef9f127ecfe83863f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaddbb9940efe580ef9f127ecfe83863f5">&#9670;&nbsp;</a></span>cy_en_pdstack_extd_ctrl_msg_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#gaddbb9940efe580ef9f127ecfe83863f5">cy_en_pdstack_extd_ctrl_msg_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum of the Extended Control Message Types sent in Ext. </p>
+<p>Ctrl Message Data Block (offset 0). </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggaddbb9940efe580ef9f127ecfe83863f5a805d2d12a7a6449c36356356f548d011"></a>CY_PDSTACK_EPR_GET_SRC_CAP&#160;</td><td class="fielddoc"><p>EPR_Get_Source_Cap ext. </p>
+<p>control msg. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaddbb9940efe580ef9f127ecfe83863f5a30ffa179a1043513c47a85f20c292970"></a>CY_PDSTACK_EPR_GET_SNK_CAP&#160;</td><td class="fielddoc"><p>EPR_Get_Sink_Cap ext. </p>
+<p>control msg . </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaddbb9940efe580ef9f127ecfe83863f5abbf9f5700d616caeeb2e89a31d1efc03"></a>CY_PDSTACK_EPR_KEEP_ALIVE&#160;</td><td class="fielddoc"><p>EPR_KeepAlive ext. </p>
+<p>control msg. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaddbb9940efe580ef9f127ecfe83863f5aaa6be41a5fef863d2fcad702ac37d541"></a>CY_PDSTACK_EPR_KEEP_ALIVE_ACK&#160;</td><td class="fielddoc"><p>EPR_KeepAlive_Ack ext. </p>
+<p>control msg. </p>
+</td></tr>
 </table>
 
 </div>
@@ -1596,11 +1809,37 @@ Enumerations</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga10fc7e5964a1a445042223338fe12f04ad8fb66f2e273e61ccc6bc372b98dc5af"></a>CY_PDSTACK_APDO_PPS&#160;</td><td class="fielddoc"><p>Programmable Power Supply PDO. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga10fc7e5964a1a445042223338fe12f04a58591ccb7534b900ad2864ff0f3bbd01"></a>CY_PDSTACK_APDO_RSVD1&#160;</td><td class="fielddoc"><p>Reserved for future use. </p>
+<tr><td class="fieldname"><a id="gga10fc7e5964a1a445042223338fe12f04af59ec86edc5e2f08513cc2d4b9780d84"></a>CY_PDSTACK_APDO_AVS&#160;</td><td class="fielddoc"><p>Reserved for future use. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga10fc7e5964a1a445042223338fe12f04ad94d3b4ac6d6e2a8e6dc2c9b2b573db9"></a>CY_PDSTACK_APDO_RSVD2&#160;</td><td class="fielddoc"><p>Reserved for future use. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga10fc7e5964a1a445042223338fe12f04aa3730d2018f83f459a445681e7020389"></a>CY_PDSTACK_APDO_RSVD3&#160;</td><td class="fielddoc"><p>Reserved for future use. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga27c25d722a97fec720f2df80ed261b8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga27c25d722a97fec720f2df80ed261b8b">&#9670;&nbsp;</a></span>cy_en_pdstack_epr_avs_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#ga27c25d722a97fec720f2df80ed261b8b">cy_en_pdstack_epr_avs_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum of the EPR AVS modes. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga27c25d722a97fec720f2df80ed261b8bacf34e9d1fa39519423a6af94ed7e602b"></a>CY_PDSTACK_SPR_MODE&#160;</td><td class="fielddoc"><p>Standard Power Range Mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga27c25d722a97fec720f2df80ed261b8ba14a49a6b3ba743d73a43930019da9a50"></a>CY_PDSTACK_EPR_FIXED_MODE&#160;</td><td class="fielddoc"><p>Extended Power Range Fixed Mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga27c25d722a97fec720f2df80ed261b8baa6f077640ea0de173aab63c23bf2e2f0"></a>CY_PDSTACK_EPR_AVS_SMALL&#160;</td><td class="fielddoc"><p>EPR Adjustable Voltage Supply Small step Mode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga27c25d722a97fec720f2df80ed261b8ba2f8a3f1aa5ebd4327b3ce20f44b4ed2c"></a>CY_PDSTACK_EPR_AVS_LARGE&#160;</td><td class="fielddoc"><p>EPR Adjustable Voltage Supply Large step Mode. </p>
 </td></tr>
 </table>
 
@@ -1815,6 +2054,18 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="ggaab347ed9d4ea3174377c728e9304fa27a033fc89fbeb8963ea6e17315e7e2e5f9"></a>CY_PDSTACK_DPM_CMD_SEND_ENTER_USB&#160;</td><td class="fielddoc"><p>15: Send a USB4 Enter_USB message to port partner or cable marker. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggaab347ed9d4ea3174377c728e9304fa27ab3a5d6c494e1b522de1d1fe0ed0d4a3a"></a>CY_PDSTACK_DPM_CMD_GET_SNK_CAP_EXTENDED&#160;</td><td class="fielddoc"><p>16: Send Get_Sink_Cap_Extended message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaab347ed9d4ea3174377c728e9304fa27a2b8659add9b793e3885c433360982cb8"></a>CY_PDSTACK_DPM_CMD_SEND_EPR_MODE&#160;</td><td class="fielddoc"><p>17: Send EPR_Mode message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaab347ed9d4ea3174377c728e9304fa27aa792bc426f93ae79d0fcb4353dfd86d0"></a>CY_PDSTACK_DPM_CMD_SNK_EPR_MODE_ENTRY&#160;</td><td class="fielddoc"><p>18: Send EPR_Mode Entry message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaab347ed9d4ea3174377c728e9304fa27a5c53bd5f34b10880237390d4ff2339d9"></a>CY_PDSTACK_DPM_CMD_SNK_SEND_KEEP_ALIVE&#160;</td><td class="fielddoc"><p>19: Send EPR Keep Alive message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaab347ed9d4ea3174377c728e9304fa27ae15a6c7c85b1fa602acf0ff40f5644cc"></a>CY_PDSTACK_DPM_CMD_SEND_EXTD_CTRL_MSG&#160;</td><td class="fielddoc"><p>1A: Send EXT_CTRL_MSG message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaab347ed9d4ea3174377c728e9304fa27a19d4a8f7093e84a012163faf4e588bb0"></a>CY_PDSTACK_DPM_CMD_SEND_GET_SOURCE_INFO&#160;</td><td class="fielddoc"><p>1B: Send Get_Source_Info message. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggaab347ed9d4ea3174377c728e9304fa27a1f89ae7545200ea8903ea50a0554c692"></a>CY_PDSTACK_DPM_CMD_SEND_GET_REVISION&#160;</td><td class="fielddoc"><p>1C: Send Get_Revision message. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggaab347ed9d4ea3174377c728e9304fa27aef5fe8435b9d2fd7c41c4a75928b13bb"></a>CY_PDSTACK_DPM_CMD_SEND_INVALID&#160;</td><td class="fielddoc"><p>FF: Invalid command code. </p>
 </td></tr>
@@ -2386,7 +2637,21 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ggadf6ec016657630c1107179e503789e8ba645d6201d79571fe15c26df58ec8a9a6"></a>CY_PDSTACK_PE_FSM_EVAL_ENTER_USB&#160;</td><td class="fielddoc"><p>42: Policy Engine handling Enter USB request. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggadf6ec016657630c1107179e503789e8bab2af47a07d3a545ba606ec2c4cabcfd9"></a>CY_PDSTACK_PE_FSM_MAX_STATES&#160;</td><td class="fielddoc"><p>43: Invalid Policy Engine state. </p>
+<tr><td class="fieldname"><a id="ggadf6ec016657630c1107179e503789e8ba88ce66a56e4aabb74f0017350b90f0c8"></a>CY_PDSTACK_PE_FSM_SRC_EVAL_EPR_MODE_ENTRY&#160;</td><td class="fielddoc"><p>43: Policy Engine handling EPR MODE request. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadf6ec016657630c1107179e503789e8ba1065ae90ee56d201c187c2a4c7196b3c"></a>CY_PDSTACK_PE_FSM_SRC_SEND_EPR_MODE_RESULT&#160;</td><td class="fielddoc"><p>44: Policy Engine handling EPR MODE request. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadf6ec016657630c1107179e503789e8ba69b510b32648db2a4bc126fdad2454dd"></a>CY_PDSTACK_PE_FSM_SRC_SEND_EPR_SRC_CAP&#160;</td><td class="fielddoc"><p>45: Policy Engine Send EPR SRC CAP. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadf6ec016657630c1107179e503789e8ba94280b5ebf33a9a1c1825f12e88df47c"></a>CY_PDSTACK_PE_FSM_SNK_SEND_EPR_MODE_ENTRY&#160;</td><td class="fielddoc"><p>46: Policy Engine Request EPR Mode Entry. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadf6ec016657630c1107179e503789e8bad104a1a262746fb157179779e8b46596"></a>CY_PDSTACK_PE_FSM_SNK_EPR_ENTRY_WAIT_FOR_RESP&#160;</td><td class="fielddoc"><p>47: Policy Engine handling EPR MODE request. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadf6ec016657630c1107179e503789e8bafda9abc22c63fb9633e3d17b5ac7a259"></a>CY_PDSTACK_PE_FSM_SNK_EPR_KEEP_ALIVE&#160;</td><td class="fielddoc"><p>48: Policy Engine send EPR MODE Keep Alive. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadf6ec016657630c1107179e503789e8ba9195be018f366fcbcfa3c386a1597de2"></a>CY_PDSTACK_PE_FSM_SNK_SEND_EPR_CAP&#160;</td><td class="fielddoc"><p>49: Policy Engine send EPR Sink Capabilities. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadf6ec016657630c1107179e503789e8bab2af47a07d3a545ba606ec2c4cabcfd9"></a>CY_PDSTACK_PE_FSM_MAX_STATES&#160;</td><td class="fielddoc"><p>50: Invalid Policy Engine state. </p>
 </td></tr>
 </table>
 
@@ -2565,7 +2830,22 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga3e748bd09a1b449496b48177f30f8dc5aaa7b7c475a3b72a251d0dc9fa7761919"></a>APP_EVT_BAD_SINK_APDO_SEL&#160;</td><td class="fielddoc"><p>0x3A: APDO selection in PD 2.0 or less revision </p>
 </td></tr>
-<tr><td class="fieldname"><a id="gga3e748bd09a1b449496b48177f30f8dc5a34d355bf67316b12305a178a3e228e0e"></a>APP_TOTAL_EVENTS&#160;</td><td class="fielddoc"><p>0x3B: Total number of application events. </p>
+<tr><td class="fieldname"><a id="gga3e748bd09a1b449496b48177f30f8dc5a1ba8101fde155b75ece28b66848c41cf"></a>APP_EVT_SOURCE_INFO_RECEIVED&#160;</td><td class="fielddoc"><p>0x3B: Source Info message Received from Sink </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3e748bd09a1b449496b48177f30f8dc5a3bfcd66eb7853179c0b104e9f5e001cb"></a>APP_EVT_REVISION_RECEIVED&#160;</td><td class="fielddoc"><p>0x3C: Revision Data message Received </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3e748bd09a1b449496b48177f30f8dc5a191a32416335fe8243e0ce35bfae84f6"></a>APP_EVT_EPR_MODE_ENTER_RECEIVED&#160;</td><td class="fielddoc"><p>0x3D: EPR Mode Enter command Received from Sink port </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3e748bd09a1b449496b48177f30f8dc5ac7da143bc677b3a1e9a156d57871f676"></a>APP_EVT_EPR_MODE_ENTER_SUCCESS&#160;</td><td class="fielddoc"><p>0x3E: EPR Mode Enter successful, Source response with Enter Succeeded </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3e748bd09a1b449496b48177f30f8dc5a7210113aa445364f4d3ecfee606350cf"></a>APP_EVT_EPR_MODE_ENTER_FAILED&#160;</td><td class="fielddoc"><p>0x3F: EPR Mode Enter failed, Source response with Fail </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3e748bd09a1b449496b48177f30f8dc5a6a944c5edd4eb4d81dbcc04f09439245"></a>APP_EVT_EPR_MODE_EXIT&#160;</td><td class="fielddoc"><p>0x40: EPR Mode Exit Received </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3e748bd09a1b449496b48177f30f8dc5a4a9231c99408656dbb914aed25a969f4"></a>APP_EVT_VCONN_SWAP_FAILED&#160;</td><td class="fielddoc"><p>0x41: VConn_SWAP process failed in EPR Enter msg. </p>
+<p>sequence. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga3e748bd09a1b449496b48177f30f8dc5a34d355bf67316b12305a178a3e228e0e"></a>APP_TOTAL_EVENTS&#160;</td><td class="fielddoc"><p>0x41: Total number of application events. </p>
 </td></tr>
 </table>
 
@@ -2682,6 +2962,178 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a id="gga56b8d796e52e02f9800958a266ec2123a49f10f7a2ed01bdc2f05eda13bcda876"></a>CY_PDSTACK_DATA_RESET_WAIT_COMPLETION&#160;</td><td class="fielddoc"><p>UFP waiting for Data_Reset completion. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="gga56b8d796e52e02f9800958a266ec2123a73aee22ff539eec609d84234a5231e97"></a>CY_PDSTACK_DATA_RESET_COMPLETE_DELAY&#160;</td><td class="fielddoc"><p>DFP waiting to send Data_Reset_Complete message. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gac89d5db997fc80167ba950b307efb7d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac89d5db997fc80167ba950b307efb7d4">&#9670;&nbsp;</a></span>cy_en_pdstack_epr_mode_state_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#gac89d5db997fc80167ba950b307efb7d4">cy_en_pdstack_epr_mode_state_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeration of sub-states associated with EPR_Mode AMS. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggac89d5db997fc80167ba950b307efb7d4ae32fe421f5e91bf9e27990d660aa9820"></a>CY_PDSTACK_EPR_MODE_STATE_IDLE&#160;</td><td class="fielddoc"><p>No EPR Mode related operation pending. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac89d5db997fc80167ba950b307efb7d4a3bb68db79af70a87d5498a68e7bdaad5"></a>CY_PDSTACK_EPR_MODE_STATE_WAIT_ACK&#160;</td><td class="fielddoc"><p>Sender waiting for EPR Mode Acknowledgement. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac89d5db997fc80167ba950b307efb7d4ab490a8d91cce6f9ad00d725a13153da1"></a>CY_PDSTACK_EPR_MODE_STATE_ACKED&#160;</td><td class="fielddoc"><p>Waiting for next step after sending Accept response. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac89d5db997fc80167ba950b307efb7d4a1e6b429df4cb00bec3bf9a05a671391e"></a>CY_PDSTACK_EPR_MODE_STATE_WAIT_CBL_DSC&#160;</td><td class="fielddoc"><p>Waiting for VConn swap and Cable Discovery completion before sending EPR MODE Enter/Fail. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac89d5db997fc80167ba950b307efb7d4af34289eef32f80b3ff840ebe5dc7fef5"></a>CY_PDSTACK_EPR_MODE_STATE_WAIT_COMPLETION&#160;</td><td class="fielddoc"><p>UFP waiting for EPR Mode completion. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggac89d5db997fc80167ba950b307efb7d4a37c43d5b2e5817e7e4028f852e7880b2"></a>CY_PDSTACK_EPR_MODE_STATE_COMPLETE_DELAY&#160;</td><td class="fielddoc"><p>DFP waiting to send EPR Mode Enter/Fail message. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga1437bc3a46bb7fbb9408221b0fcf8a35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1437bc3a46bb7fbb9408221b0fcf8a35">&#9670;&nbsp;</a></span>cy_en_pdstack_eprmdo_action_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#ga1437bc3a46bb7fbb9408221b0fcf8a35">cy_en_pdstack_eprmdo_action_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeration of action fields in EPR Enter Mode data object. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga1437bc3a46bb7fbb9408221b0fcf8a35ab345fe5cd2fcf565f9916ec1c8020757"></a>CY_PDSTACK_EPR_MODE_ENTER&#160;</td><td class="fielddoc"><p>Enter cmd. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1437bc3a46bb7fbb9408221b0fcf8a35a2b79c1562a61df7f3e16c8636add5982"></a>CY_PDSTACK_EPR_MODE_ACK&#160;</td><td class="fielddoc"><p>Enter Acknowledged. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1437bc3a46bb7fbb9408221b0fcf8a35a7d362275c5f6e9d2623af8cbac7dea87"></a>CY_PDSTACK_EPR_MODE_SUCCEEDED&#160;</td><td class="fielddoc"><p>Enter Succeeded. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1437bc3a46bb7fbb9408221b0fcf8a35aab88a530f8c0182d6896906f368bf172"></a>CY_PDSTACK_EPR_MODE_FAILED&#160;</td><td class="fielddoc"><p>Enter Failed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga1437bc3a46bb7fbb9408221b0fcf8a35afe4d0ecf1499e8b232a7bddd1817f680"></a>CY_PDSTACK_EPR_MODE_EXIT&#160;</td><td class="fielddoc"><p>Exit cmd. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga03f6696c0f77d53184148bbaa3ea8af2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga03f6696c0f77d53184148bbaa3ea8af2">&#9670;&nbsp;</a></span>cy_en_pdstack_eprmdo_data_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#ga03f6696c0f77d53184148bbaa3ea8af2">cy_en_pdstack_eprmdo_data_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enumeration of data fields in EPR Enter Mode data object with EPR_MODE_ENTER_FAILED action field. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga03f6696c0f77d53184148bbaa3ea8af2a544c32379adada2ada4b6ef94e8e176b"></a>CY_PDSTACK_EPR_FAIL_UNKNOWN&#160;</td><td class="fielddoc"><p>Unknown cause. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga03f6696c0f77d53184148bbaa3ea8af2a017d0de30d249250c32a5c658d0c3048"></a>CY_PDSTACK_EPR_FAIL_EPR_CABLE&#160;</td><td class="fielddoc"><p>Cable not EPR capable. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga03f6696c0f77d53184148bbaa3ea8af2a00e4a8f98f790effcd4ca11dda3beee6"></a>CY_PDSTACK_EPR_FAIL_EPR_VCONN&#160;</td><td class="fielddoc"><p>Source failed to become VCONN source. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga03f6696c0f77d53184148bbaa3ea8af2a8a23693178a4c8a5dc1d6e5f1fb41443"></a>CY_PDSTACK_EPR_FAIL_RDO&#160;</td><td class="fielddoc"><p>EPR Mode Capable bit not set in RDO. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga03f6696c0f77d53184148bbaa3ea8af2ab172b877bbd736a598a972a5435e1bdd"></a>CY_PDSTACK_EPR_FAIL_UNABLE_NOW&#160;</td><td class="fielddoc"><p>Unable at this time. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga03f6696c0f77d53184148bbaa3ea8af2a25a9995504e2b03da4339ac08ad8ce23"></a>CY_PDSTACK_EPR_FAIL_PDO&#160;</td><td class="fielddoc"><p>EPR Mode Capable bit not set in PDO. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga03f6696c0f77d53184148bbaa3ea8af2a48e4e3b9cdb7e81e027cb5c5661b55ce"></a>CY_PDSTACK_EPR_ENTER_SUCCESS&#160;</td><td class="fielddoc"><p>Enter Succeeded.No failures. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="ga2472529e1b96331ec1d118a4e3f123b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2472529e1b96331ec1d118a4e3f123b1">&#9670;&nbsp;</a></span>cy_en_pdstack_intel_pf_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#ga2472529e1b96331ec1d118a4e3f123b1">cy_en_pdstack_intel_pf_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of Intel TBT/USB platform types in which the CCG device is used. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga2472529e1b96331ec1d118a4e3f123b1a53fae429da3e3fe74a13b814d1782ae7"></a>CY_PDSTACK_PF_THUNDERBOLT&#160;</td><td class="fielddoc"><p>Thunderbolt platforms like Alpine Ridge or Titan Ridge. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2472529e1b96331ec1d118a4e3f123b1a7a14d43fbabdfbe02560ec4e37861a8a"></a>CY_PDSTACK_PF_ICE_LAKE&#160;</td><td class="fielddoc"><p>Intel IceLake platform. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2472529e1b96331ec1d118a4e3f123b1aa25f035573b9223d4fbe99fcfaeb8e85"></a>CY_PDSTACK_PF_TIGER_LAKE&#160;</td><td class="fielddoc"><p>Intel TigerLake platform. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga2472529e1b96331ec1d118a4e3f123b1a627ccbfd1a7a713e2a46a0a868266fea"></a>CY_PDSTACK_PF_MAPLE_RIDGE&#160;</td><td class="fielddoc"><p>Intel RocketLake + Maple Ridge platform. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gab2ef7b0b589d5cef8e46ffe5cdcaeb47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab2ef7b0b589d5cef8e46ffe5cdcaeb47">&#9670;&nbsp;</a></span>cy_en_pdstack_amd_pf_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#gab2ef7b0b589d5cef8e46ffe5cdcaeb47">cy_en_pdstack_amd_pf_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of AMD platform types in which the CCG device is used. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggab2ef7b0b589d5cef8e46ffe5cdcaeb47a997f5cb81859bdfc7eb8d3707fb031ce"></a>CY_PDSTACK_AMD_PF_RENOIR&#160;</td><td class="fielddoc"><p>AMD Renoir based platform. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab2ef7b0b589d5cef8e46ffe5cdcaeb47ae8579b3221ba0cdb49bdc9640a77fc9e"></a>CY_PDSTACK_AMD_PF_REMBRANDT_A0&#160;</td><td class="fielddoc"><p>AMD Rembrandt A0 based platform. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab2ef7b0b589d5cef8e46ffe5cdcaeb47a1cad5b01793923c67f91345d3fb1b4b7"></a>CY_PDSTACK_AMD_PF_REMBRANDT_B0&#160;</td><td class="fielddoc"><p>AMD Rembrandt B0 based platform. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="gadb40c602b90b2432cdc63f8d375628b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadb40c602b90b2432cdc63f8d375628b1">&#9670;&nbsp;</a></span>cy_en_pdstack_amd_rtmr_type_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#gadb40c602b90b2432cdc63f8d375628b1">cy_en_pdstack_amd_rtmr_type_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>List of retimer types which could be used via AMD projects. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1ab2f47056e774359ff46025fc1f1ace21"></a>CY_PDSTACK_AMD_RETIMER_NONE&#160;</td><td class="fielddoc"><p>No retimer. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1a884f3067e6f8e07c66e287a385d93995"></a>CY_PDSTACK_AMD_RETIMER_PI3DPX1205A&#160;</td><td class="fielddoc"><p>Retimer PI3DPX1205A. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1a4bd2b2db78de9e7af59e67605daa790c"></a>CY_PDSTACK_AMD_RETIMER_PS8828&#160;</td><td class="fielddoc"><p>Retimer PS8828. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1a851b0a7b853bbbba16e42a0de3eaaae6"></a>CY_PDSTACK_AMD_RETIMER_PS8830&#160;</td><td class="fielddoc"><p>Retimer PS8830. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1ab8c2b1466e3f57849e935488b01a4f39"></a>CY_PDSTACK_AMD_RETIMER_AUTO_PS8828A_OR_PS8830&#160;</td><td class="fielddoc"><p>Retimer type should be discovered. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1a1441f73f24fe03547fcf66e4bad88ce5"></a>CY_PDSTACK_AMD_RETIMER_KB800X_B0&#160;</td><td class="fielddoc"><p>Retimer KB800X B0. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1a9c20c9110a3fcd60682d1b6b62c6612b"></a>CY_PDSTACK_AMD_RETIMER_KB800X_B1&#160;</td><td class="fielddoc"><p>Retimer KB800X B1. </p>
 </td></tr>
 </table>
 
@@ -2840,11 +3292,11 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a00664e76095160b580ef99941dccc5b3"></a>PD_VCONN_OCP_DEBOUNCE_TIMER&#160;</td><td class="fielddoc"><p>027: Timer used for FW debounce of VConn OCP. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a18df953a9c4be3ceb7019dbf3ac5ee8b"></a>PD_TIMER_RESERVED_28&#160;</td><td class="fielddoc"><p>028: Reserved for future use. </p>
+<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a18a3b3209dfb00f08340e528210260c8"></a>PD_SNK_EPR_MODE_TIMER&#160;</td><td class="fielddoc"><p>028: Timer used for Pd Sink EPR Mode. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a7bee4843ac2445e89f4b1dee1a45b06c"></a>PD_TIMER_RESERVED_29&#160;</td><td class="fielddoc"><p>029: Reserved for future use. </p>
+<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a091fa4ecc24cb2a6359a24e030155de8"></a>PD_SRC_EPR_MODE_TIMER&#160;</td><td class="fielddoc"><p>029: Timer used for Pd Source EPR Mode. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a5e5eea46e2c043d99fe956121cca799b"></a>PD_TIMER_RESERVED_30&#160;</td><td class="fielddoc"><p>030: Reserved for future use. </p>
+<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a3d2b63ba13d70fe17d064eaa67ce2d4c"></a>PD_EPR_KEEPALIVE_TIMER&#160;</td><td class="fielddoc"><p>030: Timer used by EPR state machine for sending KeepAlive message. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a955c9a81a66b5e70cc795bbabc425cf2"></a>PD_TIMER_RESERVED_31&#160;</td><td class="fielddoc"><p>031: Reserved for future use. </p>
 </td></tr>
@@ -2906,11 +3358,11 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a7ac4090c18e0bd34efdfcbd921ddd9a9"></a>PD1_VCONN_OCP_DEBOUNCE_TIMER&#160;</td><td class="fielddoc"><p>059: Timer used for FW debounce of VConn OCP. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a800188ca695072c98ae589ccbadb8425"></a>PD1_TIMER_RESERVED_60&#160;</td><td class="fielddoc"><p>060: Reserved for future use. </p>
+<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a580761c96173bcdc765f8495a2a14b95"></a>PD1_SNK_EPR_MODE_TIMER&#160;</td><td class="fielddoc"><p>060: Timer used for Pd Sink EPR Mode. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0abe90e1392a0cdbea823814c0cb78b9cf"></a>PD1_TIMER_RESERVED_61&#160;</td><td class="fielddoc"><p>061: Reserved for future use. </p>
+<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0aecbe4c80096e4d76d2a302085a0ec3e5"></a>PD1_SRC_EPR_MODE_TIMER&#160;</td><td class="fielddoc"><p>061: Timer used for Pd Source EPR Mode. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0aaa7057cbbf2abc78f627323498023146"></a>PD1_TIMER_RESERVED_62&#160;</td><td class="fielddoc"><p>062: Reserved for future use. </p>
+<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a03f790547b78087e06d72ec8a558135f"></a>PD1_EPR_KEEPALIVE_TIMER&#160;</td><td class="fielddoc"><p>62: Timer used by EPR state machine for sending KeepAlive message. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a48fa901c7ade03ae980a5c4c9e67fd5d"></a>PD1_TIMER_RESERVED_63&#160;</td><td class="fielddoc"><p>063: Reserved for future use. </p>
 </td></tr>
@@ -2988,11 +3440,13 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0acbcd8930ebbbe46182e000927980d22f"></a>APP_CDP_DP_DM_POLL_TIMER&#160;</td><td class="fielddoc"><p>099: Timer used to initiate DP/DM voltage polling while connected as a CDP. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a7937daac9abb2a4bba51e2eec905f804"></a>APP_TIMER_RESERVED_100&#160;</td><td class="fielddoc"><p>100: Timer ID reserved for future use. </p>
+<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a068adbaa35935b68aedeacd0e09b2adc"></a>APP_EPR_MODE_TIMER&#160;</td><td class="fielddoc"><p>100: Timer used by EPR state machine. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a8f06973c3a3a95c713ae6200f63e2b98"></a>APP_TIMER_RESERVED_101&#160;</td><td class="fielddoc"><p>101: Timer ID reserved for future use. </p>
+<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a16854f27cab281fc103388f0abae9612"></a>APP_EPR_EXT_CMD_TIMER&#160;</td><td class="fielddoc"><p>101: Timer used to send enter/exit EPR mode events to EPR state machine. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a2976a5d8d4c8c7687db619b949152875"></a>APP_TIMER_RESERVED_102&#160;</td><td class="fielddoc"><p>102: Timer ID reserved for future use. </p>
+<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0a468c37852236867bc5ff12d8e145a833"></a>APP_TIMER_HPD_DELAY_TIMER&#160;</td><td class="fielddoc"><p>102: This timer is used to delay HPD events. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0af322195e3c15f726edcba60dd0defbf8"></a>APP_TIMERS_RESERVED_START_ID&#160;</td><td class="fielddoc"><p>103: Start index for Application level reserved timers. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggab23f6a4bf15016efed8957def744f3d0af2d25cdb84a4b94d85a4e50374c79d0e"></a>APP_TIMER_RESERVED_103&#160;</td><td class="fielddoc"><p>103: Timer ID reserved for future use. </p>
 </td></tr>
@@ -3058,7 +3512,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 1.10</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 1.20</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

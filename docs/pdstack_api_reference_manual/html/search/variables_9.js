@@ -7,7 +7,7 @@ var searchData=
   ['mfgpid',['mfgPid',['../structcy__stc__pdstack__port__cfg__t.html#a1df32bc0daab2228a434f1d9aeee69b3',1,'cy_stc_pdstack_port_cfg_t']]],
   ['mfgvid',['mfgVid',['../structcy__stc__pdstack__port__cfg__t.html#afc8462f8bd51d2263a2df5a595275d36',1,'cy_stc_pdstack_port_cfg_t']]],
   ['minvolt',['minVolt',['../structcy__stc__pdstack__contract__t.html#ae1fccef1a154b04f32d08a327ebccdbe',1,'cy_stc_pdstack_contract_t']]],
-  ['msg',['msg',['../structcy__stc__pdstack__pd__packet__t.html#a75e7b3ccd30ccd70297aadfb0c436ba4',1,'cy_stc_pdstack_pd_packet_t']]],
+  ['msg',['msg',['../structcy__stc__pdstack__pd__packet__t.html#a75e7b3ccd30ccd70297aadfb0c436ba4',1,'cy_stc_pdstack_pd_packet_t::msg()'],['../structcy__stc__pdstack__pd__packet__epr__t.html#a5ef444313cb819d35f5e62444967427a',1,'cy_stc_pdstack_pd_packet_epr_t::msg()']]],
   ['multiplier',['multiplier',['../structcy__stc__sw__timer__t.html#a1366428fa5de817438c36e46d09878e0',1,'cy_stc_sw_timer_t']]],
   ['muxenabledelayperiod',['muxEnableDelayPeriod',['../structcy__stc__pdstack__dpm__params__t.html#a71d6fced40e218558d23fec473594aba',1,'cy_stc_pdstack_dpm_params_t']]]
 ];

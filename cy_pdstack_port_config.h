@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_pdstack_port_config.h
-* \version 1.10
+* \version 1.20
 *
 * PD Port Configuration Structure Header File for the PDStack middleware.
 *
@@ -68,10 +68,10 @@ typedef struct
     uint8_t skedbEn;
 
     /** Extended Source Capability response */
-    uint8_t extSrcCap[24];
+    uint8_t extSrcCap[25];
 
     /** Extended Sink Capability response */
-    uint8_t extSnkCap[24];
+    uint8_t extSnkCap[25];
 
     /** PD port role:
      *  0 - Sink

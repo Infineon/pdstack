@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 1.10: cy_stc_pdstack_pe_status_t Struct Reference</title>
+<title>PDStack Middleware Library 1.20: cy_stc_pdstack_pe_status_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,9 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="IFXCYP_one-line.png"/></a></td>
+  <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 1.10</div>
+   <div id="projectname">PDStack Middleware Library 1.20</div>
   </td>
  </tr>
  </tbody>
@@ -265,6 +265,25 @@ cy_en_pd_ctrl_msg_t&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <tr class="memitem:a8ae37a44c07bed1a33be2655c6257ebc"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a8ae37a44c07bed1a33be2655c6257ebc">peSendHrPending</a></td></tr>
 <tr class="memdesc:a8ae37a44c07bed1a33be2655c6257ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag that indicates that Hard Reset sending is pending.  <a href="#a8ae37a44c07bed1a33be2655c6257ebc">More...</a><br /></td></tr>
 <tr class="separator:a8ae37a44c07bed1a33be2655c6257ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77ac22bc6d391fea009e0af620d5a822"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a77ac22bc6d391fea009e0af620d5a822">eprEnterRespDo</a></td></tr>
+<tr class="memdesc:a77ac22bc6d391fea009e0af620d5a822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer that hold EPR Enter Mode Response data object.  <a href="#a77ac22bc6d391fea009e0af620d5a822">More...</a><br /></td></tr>
+<tr class="separator:a77ac22bc6d391fea009e0af620d5a822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a945bfb0493cfe1aa3a187d2542231328"><td class="memItemLeft" align="right" valign="top"><a id="a945bfb0493cfe1aa3a187d2542231328"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a945bfb0493cfe1aa3a187d2542231328">eprState</a></td></tr>
+<tr class="memdesc:a945bfb0493cfe1aa3a187d2542231328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable to hold the EPR state. <br /></td></tr>
+<tr class="separator:a945bfb0493cfe1aa3a187d2542231328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc616851e6a428901a13b4390393281"><td class="memItemLeft" align="right" valign="top"><a id="a6bc616851e6a428901a13b4390393281"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a6bc616851e6a428901a13b4390393281">eprMultiMessageFlag</a></td></tr>
+<tr class="memdesc:a6bc616851e6a428901a13b4390393281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag that indicates whether EPR multi-messages are active. <br /></td></tr>
+<tr class="separator:a6bc616851e6a428901a13b4390393281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc24ebbe869e9e5ad2b93fc0af1444da"><td class="memItemLeft" align="right" valign="top"><a id="adc24ebbe869e9e5ad2b93fc0af1444da"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#adc24ebbe869e9e5ad2b93fc0af1444da">eprSendcapInSpr</a></td></tr>
+<tr class="memdesc:adc24ebbe869e9e5ad2b93fc0af1444da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag that indicates whether to send PDO in SPR. <br /></td></tr>
+<tr class="separator:adc24ebbe869e9e5ad2b93fc0af1444da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae5ad680761c98acd5d4f7ef519a51b"><td class="memItemLeft" align="right" valign="top"><a id="a1ae5ad680761c98acd5d4f7ef519a51b"></a>
+uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a1ae5ad680761c98acd5d4f7ef519a51b">eprSnkExtdChunkBuffer</a> [26]</td></tr>
+<tr class="memdesc:a1ae5ad680761c98acd5d4f7ef519a51b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer that hold the EPR Sink Extended Messages/Responses. <br /></td></tr>
+<tr class="separator:a1ae5ad680761c98acd5d4f7ef519a51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="aefa4f424ceaf65f31cc5c58148ab0edc"></a>
@@ -299,13 +318,29 @@ cy_en_pd_ctrl_msg_t&#160;</td><td class="memItemRight" valign="bottom"><a class=
 
 </div>
 </div>
+<a id="a77ac22bc6d391fea009e0af620d5a822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77ac22bc6d391fea009e0af620d5a822">&#9670;&nbsp;</a></span>eprEnterRespDo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_pe_status_t::eprEnterRespDo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Buffer that hold EPR Enter Mode Response data object. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 1.10</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 1.20</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

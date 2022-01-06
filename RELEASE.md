@@ -1,16 +1,17 @@
-# PDStack Middleware Library 1.10
+# PDStack Middleware Library 1.20
 
 ### What's Included?
 Please refer to the [README.md](./README.md).
 
-### PD compliance specification updates
+### New Features/PD compliance specification updates
 
-- Updated Type-C Error Recovery period to 250 ms.
-- Updated the size of the status extended message to 7 bytes.
+- Added libraries for USB Type-C dual role and sink Extended Power Range (EPR) operation.
+- Updated PdStack to generate events required for scheduling tasks using RTOS.
+- Added APIs for changing source/sink pdo capabilities.
 
 ### Defect fixes
 
-- USBPD wakeup interrupt was incorrectly getting disabled as part of the Software timer operation. This has been corrected.
+- None
 
 
 ### Supported Software and Tools
@@ -18,8 +19,8 @@ This version of the PDStack Middleware was validated for the compatibility with 
 
 | Software and Tools                                      | Version |
 | :---                                                    | :----:  |
-| ModusToolbox Software Environment                       | 2.3     |
-| MTB CAT2 Peripheral Driver Library (PDL)                | 1.1.0   |
+| ModusToolbox Software Environment                       | 2.4     |
+| MTB CAT2 Peripheral Driver Library (PDL)                | 1.5.0   |
 | GCC Compiler                                            | 9.3.1   |
 | IAR Compiler                                            | 8.42.2  |
 | ARM Compiler 6                                          | 6.13    |

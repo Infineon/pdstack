@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_pdstack_utils.h
-* \version 1.10
+* \version 1.20
 *
 * Provides general utility macros and definitions for the PDStack Middleware.
 *

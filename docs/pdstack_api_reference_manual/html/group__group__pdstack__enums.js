@@ -61,6 +61,10 @@ var group__group__pdstack__enums =
       [ "CY_PDSTACK_DATA_MSG_ALERT", "group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7a552b8d65aea1bbc505a091ed13b4d20f", null ],
       [ "CY_PDSTACK_DATA_MSG_GET_COUNTRY_INFO", "group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7a81c6e381c65978ca764e4f7eb66270dc", null ],
       [ "CY_PDSTACK_DATA_MSG_ENTER_USB", "group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7a9ccb4d758ac98e43c7edb260c8320ea7", null ],
+      [ "CY_PDSTACK_DATA_MSG_EPR_REQUEST", "group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7abb36d7c2bafa18b1618a48e533b2b8a3", null ],
+      [ "CY_PDSTACK_DATA_MSG_EPR_MODE", "group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7a672f44114283181b0e4ab7af1e71871b", null ],
+      [ "CY_PDSTACK_DATA_MSG_SOURCE_INFO", "group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7a992f60a5d6f3fefa5e265279e502f4fa", null ],
+      [ "CY_PDSTACK_DATA_MSG_REVISION", "group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7acffbb2e69c5e7c1f06565fb8102689ee", null ],
       [ "CY_PDSTACK_DATA_MSG_VDM", "group__group__pdstack__enums.html#gga187c862611eae74da0f5b3215780bad7a00c956ca6a5a7130c86afbd82b76685b", null ]
     ] ],
     [ "cy_en_pdstack_extd_msg_t", "group__group__pdstack__enums.html#ga24366d7f40b113729af15d81a9828943", [
@@ -78,7 +82,16 @@ var group__group__pdstack__enums =
       [ "CY_PDSTACK_EXTD_MSG_PPS_STATUS", "group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943a2b5f3afc61ccb4ace36e8efe46bbf3b4", null ],
       [ "CY_PDSTACK_EXTD_MSG_COUNTRY_INFO", "group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943a439394d4997c6e01746b4cf077345f46", null ],
       [ "CY_PDSTACK_EXTD_MSG_COUNTRY_CODES", "group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943a26ab1e4b8758337873d9923ad5578af5", null ],
-      [ "CY_PDSTACK_EXTD_MSG_SNK_CAP_EXTD", "group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943a4a5c4105b21285ee5eca6f1bfd4f7e16", null ]
+      [ "CY_PDSTACK_EXTD_MSG_SNK_CAP_EXTD", "group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943a4a5c4105b21285ee5eca6f1bfd4f7e16", null ],
+      [ "CY_PDSTACK_EXTD_MSG_EXTD_CTRL_MSG", "group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943ae6c2e9bd6c57dd21a36ed7ec394dd9e8", null ],
+      [ "CY_PDSTACK_EXTD_MSG_EPR_SRC_CAP", "group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943a2ee2066603b4fa176155a46daad261c5", null ],
+      [ "CY_PDSTACK_EXTD_MSG_EPR_SNK_CAP", "group__group__pdstack__enums.html#gga24366d7f40b113729af15d81a9828943aad9cbfc64b0e248cb7f52081b810f8de", null ]
+    ] ],
+    [ "cy_en_pdstack_extd_ctrl_msg_t", "group__group__pdstack__enums.html#gaddbb9940efe580ef9f127ecfe83863f5", [
+      [ "CY_PDSTACK_EPR_GET_SRC_CAP", "group__group__pdstack__enums.html#ggaddbb9940efe580ef9f127ecfe83863f5a805d2d12a7a6449c36356356f548d011", null ],
+      [ "CY_PDSTACK_EPR_GET_SNK_CAP", "group__group__pdstack__enums.html#ggaddbb9940efe580ef9f127ecfe83863f5a30ffa179a1043513c47a85f20c292970", null ],
+      [ "CY_PDSTACK_EPR_KEEP_ALIVE", "group__group__pdstack__enums.html#ggaddbb9940efe580ef9f127ecfe83863f5abbf9f5700d616caeeb2e89a31d1efc03", null ],
+      [ "CY_PDSTACK_EPR_KEEP_ALIVE_ACK", "group__group__pdstack__enums.html#ggaddbb9940efe580ef9f127ecfe83863f5aaa6be41a5fef863d2fcad702ac37d541", null ]
     ] ],
     [ "cy_en_pdstack_pdo_t", "group__group__pdstack__enums.html#gaf045cdaa6d7beeacaa51b1b38aefb1d5", [
       [ "CY_PDSTACK_PDO_FIXED_SUPPLY", "group__group__pdstack__enums.html#ggaf045cdaa6d7beeacaa51b1b38aefb1d5a102b628e3f11121bb21a2894c6715134", null ],
@@ -88,9 +101,15 @@ var group__group__pdstack__enums =
     ] ],
     [ "cy_en_pdstack_apdo_t", "group__group__pdstack__enums.html#ga10fc7e5964a1a445042223338fe12f04", [
       [ "CY_PDSTACK_APDO_PPS", "group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04ad8fb66f2e273e61ccc6bc372b98dc5af", null ],
-      [ "CY_PDSTACK_APDO_RSVD1", "group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04a58591ccb7534b900ad2864ff0f3bbd01", null ],
+      [ "CY_PDSTACK_APDO_AVS", "group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04af59ec86edc5e2f08513cc2d4b9780d84", null ],
       [ "CY_PDSTACK_APDO_RSVD2", "group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04ad94d3b4ac6d6e2a8e6dc2c9b2b573db9", null ],
       [ "CY_PDSTACK_APDO_RSVD3", "group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04aa3730d2018f83f459a445681e7020389", null ]
+    ] ],
+    [ "cy_en_pdstack_epr_avs_t", "group__group__pdstack__enums.html#ga27c25d722a97fec720f2df80ed261b8b", [
+      [ "CY_PDSTACK_SPR_MODE", "group__group__pdstack__enums.html#gga27c25d722a97fec720f2df80ed261b8bacf34e9d1fa39519423a6af94ed7e602b", null ],
+      [ "CY_PDSTACK_EPR_FIXED_MODE", "group__group__pdstack__enums.html#gga27c25d722a97fec720f2df80ed261b8ba14a49a6b3ba743d73a43930019da9a50", null ],
+      [ "CY_PDSTACK_EPR_AVS_SMALL", "group__group__pdstack__enums.html#gga27c25d722a97fec720f2df80ed261b8baa6f077640ea0de173aab63c23bf2e2f0", null ],
+      [ "CY_PDSTACK_EPR_AVS_LARGE", "group__group__pdstack__enums.html#gga27c25d722a97fec720f2df80ed261b8ba2f8a3f1aa5ebd4327b3ce20f44b4ed2c", null ]
     ] ],
     [ "cy_en_pdstack_peak_cur_cap_t", "group__group__pdstack__enums.html#ga9f2035ecb735f94c631905927f6f75a3", [
       [ "CY_PDSTACK_IMAX_EQ_IOC", "group__group__pdstack__enums.html#gga9f2035ecb735f94c631905927f6f75a3a14e0cfa63385b5389ef20248a610c91b", null ],
@@ -153,6 +172,12 @@ var group__group__pdstack__enums =
       [ "CY_PDSTACK_DPM_CMD_SEND_DATA_RESET", "group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27a39a282aba7e63814c31acece61706267", null ],
       [ "CY_PDSTACK_DPM_CMD_SEND_ENTER_USB", "group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27a033fc89fbeb8963ea6e17315e7e2e5f9", null ],
       [ "CY_PDSTACK_DPM_CMD_GET_SNK_CAP_EXTENDED", "group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27ab3a5d6c494e1b522de1d1fe0ed0d4a3a", null ],
+      [ "CY_PDSTACK_DPM_CMD_SEND_EPR_MODE", "group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27a2b8659add9b793e3885c433360982cb8", null ],
+      [ "CY_PDSTACK_DPM_CMD_SNK_EPR_MODE_ENTRY", "group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27aa792bc426f93ae79d0fcb4353dfd86d0", null ],
+      [ "CY_PDSTACK_DPM_CMD_SNK_SEND_KEEP_ALIVE", "group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27a5c53bd5f34b10880237390d4ff2339d9", null ],
+      [ "CY_PDSTACK_DPM_CMD_SEND_EXTD_CTRL_MSG", "group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27ae15a6c7c85b1fa602acf0ff40f5644cc", null ],
+      [ "CY_PDSTACK_DPM_CMD_SEND_GET_SOURCE_INFO", "group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27a19d4a8f7093e84a012163faf4e588bb0", null ],
+      [ "CY_PDSTACK_DPM_CMD_SEND_GET_REVISION", "group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27a1f89ae7545200ea8903ea50a0554c692", null ],
       [ "CY_PDSTACK_DPM_CMD_SEND_INVALID", "group__group__pdstack__enums.html#ggaab347ed9d4ea3174377c728e9304fa27aef5fe8435b9d2fd7c41c4a75928b13bb", null ]
     ] ],
     [ "cy_en_pdstack_vdm_type_t", "group__group__pdstack__enums.html#gaee817423e09ca638b130bdb4664c0156", [
@@ -310,6 +335,13 @@ var group__group__pdstack__enums =
       [ "CY_PDSTACK_PE_FSM_EVAL_DATA_RESET", "group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8babb479a72015b2864a3d495357fd469a5", null ],
       [ "CY_PDSTACK_PE_FSM_SEND_DATA_RESET", "group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba05680d331c97d01727fc42d71b9e0615", null ],
       [ "CY_PDSTACK_PE_FSM_EVAL_ENTER_USB", "group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba645d6201d79571fe15c26df58ec8a9a6", null ],
+      [ "CY_PDSTACK_PE_FSM_SRC_EVAL_EPR_MODE_ENTRY", "group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba88ce66a56e4aabb74f0017350b90f0c8", null ],
+      [ "CY_PDSTACK_PE_FSM_SRC_SEND_EPR_MODE_RESULT", "group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba1065ae90ee56d201c187c2a4c7196b3c", null ],
+      [ "CY_PDSTACK_PE_FSM_SRC_SEND_EPR_SRC_CAP", "group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba69b510b32648db2a4bc126fdad2454dd", null ],
+      [ "CY_PDSTACK_PE_FSM_SNK_SEND_EPR_MODE_ENTRY", "group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba94280b5ebf33a9a1c1825f12e88df47c", null ],
+      [ "CY_PDSTACK_PE_FSM_SNK_EPR_ENTRY_WAIT_FOR_RESP", "group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8bad104a1a262746fb157179779e8b46596", null ],
+      [ "CY_PDSTACK_PE_FSM_SNK_EPR_KEEP_ALIVE", "group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8bafda9abc22c63fb9633e3d17b5ac7a259", null ],
+      [ "CY_PDSTACK_PE_FSM_SNK_SEND_EPR_CAP", "group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8ba9195be018f366fcbcfa3c386a1597de2", null ],
       [ "CY_PDSTACK_PE_FSM_MAX_STATES", "group__group__pdstack__enums.html#ggadf6ec016657630c1107179e503789e8bab2af47a07d3a545ba606ec2c4cabcfd9", null ]
     ] ],
     [ "cy_en_pdstack_contract_status_t", "group__group__pdstack__enums.html#ga00f33369711357916a45ca77c7d5e295", [
@@ -383,6 +415,13 @@ var group__group__pdstack__enums =
       [ "APP_EVT_PR_SWAP_ACCEPTED", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5abd74d9d5055a2585c82191e7579dff77", null ],
       [ "APP_EVT_HR_SENT_RCVD_DEFERRED", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a39e66e51dc885a099ffc7611a79c28e1", null ],
       [ "APP_EVT_BAD_SINK_APDO_SEL", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5aaa7b7c475a3b72a251d0dc9fa7761919", null ],
+      [ "APP_EVT_SOURCE_INFO_RECEIVED", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a1ba8101fde155b75ece28b66848c41cf", null ],
+      [ "APP_EVT_REVISION_RECEIVED", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a3bfcd66eb7853179c0b104e9f5e001cb", null ],
+      [ "APP_EVT_EPR_MODE_ENTER_RECEIVED", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a191a32416335fe8243e0ce35bfae84f6", null ],
+      [ "APP_EVT_EPR_MODE_ENTER_SUCCESS", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5ac7da143bc677b3a1e9a156d57871f676", null ],
+      [ "APP_EVT_EPR_MODE_ENTER_FAILED", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a7210113aa445364f4d3ecfee606350cf", null ],
+      [ "APP_EVT_EPR_MODE_EXIT", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a6a944c5edd4eb4d81dbcc04f09439245", null ],
+      [ "APP_EVT_VCONN_SWAP_FAILED", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a4a9231c99408656dbb914aed25a969f4", null ],
       [ "APP_TOTAL_EVENTS", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a34d355bf67316b12305a178a3e228e0e", null ]
     ] ],
     [ "cy_en_pdstack_ams_type_t", "group__group__pdstack__enums.html#gaab529053dcdc1680eef0910ab36d2b47", [
@@ -415,6 +454,50 @@ var group__group__pdstack__enums =
       [ "CY_PDSTACK_DATA_RESET_WAIT_VCONN_ON", "group__group__pdstack__enums.html#gga56b8d796e52e02f9800958a266ec2123aef435ef65408c046e41aa667dadfcd42", null ],
       [ "CY_PDSTACK_DATA_RESET_WAIT_COMPLETION", "group__group__pdstack__enums.html#gga56b8d796e52e02f9800958a266ec2123a49f10f7a2ed01bdc2f05eda13bcda876", null ],
       [ "CY_PDSTACK_DATA_RESET_COMPLETE_DELAY", "group__group__pdstack__enums.html#gga56b8d796e52e02f9800958a266ec2123a73aee22ff539eec609d84234a5231e97", null ]
+    ] ],
+    [ "cy_en_pdstack_epr_mode_state_t", "group__group__pdstack__enums.html#gac89d5db997fc80167ba950b307efb7d4", [
+      [ "CY_PDSTACK_EPR_MODE_STATE_IDLE", "group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4ae32fe421f5e91bf9e27990d660aa9820", null ],
+      [ "CY_PDSTACK_EPR_MODE_STATE_WAIT_ACK", "group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4a3bb68db79af70a87d5498a68e7bdaad5", null ],
+      [ "CY_PDSTACK_EPR_MODE_STATE_ACKED", "group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4ab490a8d91cce6f9ad00d725a13153da1", null ],
+      [ "CY_PDSTACK_EPR_MODE_STATE_WAIT_CBL_DSC", "group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4a1e6b429df4cb00bec3bf9a05a671391e", null ],
+      [ "CY_PDSTACK_EPR_MODE_STATE_WAIT_COMPLETION", "group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4af34289eef32f80b3ff840ebe5dc7fef5", null ],
+      [ "CY_PDSTACK_EPR_MODE_STATE_COMPLETE_DELAY", "group__group__pdstack__enums.html#ggac89d5db997fc80167ba950b307efb7d4a37c43d5b2e5817e7e4028f852e7880b2", null ]
+    ] ],
+    [ "cy_en_pdstack_eprmdo_action_t", "group__group__pdstack__enums.html#ga1437bc3a46bb7fbb9408221b0fcf8a35", [
+      [ "CY_PDSTACK_EPR_MODE_ENTER", "group__group__pdstack__enums.html#gga1437bc3a46bb7fbb9408221b0fcf8a35ab345fe5cd2fcf565f9916ec1c8020757", null ],
+      [ "CY_PDSTACK_EPR_MODE_ACK", "group__group__pdstack__enums.html#gga1437bc3a46bb7fbb9408221b0fcf8a35a2b79c1562a61df7f3e16c8636add5982", null ],
+      [ "CY_PDSTACK_EPR_MODE_SUCCEEDED", "group__group__pdstack__enums.html#gga1437bc3a46bb7fbb9408221b0fcf8a35a7d362275c5f6e9d2623af8cbac7dea87", null ],
+      [ "CY_PDSTACK_EPR_MODE_FAILED", "group__group__pdstack__enums.html#gga1437bc3a46bb7fbb9408221b0fcf8a35aab88a530f8c0182d6896906f368bf172", null ],
+      [ "CY_PDSTACK_EPR_MODE_EXIT", "group__group__pdstack__enums.html#gga1437bc3a46bb7fbb9408221b0fcf8a35afe4d0ecf1499e8b232a7bddd1817f680", null ]
+    ] ],
+    [ "cy_en_pdstack_eprmdo_data_t", "group__group__pdstack__enums.html#ga03f6696c0f77d53184148bbaa3ea8af2", [
+      [ "CY_PDSTACK_EPR_FAIL_UNKNOWN", "group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a544c32379adada2ada4b6ef94e8e176b", null ],
+      [ "CY_PDSTACK_EPR_FAIL_EPR_CABLE", "group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a017d0de30d249250c32a5c658d0c3048", null ],
+      [ "CY_PDSTACK_EPR_FAIL_EPR_VCONN", "group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a00e4a8f98f790effcd4ca11dda3beee6", null ],
+      [ "CY_PDSTACK_EPR_FAIL_RDO", "group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a8a23693178a4c8a5dc1d6e5f1fb41443", null ],
+      [ "CY_PDSTACK_EPR_FAIL_UNABLE_NOW", "group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2ab172b877bbd736a598a972a5435e1bdd", null ],
+      [ "CY_PDSTACK_EPR_FAIL_PDO", "group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a25a9995504e2b03da4339ac08ad8ce23", null ],
+      [ "CY_PDSTACK_EPR_ENTER_SUCCESS", "group__group__pdstack__enums.html#gga03f6696c0f77d53184148bbaa3ea8af2a48e4e3b9cdb7e81e027cb5c5661b55ce", null ]
+    ] ],
+    [ "cy_en_pdstack_intel_pf_type_t", "group__group__pdstack__enums.html#ga2472529e1b96331ec1d118a4e3f123b1", [
+      [ "CY_PDSTACK_PF_THUNDERBOLT", "group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1a53fae429da3e3fe74a13b814d1782ae7", null ],
+      [ "CY_PDSTACK_PF_ICE_LAKE", "group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1a7a14d43fbabdfbe02560ec4e37861a8a", null ],
+      [ "CY_PDSTACK_PF_TIGER_LAKE", "group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1aa25f035573b9223d4fbe99fcfaeb8e85", null ],
+      [ "CY_PDSTACK_PF_MAPLE_RIDGE", "group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1a627ccbfd1a7a713e2a46a0a868266fea", null ]
+    ] ],
+    [ "cy_en_pdstack_amd_pf_type_t", "group__group__pdstack__enums.html#gab2ef7b0b589d5cef8e46ffe5cdcaeb47", [
+      [ "CY_PDSTACK_AMD_PF_RENOIR", "group__group__pdstack__enums.html#ggab2ef7b0b589d5cef8e46ffe5cdcaeb47a997f5cb81859bdfc7eb8d3707fb031ce", null ],
+      [ "CY_PDSTACK_AMD_PF_REMBRANDT_A0", "group__group__pdstack__enums.html#ggab2ef7b0b589d5cef8e46ffe5cdcaeb47ae8579b3221ba0cdb49bdc9640a77fc9e", null ],
+      [ "CY_PDSTACK_AMD_PF_REMBRANDT_B0", "group__group__pdstack__enums.html#ggab2ef7b0b589d5cef8e46ffe5cdcaeb47a1cad5b01793923c67f91345d3fb1b4b7", null ]
+    ] ],
+    [ "cy_en_pdstack_amd_rtmr_type_t", "group__group__pdstack__enums.html#gadb40c602b90b2432cdc63f8d375628b1", [
+      [ "CY_PDSTACK_AMD_RETIMER_NONE", "group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1ab2f47056e774359ff46025fc1f1ace21", null ],
+      [ "CY_PDSTACK_AMD_RETIMER_PI3DPX1205A", "group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a884f3067e6f8e07c66e287a385d93995", null ],
+      [ "CY_PDSTACK_AMD_RETIMER_PS8828", "group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a4bd2b2db78de9e7af59e67605daa790c", null ],
+      [ "CY_PDSTACK_AMD_RETIMER_PS8830", "group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a851b0a7b853bbbba16e42a0de3eaaae6", null ],
+      [ "CY_PDSTACK_AMD_RETIMER_AUTO_PS8828A_OR_PS8830", "group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1ab8c2b1466e3f57849e935488b01a4f39", null ],
+      [ "CY_PDSTACK_AMD_RETIMER_KB800X_B0", "group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a1441f73f24fe03547fcf66e4bad88ce5", null ],
+      [ "CY_PDSTACK_AMD_RETIMER_KB800X_B1", "group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a9c20c9110a3fcd60682d1b6b62c6612b", null ]
     ] ],
     [ "cy_en_pdstack_pdo_sel_alg_t", "group__group__pdstack__enums.html#ga66c076f3b12cb3f10ebd67565c690593", [
       [ "CY_PDSTACK_HIGHEST_POWER", "group__group__pdstack__enums.html#gga66c076f3b12cb3f10ebd67565c690593a1f408d437122ed64a2d1d2958accd71e", null ],
@@ -471,9 +554,9 @@ var group__group__pdstack__enums =
       [ "PD_OCP_DEBOUNCE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0add627ba326533e70aee5b2d473e1cbee", null ],
       [ "HPD_RX_ACTIVITY_TIMER_ID", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a510145521341b2657471ecfaf00098ab", null ],
       [ "PD_VCONN_OCP_DEBOUNCE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a00664e76095160b580ef99941dccc5b3", null ],
-      [ "PD_TIMER_RESERVED_28", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a18df953a9c4be3ceb7019dbf3ac5ee8b", null ],
-      [ "PD_TIMER_RESERVED_29", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a7bee4843ac2445e89f4b1dee1a45b06c", null ],
-      [ "PD_TIMER_RESERVED_30", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a5e5eea46e2c043d99fe956121cca799b", null ],
+      [ "PD_SNK_EPR_MODE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a18a3b3209dfb00f08340e528210260c8", null ],
+      [ "PD_SRC_EPR_MODE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a091fa4ecc24cb2a6359a24e030155de8", null ],
+      [ "PD_EPR_KEEPALIVE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a3d2b63ba13d70fe17d064eaa67ce2d4c", null ],
       [ "PD_TIMER_RESERVED_31", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a955c9a81a66b5e70cc795bbabc425cf2", null ],
       [ "PD1_TIMERS_START_ID", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a15866a0297241f0149c1f26d18563924", null ],
       [ "PD1_CABLE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a662269d3436702c11aaf462d405f45cc", null ],
@@ -504,9 +587,9 @@ var group__group__pdstack__enums =
       [ "PD1_OCP_DEBOUNCE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0ae15cb5a492f82759ee64a60f0efa2f47", null ],
       [ "HPD1_RX_ACTIVITY_TIMER_ID", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0ae1c6a7c183de6311a1ffe6fb9952ac09", null ],
       [ "PD1_VCONN_OCP_DEBOUNCE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a7ac4090c18e0bd34efdfcbd921ddd9a9", null ],
-      [ "PD1_TIMER_RESERVED_60", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a800188ca695072c98ae589ccbadb8425", null ],
-      [ "PD1_TIMER_RESERVED_61", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0abe90e1392a0cdbea823814c0cb78b9cf", null ],
-      [ "PD1_TIMER_RESERVED_62", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0aaa7057cbbf2abc78f627323498023146", null ],
+      [ "PD1_SNK_EPR_MODE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a580761c96173bcdc765f8495a2a14b95", null ],
+      [ "PD1_SRC_EPR_MODE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0aecbe4c80096e4d76d2a302085a0ec3e5", null ],
+      [ "PD1_EPR_KEEPALIVE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a03f790547b78087e06d72ec8a558135f", null ],
       [ "PD1_TIMER_RESERVED_63", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a48fa901c7ade03ae980a5c4c9e67fd5d", null ],
       [ "APP_TIMERS_START_ID", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a4f1b0146d05e8c7ba71462e670f68f10", null ],
       [ "APP_PSOURCE_EN_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a5aec9e15a33f1f0294e0297e3c5c22a6", null ],
@@ -545,9 +628,10 @@ var group__group__pdstack__enums =
       [ "APP_BC_DP_DM_DEBOUNCE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a26c3976be18a61d5647631fa391b4060", null ],
       [ "APP_BC_DETACH_DETECT_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0ac1e904bec13a41045656486ff73689e2", null ],
       [ "APP_CDP_DP_DM_POLL_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0acbcd8930ebbbe46182e000927980d22f", null ],
-      [ "APP_TIMER_RESERVED_100", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a7937daac9abb2a4bba51e2eec905f804", null ],
-      [ "APP_TIMER_RESERVED_101", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a8f06973c3a3a95c713ae6200f63e2b98", null ],
-      [ "APP_TIMER_RESERVED_102", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a2976a5d8d4c8c7687db619b949152875", null ],
+      [ "APP_EPR_MODE_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a068adbaa35935b68aedeacd0e09b2adc", null ],
+      [ "APP_EPR_EXT_CMD_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a16854f27cab281fc103388f0abae9612", null ],
+      [ "APP_TIMER_HPD_DELAY_TIMER", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a468c37852236867bc5ff12d8e145a833", null ],
+      [ "APP_TIMERS_RESERVED_START_ID", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0af322195e3c15f726edcba60dd0defbf8", null ],
       [ "APP_TIMER_RESERVED_103", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0af2d25cdb84a4b94d85a4e50374c79d0e", null ],
       [ "APP_TIMER_RESERVED_104", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0aa5b5f99fd3f7a972df32e5025bfafea1", null ],
       [ "APP_TIMER_RESERVED_105", "group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0af20c7c0e429a0238472109a36ff3499f", null ],
