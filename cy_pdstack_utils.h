@@ -1,12 +1,12 @@
 /***************************************************************************//**
 * \file cy_pdstack_utils.h
-* \version 1.20
+* \version 2.0
 *
 * Provides general utility macros and definitions for the PDStack Middleware.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2021, Cypress Semiconductor Corporation. All rights reserved.
+* Copyright 2021-2022, Cypress Semiconductor Corporation. All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -96,13 +96,6 @@
         | ( (uint32_t) (b)[(i) + 2] <<  8 )             \
         | ( (uint32_t) (b)[(i) + 3]       );            \
 
-#define REG_FIELD_UPDATE(reg,field,value)               \
-    (reg) = ((reg & ~(field##_MASK)) | ((value) << field##_POS))
-/**< Update a single field in a register. It first clears the field and then updates the data. */
-
-#define REG_FIELD_GET(reg,field)                        \
-    (((reg) & field##_MASK) >> field##_POS)
-/**< Retrieve a specific field from a register. */
 
 /*****************************************************************************
 * Global Function Declaration

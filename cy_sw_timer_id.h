@@ -1,12 +1,12 @@
 /***************************************************************************//**
 * \file cy_sw_timer_id.h
-* \version 1.20
+* \version 2.0
 *
 * Provides Soft Timer Identifier definitions.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2021, Cypress Semiconductor Corporation. All rights reserved.
+* Copyright 2021-2022, Cypress Semiconductor Corporation. All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -21,7 +21,7 @@
     (uint8_t)(((context)->port != 0u) ? ((uint8_t)(id) + (uint8_t)PD1_TIMERS_START_ID) : (uint8_t)(id))
 
 #define CY_PDSTACK_GET_APP_TIMER_ID(context, id)                                \
-    (uint8_t)(((context)->port != 0u) ? ((uint8_t)(id) + 64u) : (uint8_t)(id))
+    (uint16_t)(((context)->port != 0u) ? ((uint16_t)(id) + 128u) : (uint16_t)(id))
 
 /**
 * \addtogroup group_pdstack_enums
@@ -220,17 +220,17 @@ typedef enum ccg_timer_id {
     PD1_VCONN_OCP_DEBOUNCE_TIMER,
     /**< 059: Timer used for FW debounce of VConn OCP. */
 
+    CCG_ACTIVITY_TIMER_ID,
+    /**< 060: PD Application level activity timer. */
+
     PD1_SNK_EPR_MODE_TIMER,
-    /**< 060: Timer used for Pd Sink EPR Mode. */
+    /**< 061: Timer used for Pd Sink EPR Mode. */
 
     PD1_SRC_EPR_MODE_TIMER,
-    /**< 061: Timer used for Pd Source EPR Mode. */
+    /**< 062: Timer used for Pd Source EPR Mode. */
 
     PD1_EPR_KEEPALIVE_TIMER,
-    /**< 62: Timer used by EPR state machine for sending KeepAlive message. */
-
-    PD1_TIMER_RESERVED_63,
-    /**< 063: Reserved for future use. */
+    /**< 63: Timer used by EPR state machine for sending KeepAlive message. */
 
     APP_TIMERS_START_ID = 64u,
     /**< 064: Start index for Application level timers. */
@@ -352,89 +352,101 @@ typedef enum ccg_timer_id {
     APP_TIMER_HPD_DELAY_TIMER,
     /**< 102: This timer is used to delay HPD events. */
 
-    APP_TIMERS_RESERVED_START_ID = 103u,
-    /**< 103: Start index for Application level reserved timers. */
+    APP_PSOURCE_VBUS_SET_TIMER_ID,
+    /**< 103: Power source VBUS set timer ID. */
 
-    APP_TIMER_RESERVED_103 = APP_TIMERS_RESERVED_START_ID,
-    /**< 103: Timer ID reserved for future use. */
+    APP_PSOURCE_SAFE_FET_ON_TIMER_ID,
+    /**< 104: Timeout timer to set safe voltage during FET On operation. */
 
-    APP_TIMER_RESERVED_104,
-    /**< 104: Timer ID reserved for future use. */
+    APP_PSOURCE_SAFE_FET_ON_MONITOR_TIMER_ID,
+    /**< 105: Timer to monitor voltage during FET On operation. */
 
-    APP_TIMER_RESERVED_105,
-    /**< 105: Timer ID reserved for future use. */
+    VBUS_DISCHARGE_SCHEDULE_TIMER,
+    /**< 106: Timer for VBUS SLow Discharge */
 
-    APP_TIMER_RESERVED_106,
-    /**< 106: Timer ID reserved for future use. */
+    CCG_LS_MASTER_PORT_DEBOUNCE_TIMER_ID,
+    /**< 107: Macro defines Master Debounce Timer ID. */
 
-    APP_TIMER_RESERVED_107,
-    /**< 107: Timer ID reserved for future use. */
+    CCG_LS_SLAVE_PORT_DEBOUNCE_TIMER_ID,
+    /**< 108: Macro defines Slave Debounce Timer ID. */
 
-    APP_TIMER_RESERVED_108,
-    /**< 108: Timer ID reserved for future use. */
+    CCG_LS_MASTER_WRITE_TIMER_ID,
+    /**< 109: Macro defines Master Write Timer ID. */
 
-    APP_TIMER_RESERVED_109,
-    /**< 109: Timer ID reserved for future use. */
+    CCG_LS_HEART_BEAT_TIMER_ID,
+    /**< 110: Macro defines Heart Beat Timer ID. */
 
-    APP_TIMER_RESERVED_110,
-    /**< 110: Timer ID reserved for future use. */
+    THROTTLE_TIMER_ID,
+    /**< 111: Power Throttling timer ID. */
 
-    APP_TIMER_RESERVED_111,
-    /**< 111: Timer ID reserved for future use. */
+    THROTTLE_WAIT_FOR_PD_TIMER_ID,
+    /**< 112: Power Throttling timer ID. */
 
-    APP_TIMER_RESERVED_112,
-    /**< 112: Timer ID reserved for future use. */
-
-    APP_TIMER_RESERVED_113,
+    HPI_PD_CMD_TIMER,
     /**< 113: Timer ID reserved for future use. */
 
-    APP_TIMER_RESERVED_114,
-    /**< 114: Timer ID reserved for future use. */
+    LINS_BUS_INACTIVE_TIMER,
+    /**< 114: Bus Inactivity Timeout for LIN. */
+    
+    LINS_BUS_LISTEN_TIMER,
+    /**< 115: Nominal Time for Reception of a single frame from BREAK */
+    
+    LINS_MULTIFRAME_DROP_TIMER,
+    /**< 116: Multiframe timer to drop the frame upon late reception. */
 
-    APP_TIMER_RESERVED_115,
-    /**< 115: Timer ID reserved for future use. */
+    APP_FET_SOFT_START_TIMER_ID,
+    /**< 117: Timer used to control soft turn-on of power FET gate drivers. */
 
-    APP_TIMER_RESERVED_116,
-    /**< 116: Timer ID reserved for future use. */
+    APP_HAL_VREG_TIMER,
+    /**< 118: Timer that can be used for Vreg fault handling. */
 
-    APP_TIMER_RESERVED_117,
-    /**< 117: Timer ID reserved for future use. */
+    APP_HAL_GENERIC_TIMER,
+    /**< 119: Timer that can be used for generic HAL functions. */
 
-    APP_TIMER_RESERVED_118,
-    /**< 118: Timer ID reserved for future use. */
+    APP_REGULATOR_STARTUP_MONITOR_TIMER,             
+    /**< 120: Timer ID reserved for regulator startup monitoring. */
 
-    APP_TIMER_RESERVED_119,
-    /**< 119: Timer ID reserved for future use. */
+    APP_DATA_RESET_TIMER,
+    /**< 121: Timer ID for DATA Reset handling. */
 
-    APP_TIMER_RESERVED_120,
-    /**< 120: Timer ID reserved for future use. */
+    SYS_BLACK_BOX_TIMER_ID,
+    /**< 122: Timer ID reserved for blackbox. */
 
-    APP_TIMER_RESERVED_121,
-    /**< 121: Timer ID reserved for future use. */
+    APP_PSOURCE_REGULATOR_MON_TIMER,
+    /**< 123: Timer ID used to monitor regulator enable status periodically. */
 
-    APP_TIMER_RESERVED_122,
-    /**< 122: Timer ID reserved for future use. */
+    APP_BAD_SINK_TIMEOUT_TIMER,
+    /**< 124: PD bad sink timeout timer ID. */
 
-    APP_TIMER_RESERVED_123,
-    /**< 123: Timer ID reserved for future use. */
+    APP_VBAT_GND_SCP_TIMER_ID,
+    /**< 125: VBAT-GND SCP recovery timer. */
 
-    APP_TIMER_RESERVED_124,
-    /**< 124: Timer ID reserved for future use. */
+    APP_VCONN_OCP_TIMER,
+    /**< 126: Timer to perform delayed start for VCONN OCP. */
 
-    APP_TIMER_RESERVED_125,
-    /**< 125: Timer ID reserved for future use. */
+    APP_TIMERS_RESERVED_START_ID = 127,
+    /**< 127: App Reserved Timer Id Start. */
+    
+    APP_TIMER_RESERVED_127 = APP_TIMERS_RESERVED_START_ID,
+    /**< 127 - 191: Timer ID reserved for future use. */
 
-    APP_TIMER_RESERVED_126,
-    /**< 126: Timer ID reserved for future use. */
+    APP_PORT1_TIMER_START_ID = 192u,
+    /**< 192: Start of timer IDs reserved for the application layer management of PD port #1. */
 
-    APP_TIMER_RESERVED_127,
-    /**< 127: Timer ID reserved for future use. */
+    I2C_SLAVE_SCB0_TIMER = 320u,
+    /**< 320: I2C transfer timeout for SCB0. */
 
-    APP_PORT1_TIMER_START_ID = 128u,
-    /**< 128: Start of timer IDs reserved for the application layer management of PD port #1. */
+    I2C_SLAVE_SCB1_TIMER = 321u,
+    /**< 321: I2C transfer timeout for SCB1. */
 
-    USER_TIMERS_START_ID = 192u,
-    /**< 192: Start of timer IDs left for generic solution level usage. */
+    I2C_SLAVE_SCB2_TIMER = 322u,
+    /**< 322: I2C transfer timeout for SCB2. */
+
+    I2C_SLAVE_SCB3_TIMER = 323u,
+    /**< 323: I2C transfer timeout for SCB3. */
+
+    USER_TIMERS_START_ID = 324u,
+    /**< 324: Start of timer IDs left for generic solution level usage. */
 
 } cy_sw_timer_id_t;
 

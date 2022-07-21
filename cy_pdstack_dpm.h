@@ -1,12 +1,12 @@
 /***************************************************************************//**
 * \file cy_pdstack_dpm.h
-* \version 1.20
+* \version 2.0
 *
 * Header file of Device Policy Manager of the PDStack middleware.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2021, Cypress Semiconductor Corporation. All rights reserved.
+* Copyright 2021-2022, Cypress Semiconductor Corporation. All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -231,6 +231,49 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_Rtos_Init(
        cy_stc_pdstack_rtos_context_t *ptrRtosContext);
 
 /*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_AltModeInitContext
+****************************************************************************//**
+*
+* This function initializes the pdstack context with the Alternate Mode Layer
+* context details.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param ptrAltModeContext
+* Pointer to the alternate mode context context
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful
+* CY_PDSTACK_STAT_BAD_PARAM if the input parameters are not valid
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_AltModeInitContext (
+       cy_stc_pdstack_context_t *ptrPdStackContext,
+       void *ptrAltModeContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_HpiInitContext
+****************************************************************************//**
+*
+* This function initializes the pdstack context with the HPI context details.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param ptrHpiContext
+* Pointer to the HPI context
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful
+* CY_PDSTACK_STAT_BAD_PARAM if the input parameters are not valid
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_HpiInitContext (
+       cy_stc_pdstack_context_t *ptrPdStackContext,
+       void *ptrHpiContext);
+
+/*******************************************************************************
 * Function Name: Cy_PdStack_Dpm_Task
 ****************************************************************************//**
 *
@@ -283,6 +326,37 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_SendPdCommand(
         bool isResp,
         cy_pdstack_dpm_pd_cmd_cbk_t cmdCbk);
 
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_SendPdCommandEc
+****************************************************************************//**
+*
+* This function provides an interface for the HPI module to
+* send PD commands. This is only meant for HPI module wherein responses come from EC.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param cmd
+* Type of command to be initiated.
+*
+* \param ptrCmdBuf
+* Pointer to the command buffer.
+*
+* \param cmdCbk
+* Pointer to the callback function.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if the command is registered
+* CY_PDSTACK_STAT_CMD_FAILURE if the PD port is not ready for a command
+* CY_PDSTACK_STAT_BUSY if there is another pending command.
+* CY_PDSTACK_STAT_BAD_PARAM if any of the parameters are invalid
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_Pdstack_Dpm_SendPdCommandEc(
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        cy_en_pdstack_dpm_pd_cmd_t cmd,
+        cy_stc_pdstack_dpm_pd_cmd_buf_t* ptrCmdBuf,
+        cy_pdstack_dpm_pd_cmd_cbk_t cmdCbk);
 /*******************************************************************************
 * Function Name: Cy_PdStack_Dpm_SendTypecCommand
 ****************************************************************************//**
@@ -438,11 +512,11 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_IsIdle(
 * PdStack Library Context pointer.
 *
 * \return
-* None
-*
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
 *
 *******************************************************************************/
-void Cy_PdStack_Dpm_ClearSolnBusy(
+cy_en_pdstack_status_t Cy_PdStack_Dpm_ClearSolnBusy(
         cy_stc_pdstack_context_t *ptrPdStackContext);
 
 /*******************************************************************************
@@ -456,12 +530,635 @@ void Cy_PdStack_Dpm_ClearSolnBusy(
 * PdStack Library Context pointer.
 *
 * \return
-* None
-*
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
 *
 *******************************************************************************/
-void Cy_PdStack_Dpm_SetSolnBusy(
+cy_en_pdstack_status_t Cy_PdStack_Dpm_SetSolnBusy(
         cy_stc_pdstack_context_t *ptrPdStackContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_SetCf
+****************************************************************************//**
+*
+* Function sets/clears current foldback status.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param status
+* Current foldback status
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_SetCf (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        bool status);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_PpsTask
+****************************************************************************//**
+*
+* This function monitors the PPS activity. This function needs to be called
+* periodically when in PPS mode of operation. Since the VBUS voltage is expected
+* to have stabilized when invoking this function, this is not handled internally
+* and is expected to be triggered from the application layer. The recommended
+* periodicity for this is 100ms.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_PpsTask (
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_IsRdoValid
+****************************************************************************//**
+*
+* Generic function to evaluate any RDO with respect to current source cap of the specified context.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param rdo
+* Request Data Object
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_FAILURE if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_IsRdoValid (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        cy_pd_pd_do_t rdo);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateDisCounter
+****************************************************************************//**
+*
+* This function clears DPM disable requests counter.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param clear
+* True if port disable request counter needs to be cleared
+* False if port disable request counter needs to be incremented
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_FAILURE if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateDisCounter (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        bool clear);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateUsbComm
+****************************************************************************//**
+*
+* Function to update USB Communication Capable bit.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param state
+* New value of the USB Communication Capable bit.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_FAILURE if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateUsbComm (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t state);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_SetBCRFaultStat
+****************************************************************************//**
+*
+* Function to set BCR Fault bit status.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param value
+* Fault bit which needs to be set.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_FAILURE if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_SetBCRFaultStat (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t value);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_ClearBCRFaultStat
+****************************************************************************//**
+*
+* Function to clear BCR Fault bit status.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param value
+* Fault bit which needs to be cleared.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_FAILURE if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_ClearBCRFaultStat (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t value);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_GetBistStmEn
+****************************************************************************//**
+*
+* Function to get BIST STM enabled/disabled flag.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* True if BIST STM is enabled
+* False if BIST STM is disabled
+*
+*******************************************************************************/
+bool Cy_PdStack_Dpm_GetBistStmEn (
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_SetBistStmEn
+****************************************************************************//**
+*
+* Function to set BIST STM enabled/disabled flag.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param value
+* Value to be set. Set true to enable and false to disable.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_SetBistStmEn (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        bool value);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateExtSrcCap
+****************************************************************************//**
+*
+* This function updates the extended source capabilities for the PD port.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param ptrBuf
+* Pointer to buffer containing extended source capabilities data.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateExtSrcCap (
+        cy_stc_pdstack_context_t *ptrPdStackContext, 
+        uint8_t *ptrBuf);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_ClearFaultActive
+****************************************************************************//**
+*
+* This function clears the internal fault active flags.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_ClearFaultActive (
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_IsPrevContractValid
+****************************************************************************//**
+*
+* This function checks if the previous contract is valid, Previous contract may
+* become invalid due to runtime update of the source caps.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* \ref cy_en_pdstack_status_t
+* CY_PDSTACK_STAT_SUCCESS if previous contract is valid.
+* CY_PDSTACK_STAT_FAILURE if previous contract is invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_IsPrevContractValid (
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdatePortConfig
+****************************************************************************//**
+*
+ * This function allows changing the PD port configuration parameters like port
+ * role, default port role, DRP toggle enable and Try.Src enable at runtime.
+ * These changes are only allowed while the corresponding PD port is disabled.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param role
+* New port role selection (0 = Sink, 1 = Source, 2 = Dual Role).
+*
+* \param dflt_role
+* New default port role selection (0 = Sink, 1 = Source).
+*
+* \param toggle_en
+* New value for DRP toggle enable flag.
+*
+* \param try_src_snk_en
+* New value for Try.SRC/ TRY.SNK enable flag (0 =
+* Both Try.SRC and TRY.SNK are disabled, 1 = Try.SRC is enabled,
+* 2 = TRY.SNK is enabled).
+*
+* \return
+* \ref cy_en_pdstack_status_t
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+* CY_PDSTACK_STAT_FAILURE if port is not disabled.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdatePortConfig (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t role,
+        uint8_t dflt_role,
+        bool toggle_en,
+        uint8_t try_src_snk_en);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateFrsEnable
+****************************************************************************//**
+*
+* This functions allows to enable/disable the PD 3.0 FRS functionality.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param frsRxEn
+* Whether FRS receive is to be enabled.
+*
+* \param frsTxEn
+* Whether FRS transmit is to be enabled.
+*
+* \return
+* \ref cy_en_pdstack_status_t
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+* CY_PDSTACK_STAT_FAILURE if port is not disabled.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateFrsEnable (
+        cy_stc_pdstack_context_t *ptrPdStackContext, 
+        bool frsRxEn, 
+        bool frsTxEn);
+
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_ClearHardResetCount
+****************************************************************************//**
+*
+* This functions clears the hard reset count.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_ClearHardResetCount (
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_GetVbusVoltage
+****************************************************************************//**
+*
+* This function uses the application provided callback to measure the current
+* VBus voltage.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* VBus voltage in mV units.
+*
+*******************************************************************************/
+uint16_t Cy_PdStack_Dpm_GetVbusVoltage (
+         cy_stc_pdstack_context_t *ptrPdStackContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_GetCableUsbCap
+****************************************************************************//**
+*
+* This function retrieves the type of USB signalling supported by the Type-C cable
+* in use. The information is calculated based on the cable VDO responses obtained from
+* the cable marker.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* USB data signalling supported by the cable marker if known, CY_PDSTACK_USB_SIG_UNKNOWN
+* otherwise.
+*
+*******************************************************************************/
+cy_en_pdstack_usb_data_sig_t Cy_PdStack_Dpm_GetCableUsbCap (
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_SetDelaySrcCapStart
+****************************************************************************//**
+*
+* This function facilitates to delay the starting of source cap on Type-C attach.
+* Applicable only when cable is not present.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param delay
+* Delay in ms.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_SetDelaySrcCapStart (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint16_t delay);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_SetAlert
+****************************************************************************//**
+*
+* This function sets alert ADO on ocp/ovp fault. Stack will automatically
+* send alert after explicit contract when alert ADO is non zero. Once alert is sent
+* or detach happens; alert ADO will be cleared automatically by stack.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param alert_ado
+* Alert augmented data object.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_SetAlert (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        cy_pd_pd_do_t alert_ado);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_DowngradePdRev
+****************************************************************************//**
+*
+* This function allows to downgrade PD revision.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* \ref cy_en_pdstack_status_t
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_FAILURE if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_DowngradePdRev (
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateExtSnkCap
+****************************************************************************//**
+*
+* This function allows to update the extended sink capabilities for the PD port
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param ptrBuf
+* Pointer to buffer containing extended sink capabilities data.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateExtSnkCap (
+        cy_stc_pdstack_context_t *ptrPdStackContext, 
+        uint8_t *ptrBuf);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_SetFaultActive
+****************************************************************************//**
+*
+* This function sets internal flags to indicate that any fault (OVP/OCP/OTP etc.) is active.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_SetFaultActive (
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_SetChunkXferRunning
+****************************************************************************//**
+*
+* This function sets chunk transfer type. This should be called
+* after response of a chunk is received to inform stack that chunked transfer
+* has not been completed.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param amsType
+* Type of PD atomic message sequence that is running.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_SetChunkXferRunning (
+        cy_stc_pdstack_context_t *ptrPdStackContext, 
+        cy_en_pdstack_ams_type_t amsType);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_SendHardReset
+****************************************************************************//**
+*
+* This function attempts to send USBPD HardReset to port partner.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param reason
+* Reason for the hard reset. Used for internal status tracking only.
+*
+* \return
+* \ref cy_en_pdstack_status_t
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_FAILURE if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_SendHardReset (
+        cy_stc_pdstack_context_t *ptrPdStackContext, 
+        uint8_t reason);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_GetPdPortStatus
+****************************************************************************//**
+*
+* This function returns the PD port status as expected by the embedded controller.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* PD port status in the format expected by embedded controller.
+*
+*******************************************************************************/
+uint32_t Cy_PdStack_Dpm_GetPdPortStatus(
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateSwapResponse
+****************************************************************************//**
+*
+* This function updates the USBPD data role, power role and vconn swap responses.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param value
+* New swap response
+*
+* \return
+* \ref cy_en_pdstack_status_t
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_FAILURE if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateSwapResponse(
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t value);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdatePortStatus
+****************************************************************************//**
+*
+* This function updates the PD port status returned in response to a Get_Status command.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param status_p
+* Pointer to buffer containing port status.
+*
+* \param offset
+* Number of bytes of offset to be applied while updating the status
+*
+* \param byte_cnt
+* Number of bytes of status to be updated.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdatePortStatus(
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t *status_p, uint8_t offset, uint8_t byte_cnt);
+        
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_RefreshSrcCap
+****************************************************************************//**
+*
+* This function refreshes the source cap at runtime.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* Returns true if the operation is successful otherwise false
+*
+*******************************************************************************/
+bool Cy_PdStack_Dpm_RefreshSrcCap (
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_RefreshSnkCap
+****************************************************************************//**
+*
+* This function refreshes the sink cap at runtime.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* Returns true if the operation is successful otherwise false
+*
+*******************************************************************************/
+bool Cy_PdStack_Dpm_RefreshSnkCap (
+        cy_stc_pdstack_context_t *ptrPdStackContext);
+        
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_GetStackConfig
+****************************************************************************//**
+*
+* This function retrieves the configurable switch values at runtime.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* Structure indicating current stack configuration.
+*
+*******************************************************************************/
+cy_pd_stack_conf_t Cy_PdStack_Dpm_GetStackConfig(
+    cy_stc_pdstack_context_t *ptrPdStackContext);
 
 /*******************************************************************************
 * Function Name: Cy_PdStack_Dpm_ChangeEprActiveFlag
@@ -633,6 +1330,7 @@ void Cy_PdStack_Dpm_EprSnkSendKeepAliveCb (
         cy_timer_id_t id,
         void *ptrContext);
 
+
 /*******************************************************************************
 * Function Name: Cy_PdStack_Dpm_UpdateSnkMaxMin
 ****************************************************************************//**
@@ -756,6 +1454,55 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateSrcCap (
         cy_pd_pd_do_t* pdo);
 
 /*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateEprSrcCap 
+****************************************************************************//**
+*
+* Function to update the EPR source PDOs at runtime thereby overriding the generated
+* configuration by EZ-PD Configurator.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param count
+* Number of PDOs
+*
+* \param pdo
+* Pointer to the PDO array
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateEprSrcCap (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t count,
+        cy_pd_pd_do_t* pdo);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateEprSrcCapMask 
+****************************************************************************//**
+*
+* Function to update the EPR source PDO mask at runtime thereby overriding the 
+* generated configuration by EZ-PD Configurator.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param mask
+* PDO Mask
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateEprSrcCapMask (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t mask);
+
+
+/*******************************************************************************
 * Function Name: Cy_PdStack_Dpm_UpdateEprSnkCap 
 ****************************************************************************//**
 *
@@ -803,7 +1550,58 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateEprSnkCapMask (
         cy_stc_pdstack_context_t *ptrPdStackContext,
         uint8_t mask);
 
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_GetAutoVcsEnabled 
+****************************************************************************//**
+*
+* Function to check whether Automatic VConn Swap is enabled.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \return
+* True if Automatic VConn Swap by the Stack is enabled.
+*
+*******************************************************************************/
+bool Cy_PdStack_Dpm_GetAutoVcsEnabled(cy_stc_pdstack_context_t *ptrPdStackContext);
 
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateAutoVcsEnable 
+****************************************************************************//**
+*
+* Function to enable/disable Automatic VConn Swap by the PD policy engine.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param val 
+* Whether to enable Automatic VConn Swap.
+* 
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateAutoVcsEnable(cy_stc_pdstack_context_t *ptrPdStackContext, bool val);
+
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_UpdateVconnRetain
+****************************************************************************//**
+*
+* Function to enable/disable VConn Retain setting.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param val 
+* Whether to enable VConn Retain setting.
+* 
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateVconnRetain(cy_stc_pdstack_context_t *ptrPdStackContext, uint8_t val);
 
 /** \} group_pdstack_functions */
 

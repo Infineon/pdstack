@@ -21,6 +21,32 @@ var group__group__pdstack__data__structures =
       [ "powerStateChange", "structcy__stc__pdstack__pd__power__status__t.html#abbe10bc89ed3c91bbeebc333715f435f", null ],
       [ "dummy", "structcy__stc__pdstack__pd__power__status__t.html#a690cbd53a0f324cbbc8a23c60bb24c48", null ]
     ] ],
+    [ "cy_stc_pdstack_pd_port_status_ec_t", "unioncy__stc__pdstack__pd__port__status__ec__t.html", [
+      [ "val", "unioncy__stc__pdstack__pd__port__status__ec__t.html#a9c8ecad426af89d770fa0fd758ecfcdc", null ],
+      [ "status", "unioncy__stc__pdstack__pd__port__status__ec__t.html#a6dbf0bc3f455e94c399ae0a147f9662d", null ]
+    ] ],
+    [ "PD_PORT_STAT", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html", [
+      [ "dfltDataRole", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#acca6bdd2f857986623d396b8c7297f4e", null ],
+      [ "dfltDataPref", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a4550f50e83ce7fe484a99f11f359ca61", null ],
+      [ "dfltPowerRole", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#adbe7d53aec78f55f4c399d73a8e95d53", null ],
+      [ "dfltPowerPref", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#aa757dfcccc08b52ee82049561338b3c9", null ],
+      [ "curDataRole", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a5b9a869f5ea32afe6bf8836560a84be7", null ],
+      [ "reserved0", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a10fbf10860c77ea058bf0cc586398e92", null ],
+      [ "curPowerRole", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a0d88dd13f8c133b810dd2a72ea29092a", null ],
+      [ "minState", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a8d5a0a330e0ee6fdad8b5ab2c2456809", null ],
+      [ "contractExist", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#ae7cb30275a587ced24f9cbdb8c5912b4", null ],
+      [ "emcaPresent", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#aaa397dc97c5eb9b8b39d3efbba613615", null ],
+      [ "vconnSrc", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a223a3c3a34dfac43f8fa89c5ad06d392", null ],
+      [ "vconnOn", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#ad4863222313ba763624c5cb9c22fba9c", null ],
+      [ "rpStatus", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#aa1ece9c1a66e0bf77c49af7f097f97b0", null ],
+      [ "peRdy", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#aa471f26b806ccae2c54867fc17730857", null ],
+      [ "ccgSpecRev", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a42dd2b86760e5f03516b6389e93f726f", null ],
+      [ "peerPd3Supp", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#aa5137f8b8686cabf39bb09edef83b4a1", null ],
+      [ "peerUnchunkSupp", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#ab38454b66593f1a3d1fa1893e008283e", null ],
+      [ "emcaSpecRev", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#ae8460cb651b0cd0a6f55bfaabab3e40f", null ],
+      [ "emcaType", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a537460474151f0e652d30b86c1f00332", null ],
+      [ "reserved2", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a7bc69b198af127f28065e0a30d79b9ae", null ]
+    ] ],
     [ "app_resp_t", "structapp__resp__t.html", [
       [ "respDo", "structapp__resp__t.html#a427b10e49fef56b19b50a9e89d81553c", null ],
       [ "reqStatus", "structapp__resp__t.html#a4515d34dcdd23ffcc39c1ba38e8de263", null ]
@@ -49,10 +75,10 @@ var group__group__pdstack__data__structures =
       [ "status", "structcy__stc__pdstack__pd__contract__info__t.html#a911569b2c0c5813d1c532220a5a2cf6c", null ]
     ] ],
     [ "cy_stc_pdstack_pd_packet_t", "structcy__stc__pdstack__pd__packet__t.html", [
-      [ "sop", "structcy__stc__pdstack__pd__packet__t.html#a39aea48518cf5e4ef9e1297b80b3b5e6", null ],
+      [ "sop", "structcy__stc__pdstack__pd__packet__t.html#add66bc50dcce3ea5e6cfd41b8d56b1ae", null ],
       [ "len", "structcy__stc__pdstack__pd__packet__t.html#aa1550fa43aecfafe7a4ed5a156f4aaaa", null ],
       [ "msg", "structcy__stc__pdstack__pd__packet__t.html#a75e7b3ccd30ccd70297aadfb0c436ba4", null ],
-      [ "dataRole", "structcy__stc__pdstack__pd__packet__t.html#affa92b0943ccdd6da07fabaa9b5c198e", null ],
+      [ "dataRole", "structcy__stc__pdstack__pd__packet__t.html#a85432e1931c5dd494915685db0ef8068", null ],
       [ "hdr", "structcy__stc__pdstack__pd__packet__t.html#a34622b76f6904a7d7e0ed9fba7fc2699", null ],
       [ "dat", "structcy__stc__pdstack__pd__packet__t.html#ab26d7ccb5f6aa8ecb76d7c89a042b975", null ]
     ] ],
@@ -103,8 +129,8 @@ var group__group__pdstack__data__structures =
       [ "snkPdo", "structcy__stc__pdstack__epr__t.html#a2e7959b630578d12b35545a0cb30a114", null ]
     ] ],
     [ "cy_stc_pdstack_dpm_status_t", "structcy__stc__pdstack__dpm__status__t.html", [
-      [ "portRole", "structcy__stc__pdstack__dpm__status__t.html#a040e2753a59eb17105471a76c9f5be79", null ],
-      [ "dfltPortRole", "structcy__stc__pdstack__dpm__status__t.html#a92e9971fab5d0d671eef007f8348ca76", null ],
+      [ "portRole", "structcy__stc__pdstack__dpm__status__t.html#a263e151e9772a4611ae55923073d037d", null ],
+      [ "dfltPortRole", "structcy__stc__pdstack__dpm__status__t.html#a06372360e2b24694c87b3a94dae484b5", null ],
       [ "srcCurLevel", "structcy__stc__pdstack__dpm__status__t.html#a2f89705d20556829dd3af46140228722", null ],
       [ "isSrcBat", "structcy__stc__pdstack__dpm__status__t.html#a8ecc7d3dd8dde03e53fb2b67c60bb2ec", null ],
       [ "isSnkBat", "structcy__stc__pdstack__dpm__status__t.html#a933e9ebc582db798f898c87c52a48837", null ],
@@ -115,7 +141,7 @@ var group__group__pdstack__data__structures =
       [ "snkPdoCount", "structcy__stc__pdstack__dpm__status__t.html#ab662f7a57e732fd1230fce0f7adc2083", null ],
       [ "snkPdoMask", "structcy__stc__pdstack__dpm__status__t.html#af952cc4ca924ab702e43c82689186426", null ],
       [ "rpSupported", "structcy__stc__pdstack__dpm__status__t.html#af71ae478ede1199c851d5caff2d20795", null ],
-      [ "pdSupport", "structcy__stc__pdstack__dpm__status__t.html#a991e1292f1dc326915cb6212c2def10d", null ],
+      [ "pdSupport", "structcy__stc__pdstack__dpm__status__t.html#a5be6b199d4809509e028d3d2293f5a4c", null ],
       [ "trySrcSnk", "structcy__stc__pdstack__dpm__status__t.html#ac41a1466fca9f6c590a6894a0a37a64f", null ],
       [ "dbSupport", "structcy__stc__pdstack__dpm__status__t.html#aa99de4674ed6296cf7363920533fa3d7", null ],
       [ "errRecov", "structcy__stc__pdstack__dpm__status__t.html#a40062c7dddd678ad337739298aa250e2", null ],
@@ -138,6 +164,7 @@ var group__group__pdstack__data__structures =
       [ "pdDisabled", "structcy__stc__pdstack__dpm__status__t.html#a00746bd1621d301e4c8cd1490352fd9b", null ],
       [ "raPresent", "structcy__stc__pdstack__dpm__status__t.html#ad4a9d38522d08ef762457932e3be79b1", null ],
       [ "bistCm2Enabled", "structcy__stc__pdstack__dpm__status__t.html#a3c8aa837e6a754b2adb3172af03084e5", null ],
+      [ "bistStmEnabled", "structcy__stc__pdstack__dpm__status__t.html#a45b891e879d4bc9fd47da0e4d9d3d1de", null ],
       [ "cblType", "structcy__stc__pdstack__dpm__status__t.html#a8953d8d64e94fac2d631946ff41a8654", null ],
       [ "cblVdmVersion", "structcy__stc__pdstack__dpm__status__t.html#a781a0da414dc1dd06989753cb6beac0d", null ],
       [ "curSrcPdocount", "structcy__stc__pdstack__dpm__status__t.html#a963af76e3baf93e2017c21e14874e148", null ],
@@ -150,7 +177,7 @@ var group__group__pdstack__data__structures =
       [ "dpmPdCmdActive", "structcy__stc__pdstack__dpm__status__t.html#ab97989d97c7a7ea929c5856365b9342a", null ],
       [ "dpmTypecCmdActive", "structcy__stc__pdstack__dpm__status__t.html#a88400340ab37bd42269efdfbe3d245d8", null ],
       [ "dpmInit", "structcy__stc__pdstack__dpm__status__t.html#a158fe82e4b6adf297c06ce1bf831afd4", null ],
-      [ "dpmSafeDisable", "structcy__stc__pdstack__dpm__status__t.html#a45649ff95767bbb35efa4d6b6eadc583", null ],
+      [ "dpmSafeDisable", "structcy__stc__pdstack__dpm__status__t.html#a1a9a43f246ba2965dd858e70d816a3e5", null ],
       [ "dpmTypecCmd", "structcy__stc__pdstack__dpm__status__t.html#a50c0620d92da8a0e913680a14e69bfe0", null ],
       [ "ccLive", "structcy__stc__pdstack__dpm__status__t.html#a9f6b083bab7008279ea573de5c770ff1", null ],
       [ "ccStatus", "structcy__stc__pdstack__dpm__status__t.html#ae75b777788c06fa8f07e8b520d1213e7", null ],
@@ -189,12 +216,12 @@ var group__group__pdstack__data__structures =
       [ "srcCapP", "structcy__stc__pdstack__dpm__status__t.html#a548d0f8fb5dc948586a4b9ba24e76720", null ],
       [ "padval", "structcy__stc__pdstack__dpm__status__t.html#a665d69caf440bc5bd851754553e3eb55", null ],
       [ "portStatus", "structcy__stc__pdstack__dpm__status__t.html#a9fda26e590777527ec19ed25f250694b", null ],
-      [ "extSrcCap", "structcy__stc__pdstack__dpm__status__t.html#af20d0e54817be327a85773dee6960745", null ],
+      [ "reserved_1", "structcy__stc__pdstack__dpm__status__t.html#a25bc34353deb32fe5b96ca5ca625ea3d", null ],
       [ "ppsStatus", "structcy__stc__pdstack__dpm__status__t.html#a6ca388090c82d20ff00114008bae88c5", null ],
       [ "dpmErrInfo", "structcy__stc__pdstack__dpm__status__t.html#a3cf6e815907c5cd04996c8aa7f0edc7e", null ],
       [ "pwrLimited", "structcy__stc__pdstack__dpm__status__t.html#ae6dde1fe9fa8e0f46357d9d1060934f9", null ],
       [ "cblVdo2", "structcy__stc__pdstack__dpm__status__t.html#a8ee69a60cfc096e890c743c76ca225f8", null ],
-      [ "extSnkCap", "structcy__stc__pdstack__dpm__status__t.html#aec06ba3a380e2d47a0fa1c7a8c4edcd0", null ],
+      [ "reserved_2", "structcy__stc__pdstack__dpm__status__t.html#a4ca1633f0fbc4276a923ebf6d0c9151d", null ],
       [ "randBase", "structcy__stc__pdstack__dpm__status__t.html#ae2164c3ee7d281f6510588ae0c1366aa", null ],
       [ "pd3SrcCcBusy", "structcy__stc__pdstack__dpm__status__t.html#a021496044144bec203ff9578da04391a", null ],
       [ "isSolnBusy", "structcy__stc__pdstack__dpm__status__t.html#ad3e511922850178008aaef6569077ad8", null ],
@@ -211,16 +238,25 @@ var group__group__pdstack__data__structures =
       [ "mfgLenInfo", "structcy__stc__pdstack__dpm__status__t.html#a2019bd947d15fcb7190b6e3599da4d46", null ],
       [ "dWordPad0", "structcy__stc__pdstack__dpm__status__t.html#a4e8a22ae802177c9d77d4d2c93e997cb", null ],
       [ "mfgName", "structcy__stc__pdstack__dpm__status__t.html#a0f8f8a9d682d71d14a6868a36bb16581", null ],
-      [ "srcInfo", "structcy__stc__pdstack__dpm__status__t.html#a43a1b22edaec51dc5b5360beabe48eab", null ],
-      [ "revision", "structcy__stc__pdstack__dpm__status__t.html#af52dafa4fe246de8f00bf7a65a9a390a", null ],
-      [ "eprActive", "structcy__stc__pdstack__dpm__status__t.html#ab4e76b8135e1d3b8175d65e657850a0a", null ],
-      [ "eprToSpr", "structcy__stc__pdstack__dpm__status__t.html#a23273b89822bbaa1f87704ce3ab54189", null ],
-      [ "eprAvsActive", "structcy__stc__pdstack__dpm__status__t.html#a7bfae89620c1d2fd29e4f1a17255493a", null ],
-      [ "eprAvsMode", "structcy__stc__pdstack__dpm__status__t.html#a174c6fac24c88695e5ff40d3bdd4ef18", null ],
-      [ "curEprSrcPdoCount", "structcy__stc__pdstack__dpm__status__t.html#ab4ba85f778bbdb748380e3327e91d0e1", null ],
-      [ "curEprSnkPdoCount", "structcy__stc__pdstack__dpm__status__t.html#a59b4da4570f3c918dd0c21f229fa46a8", null ],
-      [ "epr", "structcy__stc__pdstack__dpm__status__t.html#ac687b01dbf5ce0c6687c5dfbaaae93d8", null ],
-      [ "pwrLed", "structcy__stc__pdstack__dpm__status__t.html#ab3bc3d2ff9410dbaabcf4611581ddfb9", null ]
+      [ "ppsSnkEn", "structcy__stc__pdstack__dpm__status__t.html#a818ae4be0b23f58848381af7090db121", null ],
+      [ "ppsSnkRdo", "structcy__stc__pdstack__dpm__status__t.html#a37ebef4069b83d47824d285025b82369", null ],
+      [ "disReqCount", "structcy__stc__pdstack__dpm__status__t.html#a2dcb8710c732c01be6e6b47bf2f3a00d", null ],
+      [ "swapResponse", "structcy__stc__pdstack__dpm__status__t.html#a097cf6a159896c650d5f5b8886787153", null ],
+      [ "autoVcsDisable", "structcy__stc__pdstack__dpm__status__t.html#a4e5fe306c059a50c71e1c8557ed9bbe5", null ]
+    ] ],
+    [ "cy_stc_pdstack_dpm_ext_status_t", "structcy__stc__pdstack__dpm__ext__status__t.html", [
+      [ "extSrcCap", "structcy__stc__pdstack__dpm__ext__status__t.html#ae23e145f21eb4efd1fe54c3676727489", null ],
+      [ "extSnkCap", "structcy__stc__pdstack__dpm__ext__status__t.html#addbbc465a154121a7f1c950e25a01c34", null ],
+      [ "srcInfo", "structcy__stc__pdstack__dpm__ext__status__t.html#a3c8ec138fbae421434c2d73c45d191e0", null ],
+      [ "revision", "structcy__stc__pdstack__dpm__ext__status__t.html#a8cdf09e189429ad51b71e4e11d5f5f44", null ],
+      [ "eprActive", "structcy__stc__pdstack__dpm__ext__status__t.html#a25d35f9dc39c034caf077ef380a84529", null ],
+      [ "eprToSpr", "structcy__stc__pdstack__dpm__ext__status__t.html#a5dcd87fa0b18f7cc724c25575e486330", null ],
+      [ "eprAvsActive", "structcy__stc__pdstack__dpm__ext__status__t.html#a0522b3207e815e58af25499e2c105092", null ],
+      [ "eprAvsMode", "structcy__stc__pdstack__dpm__ext__status__t.html#af8e6cacf34618852c4a5464f9b15bf8d", null ],
+      [ "curEprSrcPdoCount", "structcy__stc__pdstack__dpm__ext__status__t.html#ab06f9c53ae286522ba6698ec7398d024", null ],
+      [ "curEprSnkPdoCount", "structcy__stc__pdstack__dpm__ext__status__t.html#a0a8f7ffeedc11e8b2961e66b7931794e", null ],
+      [ "epr", "structcy__stc__pdstack__dpm__ext__status__t.html#a73774fe7faefe1bf455a61c22156687a", null ],
+      [ "pwrLed", "structcy__stc__pdstack__dpm__ext__status__t.html#ad6fb61a449125ec1b5307bed3570c001", null ]
     ] ],
     [ "cy_stc_pdstack_typec_status_t", "structcy__stc__pdstack__typec__status__t.html", [
       [ "randUpdt", "structcy__stc__pdstack__typec__status__t.html#aa9119f6c0785982b9649c7c50df6dd71", null ],
@@ -303,15 +339,10 @@ var group__group__pdstack__data__structures =
       [ "contractEvtResp", "structcy__stc__pdstack__pe__status__t.html#ae74aa2fc881507ded28bacc7d75c1be4", null ],
       [ "sopType", "structcy__stc__pdstack__pe__status__t.html#a9ba02a1818cd2a788d86f3b7c0b7e3ad", null ],
       [ "psHrDelay", "structcy__stc__pdstack__pe__status__t.html#aaea5291cea1366246d5eac5122daf799", null ],
-      [ "sendSrcCapDebounce", "structcy__stc__pdstack__pe__status__t.html#a26ff69cb0b77c0f58c39340d3117e8fe", null ],
+      [ "sendSrcCapDebounce", "structcy__stc__pdstack__pe__status__t.html#a2c7dfaffeb4c8adadca654e2ef7ec368", null ],
       [ "swapType", "structcy__stc__pdstack__pe__status__t.html#a1cff0aff84de2a97d2879abd83787f11", null ],
       [ "pePsrcEnDelayed", "structcy__stc__pdstack__pe__status__t.html#aefa4f424ceaf65f31cc5c58148ab0edc", null ],
-      [ "peSendHrPending", "structcy__stc__pdstack__pe__status__t.html#a8ae37a44c07bed1a33be2655c6257ebc", null ],
-      [ "eprEnterRespDo", "structcy__stc__pdstack__pe__status__t.html#a77ac22bc6d391fea009e0af620d5a822", null ],
-      [ "eprState", "structcy__stc__pdstack__pe__status__t.html#a945bfb0493cfe1aa3a187d2542231328", null ],
-      [ "eprMultiMessageFlag", "structcy__stc__pdstack__pe__status__t.html#a6bc616851e6a428901a13b4390393281", null ],
-      [ "eprSendcapInSpr", "structcy__stc__pdstack__pe__status__t.html#adc24ebbe869e9e5ad2b93fc0af1444da", null ],
-      [ "eprSnkExtdChunkBuffer", "structcy__stc__pdstack__pe__status__t.html#a1ae5ad680761c98acd5d4f7ef519a51b", null ]
+      [ "peSendHrPending", "structcy__stc__pdstack__pe__status__t.html#a8ae37a44c07bed1a33be2655c6257ebc", null ]
     ] ],
     [ "cy_stc_pdstack_dpm_params_t", "structcy__stc__pdstack__dpm__params__t.html", [
       [ "defCur", "structcy__stc__pdstack__dpm__params__t.html#a99cf0c18e10e9376edec042f5e96400c", null ],
@@ -337,7 +368,16 @@ var group__group__pdstack__data__structures =
       [ "ptrUsbPdContext", "structcy__stc__pdstack__context__t.html#a4e888ebeac403fe554c79610e0afe535", null ],
       [ "ptrDpmParams", "structcy__stc__pdstack__context__t.html#a2507db902575bbee76664ae6c721c74b", null ],
       [ "ptrTimerContext", "structcy__stc__pdstack__context__t.html#adc68381afdd63c93dc0a4218e21ed76a", null ],
-      [ "ptrRtosContext", "structcy__stc__pdstack__context__t.html#ab68de7d651d381267f1f91e6db5ca854", null ]
+      [ "ptrRtosContext", "structcy__stc__pdstack__context__t.html#ab68de7d651d381267f1f91e6db5ca854", null ],
+      [ "dpmExtStat", "structcy__stc__pdstack__context__t.html#a8d54fa7791cf18026fe0ae6fbd748b63", null ],
+      [ "ptrAltModeContext", "structcy__stc__pdstack__context__t.html#a5f8f4f4912f623846bdc6455266f2f03", null ],
+      [ "ptrHpiContext", "structcy__stc__pdstack__context__t.html#a0c2bed8fa9e495bc33888fe8ba6d310a", null ]
+    ] ],
+    [ "cy_pd_stack_conf_t", "structcy__pd__stack__conf__t.html", [
+      [ "sourceOnly", "structcy__pd__stack__conf__t.html#a2c46867e53e7be5c37b32154beaacaa0", null ],
+      [ "pdRev3", "structcy__pd__stack__conf__t.html#a8bcf8818886823bba8864b63ea96e9cb", null ],
+      [ "frsRx", "structcy__pd__stack__conf__t.html#abad8613e5b1f1cc266f7babefc09aa5d", null ],
+      [ "frsTx", "structcy__pd__stack__conf__t.html#a58b9c93ce20341c8d0838033860d7983", null ]
     ] ],
     [ "cy_stc_pdstack_port_cfg_t", "structcy__stc__pdstack__port__cfg__t.html", [
       [ "signature", "structcy__stc__pdstack__port__cfg__t.html#a03e19f4b915a32f14159fcdd8b2a53f6", null ],
@@ -398,11 +438,11 @@ var group__group__pdstack__data__structures =
       [ "start_tick", "structcy__stc__sw__timer__t.html#ad475f368df4fba6c797c3bf7a7b13a86", null ],
       [ "tick_time", "structcy__stc__sw__timer__t.html#a2ab596dbb2d42f9b836b68e543f5f628", null ],
       [ "match", "structcy__stc__sw__timer__t.html#af70a7f5980298202549c2dd51db23b7c", null ],
+      [ "multiplier", "structcy__stc__sw__timer__t.html#a1366428fa5de817438c36e46d09878e0", null ],
       [ "timer_handle", "structcy__stc__sw__timer__t.html#a33c6a6fb9046cb87633ab967955f75e2", null ],
       [ "num_active", "structcy__stc__sw__timer__t.html#a528da98dc0d8431a816fc58177a527bb", null ],
       [ "total_active", "structcy__stc__sw__timer__t.html#a1f317e5cc3b7defcd3e4e74fc64bb7ea", null ],
-      [ "is_callback", "structcy__stc__sw__timer__t.html#a065c13f8d6cac761793877d28ca6f273", null ],
-      [ "multiplier", "structcy__stc__sw__timer__t.html#a1366428fa5de817438c36e46d09878e0", null ]
+      [ "is_callback", "structcy__stc__sw__timer__t.html#a065c13f8d6cac761793877d28ca6f273", null ]
     ] ],
     [ "cy_pdstack_pd_cbk_t", "group__group__pdstack__data__structures.html#gaab21fd03092baf7f1511dafe8a0beff0", null ],
     [ "cy_pdstack_dpm_pd_cmd_cbk_t", "group__group__pdstack__data__structures.html#ga8032135e3e0bcc286f569781a51f50a2", null ],

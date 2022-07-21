@@ -2,6 +2,8 @@ var searchData=
 [
   ['tempdo',['tempDo',['../structcy__stc__pdstack__pe__status__t.html#a58616c49e019a542a0d8ef188789b431',1,'cy_stc_pdstack_pe_status_t']]],
   ['tempstatus',['tempStatus',['../structcy__stc__pdstack__pd__power__status__t.html#aed84693117d81566b267eafa987b1275',1,'cy_stc_pdstack_pd_power_status_t']]],
+  ['throttle_5ftimer_5fid',['THROTTLE_TIMER_ID',['../group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0aa01548972a38c76580598695bb9ee665',1,'cy_sw_timer_id.h']]],
+  ['throttle_5fwait_5ffor_5fpd_5ftimer_5fid',['THROTTLE_WAIT_FOR_PD_TIMER_ID',['../group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0a060c5b07088e213bbb601da33a65b693',1,'cy_sw_timer_id.h']]],
   ['tick_5ftime',['tick_time',['../structcy__stc__sw__timer__t.html#a2ab596dbb2d42f9b836b68e543f5f628',1,'cy_stc_sw_timer_t']]],
   ['timeout',['timeout',['../structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#a160686627f1be1a8427230c7712663f4',1,'cy_stc_pdstack_dpm_pd_cmd_buf_t']]],
   ['timer_5fhandle',['timer_handle',['../structcy__stc__sw__timer__t.html#a33c6a6fb9046cb87633ab967955f75e2',1,'cy_stc_sw_timer_t']]],

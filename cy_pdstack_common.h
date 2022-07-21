@@ -1,12 +1,12 @@
 /***************************************************************************//**
 * \file cy_pdstack_common.h
-* \version 1.20
+* \version 2.0
 *
 * Provides Common Header File of the PDStack middleware.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2021, Cypress Semiconductor Corporation. All rights reserved.
+* Copyright 2021-2022, Cypress Semiconductor Corporation. All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -19,10 +19,15 @@
 #include <stddef.h>
 #include <stdbool.h>
 
-#include "cy_pdstack_port_config.h"
 #include "cy_usbpd_defines.h"
 #include "cy_usbpd_common.h"
 #include "cy_sw_timer.h"
+
+#if CY_USE_CONFIG_TABLE
+#include "cy_usbpd_config_table.h"
+#else
+#include "cy_pdstack_port_config.h"
+#endif /* CY_USE_CONFIG_TABLE */
 
 /**
 ********************************************************************************
@@ -39,25 +44,27 @@
 *
 * <b>Features:</b>
 * 1. Support Type-C port configuration and connection detection in the Sink, Source and Dual Role
-* 2. Support Extended Power Range (EPR) in Sink role.
-* 3. Support USBPD Communication with the following features:
+* 2. Support USBPD Communication with the following features:
 *    * USB PD revision 3.1 compliance
 *    * USB PD revision 2.0 compliance (backward compatibility)
 *    * Power contract negotiation in Sink Role
 *    * Ability to respond to SOP and SOP' messages to support designs with a
 *    Captive USB-C cable.
-* 4. Support configuration of the port roles and responses through the EZ-PD
+* 3. Support configuration of the port roles and responses through the EZ-PD
 * Configurator.
-* 5. Support Device Policy Manager APIs to initialize, configure, monitor and
+* 4. Support Device Policy Manager APIs to initialize, configure, monitor and
 * control the port operation; as well as to send/receive USBPD messages
 * associated with Alternate Mode discovery, Authentication, Firmware update
 * etc.
+* \warning
+*    This version of the PDStack Middleware supports only the wlc1_pd3_snk
+*    library and is intended to be used in any Power-Delivery WLC1 application.
 *
 ********************************************************************************
 * \section section_pdstack_general_description General Description
 ********************************************************************************
 *
-* Include cy_pdstack_common.h, cy_pdstack_dpm.h, cy_pdstack_port_config.h to
+* Include cy_pdstack_common.h, cy_pdstack_dpm.h to
 * get access to all functions and other declarations in this library. See the
 * \ref section_pdstack_quick_start to start using the PDStack.
 *
@@ -76,16 +83,11 @@
 * The PDStack Middleware is released in the form of pre-compiled libraries. The
 * following library variants with different feature set to help limit the
 * memory footprint of the stack in applications are released.
-* 1. pmg1_pd3_snk_lite - Library with support for USB Type-C sink operation and
-* USB-PD Revision 3.1 messaging.
-* 2. pmg1_pd2_snk_lite - Library with support for USB Type-C sink operation and
-* USB-PD Revision 2.0 messaging. Using this library will reduce the flash
-* (code) memory usage by the application.
-* 3. pmg1_pd3_drp - Library with support for USB Type-C dual role operation and
+* 1. wlc1_pd3_snk - Library with support for USB Type-C sink operation and
 * USB-PD Revision 3.1 messaging. This library can be used in any Power-Delivery
-* application.
-* 4. pmg1_pd3_snk_epr - Library with support for USB Type-C sink Extended Power
-* Range(EPR) operation and USB-PD Revision 3.1 messaging.
+* WLC1 application.
+* \warning This version of the PDStack Middleware supports only the wlc1_pd3_snk
+*    library and is intended to be used in any Power-Delivery WLC1 application.
 ********************************************************************************
 * \section section_pdstack_quick_start Quick Start Guide
 ********************************************************************************
@@ -145,26 +147,25 @@
 * the PDStack Middleware in a design.
 * 1. After selecting the PDStack middleware through the library manager, the
 * user can select the library variant by editing the Code Example Makefile:
-*    * Add 'PMG1_PD3_SNK_LITE' to the COMPONENTS for using the pmg1_pd3_snk_lite library
-*    * Add 'PMG1_PD2_SNK_LITE' to the COMPONENTS for using the pmg1_pd2_snk_lite library
-*    * Add 'PMG1_PD3_DRP' to the COMPONENTS for using the pmg1_pd3_drp library
-*    * Add 'PMG1_PD3_SNK_EPR' to the COMPONENTS for using the pmg1_pd3_snk_epr library
+*    * Add 'WLC1_PD3_SNK' to the COMPONENTS for using the wlc1_pd3_snk library
 * 2. Configure the USB-C port properties
-*    * The USB-C port properties are controlled with the \ref
-*    cy_stc_pdstack_port_cfg_t structure. Please see its description to learn
-*    about the parameters and values.
+*    * The USB-C port properties are controlled with the
+*    cy_stc_pdstack_port_cfg_t structure defined in config_table.h or cy_pdstack_port_config.h file. 
+*    Please see its description to learn about the parameters and values.
 *    * Use the EZ-PD Configurator to configure the properties of the USB-C port
 *    including port role and the default response to various USB-PD messages.
 *    Refer to step 4 of the \ref section_pdstack_quick_start guide for the
 *    reference configuration data.
-*
+*    * For designs supporting EZ-PD Configuration Utility, configure the properties of the USB-C port
+*    dynamically through selection of appropriate values in the configuration utility tool.
 * Refer to the \ref section_pdstack_miscellaneous for the existing
 * restrictions.
 *
 ********************************************************************************
 * \section section_pdstack_miscellaneous Limitations and Restrictions
 ********************************************************************************
-* 1. The Extended Power Range (EPR) feature is supported only in the sink role.
+* 1. This version of the PDStack Middleware supports only the wlc1_pd3_snk
+* library.
 *
 ********************************************************************************
 * \section section_pdstack_toolchain Supported Software and Tools
@@ -184,7 +185,7 @@
 *   </tr>
 *   <tr>
 *     <td>mtb-pdl-cat2</td>
-*     <td>1.5.0</td>
+*     <td>1.6.0</td>
 *   </tr>
 *   <tr>
 *     <td>GCC Compiler</td>
@@ -207,7 +208,17 @@
 * <table class="doxtable">
 *   <tr><th>Version</th><th>Changes</th><th>Reason for Change</th></tr>
 *   <tr>
-*   <td rowspan="4">1.20</td>
+*     <td>2.0</td>
+*     <td>Added WLC1 Sink Library with support for USB Type-C sink operation and USB-PD Revision 3.1 messaging.
+* \note
+*      This version of the PDStack Middleware supports only the wlc1_pd3_snk
+*      library and is intended to be used in any Power-Delivery WLC1
+*      application.
+*     </td>
+*     <td>WLC1 device support</td>
+*   </tr>
+*   <tr>
+*   <td rowspan="3">1.20</td>
 *     <td> Added libraries for USB Type-C dual role and sink Extended Power Range (EPR) operation </td>
 *     <td> New feature Addition </td>
 *   </tr>
@@ -217,7 +228,7 @@
 *   </tr>
 *   <tr>
 *     <td> Added APIs for changing source/sink pdo capabilities</td>
-*     <td> Feature Addition.
+*     <td> Feature Addition</td>.
 *   </tr>
 *   <tr>
 *     <td rowspan="4">1.10</td>
@@ -225,7 +236,7 @@
 *     <td>PD compliance specification updates.</td>
 *   </tr>
 *   <tr>
-*     <td>Updated the size of the status extended message to 7 bytes.
+*     <td>Updated the size of the status extended message to 7 bytes.</td>
 *     <td>PD compliance specification updates.</td>
 *   </tr>
 *   <tr>
@@ -350,10 +361,29 @@
 #define CY_PD_VCONN_DISABLE              (1u)
 #endif /* CY_PD_VCONN_DISABLE */
 
+#ifndef CY_PD_BCR_EN
+#define CY_PD_BCR_EN                     (0u)
+#endif /* CY_PD_BCR_EN */
+
+#ifndef CY_PD_BIST_STM_ENABLE
+#define CY_PD_BIST_STM_ENABLE            (0u)
+#endif /* CY_PD_BIST_STM_ENABLE */
+
+#ifndef CY_PD_CRC_ERR_HANDLING_ENABLE
+#define CY_PD_CRC_ERR_HANDLING_ENABLE       (1u)
+#endif /* CY_PD_CRC_ERR_HANDLING_ENABLE */
+
+#ifndef CY_PD_EPR_AVS_ENABLE
+#define CY_PD_EPR_AVS_ENABLE             (0u)
+#endif /* CY_PD_EPR_AVS_ENABLE */
+
 /**
 * \addtogroup group_pdstack_macros
 * \{
 */
+
+/** Extended Status Present Input Offset */
+#define CY_PD_EXTD_STATUS_PRESENT_INPUT_OFFSET       (1u)
 
 /** Number of un-acknowledged Source CAP messages used to determine if the device connected is PD Capable or not. */
 #define CY_PD_MAX_SRC_CAP_TRY                     (6u)
@@ -376,11 +406,17 @@
 /** Number of PR_SWAP messages for which DUT sends a WAIT response to allow VConn_SWAP completion. */
 #define CY_PD_MAX_PR_SWAP_WAIT_COUNT              (2u)
 
+/** Maximum number of SPR DOs in a packet. Limited by PD message definition. */
+#define CY_PD_MAX_NO_OF_SPR_DO                    (7u)
+
 /** Maximum number of DOs in a packet. Limited by PD message definition. */
 #define CY_PD_MAX_NO_OF_DO                        (7u)
 
 /** Maximum number of PDOs in a packet. Limited by PD message definition. */
 #define CY_PD_MAX_NO_OF_PDO                       (CY_PD_MAX_NO_OF_DO)
+
+/** Maximum number of SPR PDOs in a packet. Limited by PD message definition. */
+#define CY_PD_MAX_NO_OF_SPR_PDO                   (CY_PD_MAX_NO_OF_SPR_DO)
 
 /** Maximum number of EPR PDOs in a packet. Limited by PD message definition. */    
 #define CY_PD_MAX_NO_OF_EPR_PDO                   (6u)
@@ -438,6 +474,9 @@
 
 /** Thunderbolt SVID defined by Intel specification. */
 #define CY_PD_TBT_SVID                            (0x8087UL)
+
+/** Apple SVID defined by Apple specification. */
+#define CY_PD_APPLE_SVID                          (0x05ACUL)
 
 /** UFP Supports Non-Physical Alternate Mode UFP VDO1 mask. */
 #define CY_PD_UFP_NON_PH_ALT_MODE_SUPP_MASK       (0x4u)
@@ -512,7 +551,7 @@
 #define CY_PD_DRP_TOGGLE_PERIOD                   (75u)
 
 /** Minimum percentage of DRP period for a source. See Table 4-16 of the Type-C spec Rev1. */
-#define CY_PD_SRC_DRP_MIN_DC                      (30)
+#define CY_PD_SRC_DRP_MIN_DC                      (30u)
 
 /** Type-C state machine inactive mode. */
 #define CY_PD_TYPEC_FSM_NONE                      (0x00000000u)
@@ -753,6 +792,9 @@
 /** Mask for unconstrained source input in extended source caps. */
 #define CY_PD_EXT_SRCCAP_INP_UNCONSTRAINED                  (0x02u)
 
+/** Index of PDP field in extended source caps. */
+#define CY_PD_EXT_SRCCAP_PDP_INDEX                          (23u)
+
 /** Index of SPR PDP field in extended source caps. */
 #define CY_PD_EXT_SPR_SRCCAP_PDP_INDEX                      (23u)
 
@@ -861,28 +903,28 @@
     (((uint32_t)type) | (((uint32_t)id) << 9) | (((uint32_t)cnt) << 12) | (((uint32_t)ext) << 15))
 
 /* Return message count from header. */
-#define CY_PD_GET_PD_HDR_CNT(header)              (((header) >> 12) & 0x7)
+#define CY_PD_GET_PD_HDR_CNT(header)              ((((uint32_t)header) >> 12) & 0x7u)
 
 /* Return PR role bit from header. */
-#define CY_PD_GET_PD_HDR_PR_ROLE(header)          (((header) >> 8) & 0x1)
+#define CY_PD_GET_PD_HDR_PR_ROLE(header)          ((((uint32_t)header) >> 8) & 0x1u)
 
 /* Return Cable Plug bit from header. */
-#define CY_PD_GET_PD_HDR_CBL_PLUG(header)         (((header) >> 8) & 0x1)
+#define CY_PD_GET_PD_HDR_CBL_PLUG(header)         ((((uint32_t)header) >> 8) & 0x1u)
 
 /* Return spec revision from header. */
-#define CY_PD_GET_PD_HDR_SPEC_REV(header)         (((header) >> 6) & 0x3)
+#define CY_PD_GET_PD_HDR_SPEC_REV(header)         ((((uint32_t)header) >> 6) & 0x3u)
 
 /* Return DR role bit from header. */
-#define CY_PD_GET_PD_HDR_DR_ROLE(header)          (((header) >> 5) & 0x1)
+#define CY_PD_GET_PD_HDR_DR_ROLE(header)          ((((uint32_t)header) >> 5) & 0x1u)
 
 /* Return message ID from header. */
-#define CY_PD_GET_PD_HDR_ID(header)               (((header) >> 9) & 0x7)
+#define CY_PD_GET_PD_HDR_ID(header)               ((((uint32_t)header) >> 9) & 0x7u)
 
 /* Return Message Type from header. */
-#define CY_PD_GET_PD_HDR_TYPE(header)             ((header) & 0xF)
+#define CY_PD_GET_PD_HDR_TYPE(header)             (((uint32_t)header) & 0xFu)
 
 /* PD header mask. */
-#define CY_PD_HDR_MASK                         (0x0000FFFFu)
+#define CY_PD_HDR_MASK                            (0x0000FFFFu)
 
 /* Message ID mask. */
 #define CY_PD_MSG_ID_MASK                         ((0x7UL) << 9u)
@@ -912,7 +954,7 @@
 /* VDM header for D_ID command. */
 #define CY_PD_STD_VDM_HEADER_IDENTITY_REQ                                             \
                                             (                                   \
-                                                (CY_PD_STD_SVID << 16) |              \
+                                                ((uint32_t)CY_PD_STD_SVID << 16) |              \
                                                 ((uint32_t)CY_PDSTACK_VDM_TYPE_STRUCTURED << 15) |   \
                                                 ((uint32_t)CY_PDSTACK_VDM_CMD_DSC_IDENTITY)          \
                                             )
@@ -969,6 +1011,8 @@
 #define CY_PD_CBL_VDO_VERS_1_2                    (2u)        /* Active Cable VDO version 1.2 */
 #define CY_PD_CBL_VDO_VERS_1_3                    (3u)        /* Active Cable VDO version 1.3 */
 
+#define CY_PD_UFP_VDO_VERSION                     (1u)        /* Version Number of the VDO version 1.1 */
+
 #define CY_PD_MAX_CBL_VBUS_50V                    (3u)        /* Max. Cable VBUS voltage: 50V.Checked in EPR mode. */
 
 /*
@@ -1010,32 +1054,34 @@
 #define CY_PD_PE_EVT_PPS_TIMEOUT                  (0x00010000u)       /* PPS timeout occurred. */
 #define CY_PD_PE_EVT_CRC_ERROR                    (0x00020000u)       /* Message received with CRC error. */
 #define CY_PD_PE_EVT_DRST_COMPLETE                (0x00040000u)       /* Data reset completion timer elapsed. */
+#define CY_PD_PE_EVT_BIST_STM_ENTRY               (0x00080000u)       /* BIST STM Entry event. */
+#define CY_PD_PE_EVT_BIST_STM_EXIT                (0x00100000u)       /* BIST STM Exit event. */
 #define CY_PD_PE_EVT_ALL_MASK                     (0xFFFFFFFFu)       /* Mask to extract all pending events. */
 
 /* Rp combinations macros. */
-#define CY_PD_RP_CC1_OPEN_CC2_OPEN                ((((uint16_t)CY_PD_RP_OPEN) << 8) | (uint16_t)CY_PD_RP_OPEN) /* PMG1 Rp: No external termination on both CC. */
-#define CY_PD_RP_CC1_OPEN_CC2_RD                  ((((uint16_t)CY_PD_RP_RD) << 8)   | (uint16_t)CY_PD_RP_OPEN) /* PMG1 Rp: external Rd on CC2. */
-#define CY_PD_RP_CC1_OPEN_CC2_RA                  ((((uint16_t)CY_PD_RP_RA) << 8)   | (uint16_t)CY_PD_RP_OPEN) /* PMG1 Rp: external Ra on CC2. */
-#define CY_PD_RP_CC1_RD_CC2_OPEN                  ((((uint16_t)CY_PD_RP_OPEN) << 8) | (uint16_t)CY_PD_RP_RD)   /* PMG1 Rp: external Rd on CC1. */
-#define CY_PD_RP_CC1_RA_CC2_OPEN                  ((((uint16_t)CY_PD_RP_OPEN) << 8) | (uint16_t)CY_PD_RP_RA)   /* PMG1 Rp: external Ra on CC1. */
-#define CY_PD_RP_CC1_RA_CC2_RD                    ((((uint16_t)CY_PD_RP_RD) << 8)   | (uint16_t)CY_PD_RP_RA)   /* PMG1 Rp: Rd on CC2, Ra on CC1. */
-#define CY_PD_RP_CC1_RA_CC2_RA                    ((((uint16_t)CY_PD_RP_RA) << 8)   | (uint16_t)CY_PD_RP_RA)   /* PMG1 Rp: Ra on both CC. */
-#define CY_PD_RP_CC1_RD_CC2_RA                    ((((uint16_t)CY_PD_RP_RA) << 8)   | (uint16_t)CY_PD_RP_RD)   /* PMG1 Rp: Rd on CC1, Ra on CC2. */
-#define CY_PD_RP_CC1_RD_CC2_RD                    ((((uint16_t)CY_PD_RP_RD) << 8)   | (uint16_t)CY_PD_RP_RD)   /* PMG1 Rp: Rd on both CC. */
+#define CY_PD_RP_CC1_OPEN_CC2_OPEN                ((((uint32_t)CY_PD_RP_OPEN) << 8) | (uint32_t)CY_PD_RP_OPEN) /* CCG/PMG1 Rp: No external termination on both CC. */
+#define CY_PD_RP_CC1_OPEN_CC2_RD                  ((((uint32_t)CY_PD_RP_RD) << 8)   | (uint32_t)CY_PD_RP_OPEN) /* CCG/PMG1 Rp: external Rd on CC2. */
+#define CY_PD_RP_CC1_OPEN_CC2_RA                  ((((uint32_t)CY_PD_RP_RA) << 8)   | (uint32_t)CY_PD_RP_OPEN) /* CCG/PMG1 Rp: external Ra on CC2. */
+#define CY_PD_RP_CC1_RD_CC2_OPEN                  ((((uint32_t)CY_PD_RP_OPEN) << 8) | (uint32_t)CY_PD_RP_RD)   /* CCG/PMG1 Rp: external Rd on CC1. */
+#define CY_PD_RP_CC1_RA_CC2_OPEN                  ((((uint32_t)CY_PD_RP_OPEN) << 8) | (uint32_t)CY_PD_RP_RA)   /* CCG/PMG1 Rp: external Ra on CC1. */
+#define CY_PD_RP_CC1_RA_CC2_RD                    ((((uint32_t)CY_PD_RP_RD) << 8)   | (uint32_t)CY_PD_RP_RA)   /* CCG/PMG1 Rp: Rd on CC2, Ra on CC1. */
+#define CY_PD_RP_CC1_RA_CC2_RA                    ((((uint32_t)CY_PD_RP_RA) << 8)   | (uint32_t)CY_PD_RP_RA)   /* CCG/PMG1 Rp: Ra on both CC. */
+#define CY_PD_RP_CC1_RD_CC2_RA                    ((((uint32_t)CY_PD_RP_RA) << 8)   | (uint32_t)CY_PD_RP_RD)   /* CCG/PMG1 Rp: Rd on CC1, Ra on CC2. */
+#define CY_PD_RP_CC1_RD_CC2_RD                    ((((uint32_t)CY_PD_RP_RD) << 8)   | (uint32_t)CY_PD_RP_RD)   /* CCG/PMG1 Rp: Rd on both CC. */
 
 /* Rd combinations macros. */
-#define CY_PD_RD_CC1_RA_CC2_USB                   ((((uint16_t)CY_PD_RD_USB) << 8)  | (uint16_t)CY_PD_RD_RA)   /* PMG1 Rd: External Default Rp on CC2. */
-#define CY_PD_RD_CC1_RA_CC2_1_5A                  ((((uint16_t)CY_PD_RD_1_5A) << 8) | (uint16_t)CY_PD_RD_RA)   /* PMG1 Rd: 1.5A Rp on CC2. */
-#define CY_PD_RD_CC1_RA_CC2_3A                    ((((uint16_t)CY_PD_RD_3A) << 8)   | (uint16_t)CY_PD_RD_RA)   /* PMG1 Rd: 3A Rp on CC2. */
-#define CY_PD_RD_CC1_USB_CC2_RA                   ((((uint16_t)CY_PD_RD_RA) << 8)   | (uint16_t)CY_PD_RD_USB)  /* PMG1 Rd: External Default Rp on CC1. */
-#define CY_PD_RD_CC1_1_5A_CC2_RA                  ((((uint16_t)CY_PD_RD_RA) << 8)   | (uint16_t)CY_PD_RD_1_5A) /* PMG1 Rd: 1.5A Rp on CC1. */
-#define CY_PD_RD_CC1_3A_CC2_RA                    ((((uint16_t)CY_PD_RD_RA) << 8)   | (uint16_t)CY_PD_RD_3A)   /* PMG1 Rd: 3A Rp on CC1. */
-#define CY_PD_RD_CC1_RA_CC2_RA                    ((((uint16_t)CY_PD_RD_RA) << 8)   | (uint16_t)CY_PD_RD_RA)   /* PMG1 Rd: No Rp on either CC. */
-#define CY_PD_RD_CC1_ERR_CC2_ERR                  ((((uint16_t)CY_PD_RD_ERR) << 8)  | (uint16_t)CY_PD_RD_ERR)  /* PMG1 Rd: Error state. */
+#define CY_PD_RD_CC1_RA_CC2_USB                   ((((uint32_t)CY_PD_RD_USB) << 8)  | (uint32_t)CY_PD_RD_RA)   /* CCG/PMG1 Rd: External Default Rp on CC2. */
+#define CY_PD_RD_CC1_RA_CC2_1_5A                  ((((uint32_t)CY_PD_RD_1_5A) << 8) | (uint32_t)CY_PD_RD_RA)   /* CCG/PMG1 Rd: 1.5A Rp on CC2. */
+#define CY_PD_RD_CC1_RA_CC2_3A                    ((((uint32_t)CY_PD_RD_3A) << 8)   | (uint32_t)CY_PD_RD_RA)   /* CCG/PMG1 Rd: 3A Rp on CC2. */
+#define CY_PD_RD_CC1_USB_CC2_RA                   ((((uint32_t)CY_PD_RD_RA) << 8)   | (uint32_t)CY_PD_RD_USB)  /* CCG/PMG1 Rd: External Default Rp on CC1. */
+#define CY_PD_RD_CC1_1_5A_CC2_RA                  ((((uint32_t)CY_PD_RD_RA) << 8)   | (uint32_t)CY_PD_RD_1_5A) /* CCG/PMG1 Rd: 1.5A Rp on CC1. */
+#define CY_PD_RD_CC1_3A_CC2_RA                    ((((uint32_t)CY_PD_RD_RA) << 8)   | (uint32_t)CY_PD_RD_3A)   /* CCG/PMG1 Rd: 3A Rp on CC1. */
+#define CY_PD_RD_CC1_RA_CC2_RA                    ((((uint32_t)CY_PD_RD_RA) << 8)   | (uint32_t)CY_PD_RD_RA)   /* CCG/PMG1 Rd: No Rp on either CC. */
+#define CY_PD_RD_CC1_ERR_CC2_ERR                  ((((uint32_t)CY_PD_RD_ERR) << 8)  | (uint32_t)CY_PD_RD_ERR)  /* CCG/PMG1 Rd: Error state. */
 
-#define CY_PD_RD_CC1_USB_CC2_USB                  ((((uint16_t)CY_PD_RD_USB) << 8)  | (uint16_t)CY_PD_RD_USB)  /* PMG1 Rd: External Default Rp on CC1 and CC2. */
-#define CY_PD_RD_CC1_1_5A_CC2_1_5A                ((((uint16_t)CY_PD_RD_1_5A) << 8) | (uint16_t)CY_PD_RD_1_5A) /* PMG1 Rd: 1.5A Rp on both CC1 and CC2. */
-#define CY_PD_RD_CC1_3A_CC2_3A                    ((((uint16_t)CY_PD_RD_3A) << 8)   | (uint16_t)CY_PD_RD_3A)   /* PMG1 Rd: 3A Rp on CC1 and CC2. */
+#define CY_PD_RD_CC1_USB_CC2_USB                  ((((uint32_t)CY_PD_RD_USB) << 8)  | (uint32_t)CY_PD_RD_USB)  /* CCG/PMG1 Rd: External Default Rp on CC1 and CC2. */
+#define CY_PD_RD_CC1_1_5A_CC2_1_5A                ((((uint32_t)CY_PD_RD_1_5A) << 8) | (uint32_t)CY_PD_RD_1_5A) /* CCG/PMG1 Rd: 1.5A Rp on both CC1 and CC2. */
+#define CY_PD_RD_CC1_3A_CC2_3A                    ((((uint32_t)CY_PD_RD_3A) << 8)   | (uint32_t)CY_PD_RD_3A)   /* CCG/PMG1 Rd: 3A Rp on CC1 and CC2. */
 
 /* Type-C events macros. */
 #define CY_PD_TYPEC_EVT_NONE                      (0x00000000u)               /* No pending Type-C events. */
@@ -1074,6 +1120,10 @@
 #define CY_PD_PD_EXTD_STATUS_PWR_LED_MASK         (0x38u)
 
 #define CY_PD_EXTD_STATUS_PWR_STATE_CHANGE_MASK   (0x000000FFu)
+#define CY_PD_EXTD_STATUS_PWR_STATE_CHG_OFFSET    (6u)
+
+/* Period to check whether the solution state allows to move forward with Type-C connection. */
+#define CY_PD_TYPEC_SLN_STATUS_CHECK_PERIOD       (10u)
 
 /** @endcond */
 
@@ -1312,7 +1362,9 @@ typedef enum
     CY_PDSTACK_BIST_CARRIER_MODE_2,                /**< BIST carrier mode 2. */
     CY_PDSTACK_BIST_CARRIER_MODE_3,                /**< BIST carrier mode 3. */
     CY_PDSTACK_BIST_EYE_PATTERN_MODE,              /**< BIST eye pattern. */
-    CY_PDSTACK_BIST_TEST_DATA_MODE                 /**< BIST test data mode. */
+    CY_PDSTACK_BIST_TEST_DATA_MODE,                /**< BIST test data mode. */
+    CY_PDSTACK_BIST_STM_ENTRY,                     /**< BIST Shared Capacity Test mode entry */
+    CY_PDSTACK_BIST_STM_EXIT                       /**< BIST Shared Capacity Test mode exit */    
 } cy_en_pdstack_bist_mode_t;
 
 /**
@@ -1382,13 +1434,16 @@ typedef enum
     CY_PDSTACK_DPM_CMD_INITIATE_CBL_DISCOVERY,     /**< 13: Initiate cable discovery (preceded by VConn Swap if required). */
     CY_PDSTACK_DPM_CMD_SEND_DATA_RESET,            /**< 14: Send a USB4 Data_Reset message. */
     CY_PDSTACK_DPM_CMD_SEND_ENTER_USB,             /**< 15: Send a USB4 Enter_USB message to port partner or cable marker. */
-    CY_PDSTACK_DPM_CMD_GET_SNK_CAP_EXTENDED,       /**< 16: Send Get_Sink_Cap_Extended message. */   
-    CY_PDSTACK_DPM_CMD_SEND_EPR_MODE,              /**< 17: Send EPR_Mode message. */
-    CY_PDSTACK_DPM_CMD_SNK_EPR_MODE_ENTRY,         /**< 18: Send EPR_Mode Entry message. */
-    CY_PDSTACK_DPM_CMD_SNK_SEND_KEEP_ALIVE,        /**< 19: Send EPR Keep Alive message. */
-    CY_PDSTACK_DPM_CMD_SEND_EXTD_CTRL_MSG,         /**< 1A: Send EXT_CTRL_MSG message. */
-    CY_PDSTACK_DPM_CMD_SEND_GET_SOURCE_INFO,       /**< 1B: Send Get_Source_Info message. */
-    CY_PDSTACK_DPM_CMD_SEND_GET_REVISION,          /**< 1C: Send Get_Revision message. */
+    CY_PDSTACK_DPM_CMD_GET_SNK_CAP_EXTENDED,       /**< 16: Send Get_Sink_Cap_Extended message. */
+    CY_PDSTACK_DPM_CMD_SEND_REQUEST,               /**< 17: Send Request data message. */
+    CY_PDSTACK_DPM_CMD_GET_PPS_STATUS,             /**< 18: Send Get_PPS_Status message. */
+    CY_PDSTACK_DPM_CMD_GET_COUNTRY_CODES,          /**< 19: Send Get_Country_Codes message. */
+    CY_PDSTACK_DPM_CMD_SEND_EPR_MODE,              /**< 1A: Send EPR_Mode message. */
+    CY_PDSTACK_DPM_CMD_SNK_EPR_MODE_ENTRY,         /**< 1B: Send EPR_Mode Entry message. */
+    CY_PDSTACK_DPM_CMD_SNK_SEND_KEEP_ALIVE,        /**< 1C: Send EPR Keep Alive message. */
+    CY_PDSTACK_DPM_CMD_SEND_EXTD_CTRL_MSG,         /**< 1D: Send EXT_CTRL_MSG message. */
+    CY_PDSTACK_DPM_CMD_SEND_GET_SOURCE_INFO,       /**< 1E: Send Get_Source_Info message. */
+    CY_PDSTACK_DPM_CMD_SEND_GET_REVISION,          /**< 1F: Send Get_Revision message. */
     CY_PDSTACK_DPM_CMD_SEND_INVALID = 0xFFu        /**< FF: Invalid command code. */
 } cy_en_pdstack_dpm_pd_cmd_t;
 
@@ -1446,6 +1501,18 @@ typedef enum
     CY_PDSTACK_PROD_TYPE_VPD      = 6,             /**< VConn powered device. */
     CY_PDSTACK_PROD_TYPE_RSVD     = 7              /**< Reserved. Shall not be used. */
 } cy_en_pdstack_std_vdm_prod_t;
+
+/**
+ * @typedef cy_en_pdstack_std_vdm_conn_t
+ * @brief Enum of the standard VDM connector types.
+ */
+typedef enum
+{
+    CY_PDSTACK_CONN_TYPE_RSVD = 0,                 /**< Reserved, for compatibility with legacy systems. */
+    CY_PDSTACK_CONN_TYPE_RSVD1,                    /**< Reserved, Shall Not be used. */
+    CY_PDSTACK_CONN_TYPE_RECEPTACLE,               /**< USB Type-C Receptacle. */
+    CY_PDSTACK_CONN_TYPE_PLUG                      /**< USB Type-C Plug. */
+} cy_en_pdstack_std_vdm_conn_t;
 
 /**
  * @typedef cy_en_pdstack_std_vdm_ver_t
@@ -1513,10 +1580,10 @@ typedef enum
  */
 typedef enum
 {
-    CY_PDSTACK_DEV_CAP_USB_2_0 = (1<<0),     /**< [USB 2.0] Device Capable. */
-    CY_PDSTACK_DEV_CAP_USB_BB_ONLY = (1<<1), /**< Device Capable (Billboard only). */
-    CY_PDSTACK_DEV_CAP_USB_3_2 = (1<<2),     /**< [USB 3.2] Device Capable. */
-    CY_PDSTACK_DEV_CAP_USB_4_0 = (1<<3)      /**< [USB4] Device Capable. */
+    CY_PDSTACK_DEV_CAP_USB_2_0 = (1u<<0),     /**< [USB 2.0] Device Capable. */
+    CY_PDSTACK_DEV_CAP_USB_BB_ONLY = (1u<<1), /**< Device Capable (Billboard only). */
+    CY_PDSTACK_DEV_CAP_USB_3_2 = (1u<<2),     /**< [USB 3.2] Device Capable. */
+    CY_PDSTACK_DEV_CAP_USB_4_0 = (1u<<3)      /**< [USB4] Device Capable. */
 } cy_en_pdstack_usb_dev_cap_t;
 
 /**
@@ -1525,9 +1592,9 @@ typedef enum
  */
 typedef enum
 {
-    CY_PDSTACK_HOST_CAP_USB_2_0 = (1<<0),  /**< [USB 2.0] Host Capable. */
-    CY_PDSTACK_HOST_CAP_USB_3_2 = (1<<1),  /**< [USB 3.2] Host Capable. */
-    CY_PDSTACK_HOST_CAP_USB_4_0 = (1<<2)   /**< [USB4] Host Capable. */
+    CY_PDSTACK_HOST_CAP_USB_2_0 = (1u<<0),  /**< [USB 2.0] Host Capable. */
+    CY_PDSTACK_HOST_CAP_USB_3_2 = (1u<<1),  /**< [USB 3.2] Host Capable. */
+    CY_PDSTACK_HOST_CAP_USB_4_0 = (1u<<2)   /**< [USB4] Host Capable. */
 } cy_en_pdstack_usb_host_cap_t;
 
 /**
@@ -1804,15 +1871,37 @@ typedef enum
                                                            accommodate retimer communication delay timing. */
     APP_EVT_BAD_SINK_APDO_SEL,                  /**< 0x3A: APDO selection in PD 2.0 or less revision */
 
-    APP_EVT_SOURCE_INFO_RECEIVED,               /**< 0x3B: Source Info message Received from Sink*/
-    APP_EVT_REVISION_RECEIVED,                  /**< 0x3C: Revision Data message Received */  
+    APP_EVT_BC_DETECTION_COMPLETED,             /**< 0x3B: Legacy battery charging protocol detection completed . */
 
-    APP_EVT_EPR_MODE_ENTER_RECEIVED,            /**< 0x3D: EPR Mode Enter command Received from Sink port */
-    APP_EVT_EPR_MODE_ENTER_SUCCESS,             /**< 0x3E: EPR Mode Enter successful, Source response with Enter Succeeded */
-    APP_EVT_EPR_MODE_ENTER_FAILED,              /**< 0x3F: EPR Mode Enter failed, Source response with Fail*/
-    APP_EVT_EPR_MODE_EXIT,                      /**< 0x40: EPR Mode Exit Received*/
-    APP_EVT_VCONN_SWAP_FAILED,                  /**< 0x41: VConn_SWAP process failed in EPR Enter msg. sequence. */
-    APP_TOTAL_EVENTS                            /**< 0x41: Total number of application events. */
+    APP_EVT_SNK_FET_ENABLE,                     /**< 0x3C: HPI Enable  SNK FET cmd event. */
+    APP_EVT_SNK_FET_DISABLE,                    /**< 0x3D: HPI Disable SNK FET cmd event. */
+    APP_EVT_SAFE_PWR_ENABLE,                    /**< 0x3E: HPI Enable Safe PWR path cmd event. */
+    APP_EVT_SAFE_PWR_DISABLE,                   /**< 0x3F: HPI Disable Safe PWR path cmd event. */
+    APP_EVT_FAULT_CLEANED,                      /**< 0x40: OVP/OCP/OTP fault state is cleaned. */
+    APP_EVT_MISMATCH_CLEANED,                   /**< 0x41: MISMATCH fault state is cleaned. */
+
+    APP_EVT_CUST_ALT_MODE_CHANGED,              /**< 0x42: This is a custom event that could be set for notification of alternate 
+                                                           mode specific conditions like mode entry and mode exit. */
+    APP_EVT_CUST_MODE_DISC_CMPL,                /**< 0x43: Apple sequencing is finished . */
+
+    APP_EVT_VBAT_GND_SCP_FAULT,                 /**< 0x44: Battery to ground short circuit fault detected. */
+    APP_EVT_VIN_UVP_FAULT,                      /**< 0x45: Regulator input under voltage fault detected. */
+    APP_EVT_VIN_OVP_FAULT,                      /**< 0x46: Regulator input over voltage fault detected. */
+    APP_EVT_BIST_STM_ENTRY,                     /**< 0x47: BIST STM Entry event. */
+    APP_EVT_BIST_STM_EXIT,                      /**< 0x48: BIST STM Exit event. */
+    APP_EVT_ILIM_FAULT,                         /**< 0x49: Inductor Limit fault detected. */
+    APP_EVT_VREG_INRUSH_FAULT,                  /**< 0x4A: Vreg inrush detect fault detected. */
+    APP_EVT_VREG_BOD_FAULT,                     /**< 0x4B: Device Brown Out Detect fault detected. */
+    APP_EVT_VCONN_SCP_FAULT,                    /**< 0x4C: VConn Short Circuit fault detected. */
+    APP_EVT_SOURCE_INFO_RECEIVED,               /**< 0x4D: Source Info message Received from Sink*/
+    APP_EVT_REVISION_RECEIVED,                  /**< 0x4E: Revision Data message Received */  
+
+    APP_EVT_EPR_MODE_ENTER_RECEIVED,            /**< 0x4F: EPR Mode Enter command Received from Sink port */
+    APP_EVT_EPR_MODE_ENTER_SUCCESS,             /**< 0x50: EPR Mode Enter successful, Source response with Enter Succeeded */
+    APP_EVT_EPR_MODE_ENTER_FAILED,              /**< 0x51: EPR Mode Enter failed, Source response with Fail*/
+    APP_EVT_EPR_MODE_EXIT,                      /**< 0x52: EPR Mode Exit Received*/
+    APP_EVT_VCONN_SWAP_FAILED,                  /**< 0x53: VConn_SWAP process failed in EPR Enter msg. sequence. */
+    APP_TOTAL_EVENTS                            /**< 0x54: Total number of application events. */
 } cy_en_pdstack_app_evt_t;
 
 /**
@@ -2004,7 +2093,14 @@ typedef enum cy_en_pdstack_status
     CY_PDSTACK_STAT_NOT_READY,                 /**< Operation failed due to device/stack not ready. */
     CY_PDSTACK_STAT_BUSY,                      /**< Operation failed due to device/stack busy status. */
     CY_PDSTACK_STAT_TIMEOUT,                   /**< Operation timed out. */
-    CY_PDSTACK_STAT_INVALID_PORT               /**< Invalid port number. */
+    CY_PDSTACK_STAT_INVALID_PORT,              /**< Invalid port number. */
+
+    CY_PDSTACK_STAT_INVALID_ID = 0x3E,         /**< Invalid FWCT identity received for signed FW upgrade. */
+    CY_PDSTACK_STAT_INVALID_GUID,              /**< Invalid GUID received for signed FW upgrade. */
+    CY_PDSTACK_STAT_INVALID_VER,               /**< Invalid/older Primary FW version received for signed FW upgrade. */
+    CY_PDSTACK_STAT_OUT_OF_SEQ_CMD,            /**< Command sent is not expected in current state during signed FW upgrade. */
+    CY_PDSTACK_STAT_INVALID_FWCT,              /**< Unauthentic FWCT received for signed FW upgrade. */
+    CY_PDSTACK_STAT_HASH_CMP_FAILED            /**< Hash comparison of fw image and hash in FWCT is not matched during signed FW upgrade. */
 } cy_en_pdstack_status_t;
 
 /** \} group_pdstack_enums */
@@ -2047,6 +2143,39 @@ typedef struct
     uint8_t  powerStateChange;                 /**< Power state change. */
     uint8_t  dummy;                            /**< Reserved field used for 4 byte alignment. */
 } cy_stc_pdstack_pd_power_status_t;
+
+/**
+ * @brief PD port status as reported to embedded controller.
+ */
+typedef union cy_stc_pdstack_pd_port_status_ec
+{
+    uint32_t    val;                                    /**< PD-Status register value. */
+
+    /** @brief Structure containing status bits. */
+    struct PD_PORT_STAT
+    {
+        uint32_t dfltDataRole           : 2;            /**< Default data role. */
+        uint32_t dfltDataPref           : 1;            /**< Preferred data role in case of DRP. */
+        uint32_t dfltPowerRole          : 2;            /**< Default power role. */
+        uint32_t dfltPowerPref          : 1;            /**< Preferred power role in case of DRP. */
+        uint32_t curDataRole            : 1;            /**< Current data role. */
+        uint32_t reserved0              : 1;            /**< Reserved. */
+        uint32_t curPowerRole           : 1;            /**< Current power role. */
+        uint32_t minState               : 1;            /**< Whether in Min state (due to GotoMin). */
+        uint32_t contractExist          : 1;            /**< Whether explicit contract exists. */
+        uint32_t emcaPresent            : 1;            /**< EMCA detected or not. */
+        uint32_t vconnSrc               : 1;            /**< Whether CCG is VConn source. */
+        uint32_t vconnOn                : 1;            /**< Whether VConn is actually ON. */
+        uint32_t rpStatus               : 1;            /**< Current Rp status. */
+        uint32_t peRdy                  : 1;            /**< Whether Policy Engine is in Ready state. */
+        uint32_t ccgSpecRev             : 2;            /**< USB-PD revision supported by CCG firmware. */
+        uint32_t peerPd3Supp            : 1;            /**< Whether port partner supports PD 3.0. */
+        uint32_t peerUnchunkSupp        : 1;            /**< Whether port partner supports unchunked messages. */
+        uint32_t emcaSpecRev            : 2;            /**< USB-PD revision supported by cable marker. */
+        uint32_t emcaType               : 1;            /**< EMCA type: Passive=0, Active=1. */
+        uint32_t reserved2              : 9;            /**< Reserved field. */
+    } status;                                           /**< PD port status structure. */
+} cy_stc_pdstack_pd_port_status_ec_t;
 
 /**
  * @brief Struct to hold response to policy manager.
@@ -2114,11 +2243,11 @@ typedef struct
  */
 typedef struct
 {
-    uint8_t     sop;                    /**< Packet type. */
-    uint8_t     len;                    /**< Length in data objects. */
-    uint8_t     msg;                    /**< Message code. */
-    uint8_t     dataRole;              /**< Data role. */
-    cy_pd_pd_hdr_t    hdr;                    /**< Message header. */
+    cy_en_pd_sop_t     sop;                         /**< Packet type. */
+    uint8_t     len;                                /**< Length in data objects. */
+    uint8_t     msg;                                /**< Message code. */
+    cy_en_pd_port_role_t     dataRole;              /**< Data role. */
+    cy_pd_pd_hdr_t    hdr;                          /**< Message header. */
     cy_pd_pd_do_t     dat[CY_PD_MAX_NO_OF_DO];      /**< Data objects associated with the message. */
 } cy_stc_pdstack_pd_packet_t;
 
@@ -2432,10 +2561,10 @@ typedef enum
 typedef struct
 {
     /** Port role: Sink, Source or Dual. */
-    uint8_t portRole;
+    cy_en_pd_port_role_t portRole;
 
     /** Default port role: Sink or Source. */
-    uint8_t dfltPortRole;
+    cy_en_pd_port_role_t dfltPortRole;
 
     /** Type C current level in the source role. */
     uint8_t srcCurLevel;
@@ -2472,7 +2601,7 @@ typedef struct
     uint8_t rpSupported;
 
     /** USB-PD supported. */
-    uint8_t pdSupport;
+    bool pdSupport;
 
     /** Try Source/ Try Sink control knob. */
     uint8_t trySrcSnk;
@@ -2543,6 +2672,9 @@ typedef struct
     /** BIST Carrier Mode 2 going on */
     bool volatile bistCm2Enabled;
 
+    /** BIST_Shared_Test_Mode enabled flag. */
+    bool volatile bistStmEnabled;
+
     /** Stores the cable type. */
     cy_en_pdstack_std_vdm_prod_t cblType;
 
@@ -2581,7 +2713,7 @@ typedef struct
 
     /** DPM safe disable flag. Used to make sure that the port is disabled
      * correctly after a fault occurrence. */
-    uint8_t dpmSafeDisable;
+    bool dpmSafeDisable;
 
     /** Current DPM Type C command. */
     cy_en_pdstack_dpm_typec_cmd_t dpmTypecCmd;
@@ -2713,8 +2845,9 @@ typedef struct
     /** Port power status. */
     cy_stc_pdstack_pd_power_status_t portStatus;
 
-    /** Buffer to hold extended source caps. */
-    uint8_t extSrcCap[CY_PD_EXT_SRCCAP_BUF_SIZE];
+    /** Reserved 24 bytes to match old structure definition for ROM compatibility, the new extSrcCap 
+      * moved to cy_stc_pdstack_dpm_ext_status_t. */
+    uint8_t reserved_1[24];
 
     /** Buffer to hold PPS status. */
     uint8_t ppsStatus[CY_PD_EXT_PPS_STATUS_SIZE];
@@ -2728,8 +2861,9 @@ typedef struct
     /** Stores the last received Active Cable VDO #2. */
     cy_pd_pd_do_t cblVdo2;
 
-    /** Buffer to hold extended sink caps. */
-    uint8_t extSnkCap[CY_PD_EXT_SNKCAP_BUF_SIZE];
+    /** Reserved 24 bytes to match old structure definition for ROM compatibility, the new extSnkCap 
+      * moved to cy_stc_pdstack_dpm_ext_status_t. */
+    uint8_t reserved_2[24];
 
     /** Temporary variable used for random number generation. */
     uint32_t randBase;
@@ -2830,7 +2964,41 @@ typedef struct
 
     /** Manufacturer Name. Null terminated string. Should be 4-byte aligned. */
     uint8_t mfgName[26];
-    
+
+    /** Flag indicating that PPS SINK RDO from EC is supported. */
+    uint8_t ppsSnkEn;
+
+    /** PPS SINK RDO from EC */
+    cy_pd_pd_do_t ppsSnkRdo;
+
+    /** Number of dpm disable requests active. */
+    uint16_t disReqCount;
+
+    /** Response to be sent for each USB-PD SWAP command.
+     *  - Bits 1:0 => DR_SWAP response.
+     *  - Bits 3:2 => PR_SWAP response.
+     *  - Bits 5:4 => VCONN_SWAP response.
+     *  Allowed values are: 0=ACCEPT, 1=REJECT, 2=WAIT, 3=NOT_SUPPORTED. */
+    uint8_t swapResponse;
+ 
+    /** Option to disable Automatic VConn Swap from the Stack. */
+    bool autoVcsDisable;
+} cy_stc_pdstack_dpm_status_t;
+
+/**
+ * @brief PD Device Latest Policy Status structure. This structure holds all of the
+ * configuration and status information associated with PD3.1 update.
+ * Members of this structure should not be directly modified by any of
+ * the application code.
+ */
+typedef struct
+{
+    /** Buffer to hold extended source caps. */
+    uint8_t extSrcCap[CY_PD_EXT_SRCCAP_BUF_SIZE];
+
+    /** Buffer to hold extended sink caps. */
+    uint8_t extSnkCap[CY_PD_EXT_SNKCAP_BUF_SIZE];
+
     /** Source info */
     cy_pd_pd_do_t  srcInfo;
     
@@ -2860,8 +3028,7 @@ typedef struct
 
     /** Power LED state */
     uint8_t pwrLed;
-
-} cy_stc_pdstack_dpm_status_t;
+} cy_stc_pdstack_dpm_ext_status_t;
 
 /**
  * @brief Type C Manager Status structure. This structure holds all of the
@@ -3088,7 +3255,7 @@ typedef struct {
     /** Flag to indicate PSHardResetDelay required */
     bool psHrDelay;
     /** Flag determines srccap start debounce in progress */
-    uint8_t sendSrcCapDebounce;
+    bool sendSrcCapDebounce;
     /** Store received/sent swap type */
     cy_en_pd_ctrl_msg_t swapType;
 
@@ -3126,7 +3293,7 @@ typedef struct {
 
     /** Flag that indicates that Hard Reset sending is pending. */
     volatile bool peSendHrPending;
-    
+#if CY_PD_EPR_ENABLE    
     /** Buffer that hold EPR Enter Mode Response data object. */
     cy_pd_pd_do_t eprEnterRespDo;
     
@@ -3141,7 +3308,7 @@ typedef struct {
     
     /** Buffer that hold the EPR Sink Extended Messages/Responses */
     uint8_t eprSnkExtdChunkBuffer[26];
-
+#endif /* CY_PD_EPR_ENABLE */
 } cy_stc_pdstack_pe_status_t;
 
 /**
@@ -3231,8 +3398,40 @@ typedef struct cy_stc_pdstack_context
     /** Pointer to the RTOS callback function structure. */
     cy_stc_pdstack_rtos_context_t *ptrRtosContext;
 
+    /** PD Device Policy Configuration and Status structure having PD3.1 
+     *  updated parameters. */
+    cy_stc_pdstack_dpm_ext_status_t dpmExtStat;
+
+    /** Pointer to the AltMode context. */
+    void *ptrAltModeContext;
+
+    /** Pointer to the HPI context. */
+    void *ptrHpiContext;
 } cy_stc_pdstack_context_t;
 
+/**
+ * @brief Struct used to fetch the PD stack configuration supported by the library
+ * that is currently in use.
+ */
+typedef struct
+{
+    bool sourceOnly;          /**<
+                                * - True : CY_PD_SOURCE_ONLY macro is enabled
+                                * - False : CY_PD_SOURCE_ONLY macro is disabled
+                                */
+    bool pdRev3;             /**<
+                                * - True : CY_PD_REV3_ENABLE macro is enabled
+                                * - False : CY_PD_REV3_ENABLE macro is disabled
+                                */
+    bool frsRx;               /**<
+                                * - True : FRS receive is enabled
+                                * - False : FRS receive is disabled 
+                                */
+    bool frsTx;               /**<
+                                * - True : FRS transmit is enabled
+                                * - False : FRS transmit is disabled
+                                */
+} cy_pd_stack_conf_t;
 
 /** \} group_pdstack_data_structures */
 

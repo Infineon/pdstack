@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 1.20: Data Structures</title>
+<title>PDStack Middleware Library 2.0: Data Structures</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 1.20</div>
+   <div id="projectname">PDStack Middleware Library 2.0</div>
   </td>
  </tr>
  </tbody>
@@ -102,6 +102,12 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__power__status__t.html">cy_stc_pdstack_pd_power_status_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">PD port status corresponding to the Status Data Block (SSDB) See Table 6-39 of USB-PD R3 specification.  <a href="structcy__stc__pdstack__pd__power__status__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unioncy__stc__pdstack__pd__port__status__ec__t.html">cy_stc_pdstack_pd_port_status_ec_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">PD port status as reported to embedded controller.  <a href="unioncy__stc__pdstack__pd__port__status__ec__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html">cy_stc_pdstack_pd_port_status_ec_t::PD_PORT_STAT</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure containing status bits.  <a href="structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structapp__resp__t.html">app_resp_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct to hold response to policy manager.  <a href="structapp__resp__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -132,6 +138,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html">cy_stc_pdstack_dpm_status_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">PD Device Policy Status structure.  <a href="structcy__stc__pdstack__dpm__status__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__ext__status__t.html">cy_stc_pdstack_dpm_ext_status_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">PD Device Latest Policy Status structure.  <a href="structcy__stc__pdstack__dpm__ext__status__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html">cy_stc_pdstack_typec_status_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type C Manager Status structure.  <a href="structcy__stc__pdstack__typec__status__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,6 +161,9 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to PDSTACK Middleware context information.  <a href="structcy__stc__pdstack__context__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__pd__stack__conf__t.html">cy_pd_stack_conf_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struct used to fetch the PD stack configuration supported by the library that is currently in use.  <a href="structcy__pd__stack__conf__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__port__cfg__t.html">cy_stc_pdstack_port_cfg_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold PDSTACK Middleware configuration information.  <a href="structcy__stc__pdstack__port__cfg__t.html#details">More...</a><br /></td></tr>
@@ -186,7 +198,7 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ga3f4fb1cb7b6b853659e8d2ea7db20884"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga3f4fb1cb7b6b853659e8d2ea7db20884">cy_pdstack_dpm_typec_cmd_cbk_t</a>) (struct cy_stc_pdstack_context *ptrPdStackContext, <a class="el" href="group__group__pdstack__enums.html#gabc08be71025fa80938b86a436ec2231c">cy_en_pdstack_dpm_typec_cmd_resp_t</a> resp)</td></tr>
 <tr class="memdesc:ga3f4fb1cb7b6b853659e8d2ea7db20884"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type C command response callback.  <a href="#ga3f4fb1cb7b6b853659e8d2ea7db20884">More...</a><br /></td></tr>
 <tr class="separator:ga3f4fb1cb7b6b853659e8d2ea7db20884"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga87a37816b1bb27d6ab0f583a1ac01cdd"><td class="memItemLeft" align="right" valign="top">typedef uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga87a37816b1bb27d6ab0f583a1ac01cdd">cy_timer_id_t</a></td></tr>
+<tr class="memitem:ga87a37816b1bb27d6ab0f583a1ac01cdd"><td class="memItemLeft" align="right" valign="top">typedef uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga87a37816b1bb27d6ab0f583a1ac01cdd">cy_timer_id_t</a></td></tr>
 <tr class="memdesc:ga87a37816b1bb27d6ab0f583a1ac01cdd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer ID type definition.  <a href="#ga87a37816b1bb27d6ab0f583a1ac01cdd">More...</a><br /></td></tr>
 <tr class="separator:ga87a37816b1bb27d6ab0f583a1ac01cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga677655f9c592cb223c59bf38678c1a1a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga677655f9c592cb223c59bf38678c1a1a">cy_cb_timer_t</a>) (<a class="el" href="group__group__pdstack__data__structures.html#ga87a37816b1bb27d6ab0f583a1ac01cdd">cy_timer_id_t</a> id, void *callbackContext)</td></tr>
@@ -415,9 +427,9 @@ Enumerations</h2></td></tr>
 <ul>
 <li>PD and Type-C stack (Port-0) : 0 - 31 : 32 timers</li>
 <li>PD and Type-C stack (Port-1) : 32 - 63 : 32 timers</li>
-<li>Base application stack (Port-0) : 64 - 127 : 64 timers</li>
-<li>Base application stack (Port-1) : 128 - 191 : 64 timers</li>
-<li>Solution (project directory) : 192 - 254 : 63 timers </li>
+<li>Base application stack (Port-0) : 64 - 191 : 128 timers</li>
+<li>Base application stack (Port-1) : 192 - 319 : 128 timers</li>
+<li>Solution (project directory) : 324 - 387 : 63 timers </li>
 </ul>
 
 </div>
@@ -445,7 +457,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 1.20</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 2.0</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

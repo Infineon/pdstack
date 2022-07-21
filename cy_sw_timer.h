@@ -1,12 +1,12 @@
 /***************************************************************************//**
 * \file cy_sw_timer.h
-* \version 1.20
+* \version 2.0
 *
 * Provides API declarations of the Software Timer implementation.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2021, Cypress Semiconductor Corporation. All rights reserved.
+* Copyright 2021-2022, Cypress Semiconductor Corporation. All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -82,7 +82,7 @@
 #define TIMER_MAX_TIMEOUT               (0xFFFF)
 
 /** Invalid timer ID value. */
-#define TIMER_INVALID_ID                (0xFFu)
+#define TIMER_INVALID_ID                (0xFFFFu)
 
 /** Invalid timer instance. */
 #define TIMER_INVALID_INDEX             (0xFFu)
@@ -112,11 +112,11 @@
  *
  * - PD and Type-C stack (Port-0)         :   0 -  31 : 32 timers
  * - PD and Type-C stack (Port-1)         :  32 -  63 : 32 timers
- * - Base application stack (Port-0)      :  64 - 127 : 64 timers
- * - Base application stack (Port-1)      : 128 - 191 : 64 timers
- * - Solution (project directory)         : 192 - 254 : 63 timers
+ * - Base application stack (Port-0)      :  64 - 191 : 128 timers
+ * - Base application stack (Port-1)      : 192 - 319 : 128 timers
+ * - Solution (project directory)         : 324 - 387 : 63 timers
  */
-typedef uint8_t cy_timer_id_t;
+typedef uint16_t cy_timer_id_t;
 
 /**
  * @typedef cy_cb_timer_t
@@ -170,6 +170,9 @@ typedef struct
     /** Match register content. */
     uint16_t volatile match;
 
+    /** Multiplier for 1ms interval */
+    uint16_t multiplier;
+
     /** Handle for software timers. */
     cy_timer_t volatile timer_handle[TIMER_NUM_TIMERS];
 
@@ -181,9 +184,6 @@ typedef struct
 
     /** Flag indicating whether invoked from timer callback. */
     bool volatile is_callback;
-
-    /** Multiplier for 1ms interval */
-    uint16_t multiplier;
 
 } cy_stc_sw_timer_t;
 

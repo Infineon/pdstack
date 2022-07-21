@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "PDStack Middleware Library 1.20", "index.html", [
+  [ "PDStack Middleware Library 2.0", "index.html", [
     [ "PDStack Middleware Library", "index.html", [
       [ "General Description", "index.html#section_pdstack_general_description", null ],
       [ "Quick Start Guide", "index.html#section_pdstack_quick_start", null ],
@@ -17,10 +17,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "group__group__pdstack__data__structures.html",
-"group__group__pdstack__enums.html#gga473e59cf028fdde48d9e830841d167f8aa64d360b8a162e98af5440466cc3f0f1",
-"group__group__pdstack__enums.html#ggac2ed504d53c9fc529b82ccd7dba9af14ad139afc139b1053de1e1b3b3bb789446",
-"group__group__pdstack__macros.html#ga66926186162036b5e786fd78c37af155",
-"structcy__stc__pdstack__dpm__status__t.html#a9aa2b86e70e34a79e71af8a6e43505e4"
+"group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5aa7256aebc3fb265ff9d3e14aa8b27232",
+"group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0ad8b749f867057dcb57e8ce2d18033c25",
+"group__group__pdstack__macros.html#ga07dac132356e2d12b118a1abb6a31f76",
+"structcy__stc__pdstack__dpm__ext__status__t.html#a25d35f9dc39c034caf077ef380a84529",
+"structcy__stc__pdstack__pe__status__t.html#ac2e12f8993d4160d7534a227f18f645a"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

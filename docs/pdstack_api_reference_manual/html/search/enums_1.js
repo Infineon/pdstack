@@ -41,6 +41,7 @@ var searchData=
   ['cy_5fen_5fpdstack_5fstatus_5ft',['cy_en_pdstack_status_t',['../group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fcmd_5ft',['cy_en_pdstack_std_vdm_cmd_t',['../group__group__pdstack__enums.html#ga1c9d979d9cb9ed9df3a6cff1f8606e78',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fcmd_5ftype_5ft',['cy_en_pdstack_std_vdm_cmd_type_t',['../group__group__pdstack__enums.html#ga8904c7e4f548c96b7aa2e21dd4e89195',1,'cy_pdstack_common.h']]],
+  ['cy_5fen_5fpdstack_5fstd_5fvdm_5fconn_5ft',['cy_en_pdstack_std_vdm_conn_t',['../group__group__pdstack__enums.html#ga142edc9bc0664da1f462a9c79b052df1',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fprod_5ft',['cy_en_pdstack_std_vdm_prod_t',['../group__group__pdstack__enums.html#gaff3eff181dd5d5951fb7176a3efdf72a',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fver_5ft',['cy_en_pdstack_std_vdm_ver_t',['../group__group__pdstack__enums.html#ga764f0200a8f0a733f24f9a733196acea',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5ftry_5fsrc_5fsnk_5ft',['cy_en_pdstack_try_src_snk_t',['../group__group__pdstack__enums.html#gaad0c1d0faab6bcaa247d967358ef01be',1,'cy_pdstack_common.h']]],

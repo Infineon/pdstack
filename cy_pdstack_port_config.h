@@ -1,12 +1,12 @@
 /***************************************************************************//**
 * \file cy_pdstack_port_config.h
-* \version 1.20
+* \version 2.0
 *
 * PD Port Configuration Structure Header File for the PDStack middleware.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2021, Cypress Semiconductor Corporation. All rights reserved.
+* Copyright 2021-2022, Cypress Semiconductor Corporation. All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -28,6 +28,7 @@
 * \{
 */
 
+#if !CY_USE_CONFIG_TABLE
 /**
  * @brief Structure to hold PDSTACK Middleware configuration information.
  */
@@ -209,6 +210,7 @@ typedef struct
     uint32_t eprSnkPdo[6];
 
 } cy_stc_pdstack_port_cfg_t;
+#endif /* !CY_USE_CONFIG_TABLE */
 
 /** \} group_pdstack_data_structures */
 

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 1.20: cy_stc_pdstack_context_t Struct Reference</title>
+<title>PDStack Middleware Library 2.0: cy_stc_pdstack_context_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 1.20</div>
+   <div id="projectname">PDStack Middleware Library 2.0</div>
   </td>
  </tr>
  </tbody>
@@ -128,6 +128,15 @@ Data Fields</h2></td></tr>
 <tr class="memitem:ab68de7d651d381267f1f91e6db5ca854"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__rtos__context__t.html">cy_stc_pdstack_rtos_context_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__context__t.html#ab68de7d651d381267f1f91e6db5ca854">ptrRtosContext</a></td></tr>
 <tr class="memdesc:ab68de7d651d381267f1f91e6db5ca854"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the RTOS callback function structure.  <a href="#ab68de7d651d381267f1f91e6db5ca854">More...</a><br /></td></tr>
 <tr class="separator:ab68de7d651d381267f1f91e6db5ca854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d54fa7791cf18026fe0ae6fbd748b63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__dpm__ext__status__t.html">cy_stc_pdstack_dpm_ext_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__context__t.html#a8d54fa7791cf18026fe0ae6fbd748b63">dpmExtStat</a></td></tr>
+<tr class="memdesc:a8d54fa7791cf18026fe0ae6fbd748b63"><td class="mdescLeft">&#160;</td><td class="mdescRight">PD Device Policy Configuration and Status structure having PD3.1 updated parameters.  <a href="#a8d54fa7791cf18026fe0ae6fbd748b63">More...</a><br /></td></tr>
+<tr class="separator:a8d54fa7791cf18026fe0ae6fbd748b63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f8f4f4912f623846bdc6455266f2f03"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__context__t.html#a5f8f4f4912f623846bdc6455266f2f03">ptrAltModeContext</a></td></tr>
+<tr class="memdesc:a5f8f4f4912f623846bdc6455266f2f03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the AltMode context.  <a href="#a5f8f4f4912f623846bdc6455266f2f03">More...</a><br /></td></tr>
+<tr class="separator:a5f8f4f4912f623846bdc6455266f2f03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c2bed8fa9e495bc33888fe8ba6d310a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__context__t.html#a0c2bed8fa9e495bc33888fe8ba6d310a">ptrHpiContext</a></td></tr>
+<tr class="memdesc:a0c2bed8fa9e495bc33888fe8ba6d310a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the HPI context.  <a href="#a0c2bed8fa9e495bc33888fe8ba6d310a">More...</a><br /></td></tr>
+<tr class="separator:a0c2bed8fa9e495bc33888fe8ba6d310a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="afdc8314419809dc020e10bd472dd211b"></a>
@@ -306,13 +315,61 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
+<a id="a8d54fa7791cf18026fe0ae6fbd748b63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d54fa7791cf18026fe0ae6fbd748b63">&#9670;&nbsp;</a></span>dpmExtStat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcy__stc__pdstack__dpm__ext__status__t.html">cy_stc_pdstack_dpm_ext_status_t</a> cy_stc_pdstack_context_t::dpmExtStat</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PD Device Policy Configuration and Status structure having PD3.1 updated parameters. </p>
+
+</div>
+</div>
+<a id="a5f8f4f4912f623846bdc6455266f2f03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f8f4f4912f623846bdc6455266f2f03">&#9670;&nbsp;</a></span>ptrAltModeContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* cy_stc_pdstack_context_t::ptrAltModeContext</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pointer to the AltMode context. </p>
+
+</div>
+</div>
+<a id="a0c2bed8fa9e495bc33888fe8ba6d310a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c2bed8fa9e495bc33888fe8ba6d310a">&#9670;&nbsp;</a></span>ptrHpiContext</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* cy_stc_pdstack_context_t::ptrHpiContext</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pointer to the HPI context. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 1.20</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 2.0</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

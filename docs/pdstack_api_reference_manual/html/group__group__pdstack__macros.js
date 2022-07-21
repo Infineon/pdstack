@@ -1,5 +1,6 @@
 var group__group__pdstack__macros =
 [
+    [ "CY_PD_EXTD_STATUS_PRESENT_INPUT_OFFSET", "group__group__pdstack__macros.html#ga65ceb6ae5fad42b1d12baee2bd2fe62b", null ],
     [ "CY_PD_MAX_SRC_CAP_TRY", "group__group__pdstack__macros.html#ga0439cbd8dd15a37c4347f88a7405dff7", null ],
     [ "CY_PD_GIVE_BACK_MASK", "group__group__pdstack__macros.html#gafb6f4e29984ef48671b4aa05613d6fa5", null ],
     [ "CY_PD_SNK_MIN_MAX_MASK", "group__group__pdstack__macros.html#ga18c020421c917ea7ff574d4c5d723311", null ],
@@ -7,8 +8,10 @@ var group__group__pdstack__macros =
     [ "CY_PD_MAX_HARD_RESET_COUNT", "group__group__pdstack__macros.html#ga7817bedb6aa675adb48bb8271a00dc77", null ],
     [ "CY_PD_MAX_CBL_DSC_ID_COUNT", "group__group__pdstack__macros.html#ga2cfc71bd65202101b0bf216e38b13431", null ],
     [ "CY_PD_MAX_PR_SWAP_WAIT_COUNT", "group__group__pdstack__macros.html#gab2835f0909699676bfc25837d6a4408e", null ],
+    [ "CY_PD_MAX_NO_OF_SPR_DO", "group__group__pdstack__macros.html#ga10d8f9af570a5164284566296a548786", null ],
     [ "CY_PD_MAX_NO_OF_DO", "group__group__pdstack__macros.html#ga6e0f4d6200f73e833ea05dc85172ee16", null ],
     [ "CY_PD_MAX_NO_OF_PDO", "group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d", null ],
+    [ "CY_PD_MAX_NO_OF_SPR_PDO", "group__group__pdstack__macros.html#gaa13b7bec497f09bf577da9da599e358d", null ],
     [ "CY_PD_MAX_NO_OF_EPR_PDO", "group__group__pdstack__macros.html#ga0b680656c00df03fd94113b78cefde43", null ],
     [ "CY_PD_MAX_NO_OF_VDO", "group__group__pdstack__macros.html#gaa9566da6c61c3a22ac8c86631c92b12e", null ],
     [ "CY_PD_VDM_HEADER_IDX", "group__group__pdstack__macros.html#ga4c827be17a5d850e99c71153e6c9d67f", null ],
@@ -28,6 +31,7 @@ var group__group__pdstack__macros =
     [ "CY_PD_STD_SVID", "group__group__pdstack__macros.html#ga2b4edaf789f84bbecd0e7781fab4abe8", null ],
     [ "CY_PD_DP_SVID", "group__group__pdstack__macros.html#gaca536cce587bb01c6bea32fe03b54280", null ],
     [ "CY_PD_TBT_SVID", "group__group__pdstack__macros.html#gad884121abe5a8a407d799c73aefb583a", null ],
+    [ "CY_PD_APPLE_SVID", "group__group__pdstack__macros.html#gaf398740f7956fab46e13b50761c7e2d8", null ],
     [ "CY_PD_UFP_NON_PH_ALT_MODE_SUPP_MASK", "group__group__pdstack__macros.html#ga16681f9076e8bc71e3d2d73811d077cb", null ],
     [ "CY_PD_CY_VID", "group__group__pdstack__macros.html#ga4da01a2840d4a3c2769afc76aae9f281", null ],
     [ "CY_PD_STD_VDM_VERSION_IDX", "group__group__pdstack__macros.html#ga0f93f6d75b73c466a6e160d9e3b923e3", null ],
@@ -129,6 +133,7 @@ var group__group__pdstack__macros =
     [ "CY_PD_EXT_SRCCAP_BUF_SIZE", "group__group__pdstack__macros.html#ga1fa88f710580557d9c3bd4afedd8eaff", null ],
     [ "CY_PD_EXT_SRCCAP_INP_INDEX", "group__group__pdstack__macros.html#ga094044b35762948cd96143b15f175b4d", null ],
     [ "CY_PD_EXT_SRCCAP_INP_UNCONSTRAINED", "group__group__pdstack__macros.html#gad6a663f358b2434e77048f4c6594990d", null ],
+    [ "CY_PD_EXT_SRCCAP_PDP_INDEX", "group__group__pdstack__macros.html#ga6497e14fa506632b3130fc730bbeb16c", null ],
     [ "CY_PD_EXT_SPR_SRCCAP_PDP_INDEX", "group__group__pdstack__macros.html#ga44b6f44ee85eaa0f726ac1eeb3fb1a20", null ],
     [ "CY_PD_EXT_EPR_SRCCAP_PDP_INDEX", "group__group__pdstack__macros.html#ga9b64419cafaa7775666a1abac4d53923", null ],
     [ "CY_PD_EXT_SNKCAP_SIZE", "group__group__pdstack__macros.html#gadbb473d73e77ab4fb021ed4e6eeb48f0", null ],
