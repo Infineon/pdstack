@@ -39,11 +39,13 @@ var searchData=
   ['cy_5fen_5fpdstack_5fresp_5fstatus_5ft',['cy_en_pdstack_resp_status_t',['../group__group__pdstack__enums.html#ga0b601c6a30a8c7ce2a765ea4ee7572d6',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fsoft_5freset_5freason_5ft',['cy_en_pdstack_soft_reset_reason_t',['../group__group__pdstack__enums.html#gaf23099fdf175772dc4a04635904f4d00',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstatus_5ft',['cy_en_pdstack_status_t',['../group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f',1,'cy_pdstack_common.h']]],
+  ['cy_5fen_5fpdstack_5fstd_5fminor_5fvdm_5fver_5ft',['cy_en_pdstack_std_minor_vdm_ver_t',['../group__group__pdstack__enums.html#ga691827e709ecdcd79f77107fcf917b10',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fcmd_5ft',['cy_en_pdstack_std_vdm_cmd_t',['../group__group__pdstack__enums.html#ga1c9d979d9cb9ed9df3a6cff1f8606e78',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fcmd_5ftype_5ft',['cy_en_pdstack_std_vdm_cmd_type_t',['../group__group__pdstack__enums.html#ga8904c7e4f548c96b7aa2e21dd4e89195',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fconn_5ft',['cy_en_pdstack_std_vdm_conn_t',['../group__group__pdstack__enums.html#ga142edc9bc0664da1f462a9c79b052df1',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fprod_5ft',['cy_en_pdstack_std_vdm_prod_t',['../group__group__pdstack__enums.html#gaff3eff181dd5d5951fb7176a3efdf72a',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fver_5ft',['cy_en_pdstack_std_vdm_ver_t',['../group__group__pdstack__enums.html#ga764f0200a8f0a733f24f9a733196acea',1,'cy_pdstack_common.h']]],
+  ['cy_5fen_5fpdstack_5ftimer_5fid_5ft',['cy_en_pdstack_timer_id_t',['../group__group__pdstack__enums.html#gae2c1c922571761f68889bf4cb4a4ee46',1,'cy_pdstack_timer_id.h']]],
   ['cy_5fen_5fpdstack_5ftry_5fsrc_5fsnk_5ft',['cy_en_pdstack_try_src_snk_t',['../group__group__pdstack__enums.html#gaad0c1d0faab6bcaa247d967358ef01be',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5ftypec_5ffsm_5fstate_5ft',['cy_en_pdstack_typec_fsm_state_t',['../group__group__pdstack__enums.html#ga6274d400cdeecb2da1711ded27ba9953',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fusb_5fdata_5fsig_5ft',['cy_en_pdstack_usb_data_sig_t',['../group__group__pdstack__enums.html#gaab99ac36ea56d33251e70df9b934f892',1,'cy_pdstack_common.h']]],
@@ -52,6 +54,5 @@ var searchData=
   ['cy_5fen_5fpdstack_5fusb_5frole_5ft',['cy_en_pdstack_usb_role_t',['../group__group__pdstack__enums.html#ga7766cdeebc0d2da0916334d0e6adbcc2',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fusb_5fsig_5fsupp_5ft',['cy_en_pdstack_usb_sig_supp_t',['../group__group__pdstack__enums.html#gaf7a14a7f9a14f3633f41dc74dae15a88',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fvdm_5fams_5ft',['cy_en_pdstack_vdm_ams_t',['../group__group__pdstack__enums.html#ga14ffbc6640150b89fc3917773b9822b2',1,'cy_pdstack_common.h']]],
-  ['cy_5fen_5fpdstack_5fvdm_5ftype_5ft',['cy_en_pdstack_vdm_type_t',['../group__group__pdstack__enums.html#gaee817423e09ca638b130bdb4664c0156',1,'cy_pdstack_common.h']]],
-  ['cy_5fsw_5ftimer_5fid_5ft',['cy_sw_timer_id_t',['../group__group__pdstack__enums.html#gab23f6a4bf15016efed8957def744f3d0',1,'cy_sw_timer_id.h']]]
+  ['cy_5fen_5fpdstack_5fvdm_5ftype_5ft',['cy_en_pdstack_vdm_type_t',['../group__group__pdstack__enums.html#gaee817423e09ca638b130bdb4664c0156',1,'cy_pdstack_common.h']]]
 ];

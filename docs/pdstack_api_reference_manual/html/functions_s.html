@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 2.0: Data Fields</title>
+<title>PDStack Middleware Library 3.0: Data Fields</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 2.0</div>
+   <div id="projectname">PDStack Middleware Library 3.0</div>
   </td>
  </tr>
  </tbody>
@@ -85,6 +85,12 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <h3><a id="index_s"></a>- s -</h3><ul>
 <li>scedbEn
 : <a class="el" href="structcy__stc__pdstack__port__cfg__t.html#a7ba447165926a7298690594d8ea9e115">cy_stc_pdstack_port_cfg_t</a>
+</li>
+<li>send_src_info
+: <a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a407f3ecaf0baf2e71ba1ac532e4bc786">cy_stc_pdstack_app_cbk_t</a>
+</li>
+<li>senderRspTimeout
+: <a class="el" href="structcy__stc__pdstack__context__t.html#a2a3a56499a55d9c8996820bfa9bcf007">cy_stc_pdstack_context_t</a>
 </li>
 <li>sendextdhdr
 : <a class="el" href="structcy__stc__pdstack__pe__status__t.html#a7c1ca046655730679185e70fe422e271">cy_stc_pdstack_pe_status_t</a>
@@ -167,8 +173,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#aa6cd6e9b6b59c760c5c30dba12fa47dc">cy_stc_pdstack_dpm_status_t</a>
 </li>
 <li>sop
-: <a class="el" href="structcy__stc__pdstack__pd__packet__epr__t.html#a6e18250ed50dc816252f5b97a31d3d27">cy_stc_pdstack_pd_packet_epr_t</a>
-, <a class="el" href="structcy__stc__pdstack__pd__packet__t.html#add66bc50dcce3ea5e6cfd41b8d56b1ae">cy_stc_pdstack_pd_packet_t</a>
+: <a class="el" href="structcy__stc__pdstack__pd__packet__t.html#add66bc50dcce3ea5e6cfd41b8d56b1ae">cy_stc_pdstack_pd_packet_t</a>
 </li>
 <li>sopType
 : <a class="el" href="structcy__stc__pdstack__pe__status__t.html#a9ba02a1818cd2a788d86f3b7c0b7e3ad">cy_stc_pdstack_pe_status_t</a>
@@ -178,6 +183,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 </li>
 <li>specRevCbl
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ae2836499df7d39af78c23064d67e3028">cy_stc_pdstack_dpm_status_t</a>
+</li>
+<li>specRevDetermined
+: <a class="el" href="structcy__stc__pdstack__pe__status__t.html#a0151a2ecdc8f9c86b0877d60362c6461">cy_stc_pdstack_pe_status_t</a>
 </li>
 <li>specRevPeer
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a86f1cd5c63f9effa3713366e0f70ada9">cy_stc_pdstack_dpm_status_t</a>
@@ -247,9 +255,6 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a7fcdc039f7975bdfb547cf66fe0b3a07">cy_stc_pdstack_dpm_status_t</a>
 , <a class="el" href="structcy__stc__pdstack__pe__status__t.html#aec050ef7509042df6d53ba629eb93116">cy_stc_pdstack_pe_status_t</a>
 </li>
-<li>start_tick
-: <a class="el" href="structcy__stc__sw__timer__t.html#ad475f368df4fba6c797c3bf7a7b13a86">cy_stc_sw_timer_t</a>
-</li>
 <li>status
 : <a class="el" href="structcy__stc__pdstack__pd__contract__info__t.html#a911569b2c0c5813d1c532220a5a2cf6c">cy_stc_pdstack_pd_contract_info_t</a>
 , <a class="el" href="unioncy__stc__pdstack__pd__port__status__ec__t.html#a6dbf0bc3f455e94c399ae0a147f9662d">cy_stc_pdstack_pd_port_status_ec_t</a>
@@ -263,9 +268,6 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>swapType
 : <a class="el" href="structcy__stc__pdstack__pe__status__t.html#a1cff0aff84de2a97d2879abd83787f11">cy_stc_pdstack_pe_status_t</a>
 </li>
-<li>sys_clk_freq
-: <a class="el" href="structcy__stc__sw__timer__t.html#a6e0eb02dd9635ffc0acc213b07b6c23d">cy_stc_sw_timer_t</a>
-</li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -273,7 +275,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 2.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.0</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

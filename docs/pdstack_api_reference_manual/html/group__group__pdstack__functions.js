@@ -1,6 +1,6 @@
 var group__group__pdstack__functions =
 [
-    [ "Cy_PdStack_Dpm_Init", "group__group__pdstack__functions.html#ga201503833db097afe5c9e0d18e8e03ea", null ],
+    [ "Cy_PdStack_Dpm_Init", "group__group__pdstack__functions.html#ga37024bdc821e5a3065a128a79e51f10d", null ],
     [ "Cy_PdStack_Dpm_Start", "group__group__pdstack__functions.html#gaae9893510cb213c6b799bb490b76d513", null ],
     [ "Cy_PdStack_Dpm_Stop", "group__group__pdstack__functions.html#ga67ca2bbf457f4a9777dc121eb53f445b", null ],
     [ "Cy_PdStack_Dpm_Disable", "group__group__pdstack__functions.html#ga5b02e2958684a052e39ec007b2f646e1", null ],
@@ -26,6 +26,7 @@ var group__group__pdstack__functions =
     [ "Cy_PdStack_Dpm_IsRdoValid", "group__group__pdstack__functions.html#ga118b61265cff80e1d8d22b152cedac0d", null ],
     [ "Cy_PdStack_Dpm_UpdateDisCounter", "group__group__pdstack__functions.html#gac687bc51577dc53900e32246a639dfd2", null ],
     [ "Cy_PdStack_Dpm_UpdateUsbComm", "group__group__pdstack__functions.html#ga04e21c2d8b43702ac52dd571dfbcbbc8", null ],
+    [ "Cy_PdStack_Dpm_UpdateSnkUsbSusp", "group__group__pdstack__functions.html#ga2b46583911bef66a3c8559dc76c84fef", null ],
     [ "Cy_PdStack_Dpm_SetBCRFaultStat", "group__group__pdstack__functions.html#ga498a4713c456c9eeef5bf1b6d47840f2", null ],
     [ "Cy_PdStack_Dpm_ClearBCRFaultStat", "group__group__pdstack__functions.html#ga1819a6647b3dba1113d2d4d69986ed4c", null ],
     [ "Cy_PdStack_Dpm_GetBistStmEn", "group__group__pdstack__functions.html#gacc1d801b797ed62dc977d22eb94284e0", null ],
@@ -71,17 +72,6 @@ var group__group__pdstack__functions =
     [ "Cy_PdStack_Dpm_GetAutoVcsEnabled", "group__group__pdstack__functions.html#ga07c6dcab5d3ddb532a7d69524e14fd48", null ],
     [ "Cy_PdStack_Dpm_UpdateAutoVcsEnable", "group__group__pdstack__functions.html#ga22e36c703fc00cf3ddd00777458e6701", null ],
     [ "Cy_PdStack_Dpm_UpdateVconnRetain", "group__group__pdstack__functions.html#gae4832144f5045d333f4016db3b2b9070", null ],
-    [ "cy_sw_timer_init", "group__group__pdstack__functions.html#ga571254a255a639c850955f2ee44a4ff6", null ],
-    [ "cy_sw_timer_start", "group__group__pdstack__functions.html#ga4f7d0de989622862b23e48dd59ea4fcc", null ],
-    [ "cy_sw_timer_start_wocb", "group__group__pdstack__functions.html#ga1fa158c30f555b378dc841b4964a34bd", null ],
-    [ "cy_sw_timer_stop", "group__group__pdstack__functions.html#ga3006fefdec6f3e5cc0ba40533ebd90e1", null ],
-    [ "cy_sw_timer_is_running", "group__group__pdstack__functions.html#ga6de412b66324addf487bed9fda267f3e", null ],
-    [ "cy_sw_timer_range_enabled", "group__group__pdstack__functions.html#ga729796ffbdea922f8e5a7fd5f321cd0d", null ],
-    [ "cy_sw_timer_get_count", "group__group__pdstack__functions.html#ga61adc4b2eb587c1a2ae7b2e87dfa3072", null ],
-    [ "cy_sw_timer_stop_all", "group__group__pdstack__functions.html#ga4d12d06f621bb1dd95fcbd011516682f", null ],
-    [ "cy_sw_timer_stop_range", "group__group__pdstack__functions.html#gaa9ff160349cf0db1ab09fc42eeafe57b", null ],
-    [ "cy_sw_timer_num_active", "group__group__pdstack__functions.html#gaece137e47862aa5d0b40edf013a71738", null ],
-    [ "cy_sw_timer_enter_sleep", "group__group__pdstack__functions.html#ga28d1dbbc963e015cd3689f8a4263e425", null ],
-    [ "cy_sw_timer_interrupt_handler", "group__group__pdstack__functions.html#ga548d2c906554c3e70bf1e25a7feeb111", null ],
-    [ "cy_sw_timer_get_multiplier", "group__group__pdstack__functions.html#ga5caa507456d28bdc2941796cead1bbe9", null ]
+    [ "Cy_PdStack_Dpm_SetDataReset", "group__group__pdstack__functions.html#ga97724cfbab85affa826f8a012bc6e0de", null ],
+    [ "Cy_PdStack_Dpm_UpdateTimingParams", "group__group__pdstack__functions.html#ga21dcdd21f06231e5bfa002a592097a17", null ]
 ];

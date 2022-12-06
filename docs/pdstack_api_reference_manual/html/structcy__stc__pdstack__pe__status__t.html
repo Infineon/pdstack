@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 2.0: cy_stc_pdstack_pe_status_t Struct Reference</title>
+<title>PDStack Middleware Library 3.0: cy_stc_pdstack_pe_status_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 2.0</div>
+   <div id="projectname">PDStack Middleware Library 3.0</div>
   </td>
  </tr>
  </tbody>
@@ -83,190 +83,990 @@ $(document).ready(function(){initNavTree('structcy__stc__pdstack__pe__status__t.
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">cy_stc_pdstack_pe_status_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data Structures</a></div></div>  </div>
+<div class="title">cy_stc_pdstack_pe_status_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data structures</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
-<div class="textblock"><p>Structure to hold the Policy Engine Status. </p>
+<div class="textblock"><p>Structure to hold the policy engine status. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:ad92c9403b5e6e6729112e0b55604e47a"><td class="memItemLeft" align="right" valign="top"><a id="ad92c9403b5e6e6729112e0b55604e47a"></a>
-cy_stc_pd_packet_extd_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ad92c9403b5e6e6729112e0b55604e47a">rcvdPtr</a></td></tr>
-<tr class="memdesc:ad92c9403b5e6e6729112e0b55604e47a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to received packet. <br /></td></tr>
+<tr class="memitem:ad92c9403b5e6e6729112e0b55604e47a"><td class="memItemLeft" align="right" valign="top">cy_stc_pd_packet_extd_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ad92c9403b5e6e6729112e0b55604e47a">rcvdPtr</a></td></tr>
+<tr class="memdesc:ad92c9403b5e6e6729112e0b55604e47a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the received packet.  <a href="#ad92c9403b5e6e6729112e0b55604e47a">More...</a><br /></td></tr>
 <tr class="separator:ad92c9403b5e6e6729112e0b55604e47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bd5755f753a41d0fd874c788e5d28e0"><td class="memItemLeft" align="right" valign="top"><a id="a3bd5755f753a41d0fd874c788e5d28e0"></a>
-cy_stc_pd_packet_extd_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a3bd5755f753a41d0fd874c788e5d28e0">rcvdPkt</a></td></tr>
-<tr class="memdesc:a3bd5755f753a41d0fd874c788e5d28e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently received packet. <br /></td></tr>
+<tr class="memitem:a3bd5755f753a41d0fd874c788e5d28e0"><td class="memItemLeft" align="right" valign="top">cy_stc_pd_packet_extd_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a3bd5755f753a41d0fd874c788e5d28e0">rcvdPkt</a></td></tr>
+<tr class="memdesc:a3bd5755f753a41d0fd874c788e5d28e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently received packet.  <a href="#a3bd5755f753a41d0fd874c788e5d28e0">More...</a><br /></td></tr>
 <tr class="separator:a3bd5755f753a41d0fd874c788e5d28e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a493666fa3854fe00763ee984d196ea0a"><td class="memItemLeft" align="right" valign="top"><a id="a493666fa3854fe00763ee984d196ea0a"></a>
-<a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a493666fa3854fe00763ee984d196ea0a">vdmPkt</a></td></tr>
-<tr class="memdesc:a493666fa3854fe00763ee984d196ea0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eval VDM local buffer. <br /></td></tr>
+<tr class="memitem:a493666fa3854fe00763ee984d196ea0a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a493666fa3854fe00763ee984d196ea0a">vdmPkt</a></td></tr>
+<tr class="memdesc:a493666fa3854fe00763ee984d196ea0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eval VDM local buffer.  <a href="#a493666fa3854fe00763ee984d196ea0a">More...</a><br /></td></tr>
 <tr class="separator:a493666fa3854fe00763ee984d196ea0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad337c6b9304612b6c60567b79b8160b0"><td class="memItemLeft" align="right" valign="top"><a id="ad337c6b9304612b6c60567b79b8160b0"></a>
-<a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ad337c6b9304612b6c60567b79b8160b0">dpmResp</a></td></tr>
-<tr class="memdesc:ad337c6b9304612b6c60567b79b8160b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the DPM command response. <br /></td></tr>
+<tr class="memitem:ad337c6b9304612b6c60567b79b8160b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ad337c6b9304612b6c60567b79b8160b0">dpmResp</a></td></tr>
+<tr class="memdesc:ad337c6b9304612b6c60567b79b8160b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the DPM command response.  <a href="#ad337c6b9304612b6c60567b79b8160b0">More...</a><br /></td></tr>
 <tr class="separator:ad337c6b9304612b6c60567b79b8160b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd4ad918f2dae5749b10dac9a05c4ff2"><td class="memItemLeft" align="right" valign="top"><a id="acd4ad918f2dae5749b10dac9a05c4ff2"></a>
-<a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#acd4ad918f2dae5749b10dac9a05c4ff2">srcCap</a></td></tr>
-<tr class="memdesc:acd4ad918f2dae5749b10dac9a05c4ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the current source cap received. <br /></td></tr>
+<tr class="memitem:acd4ad918f2dae5749b10dac9a05c4ff2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#acd4ad918f2dae5749b10dac9a05c4ff2">srcCap</a></td></tr>
+<tr class="memdesc:acd4ad918f2dae5749b10dac9a05c4ff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the current source cap received.  <a href="#acd4ad918f2dae5749b10dac9a05c4ff2">More...</a><br /></td></tr>
 <tr class="separator:acd4ad918f2dae5749b10dac9a05c4ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58616c49e019a542a0d8ef188789b431"><td class="memItemLeft" align="right" valign="top"><a id="a58616c49e019a542a0d8ef188789b431"></a>
-cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a58616c49e019a542a0d8ef188789b431">tempDo</a></td></tr>
-<tr class="memdesc:a58616c49e019a542a0d8ef188789b431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary buffer for sending VDM commands. <br /></td></tr>
+<tr class="memitem:a58616c49e019a542a0d8ef188789b431"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a58616c49e019a542a0d8ef188789b431">tempDo</a></td></tr>
+<tr class="memdesc:a58616c49e019a542a0d8ef188789b431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary buffer for sending VDM commands.  <a href="#a58616c49e019a542a0d8ef188789b431">More...</a><br /></td></tr>
 <tr class="separator:a58616c49e019a542a0d8ef188789b431"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a038e7de08404926867493036be8a9228"><td class="memItemLeft" align="right" valign="top"><a id="a038e7de08404926867493036be8a9228"></a>
-<a class="el" href="structapp__resp__t.html">app_resp_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a038e7de08404926867493036be8a9228">appResp</a></td></tr>
-<tr class="memdesc:a038e7de08404926867493036be8a9228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary buffer for storing APP response. <br /></td></tr>
+<tr class="memitem:a038e7de08404926867493036be8a9228"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structapp__resp__t.html">app_resp_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a038e7de08404926867493036be8a9228">appResp</a></td></tr>
+<tr class="memdesc:a038e7de08404926867493036be8a9228"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary buffer for storing APP response.  <a href="#a038e7de08404926867493036be8a9228">More...</a><br /></td></tr>
 <tr class="separator:a038e7de08404926867493036be8a9228"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a5578c8a3b684ec3daee681b676e782"><td class="memItemLeft" align="right" valign="top"><a id="a3a5578c8a3b684ec3daee681b676e782"></a>
-<a class="el" href="structvdm__resp__t.html">vdm_resp_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a3a5578c8a3b684ec3daee681b676e782">vdmResp</a></td></tr>
-<tr class="memdesc:a3a5578c8a3b684ec3daee681b676e782"><td class="mdescLeft">&#160;</td><td class="mdescRight">VDM response from APP stored here. <br /></td></tr>
+<tr class="memitem:a3a5578c8a3b684ec3daee681b676e782"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structvdm__resp__t.html">vdm_resp_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a3a5578c8a3b684ec3daee681b676e782">vdmResp</a></td></tr>
+<tr class="memdesc:a3a5578c8a3b684ec3daee681b676e782"><td class="mdescLeft">&#160;</td><td class="mdescRight">VDM response from APP stored here.  <a href="#a3a5578c8a3b684ec3daee681b676e782">More...</a><br /></td></tr>
 <tr class="separator:a3a5578c8a3b684ec3daee681b676e782"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a578641614c5cdd8ae25e8db3f29c2ffb"><td class="memItemLeft" align="right" valign="top"><a id="a578641614c5cdd8ae25e8db3f29c2ffb"></a>
-<a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html">cy_stc_pdstack_dpm_pd_cmd_buf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a578641614c5cdd8ae25e8db3f29c2ffb">vsBuf</a></td></tr>
-<tr class="memdesc:a578641614c5cdd8ae25e8db3f29c2ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">VCONN swap command buffer. <br /></td></tr>
+<tr class="memitem:a578641614c5cdd8ae25e8db3f29c2ffb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html">cy_stc_pdstack_dpm_pd_cmd_buf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a578641614c5cdd8ae25e8db3f29c2ffb">vsBuf</a></td></tr>
+<tr class="memdesc:a578641614c5cdd8ae25e8db3f29c2ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">VCONN swap command buffer.  <a href="#a578641614c5cdd8ae25e8db3f29c2ffb">More...</a><br /></td></tr>
 <tr class="separator:a578641614c5cdd8ae25e8db3f29c2ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade641f14e39f35ac34f8658db3667c1f"><td class="memItemLeft" align="right" valign="top"><a id="ade641f14e39f35ac34f8658db3667c1f"></a>
-<a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html">cy_stc_pdstack_dpm_pd_cmd_buf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ade641f14e39f35ac34f8658db3667c1f">cblBuf</a></td></tr>
-<tr class="memdesc:ade641f14e39f35ac34f8658db3667c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cable command buffer. <br /></td></tr>
+<tr class="memitem:ade641f14e39f35ac34f8658db3667c1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html">cy_stc_pdstack_dpm_pd_cmd_buf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ade641f14e39f35ac34f8658db3667c1f">cblBuf</a></td></tr>
+<tr class="memdesc:ade641f14e39f35ac34f8658db3667c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cable command buffer.  <a href="#ade641f14e39f35ac34f8658db3667c1f">More...</a><br /></td></tr>
 <tr class="separator:ade641f14e39f35ac34f8658db3667c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57cc94443367861b01845a4cc661aed4"><td class="memItemLeft" align="right" valign="top"><a id="a57cc94443367861b01845a4cc661aed4"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a57cc94443367861b01845a4cc661aed4">hardResetCount</a></td></tr>
-<tr class="memdesc:a57cc94443367861b01845a4cc661aed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hard reset counter. <br /></td></tr>
+<tr class="memitem:a57cc94443367861b01845a4cc661aed4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a57cc94443367861b01845a4cc661aed4">hardResetCount</a></td></tr>
+<tr class="memdesc:a57cc94443367861b01845a4cc661aed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hard reset counter.  <a href="#a57cc94443367861b01845a4cc661aed4">More...</a><br /></td></tr>
 <tr class="separator:a57cc94443367861b01845a4cc661aed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ab1ba911e14692ce70b24f3911ab9b8"><td class="memItemLeft" align="right" valign="top"><a id="a9ab1ba911e14692ce70b24f3911ab9b8"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a9ab1ba911e14692ce70b24f3911ab9b8">srcCapCount</a></td></tr>
-<tr class="memdesc:a9ab1ba911e14692ce70b24f3911ab9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source capability counter. <br /></td></tr>
+<tr class="memitem:a9ab1ba911e14692ce70b24f3911ab9b8"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a9ab1ba911e14692ce70b24f3911ab9b8">srcCapCount</a></td></tr>
+<tr class="memdesc:a9ab1ba911e14692ce70b24f3911ab9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source capability counter.  <a href="#a9ab1ba911e14692ce70b24f3911ab9b8">More...</a><br /></td></tr>
 <tr class="separator:a9ab1ba911e14692ce70b24f3911ab9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15cda3699202430fd48d336e3b643128"><td class="memItemLeft" align="right" valign="top"><a id="a15cda3699202430fd48d336e3b643128"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a15cda3699202430fd48d336e3b643128">cblDscIdCount</a></td></tr>
-<tr class="memdesc:a15cda3699202430fd48d336e3b643128"><td class="mdescLeft">&#160;</td><td class="mdescRight">CBL dsc id count. <br /></td></tr>
+<tr class="memitem:a15cda3699202430fd48d336e3b643128"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a15cda3699202430fd48d336e3b643128">cblDscIdCount</a></td></tr>
+<tr class="memdesc:a15cda3699202430fd48d336e3b643128"><td class="mdescLeft">&#160;</td><td class="mdescRight">CBL dsc id count.  <a href="#a15cda3699202430fd48d336e3b643128">More...</a><br /></td></tr>
 <tr class="separator:a15cda3699202430fd48d336e3b643128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24e0385313f2c2d2d3ec27d3ccd8763c"><td class="memItemLeft" align="right" valign="top"><a id="a24e0385313f2c2d2d3ec27d3ccd8763c"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a24e0385313f2c2d2d3ec27d3ccd8763c">prSwap</a></td></tr>
-<tr class="memdesc:a24e0385313f2c2d2d3ec27d3ccd8763c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate power role swap going on. <br /></td></tr>
+<tr class="memitem:a24e0385313f2c2d2d3ec27d3ccd8763c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a24e0385313f2c2d2d3ec27d3ccd8763c">prSwap</a></td></tr>
+<tr class="memdesc:a24e0385313f2c2d2d3ec27d3ccd8763c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates power role swap going on.  <a href="#a24e0385313f2c2d2d3ec27d3ccd8763c">More...</a><br /></td></tr>
 <tr class="separator:a24e0385313f2c2d2d3ec27d3ccd8763c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0950e1d77e28c8be82a7b0084226924"><td class="memItemLeft" align="right" valign="top"><a id="af0950e1d77e28c8be82a7b0084226924"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#af0950e1d77e28c8be82a7b0084226924">prSwapCount</a></td></tr>
-<tr class="memdesc:af0950e1d77e28c8be82a7b0084226924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts PR swap requests if VCONN swap is pending. <br /></td></tr>
+<tr class="memitem:af0950e1d77e28c8be82a7b0084226924"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#af0950e1d77e28c8be82a7b0084226924">prSwapCount</a></td></tr>
+<tr class="memdesc:af0950e1d77e28c8be82a7b0084226924"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counts PR swap requests if VCONN swap is pending.  <a href="#af0950e1d77e28c8be82a7b0084226924">More...</a><br /></td></tr>
 <tr class="separator:af0950e1d77e28c8be82a7b0084226924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08093220bc3b664073942c7978b49588"><td class="memItemLeft" align="right" valign="top"><a id="a08093220bc3b664073942c7978b49588"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a08093220bc3b664073942c7978b49588">snkGoToMin</a></td></tr>
-<tr class="memdesc:a08093220bc3b664073942c7978b49588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate go to min request received from source. <br /></td></tr>
+<tr class="memitem:a08093220bc3b664073942c7978b49588"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a08093220bc3b664073942c7978b49588">snkGoToMin</a></td></tr>
+<tr class="memdesc:a08093220bc3b664073942c7978b49588"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates go to min request received from the source.  <a href="#a08093220bc3b664073942c7978b49588">More...</a><br /></td></tr>
 <tr class="separator:a08093220bc3b664073942c7978b49588"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7d3b4cedd0abc3c99a6ddd66fbad5bf"><td class="memItemLeft" align="right" valign="top"><a id="ac7d3b4cedd0abc3c99a6ddd66fbad5bf"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ac7d3b4cedd0abc3c99a6ddd66fbad5bf">srcGoToMin</a></td></tr>
-<tr class="memdesc:ac7d3b4cedd0abc3c99a6ddd66fbad5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate go to min need to be sent by source(requested by dpm) <br /></td></tr>
+<tr class="memitem:ac7d3b4cedd0abc3c99a6ddd66fbad5bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ac7d3b4cedd0abc3c99a6ddd66fbad5bf">srcGoToMin</a></td></tr>
+<tr class="memdesc:ac7d3b4cedd0abc3c99a6ddd66fbad5bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates go to min needs to be sent by the source (requested by dpm).  <a href="#ac7d3b4cedd0abc3c99a6ddd66fbad5bf">More...</a><br /></td></tr>
 <tr class="separator:ac7d3b4cedd0abc3c99a6ddd66fbad5bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15f0ef3c5cde9431c95d49aafefc3c4e"><td class="memItemLeft" align="right" valign="top"><a id="a15f0ef3c5cde9431c95d49aafefc3c4e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a15f0ef3c5cde9431c95d49aafefc3c4e">isVconnSwapActive</a></td></tr>
-<tr class="memdesc:a15f0ef3c5cde9431c95d49aafefc3c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate VCONN swap need to be performed. <br /></td></tr>
+<tr class="memitem:a15f0ef3c5cde9431c95d49aafefc3c4e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a15f0ef3c5cde9431c95d49aafefc3c4e">isVconnSwapActive</a></td></tr>
+<tr class="memdesc:a15f0ef3c5cde9431c95d49aafefc3c4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates VCONN swap needs to be performed.  <a href="#a15f0ef3c5cde9431c95d49aafefc3c4e">More...</a><br /></td></tr>
 <tr class="separator:a15f0ef3c5cde9431c95d49aafefc3c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae198fbb9fdcedffaf82a2d74791e88ee"><td class="memItemLeft" align="right" valign="top"><a id="ae198fbb9fdcedffaf82a2d74791e88ee"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ae198fbb9fdcedffaf82a2d74791e88ee">vsCount</a></td></tr>
-<tr class="memdesc:ae198fbb9fdcedffaf82a2d74791e88ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current count of VCONN Swap tries. <br /></td></tr>
+<tr class="memitem:ae198fbb9fdcedffaf82a2d74791e88ee"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ae198fbb9fdcedffaf82a2d74791e88ee">vsCount</a></td></tr>
+<tr class="memdesc:ae198fbb9fdcedffaf82a2d74791e88ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current count of VCONN swap tries.  <a href="#ae198fbb9fdcedffaf82a2d74791e88ee">More...</a><br /></td></tr>
 <tr class="separator:ae198fbb9fdcedffaf82a2d74791e88ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae21f9820ce4580a82a1103d6ac8e5fbd"><td class="memItemLeft" align="right" valign="top"><a id="ae21f9820ce4580a82a1103d6ac8e5fbd"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ae21f9820ce4580a82a1103d6ac8e5fbd">vsWait</a></td></tr>
-<tr class="memdesc:ae21f9820ce4580a82a1103d6ac8e5fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate waiting for response. <br /></td></tr>
+<tr class="memitem:ae21f9820ce4580a82a1103d6ac8e5fbd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ae21f9820ce4580a82a1103d6ac8e5fbd">vsWait</a></td></tr>
+<tr class="memdesc:ae21f9820ce4580a82a1103d6ac8e5fbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate waiting for the response.  <a href="#ae21f9820ce4580a82a1103d6ac8e5fbd">More...</a><br /></td></tr>
 <tr class="separator:ae21f9820ce4580a82a1103d6ac8e5fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3da2bc382942fe3076b9a5285bd9230b"><td class="memItemLeft" align="right" valign="top"><a id="a3da2bc382942fe3076b9a5285bd9230b"></a>
-<a class="el" href="group__group__pdstack__enums.html#gaaca728ef9a1ee6b42dae1d194ff67ead">pd_ams_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a3da2bc382942fe3076b9a5285bd9230b">amsType</a></td></tr>
-<tr class="memdesc:a3da2bc382942fe3076b9a5285bd9230b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate AMS is continued from previous transition. <br /></td></tr>
+<tr class="memitem:a3da2bc382942fe3076b9a5285bd9230b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#gaaca728ef9a1ee6b42dae1d194ff67ead">pd_ams_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a3da2bc382942fe3076b9a5285bd9230b">amsType</a></td></tr>
+<tr class="memdesc:a3da2bc382942fe3076b9a5285bd9230b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate AMS is continued from the previous transition.  <a href="#a3da2bc382942fe3076b9a5285bd9230b">More...</a><br /></td></tr>
 <tr class="separator:a3da2bc382942fe3076b9a5285bd9230b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7859a7ab879cf189c575e0dcecb1d6d"><td class="memItemLeft" align="right" valign="top"><a id="ac7859a7ab879cf189c575e0dcecb1d6d"></a>
-cy_en_pd_sop_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ac7859a7ab879cf189c575e0dcecb1d6d">sendMsgSop</a></td></tr>
-<tr class="memdesc:ac7859a7ab879cf189c575e0dcecb1d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores send message sop type. <br /></td></tr>
+<tr class="memitem:ac7859a7ab879cf189c575e0dcecb1d6d"><td class="memItemLeft" align="right" valign="top">cy_en_pd_sop_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ac7859a7ab879cf189c575e0dcecb1d6d">sendMsgSop</a></td></tr>
+<tr class="memdesc:ac7859a7ab879cf189c575e0dcecb1d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores send message sop type.  <a href="#ac7859a7ab879cf189c575e0dcecb1d6d">More...</a><br /></td></tr>
 <tr class="separator:ac7859a7ab879cf189c575e0dcecb1d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5481ab8c6cfaae65a5b7cfdde63bff55"><td class="memItemLeft" align="right" valign="top"><a id="a5481ab8c6cfaae65a5b7cfdde63bff55"></a>
-<a class="el" href="group__group__pdstack__enums.html#ga60e47a0cdd4dc6061a214a1efb8a5d2a">cy_en_pdstack_pd_msg_class_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a5481ab8c6cfaae65a5b7cfdde63bff55">sendMsgClass</a></td></tr>
-<tr class="memdesc:a5481ab8c6cfaae65a5b7cfdde63bff55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores send message class. <br /></td></tr>
+<tr class="memitem:a5481ab8c6cfaae65a5b7cfdde63bff55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga60e47a0cdd4dc6061a214a1efb8a5d2a">cy_en_pdstack_pd_msg_class_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a5481ab8c6cfaae65a5b7cfdde63bff55">sendMsgClass</a></td></tr>
+<tr class="memdesc:a5481ab8c6cfaae65a5b7cfdde63bff55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores send message class.  <a href="#a5481ab8c6cfaae65a5b7cfdde63bff55">More...</a><br /></td></tr>
 <tr class="separator:a5481ab8c6cfaae65a5b7cfdde63bff55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74ccae02ed0a7e045225404e0089e4c6"><td class="memItemLeft" align="right" valign="top"><a id="a74ccae02ed0a7e045225404e0089e4c6"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a74ccae02ed0a7e045225404e0089e4c6">sendMsgType</a></td></tr>
-<tr class="memdesc:a74ccae02ed0a7e045225404e0089e4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send message type. <br /></td></tr>
+<tr class="memitem:a74ccae02ed0a7e045225404e0089e4c6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a74ccae02ed0a7e045225404e0089e4c6">sendMsgType</a></td></tr>
+<tr class="memdesc:a74ccae02ed0a7e045225404e0089e4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends message type.  <a href="#a74ccae02ed0a7e045225404e0089e4c6">More...</a><br /></td></tr>
 <tr class="separator:a74ccae02ed0a7e045225404e0089e4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcecbcdc692c40c33528942c74eb4cb9"><td class="memItemLeft" align="right" valign="top"><a id="abcecbcdc692c40c33528942c74eb4cb9"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#abcecbcdc692c40c33528942c74eb4cb9">sendMsgCount</a></td></tr>
-<tr class="memdesc:abcecbcdc692c40c33528942c74eb4cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send message count. <br /></td></tr>
+<tr class="memitem:abcecbcdc692c40c33528942c74eb4cb9"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#abcecbcdc692c40c33528942c74eb4cb9">sendMsgCount</a></td></tr>
+<tr class="memdesc:abcecbcdc692c40c33528942c74eb4cb9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends message count.  <a href="#abcecbcdc692c40c33528942c74eb4cb9">More...</a><br /></td></tr>
 <tr class="separator:abcecbcdc692c40c33528942c74eb4cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c1ca046655730679185e70fe422e271"><td class="memItemLeft" align="right" valign="top"><a id="a7c1ca046655730679185e70fe422e271"></a>
-<a class="el" href="unioncy__pdstack__extd__hdr__t.html">cy_pdstack_extd_hdr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a7c1ca046655730679185e70fe422e271">sendextdhdr</a></td></tr>
-<tr class="memdesc:a7c1ca046655730679185e70fe422e271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send extended header. <br /></td></tr>
+<tr class="memitem:a7c1ca046655730679185e70fe422e271"><td class="memItemLeft" align="right" valign="top"><a class="el" href="unioncy__pdstack__extd__hdr__t.html">cy_pdstack_extd_hdr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a7c1ca046655730679185e70fe422e271">sendextdhdr</a></td></tr>
+<tr class="memdesc:a7c1ca046655730679185e70fe422e271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends extended header.  <a href="#a7c1ca046655730679185e70fe422e271">More...</a><br /></td></tr>
 <tr class="separator:a7c1ca046655730679185e70fe422e271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01312b51decb7e715a9b7c714f1742e6"><td class="memItemLeft" align="right" valign="top"><a id="a01312b51decb7e715a9b7c714f1742e6"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a01312b51decb7e715a9b7c714f1742e6">sendMsgTimeout</a></td></tr>
-<tr class="memdesc:a01312b51decb7e715a9b7c714f1742e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send message timeout. <br /></td></tr>
+<tr class="memitem:a01312b51decb7e715a9b7c714f1742e6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a01312b51decb7e715a9b7c714f1742e6">sendMsgTimeout</a></td></tr>
+<tr class="memdesc:a01312b51decb7e715a9b7c714f1742e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends message timeout.  <a href="#a01312b51decb7e715a9b7c714f1742e6">More...</a><br /></td></tr>
 <tr class="separator:a01312b51decb7e715a9b7c714f1742e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59fe2051fb59a26f72e276ac42989f0a"><td class="memItemLeft" align="right" valign="top"><a id="a59fe2051fb59a26f72e276ac42989f0a"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a59fe2051fb59a26f72e276ac42989f0a">sendMsgPtr</a></td></tr>
-<tr class="memdesc:a59fe2051fb59a26f72e276ac42989f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send message data pointer. <br /></td></tr>
+<tr class="memitem:a59fe2051fb59a26f72e276ac42989f0a"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a59fe2051fb59a26f72e276ac42989f0a">sendMsgPtr</a></td></tr>
+<tr class="memdesc:a59fe2051fb59a26f72e276ac42989f0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sends message data pointer.  <a href="#a59fe2051fb59a26f72e276ac42989f0a">More...</a><br /></td></tr>
 <tr class="separator:a59fe2051fb59a26f72e276ac42989f0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2e12f8993d4160d7534a227f18f645a"><td class="memItemLeft" align="right" valign="top"><a id="ac2e12f8993d4160d7534a227f18f645a"></a>
-<a class="el" href="group__group__pdstack__enums.html#ga60e47a0cdd4dc6061a214a1efb8a5d2a">cy_en_pdstack_pd_msg_class_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ac2e12f8993d4160d7534a227f18f645a">expMsgClass</a></td></tr>
-<tr class="memdesc:ac2e12f8993d4160d7534a227f18f645a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores expected message class. <br /></td></tr>
+<tr class="memitem:ac2e12f8993d4160d7534a227f18f645a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga60e47a0cdd4dc6061a214a1efb8a5d2a">cy_en_pdstack_pd_msg_class_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ac2e12f8993d4160d7534a227f18f645a">expMsgClass</a></td></tr>
+<tr class="memdesc:ac2e12f8993d4160d7534a227f18f645a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores expected message class.  <a href="#ac2e12f8993d4160d7534a227f18f645a">More...</a><br /></td></tr>
 <tr class="separator:ac2e12f8993d4160d7534a227f18f645a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca963f297c1f3d5056f2e2944845a062"><td class="memItemLeft" align="right" valign="top"><a id="aca963f297c1f3d5056f2e2944845a062"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#aca963f297c1f3d5056f2e2944845a062">expMsgMask</a></td></tr>
-<tr class="memdesc:aca963f297c1f3d5056f2e2944845a062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expected message mask. <br /></td></tr>
+<tr class="memitem:aca963f297c1f3d5056f2e2944845a062"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#aca963f297c1f3d5056f2e2944845a062">expMsgMask</a></td></tr>
+<tr class="memdesc:aca963f297c1f3d5056f2e2944845a062"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expected message mask.  <a href="#aca963f297c1f3d5056f2e2944845a062">More...</a><br /></td></tr>
 <tr class="separator:aca963f297c1f3d5056f2e2944845a062"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72b6db8b1fde3bb53ac55a5baeddc37a"><td class="memItemLeft" align="right" valign="top"><a id="a72b6db8b1fde3bb53ac55a5baeddc37a"></a>
-uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a72b6db8b1fde3bb53ac55a5baeddc37a">expMsgLen</a></td></tr>
-<tr class="memdesc:a72b6db8b1fde3bb53ac55a5baeddc37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expected message length. <br /></td></tr>
+<tr class="memitem:a72b6db8b1fde3bb53ac55a5baeddc37a"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a72b6db8b1fde3bb53ac55a5baeddc37a">expMsgLen</a></td></tr>
+<tr class="memdesc:a72b6db8b1fde3bb53ac55a5baeddc37a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expected message length.  <a href="#a72b6db8b1fde3bb53ac55a5baeddc37a">More...</a><br /></td></tr>
 <tr class="separator:a72b6db8b1fde3bb53ac55a5baeddc37a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7fdac877d48570cf4387e8a2a5d7c618"><td class="memItemLeft" align="right" valign="top"><a id="a7fdac877d48570cf4387e8a2a5d7c618"></a>
-<a class="el" href="group__group__pdstack__enums.html#ga003cdc71d8d5ec15c7c31657cd254826">cy_en_pdstack_app_req_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a7fdac877d48570cf4387e8a2a5d7c618">appReqRslt</a></td></tr>
-<tr class="memdesc:a7fdac877d48570cf4387e8a2a5d7c618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary buffer for APP req response. <br /></td></tr>
+<tr class="memitem:a7fdac877d48570cf4387e8a2a5d7c618"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga003cdc71d8d5ec15c7c31657cd254826">cy_en_pdstack_app_req_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a7fdac877d48570cf4387e8a2a5d7c618">appReqRslt</a></td></tr>
+<tr class="memdesc:a7fdac877d48570cf4387e8a2a5d7c618"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary buffer for APP req response.  <a href="#a7fdac877d48570cf4387e8a2a5d7c618">More...</a><br /></td></tr>
 <tr class="separator:a7fdac877d48570cf4387e8a2a5d7c618"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a8097baa8f575a88021931af0b58d90"><td class="memItemLeft" align="right" valign="top"><a id="a6a8097baa8f575a88021931af0b58d90"></a>
-<a class="el" href="structcy__stc__pdstack__contract__t.html">cy_stc_pdstack_contract_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a6a8097baa8f575a88021931af0b58d90">contract</a></td></tr>
-<tr class="memdesc:a6a8097baa8f575a88021931af0b58d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary contract status. <br /></td></tr>
+<tr class="memitem:a6a8097baa8f575a88021931af0b58d90"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__contract__t.html">cy_stc_pdstack_contract_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a6a8097baa8f575a88021931af0b58d90">contract</a></td></tr>
+<tr class="memdesc:a6a8097baa8f575a88021931af0b58d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary contract status.  <a href="#a6a8097baa8f575a88021931af0b58d90">More...</a><br /></td></tr>
 <tr class="separator:a6a8097baa8f575a88021931af0b58d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae82f1393093748ae65be21b8abef7b4a"><td class="memItemLeft" align="right" valign="top"><a id="ae82f1393093748ae65be21b8abef7b4a"></a>
-cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ae82f1393093748ae65be21b8abef7b4a">snkRdo</a></td></tr>
-<tr class="memdesc:ae82f1393093748ae65be21b8abef7b4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary rdo sent by sink. <br /></td></tr>
+<tr class="memitem:ae82f1393093748ae65be21b8abef7b4a"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ae82f1393093748ae65be21b8abef7b4a">snkRdo</a></td></tr>
+<tr class="memdesc:ae82f1393093748ae65be21b8abef7b4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary rdo sent by the sink.  <a href="#ae82f1393093748ae65be21b8abef7b4a">More...</a><br /></td></tr>
 <tr class="separator:ae82f1393093748ae65be21b8abef7b4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a5bc632239c771856799f2eeb1127c5"><td class="memItemLeft" align="right" valign="top"><a id="a5a5bc632239c771856799f2eeb1127c5"></a>
-cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a5a5bc632239c771856799f2eeb1127c5">snkSelPdo</a></td></tr>
-<tr class="memdesc:a5a5bc632239c771856799f2eeb1127c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary Selected pdo(among source cap) by sink. <br /></td></tr>
+<tr class="memitem:a5a5bc632239c771856799f2eeb1127c5"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a5a5bc632239c771856799f2eeb1127c5">snkSelPdo</a></td></tr>
+<tr class="memdesc:a5a5bc632239c771856799f2eeb1127c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary selected pdo (among source cap) by the sink.  <a href="#a5a5bc632239c771856799f2eeb1127c5">More...</a><br /></td></tr>
 <tr class="separator:a5a5bc632239c771856799f2eeb1127c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec050ef7509042df6d53ba629eb93116"><td class="memItemLeft" align="right" valign="top"><a id="aec050ef7509042df6d53ba629eb93116"></a>
-cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#aec050ef7509042df6d53ba629eb93116">srcSelPdo</a></td></tr>
-<tr class="memdesc:aec050ef7509042df6d53ba629eb93116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary Selected pdo(among source cap) of source. <br /></td></tr>
+<tr class="memitem:aec050ef7509042df6d53ba629eb93116"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#aec050ef7509042df6d53ba629eb93116">srcSelPdo</a></td></tr>
+<tr class="memdesc:aec050ef7509042df6d53ba629eb93116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary selected pdo (among source cap) of the source.  <a href="#aec050ef7509042df6d53ba629eb93116">More...</a><br /></td></tr>
 <tr class="separator:aec050ef7509042df6d53ba629eb93116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a9110fbe19fe0393d900fc550fc1529"><td class="memItemLeft" align="right" valign="top"><a id="a3a9110fbe19fe0393d900fc550fc1529"></a>
-<a class="el" href="group__group__pdstack__enums.html#ga003cdc71d8d5ec15c7c31657cd254826">cy_en_pdstack_app_req_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a3a9110fbe19fe0393d900fc550fc1529">swapEvtResp</a></td></tr>
-<tr class="memdesc:a3a9110fbe19fe0393d900fc550fc1529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary store for status of app swap complete event. <br /></td></tr>
+<tr class="memitem:a3a9110fbe19fe0393d900fc550fc1529"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga003cdc71d8d5ec15c7c31657cd254826">cy_en_pdstack_app_req_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a3a9110fbe19fe0393d900fc550fc1529">swapEvtResp</a></td></tr>
+<tr class="memdesc:a3a9110fbe19fe0393d900fc550fc1529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary store for the status of app swap complete event.  <a href="#a3a9110fbe19fe0393d900fc550fc1529">More...</a><br /></td></tr>
 <tr class="separator:a3a9110fbe19fe0393d900fc550fc1529"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae74aa2fc881507ded28bacc7d75c1be4"><td class="memItemLeft" align="right" valign="top"><a id="ae74aa2fc881507ded28bacc7d75c1be4"></a>
-<a class="el" href="structcy__stc__pdstack__pd__contract__info__t.html">cy_stc_pdstack_pd_contract_info_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ae74aa2fc881507ded28bacc7d75c1be4">contractEvtResp</a></td></tr>
-<tr class="memdesc:ae74aa2fc881507ded28bacc7d75c1be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary store for app PD contract event status. <br /></td></tr>
+<tr class="memitem:ae74aa2fc881507ded28bacc7d75c1be4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__pd__contract__info__t.html">cy_stc_pdstack_pd_contract_info_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ae74aa2fc881507ded28bacc7d75c1be4">contractEvtResp</a></td></tr>
+<tr class="memdesc:ae74aa2fc881507ded28bacc7d75c1be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary store for app PD contract event status.  <a href="#ae74aa2fc881507ded28bacc7d75c1be4">More...</a><br /></td></tr>
 <tr class="separator:ae74aa2fc881507ded28bacc7d75c1be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ba02a1818cd2a788d86f3b7c0b7e3ad"><td class="memItemLeft" align="right" valign="top"><a id="a9ba02a1818cd2a788d86f3b7c0b7e3ad"></a>
-cy_en_pd_sop_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a9ba02a1818cd2a788d86f3b7c0b7e3ad">sopType</a></td></tr>
-<tr class="memdesc:a9ba02a1818cd2a788d86f3b7c0b7e3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary variable to hold sop type. <br /></td></tr>
+<tr class="memitem:a9ba02a1818cd2a788d86f3b7c0b7e3ad"><td class="memItemLeft" align="right" valign="top">cy_en_pd_sop_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a9ba02a1818cd2a788d86f3b7c0b7e3ad">sopType</a></td></tr>
+<tr class="memdesc:a9ba02a1818cd2a788d86f3b7c0b7e3ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary variable to hold sop type.  <a href="#a9ba02a1818cd2a788d86f3b7c0b7e3ad">More...</a><br /></td></tr>
 <tr class="separator:a9ba02a1818cd2a788d86f3b7c0b7e3ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaea5291cea1366246d5eac5122daf799"><td class="memItemLeft" align="right" valign="top"><a id="aaea5291cea1366246d5eac5122daf799"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#aaea5291cea1366246d5eac5122daf799">psHrDelay</a></td></tr>
-<tr class="memdesc:aaea5291cea1366246d5eac5122daf799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate PSHardResetDelay required. <br /></td></tr>
+<tr class="memitem:aaea5291cea1366246d5eac5122daf799"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#aaea5291cea1366246d5eac5122daf799">psHrDelay</a></td></tr>
+<tr class="memdesc:aaea5291cea1366246d5eac5122daf799"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate PSHardResetDelay required.  <a href="#aaea5291cea1366246d5eac5122daf799">More...</a><br /></td></tr>
 <tr class="separator:aaea5291cea1366246d5eac5122daf799"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c7dfaffeb4c8adadca654e2ef7ec368"><td class="memItemLeft" align="right" valign="top"><a id="a2c7dfaffeb4c8adadca654e2ef7ec368"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a2c7dfaffeb4c8adadca654e2ef7ec368">sendSrcCapDebounce</a></td></tr>
-<tr class="memdesc:a2c7dfaffeb4c8adadca654e2ef7ec368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag determines srccap start debounce in progress. <br /></td></tr>
+<tr class="memitem:a2c7dfaffeb4c8adadca654e2ef7ec368"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a2c7dfaffeb4c8adadca654e2ef7ec368">sendSrcCapDebounce</a></td></tr>
+<tr class="memdesc:a2c7dfaffeb4c8adadca654e2ef7ec368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag determines srccap start debounce in progress.  <a href="#a2c7dfaffeb4c8adadca654e2ef7ec368">More...</a><br /></td></tr>
 <tr class="separator:a2c7dfaffeb4c8adadca654e2ef7ec368"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1cff0aff84de2a97d2879abd83787f11"><td class="memItemLeft" align="right" valign="top"><a id="a1cff0aff84de2a97d2879abd83787f11"></a>
-cy_en_pd_ctrl_msg_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a1cff0aff84de2a97d2879abd83787f11">swapType</a></td></tr>
-<tr class="memdesc:a1cff0aff84de2a97d2879abd83787f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store received/sent swap type. <br /></td></tr>
+<tr class="memitem:a1cff0aff84de2a97d2879abd83787f11"><td class="memItemLeft" align="right" valign="top">cy_en_pd_ctrl_msg_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a1cff0aff84de2a97d2879abd83787f11">swapType</a></td></tr>
+<tr class="memdesc:a1cff0aff84de2a97d2879abd83787f11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Store received/sent swap type.  <a href="#a1cff0aff84de2a97d2879abd83787f11">More...</a><br /></td></tr>
 <tr class="separator:a1cff0aff84de2a97d2879abd83787f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0151a2ecdc8f9c86b0877d60362c6461"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a0151a2ecdc8f9c86b0877d60362c6461">specRevDetermined</a></td></tr>
+<tr class="memdesc:a0151a2ecdc8f9c86b0877d60362c6461"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate spec rev has been determined.  <a href="#a0151a2ecdc8f9c86b0877d60362c6461">More...</a><br /></td></tr>
+<tr class="separator:a0151a2ecdc8f9c86b0877d60362c6461"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca6a3f5f2d9e0548e979658608af12d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#aca6a3f5f2d9e0548e979658608af12d1">chunkDetermined</a></td></tr>
+<tr class="memdesc:aca6a3f5f2d9e0548e979658608af12d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate spec rev has been determined.  <a href="#aca6a3f5f2d9e0548e979658608af12d1">More...</a><br /></td></tr>
+<tr class="separator:aca6a3f5f2d9e0548e979658608af12d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4157b4420e8b77c92bed9c7af3a8f89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga24366d7f40b113729af15d81a9828943">cy_en_pdstack_extd_msg_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ad4157b4420e8b77c92bed9c7af3a8f89">autoExtdMsgType</a></td></tr>
+<tr class="memdesc:ad4157b4420e8b77c92bed9c7af3a8f89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary variable to hold extended message type to send.  <a href="#ad4157b4420e8b77c92bed9c7af3a8f89">More...</a><br /></td></tr>
+<tr class="separator:ad4157b4420e8b77c92bed9c7af3a8f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97f7b4f940ae5393c1fb45a4a579f777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#gaab529053dcdc1680eef0910ab36d2b47">cy_en_pdstack_ams_type_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a97f7b4f940ae5393c1fb45a4a579f777">amsTypeTemp</a></td></tr>
+<tr class="memdesc:a97f7b4f940ae5393c1fb45a4a579f777"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary store AMS type.  <a href="#a97f7b4f940ae5393c1fb45a4a579f777">More...</a><br /></td></tr>
+<tr class="separator:a97f7b4f940ae5393c1fb45a4a579f777"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad867d03a50db57a195cfac3124fef36"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#aad867d03a50db57a195cfac3124fef36">getSnkCapWait</a></td></tr>
+<tr class="memdesc:aad867d03a50db57a195cfac3124fef36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate waiting for the response.  <a href="#aad867d03a50db57a195cfac3124fef36">More...</a><br /></td></tr>
+<tr class="separator:aad867d03a50db57a195cfac3124fef36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab823414bd06537303ec33bea5b77e4cd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#ab823414bd06537303ec33bea5b77e4cd">isGetSnkCapActive</a></td></tr>
+<tr class="memdesc:ab823414bd06537303ec33bea5b77e4cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates get sink cap needs to be performed.  <a href="#ab823414bd06537303ec33bea5b77e4cd">More...</a><br /></td></tr>
+<tr class="separator:ab823414bd06537303ec33bea5b77e4cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2deed52bb0bedb1f4d97c0ef7d7dd3a"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#aa2deed52bb0bedb1f4d97c0ef7d7dd3a">getSnkCapCount</a></td></tr>
+<tr class="memdesc:aa2deed52bb0bedb1f4d97c0ef7d7dd3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current count of get sink cap tries.  <a href="#aa2deed52bb0bedb1f4d97c0ef7d7dd3a">More...</a><br /></td></tr>
+<tr class="separator:aa2deed52bb0bedb1f4d97c0ef7d7dd3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfaa92a9c7c97814a158fcca23aaf7ee"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#adfaa92a9c7c97814a158fcca23aaf7ee">usb4DataResetState</a></td></tr>
+<tr class="memdesc:adfaa92a9c7c97814a158fcca23aaf7ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores USB4 data reset state.  <a href="#adfaa92a9c7c97814a158fcca23aaf7ee">More...</a><br /></td></tr>
+<tr class="separator:adfaa92a9c7c97814a158fcca23aaf7ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefa4f424ceaf65f31cc5c58148ab0edc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#aefa4f424ceaf65f31cc5c58148ab0edc">pePsrcEnDelayed</a></td></tr>
 <tr class="memdesc:aefa4f424ceaf65f31cc5c58148ab0edc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating PSRC enable call has been delayed.  <a href="#aefa4f424ceaf65f31cc5c58148ab0edc">More...</a><br /></td></tr>
 <tr class="separator:aefa4f424ceaf65f31cc5c58148ab0edc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ae37a44c07bed1a33be2655c6257ebc"><td class="memItemLeft" align="right" valign="top">volatile bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a8ae37a44c07bed1a33be2655c6257ebc">peSendHrPending</a></td></tr>
-<tr class="memdesc:a8ae37a44c07bed1a33be2655c6257ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag that indicates that Hard Reset sending is pending.  <a href="#a8ae37a44c07bed1a33be2655c6257ebc">More...</a><br /></td></tr>
+<tr class="memdesc:a8ae37a44c07bed1a33be2655c6257ebc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag that indicates that hard reset sending is pending.  <a href="#a8ae37a44c07bed1a33be2655c6257ebc">More...</a><br /></td></tr>
 <tr class="separator:a8ae37a44c07bed1a33be2655c6257ebc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77ac22bc6d391fea009e0af620d5a822"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a77ac22bc6d391fea009e0af620d5a822">eprEnterRespDo</a></td></tr>
+<tr class="memdesc:a77ac22bc6d391fea009e0af620d5a822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer that holds EPR enter mode response data object.  <a href="#a77ac22bc6d391fea009e0af620d5a822">More...</a><br /></td></tr>
+<tr class="separator:a77ac22bc6d391fea009e0af620d5a822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a945bfb0493cfe1aa3a187d2542231328"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a945bfb0493cfe1aa3a187d2542231328">eprState</a></td></tr>
+<tr class="memdesc:a945bfb0493cfe1aa3a187d2542231328"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable to hold the EPR state.  <a href="#a945bfb0493cfe1aa3a187d2542231328">More...</a><br /></td></tr>
+<tr class="separator:a945bfb0493cfe1aa3a187d2542231328"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bc616851e6a428901a13b4390393281"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a6bc616851e6a428901a13b4390393281">eprMultiMessageFlag</a></td></tr>
+<tr class="memdesc:a6bc616851e6a428901a13b4390393281"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag that indicates whether EPR multi-messages are active.  <a href="#a6bc616851e6a428901a13b4390393281">More...</a><br /></td></tr>
+<tr class="separator:a6bc616851e6a428901a13b4390393281"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc24ebbe869e9e5ad2b93fc0af1444da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#adc24ebbe869e9e5ad2b93fc0af1444da">eprSendcapInSpr</a></td></tr>
+<tr class="memdesc:adc24ebbe869e9e5ad2b93fc0af1444da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag that indicates whether to send PDO in SPR.  <a href="#adc24ebbe869e9e5ad2b93fc0af1444da">More...</a><br /></td></tr>
+<tr class="separator:adc24ebbe869e9e5ad2b93fc0af1444da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ae5ad680761c98acd5d4f7ef519a51b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#a1ae5ad680761c98acd5d4f7ef519a51b">eprSnkExtdChunkBuffer</a> [26]</td></tr>
+<tr class="memdesc:a1ae5ad680761c98acd5d4f7ef519a51b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer that holds the EPR sink extended messages/responses.  <a href="#a1ae5ad680761c98acd5d4f7ef519a51b">More...</a><br /></td></tr>
+<tr class="separator:a1ae5ad680761c98acd5d4f7ef519a51b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadc73a36c4608acf46a7ab0ddcb43f12"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html#aadc73a36c4608acf46a7ab0ddcb43f12">eprChunkCount</a></td></tr>
+<tr class="memdesc:aadc73a36c4608acf46a7ab0ddcb43f12"><td class="mdescLeft">&#160;</td><td class="mdescRight">EPR chunked message count.  <a href="#aadc73a36c4608acf46a7ab0ddcb43f12">More...</a><br /></td></tr>
+<tr class="separator:aadc73a36c4608acf46a7ab0ddcb43f12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="ad92c9403b5e6e6729112e0b55604e47a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad92c9403b5e6e6729112e0b55604e47a">&#9670;&nbsp;</a></span>rcvdPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_stc_pd_packet_extd_t* cy_stc_pdstack_pe_status_t::rcvdPtr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pointer to the received packet. </p>
+
+</div>
+</div>
+<a id="a3bd5755f753a41d0fd874c788e5d28e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bd5755f753a41d0fd874c788e5d28e0">&#9670;&nbsp;</a></span>rcvdPkt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_stc_pd_packet_extd_t cy_stc_pdstack_pe_status_t::rcvdPkt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Currently received packet. </p>
+
+</div>
+</div>
+<a id="a493666fa3854fe00763ee984d196ea0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a493666fa3854fe00763ee984d196ea0a">&#9670;&nbsp;</a></span>vdmPkt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a> cy_stc_pdstack_pe_status_t::vdmPkt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Eval VDM local buffer. </p>
+
+</div>
+</div>
+<a id="ad337c6b9304612b6c60567b79b8160b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad337c6b9304612b6c60567b79b8160b0">&#9670;&nbsp;</a></span>dpmResp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a> cy_stc_pdstack_pe_status_t::dpmResp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stores the DPM command response. </p>
+
+</div>
+</div>
+<a id="acd4ad918f2dae5749b10dac9a05c4ff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd4ad918f2dae5749b10dac9a05c4ff2">&#9670;&nbsp;</a></span>srcCap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a> cy_stc_pdstack_pe_status_t::srcCap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stores the current source cap received. </p>
+
+</div>
+</div>
+<a id="a58616c49e019a542a0d8ef188789b431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58616c49e019a542a0d8ef188789b431">&#9670;&nbsp;</a></span>tempDo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_pe_status_t::tempDo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary buffer for sending VDM commands. </p>
+
+</div>
+</div>
+<a id="a038e7de08404926867493036be8a9228"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038e7de08404926867493036be8a9228">&#9670;&nbsp;</a></span>appResp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structapp__resp__t.html">app_resp_t</a> cy_stc_pdstack_pe_status_t::appResp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary buffer for storing APP response. </p>
+
+</div>
+</div>
+<a id="a3a5578c8a3b684ec3daee681b676e782"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5578c8a3b684ec3daee681b676e782">&#9670;&nbsp;</a></span>vdmResp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structvdm__resp__t.html">vdm_resp_t</a> cy_stc_pdstack_pe_status_t::vdmResp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>VDM response from APP stored here. </p>
+
+</div>
+</div>
+<a id="a578641614c5cdd8ae25e8db3f29c2ffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a578641614c5cdd8ae25e8db3f29c2ffb">&#9670;&nbsp;</a></span>vsBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html">cy_stc_pdstack_dpm_pd_cmd_buf_t</a> cy_stc_pdstack_pe_status_t::vsBuf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>VCONN swap command buffer. </p>
+
+</div>
+</div>
+<a id="ade641f14e39f35ac34f8658db3667c1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade641f14e39f35ac34f8658db3667c1f">&#9670;&nbsp;</a></span>cblBuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html">cy_stc_pdstack_dpm_pd_cmd_buf_t</a> cy_stc_pdstack_pe_status_t::cblBuf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cable command buffer. </p>
+
+</div>
+</div>
+<a id="a57cc94443367861b01845a4cc661aed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57cc94443367861b01845a4cc661aed4">&#9670;&nbsp;</a></span>hardResetCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pe_status_t::hardResetCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hard reset counter. </p>
+
+</div>
+</div>
+<a id="a9ab1ba911e14692ce70b24f3911ab9b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ab1ba911e14692ce70b24f3911ab9b8">&#9670;&nbsp;</a></span>srcCapCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pe_status_t::srcCapCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Source capability counter. </p>
+
+</div>
+</div>
+<a id="a15cda3699202430fd48d336e3b643128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15cda3699202430fd48d336e3b643128">&#9670;&nbsp;</a></span>cblDscIdCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pe_status_t::cblDscIdCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CBL dsc id count. </p>
+
+</div>
+</div>
+<a id="a24e0385313f2c2d2d3ec27d3ccd8763c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24e0385313f2c2d2d3ec27d3ccd8763c">&#9670;&nbsp;</a></span>prSwap</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::prSwap</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicates power role swap going on. </p>
+
+</div>
+</div>
+<a id="af0950e1d77e28c8be82a7b0084226924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af0950e1d77e28c8be82a7b0084226924">&#9670;&nbsp;</a></span>prSwapCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t cy_stc_pdstack_pe_status_t::prSwapCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Counts PR swap requests if VCONN swap is pending. </p>
+
+</div>
+</div>
+<a id="a08093220bc3b664073942c7978b49588"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08093220bc3b664073942c7978b49588">&#9670;&nbsp;</a></span>snkGoToMin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::snkGoToMin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicates go to min request received from the source. </p>
+
+</div>
+</div>
+<a id="ac7d3b4cedd0abc3c99a6ddd66fbad5bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d3b4cedd0abc3c99a6ddd66fbad5bf">&#9670;&nbsp;</a></span>srcGoToMin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::srcGoToMin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicates go to min needs to be sent by the source (requested by dpm). </p>
+
+</div>
+</div>
+<a id="a15f0ef3c5cde9431c95d49aafefc3c4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f0ef3c5cde9431c95d49aafefc3c4e">&#9670;&nbsp;</a></span>isVconnSwapActive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::isVconnSwapActive</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicates VCONN swap needs to be performed. </p>
+
+</div>
+</div>
+<a id="ae198fbb9fdcedffaf82a2d74791e88ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae198fbb9fdcedffaf82a2d74791e88ee">&#9670;&nbsp;</a></span>vsCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pe_status_t::vsCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Current count of VCONN swap tries. </p>
+
+</div>
+</div>
+<a id="ae21f9820ce4580a82a1103d6ac8e5fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae21f9820ce4580a82a1103d6ac8e5fbd">&#9670;&nbsp;</a></span>vsWait</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::vsWait</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate waiting for the response. </p>
+
+</div>
+</div>
+<a id="a3da2bc382942fe3076b9a5285bd9230b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3da2bc382942fe3076b9a5285bd9230b">&#9670;&nbsp;</a></span>amsType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#gaaca728ef9a1ee6b42dae1d194ff67ead">pd_ams_type_t</a> cy_stc_pdstack_pe_status_t::amsType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate AMS is continued from the previous transition. </p>
+
+</div>
+</div>
+<a id="ac7859a7ab879cf189c575e0dcecb1d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7859a7ab879cf189c575e0dcecb1d6d">&#9670;&nbsp;</a></span>sendMsgSop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_en_pd_sop_t cy_stc_pdstack_pe_status_t::sendMsgSop</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stores send message sop type. </p>
+
+</div>
+</div>
+<a id="a5481ab8c6cfaae65a5b7cfdde63bff55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5481ab8c6cfaae65a5b7cfdde63bff55">&#9670;&nbsp;</a></span>sendMsgClass</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga60e47a0cdd4dc6061a214a1efb8a5d2a">cy_en_pdstack_pd_msg_class_t</a> cy_stc_pdstack_pe_status_t::sendMsgClass</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stores send message class. </p>
+
+</div>
+</div>
+<a id="a74ccae02ed0a7e045225404e0089e4c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74ccae02ed0a7e045225404e0089e4c6">&#9670;&nbsp;</a></span>sendMsgType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pe_status_t::sendMsgType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends message type. </p>
+
+</div>
+</div>
+<a id="abcecbcdc692c40c33528942c74eb4cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcecbcdc692c40c33528942c74eb4cb9">&#9670;&nbsp;</a></span>sendMsgCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pe_status_t::sendMsgCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends message count. </p>
+
+</div>
+</div>
+<a id="a7c1ca046655730679185e70fe422e271"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c1ca046655730679185e70fe422e271">&#9670;&nbsp;</a></span>sendextdhdr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unioncy__pdstack__extd__hdr__t.html">cy_pdstack_extd_hdr_t</a> cy_stc_pdstack_pe_status_t::sendextdhdr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends extended header. </p>
+
+</div>
+</div>
+<a id="a01312b51decb7e715a9b7c714f1742e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01312b51decb7e715a9b7c714f1742e6">&#9670;&nbsp;</a></span>sendMsgTimeout</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t cy_stc_pdstack_pe_status_t::sendMsgTimeout</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends message timeout. </p>
+
+</div>
+</div>
+<a id="a59fe2051fb59a26f72e276ac42989f0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59fe2051fb59a26f72e276ac42989f0a">&#9670;&nbsp;</a></span>sendMsgPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* cy_stc_pdstack_pe_status_t::sendMsgPtr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sends message data pointer. </p>
+
+</div>
+</div>
+<a id="ac2e12f8993d4160d7534a227f18f645a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2e12f8993d4160d7534a227f18f645a">&#9670;&nbsp;</a></span>expMsgClass</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga60e47a0cdd4dc6061a214a1efb8a5d2a">cy_en_pdstack_pd_msg_class_t</a> cy_stc_pdstack_pe_status_t::expMsgClass</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stores expected message class. </p>
+
+</div>
+</div>
+<a id="aca963f297c1f3d5056f2e2944845a062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca963f297c1f3d5056f2e2944845a062">&#9670;&nbsp;</a></span>expMsgMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t cy_stc_pdstack_pe_status_t::expMsgMask</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expected message mask. </p>
+
+</div>
+</div>
+<a id="a72b6db8b1fde3bb53ac55a5baeddc37a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b6db8b1fde3bb53ac55a5baeddc37a">&#9670;&nbsp;</a></span>expMsgLen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t cy_stc_pdstack_pe_status_t::expMsgLen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Expected message length. </p>
+
+</div>
+</div>
+<a id="a7fdac877d48570cf4387e8a2a5d7c618"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7fdac877d48570cf4387e8a2a5d7c618">&#9670;&nbsp;</a></span>appReqRslt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga003cdc71d8d5ec15c7c31657cd254826">cy_en_pdstack_app_req_status_t</a> cy_stc_pdstack_pe_status_t::appReqRslt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary buffer for APP req response. </p>
+
+</div>
+</div>
+<a id="a6a8097baa8f575a88021931af0b58d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a8097baa8f575a88021931af0b58d90">&#9670;&nbsp;</a></span>contract</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcy__stc__pdstack__contract__t.html">cy_stc_pdstack_contract_t</a> cy_stc_pdstack_pe_status_t::contract</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary contract status. </p>
+
+</div>
+</div>
+<a id="ae82f1393093748ae65be21b8abef7b4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae82f1393093748ae65be21b8abef7b4a">&#9670;&nbsp;</a></span>snkRdo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_pe_status_t::snkRdo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary rdo sent by the sink. </p>
+
+</div>
+</div>
+<a id="a5a5bc632239c771856799f2eeb1127c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5bc632239c771856799f2eeb1127c5">&#9670;&nbsp;</a></span>snkSelPdo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_pe_status_t::snkSelPdo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary selected pdo (among source cap) by the sink. </p>
+
+</div>
+</div>
+<a id="aec050ef7509042df6d53ba629eb93116"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec050ef7509042df6d53ba629eb93116">&#9670;&nbsp;</a></span>srcSelPdo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_pe_status_t::srcSelPdo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary selected pdo (among source cap) of the source. </p>
+
+</div>
+</div>
+<a id="a3a9110fbe19fe0393d900fc550fc1529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a9110fbe19fe0393d900fc550fc1529">&#9670;&nbsp;</a></span>swapEvtResp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga003cdc71d8d5ec15c7c31657cd254826">cy_en_pdstack_app_req_status_t</a> cy_stc_pdstack_pe_status_t::swapEvtResp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary store for the status of app swap complete event. </p>
+
+</div>
+</div>
+<a id="ae74aa2fc881507ded28bacc7d75c1be4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae74aa2fc881507ded28bacc7d75c1be4">&#9670;&nbsp;</a></span>contractEvtResp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structcy__stc__pdstack__pd__contract__info__t.html">cy_stc_pdstack_pd_contract_info_t</a> cy_stc_pdstack_pe_status_t::contractEvtResp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary store for app PD contract event status. </p>
+
+</div>
+</div>
+<a id="a9ba02a1818cd2a788d86f3b7c0b7e3ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ba02a1818cd2a788d86f3b7c0b7e3ad">&#9670;&nbsp;</a></span>sopType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_en_pd_sop_t cy_stc_pdstack_pe_status_t::sopType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary variable to hold sop type. </p>
+
+</div>
+</div>
+<a id="aaea5291cea1366246d5eac5122daf799"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaea5291cea1366246d5eac5122daf799">&#9670;&nbsp;</a></span>psHrDelay</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::psHrDelay</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate PSHardResetDelay required. </p>
+
+</div>
+</div>
+<a id="a2c7dfaffeb4c8adadca654e2ef7ec368"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c7dfaffeb4c8adadca654e2ef7ec368">&#9670;&nbsp;</a></span>sendSrcCapDebounce</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::sendSrcCapDebounce</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag determines srccap start debounce in progress. </p>
+
+</div>
+</div>
+<a id="a1cff0aff84de2a97d2879abd83787f11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cff0aff84de2a97d2879abd83787f11">&#9670;&nbsp;</a></span>swapType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_en_pd_ctrl_msg_t cy_stc_pdstack_pe_status_t::swapType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Store received/sent swap type. </p>
+
+</div>
+</div>
+<a id="a0151a2ecdc8f9c86b0877d60362c6461"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0151a2ecdc8f9c86b0877d60362c6461">&#9670;&nbsp;</a></span>specRevDetermined</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::specRevDetermined</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate spec rev has been determined. </p>
+
+</div>
+</div>
+<a id="aca6a3f5f2d9e0548e979658608af12d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca6a3f5f2d9e0548e979658608af12d1">&#9670;&nbsp;</a></span>chunkDetermined</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::chunkDetermined</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate spec rev has been determined. </p>
+
+</div>
+</div>
+<a id="ad4157b4420e8b77c92bed9c7af3a8f89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4157b4420e8b77c92bed9c7af3a8f89">&#9670;&nbsp;</a></span>autoExtdMsgType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga24366d7f40b113729af15d81a9828943">cy_en_pdstack_extd_msg_t</a> cy_stc_pdstack_pe_status_t::autoExtdMsgType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary variable to hold extended message type to send. </p>
+
+</div>
+</div>
+<a id="a97f7b4f940ae5393c1fb45a4a579f777"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f7b4f940ae5393c1fb45a4a579f777">&#9670;&nbsp;</a></span>amsTypeTemp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#gaab529053dcdc1680eef0910ab36d2b47">cy_en_pdstack_ams_type_t</a> cy_stc_pdstack_pe_status_t::amsTypeTemp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Temporary store AMS type. </p>
+
+</div>
+</div>
+<a id="aad867d03a50db57a195cfac3124fef36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad867d03a50db57a195cfac3124fef36">&#9670;&nbsp;</a></span>getSnkCapWait</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::getSnkCapWait</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate waiting for the response. </p>
+
+</div>
+</div>
+<a id="ab823414bd06537303ec33bea5b77e4cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab823414bd06537303ec33bea5b77e4cd">&#9670;&nbsp;</a></span>isGetSnkCapActive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::isGetSnkCapActive</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicates get sink cap needs to be performed. </p>
+
+</div>
+</div>
+<a id="aa2deed52bb0bedb1f4d97c0ef7d7dd3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2deed52bb0bedb1f4d97c0ef7d7dd3a">&#9670;&nbsp;</a></span>getSnkCapCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pe_status_t::getSnkCapCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Current count of get sink cap tries. </p>
+
+</div>
+</div>
+<a id="adfaa92a9c7c97814a158fcca23aaf7ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfaa92a9c7c97814a158fcca23aaf7ee">&#9670;&nbsp;</a></span>usb4DataResetState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pe_status_t::usb4DataResetState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Stores USB4 data reset state. </p>
+
+</div>
+</div>
 <a id="aefa4f424ceaf65f31cc5c58148ab0edc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aefa4f424ceaf65f31cc5c58148ab0edc">&#9670;&nbsp;</a></span>pePsrcEnDelayed</h2>
 
@@ -295,7 +1095,103 @@ cy_en_pd_ctrl_msg_t&#160;</td><td class="memItemRight" valign="bottom"><a class=
       </table>
 </div><div class="memdoc">
 
-<p>Flag that indicates that Hard Reset sending is pending. </p>
+<p>Flag that indicates that hard reset sending is pending. </p>
+
+</div>
+</div>
+<a id="a77ac22bc6d391fea009e0af620d5a822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77ac22bc6d391fea009e0af620d5a822">&#9670;&nbsp;</a></span>eprEnterRespDo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_pe_status_t::eprEnterRespDo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Buffer that holds EPR enter mode response data object. </p>
+
+</div>
+</div>
+<a id="a945bfb0493cfe1aa3a187d2542231328"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a945bfb0493cfe1aa3a187d2542231328">&#9670;&nbsp;</a></span>eprState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pe_status_t::eprState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Variable to hold the EPR state. </p>
+
+</div>
+</div>
+<a id="a6bc616851e6a428901a13b4390393281"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bc616851e6a428901a13b4390393281">&#9670;&nbsp;</a></span>eprMultiMessageFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::eprMultiMessageFlag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag that indicates whether EPR multi-messages are active. </p>
+
+</div>
+</div>
+<a id="adc24ebbe869e9e5ad2b93fc0af1444da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc24ebbe869e9e5ad2b93fc0af1444da">&#9670;&nbsp;</a></span>eprSendcapInSpr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_pe_status_t::eprSendcapInSpr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag that indicates whether to send PDO in SPR. </p>
+
+</div>
+</div>
+<a id="a1ae5ad680761c98acd5d4f7ef519a51b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ae5ad680761c98acd5d4f7ef519a51b">&#9670;&nbsp;</a></span>eprSnkExtdChunkBuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pe_status_t::eprSnkExtdChunkBuffer[26]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Buffer that holds the EPR sink extended messages/responses. </p>
+
+</div>
+</div>
+<a id="aadc73a36c4608acf46a7ab0ddcb43f12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadc73a36c4608acf46a7ab0ddcb43f12">&#9670;&nbsp;</a></span>eprChunkCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_pe_status_t::eprChunkCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>EPR chunked message count. </p>
 
 </div>
 </div>
@@ -305,7 +1201,7 @@ cy_en_pd_ctrl_msg_t&#160;</td><td class="memItemRight" valign="bottom"><a class=
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 2.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.0</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

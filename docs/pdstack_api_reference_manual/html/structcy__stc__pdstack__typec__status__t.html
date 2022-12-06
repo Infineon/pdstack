@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 2.0: cy_stc_pdstack_typec_status_t Struct Reference</title>
+<title>PDStack Middleware Library 3.0: cy_stc_pdstack_typec_status_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 2.0</div>
+   <div id="projectname">PDStack Middleware Library 3.0</div>
   </td>
  </tr>
  </tbody>
@@ -83,56 +83,210 @@ $(document).ready(function(){initNavTree('structcy__stc__pdstack__typec__status_
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">cy_stc_pdstack_typec_status_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data Structures</a></div></div>  </div>
+<div class="title">cy_stc_pdstack_typec_status_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data structures</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
-<div class="textblock"><p>Type C Manager Status structure. </p>
-<p>This structure holds all of the configuration and status information associated with the Type C Manager. Members of this structure should not be directly modified by any of the application code. </p>
+<div class="textblock"><p>Type-C manager status structure. </p>
+<p>This structure holds all of the configuration and status information associated with the Type-C manager. Structure should not be directly modified by any of the application code. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:aa9119f6c0785982b9649c7c50df6dd71"><td class="memItemLeft" align="right" valign="top"><a id="aa9119f6c0785982b9649c7c50df6dd71"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#aa9119f6c0785982b9649c7c50df6dd71">randUpdt</a></td></tr>
-<tr class="memdesc:aa9119f6c0785982b9649c7c50df6dd71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate start of drp random timeout update cycle. <br /></td></tr>
+<tr class="memitem:aa9119f6c0785982b9649c7c50df6dd71"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#aa9119f6c0785982b9649c7c50df6dd71">randUpdt</a></td></tr>
+<tr class="memdesc:aa9119f6c0785982b9649c7c50df6dd71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate the start of the drp random timeout update cycle.  <a href="#aa9119f6c0785982b9649c7c50df6dd71">More...</a><br /></td></tr>
 <tr class="separator:aa9119f6c0785982b9649c7c50df6dd71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a766d12a973691562472102694e10a88a"><td class="memItemLeft" align="right" valign="top"><a id="a766d12a973691562472102694e10a88a"></a>
-bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#a766d12a973691562472102694e10a88a">rdDebounce</a></td></tr>
-<tr class="memdesc:a766d12a973691562472102694e10a88a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate rd debounce reset. <br /></td></tr>
+<tr class="memitem:a766d12a973691562472102694e10a88a"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#a766d12a973691562472102694e10a88a">rdDebounce</a></td></tr>
+<tr class="memdesc:a766d12a973691562472102694e10a88a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate rd debounce reset.  <a href="#a766d12a973691562472102694e10a88a">More...</a><br /></td></tr>
 <tr class="separator:a766d12a973691562472102694e10a88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abde32e4723959dc66e596ac5aa75edd7"><td class="memItemLeft" align="right" valign="top"><a id="abde32e4723959dc66e596ac5aa75edd7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#abde32e4723959dc66e596ac5aa75edd7">psrcEn</a></td></tr>
-<tr class="memdesc:abde32e4723959dc66e596ac5aa75edd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate power source enable is going on. <br /></td></tr>
+<tr class="memitem:abde32e4723959dc66e596ac5aa75edd7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#abde32e4723959dc66e596ac5aa75edd7">psrcEn</a></td></tr>
+<tr class="memdesc:abde32e4723959dc66e596ac5aa75edd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate power source enable is going on.  <a href="#abde32e4723959dc66e596ac5aa75edd7">More...</a><br /></td></tr>
 <tr class="separator:abde32e4723959dc66e596ac5aa75edd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9acd1c3c83856030c04561b5e258c82"><td class="memItemLeft" align="right" valign="top"><a id="ad9acd1c3c83856030c04561b5e258c82"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#ad9acd1c3c83856030c04561b5e258c82">vbusUnexpected</a></td></tr>
-<tr class="memdesc:ad9acd1c3c83856030c04561b5e258c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate unexpected vbus detected by source before applying vbus. <br /></td></tr>
+<tr class="memitem:ad9acd1c3c83856030c04561b5e258c82"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#ad9acd1c3c83856030c04561b5e258c82">vbusUnexpected</a></td></tr>
+<tr class="memdesc:ad9acd1c3c83856030c04561b5e258c82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate unexpected vbus detected by the source before applying vbus.  <a href="#ad9acd1c3c83856030c04561b5e258c82">More...</a><br /></td></tr>
 <tr class="separator:ad9acd1c3c83856030c04561b5e258c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ba698ac6fac995adc65d1cb7d2eab8"><td class="memItemLeft" align="right" valign="top"><a id="a65ba698ac6fac995adc65d1cb7d2eab8"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#a65ba698ac6fac995adc65d1cb7d2eab8">portDisable</a></td></tr>
-<tr class="memdesc:a65ba698ac6fac995adc65d1cb7d2eab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate port disable is going on. <br /></td></tr>
+<tr class="memitem:a65ba698ac6fac995adc65d1cb7d2eab8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#a65ba698ac6fac995adc65d1cb7d2eab8">portDisable</a></td></tr>
+<tr class="memdesc:a65ba698ac6fac995adc65d1cb7d2eab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate port disable is going on.  <a href="#a65ba698ac6fac995adc65d1cb7d2eab8">More...</a><br /></td></tr>
 <tr class="separator:a65ba698ac6fac995adc65d1cb7d2eab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11f4fab698d57223beebe3e745deec7e"><td class="memItemLeft" align="right" valign="top"><a id="a11f4fab698d57223beebe3e745deec7e"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#a11f4fab698d57223beebe3e745deec7e">curPeriod</a></td></tr>
-<tr class="memdesc:a11f4fab698d57223beebe3e745deec7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current period (sink or source) <br /></td></tr>
+<tr class="memitem:a11f4fab698d57223beebe3e745deec7e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#a11f4fab698d57223beebe3e745deec7e">curPeriod</a></td></tr>
+<tr class="memdesc:a11f4fab698d57223beebe3e745deec7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current period (sink or source).  <a href="#a11f4fab698d57223beebe3e745deec7e">More...</a><br /></td></tr>
 <tr class="separator:a11f4fab698d57223beebe3e745deec7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a69a6620ece05ce645bd89ba4d5f45991"><td class="memItemLeft" align="right" valign="top"><a id="a69a6620ece05ce645bd89ba4d5f45991"></a>
-bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#a69a6620ece05ce645bd89ba4d5f45991">toggleOn</a></td></tr>
-<tr class="memdesc:a69a6620ece05ce645bd89ba4d5f45991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate toggle timer On. <br /></td></tr>
+<tr class="memitem:a69a6620ece05ce645bd89ba4d5f45991"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#a69a6620ece05ce645bd89ba4d5f45991">toggleOn</a></td></tr>
+<tr class="memdesc:a69a6620ece05ce645bd89ba4d5f45991"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate toggle timer ON.  <a href="#a69a6620ece05ce645bd89ba4d5f45991">More...</a><br /></td></tr>
 <tr class="separator:a69a6620ece05ce645bd89ba4d5f45991"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab5fbf6b2c13a61bd633ee64803afa25"><td class="memItemLeft" align="right" valign="top"><a id="aab5fbf6b2c13a61bd633ee64803afa25"></a>
-bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#aab5fbf6b2c13a61bd633ee64803afa25">discharge</a></td></tr>
-<tr class="memdesc:aab5fbf6b2c13a61bd633ee64803afa25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate attempt to discharge if vbus seen before applying vbus is over. <br /></td></tr>
+<tr class="memitem:aab5fbf6b2c13a61bd633ee64803afa25"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#aab5fbf6b2c13a61bd633ee64803afa25">discharge</a></td></tr>
+<tr class="memdesc:aab5fbf6b2c13a61bd633ee64803afa25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate an attempt to discharge if vbus seen before applying vbus is over.  <a href="#aab5fbf6b2c13a61bd633ee64803afa25">More...</a><br /></td></tr>
 <tr class="separator:aab5fbf6b2c13a61bd633ee64803afa25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd9eff717cf235e0c5cf5155c156a6fe"><td class="memItemLeft" align="right" valign="top"><a id="acd9eff717cf235e0c5cf5155c156a6fe"></a>
-bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#acd9eff717cf235e0c5cf5155c156a6fe">ccStatusDebounced</a> [2]</td></tr>
-<tr class="memdesc:acd9eff717cf235e0c5cf5155c156a6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate cc status debounced to avoid race condition in going to deepsleep. <br /></td></tr>
+<tr class="memitem:a95daa5a3a09ba7d16217bb50a2ed2c80"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#a95daa5a3a09ba7d16217bb50a2ed2c80">trySnkDeadTime</a></td></tr>
+<tr class="memdesc:a95daa5a3a09ba7d16217bb50a2ed2c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate try snk tDRPTry timer is running.  <a href="#a95daa5a3a09ba7d16217bb50a2ed2c80">More...</a><br /></td></tr>
+<tr class="separator:a95daa5a3a09ba7d16217bb50a2ed2c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9eff717cf235e0c5cf5155c156a6fe"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#acd9eff717cf235e0c5cf5155c156a6fe">ccStatusDebounced</a> [2]</td></tr>
+<tr class="memdesc:acd9eff717cf235e0c5cf5155c156a6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate cc status debounced to avoid race condition in going to DeepSleep.  <a href="#acd9eff717cf235e0c5cf5155c156a6fe">More...</a><br /></td></tr>
 <tr class="separator:acd9eff717cf235e0c5cf5155c156a6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84372dc9aa80e6792e6a9ffb4c700549"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__typec__status__t.html#a84372dc9aa80e6792e6a9ffb4c700549">srcDisableWait</a></td></tr>
-<tr class="memdesc:a84372dc9aa80e6792e6a9ffb4c700549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate that source disable operation is in progress.  <a href="#a84372dc9aa80e6792e6a9ffb4c700549">More...</a><br /></td></tr>
+<tr class="memdesc:a84372dc9aa80e6792e6a9ffb4c700549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate that source disables operation is in progress.  <a href="#a84372dc9aa80e6792e6a9ffb4c700549">More...</a><br /></td></tr>
 <tr class="separator:a84372dc9aa80e6792e6a9ffb4c700549"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="aa9119f6c0785982b9649c7c50df6dd71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9119f6c0785982b9649c7c50df6dd71">&#9670;&nbsp;</a></span>randUpdt</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_typec_status_t::randUpdt</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate the start of the drp random timeout update cycle. </p>
+
+</div>
+</div>
+<a id="a766d12a973691562472102694e10a88a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a766d12a973691562472102694e10a88a">&#9670;&nbsp;</a></span>rdDebounce</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool volatile cy_stc_pdstack_typec_status_t::rdDebounce</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate rd debounce reset. </p>
+
+</div>
+</div>
+<a id="abde32e4723959dc66e596ac5aa75edd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abde32e4723959dc66e596ac5aa75edd7">&#9670;&nbsp;</a></span>psrcEn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_typec_status_t::psrcEn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate power source enable is going on. </p>
+
+</div>
+</div>
+<a id="ad9acd1c3c83856030c04561b5e258c82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9acd1c3c83856030c04561b5e258c82">&#9670;&nbsp;</a></span>vbusUnexpected</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_typec_status_t::vbusUnexpected</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate unexpected vbus detected by the source before applying vbus. </p>
+
+</div>
+</div>
+<a id="a65ba698ac6fac995adc65d1cb7d2eab8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65ba698ac6fac995adc65d1cb7d2eab8">&#9670;&nbsp;</a></span>portDisable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_typec_status_t::portDisable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate port disable is going on. </p>
+
+</div>
+</div>
+<a id="a11f4fab698d57223beebe3e745deec7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11f4fab698d57223beebe3e745deec7e">&#9670;&nbsp;</a></span>curPeriod</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_typec_status_t::curPeriod</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Current period (sink or source). </p>
+
+</div>
+</div>
+<a id="a69a6620ece05ce645bd89ba4d5f45991"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a69a6620ece05ce645bd89ba4d5f45991">&#9670;&nbsp;</a></span>toggleOn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool volatile cy_stc_pdstack_typec_status_t::toggleOn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate toggle timer ON. </p>
+
+</div>
+</div>
+<a id="aab5fbf6b2c13a61bd633ee64803afa25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab5fbf6b2c13a61bd633ee64803afa25">&#9670;&nbsp;</a></span>discharge</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool volatile cy_stc_pdstack_typec_status_t::discharge</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate an attempt to discharge if vbus seen before applying vbus is over. </p>
+
+</div>
+</div>
+<a id="a95daa5a3a09ba7d16217bb50a2ed2c80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95daa5a3a09ba7d16217bb50a2ed2c80">&#9670;&nbsp;</a></span>trySnkDeadTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool volatile cy_stc_pdstack_typec_status_t::trySnkDeadTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate try snk tDRPTry timer is running. </p>
+
+</div>
+</div>
+<a id="acd9eff717cf235e0c5cf5155c156a6fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd9eff717cf235e0c5cf5155c156a6fe">&#9670;&nbsp;</a></span>ccStatusDebounced</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool volatile cy_stc_pdstack_typec_status_t::ccStatusDebounced[2]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag to indicate cc status debounced to avoid race condition in going to DeepSleep. </p>
+
+</div>
+</div>
 <a id="a84372dc9aa80e6792e6a9ffb4c700549"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a84372dc9aa80e6792e6a9ffb4c700549">&#9670;&nbsp;</a></span>srcDisableWait</h2>
 
@@ -145,7 +299,7 @@ bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Flag to indicate that source disable operation is in progress. </p>
+<p>Flag to indicate that source disables operation is in progress. </p>
 
 </div>
 </div>
@@ -155,7 +309,7 @@ bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 2.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.0</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

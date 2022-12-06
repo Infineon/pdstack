@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 2.0: cy_stc_pdstack_app_cbk_t Struct Reference</title>
+<title>PDStack Middleware Library 3.0: cy_stc_pdstack_app_cbk_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 2.0</div>
+   <div id="projectname">PDStack Middleware Library 3.0</div>
   </td>
  </tr>
  </tbody>
@@ -83,12 +83,12 @@ $(document).ready(function(){initNavTree('structcy__stc__pdstack__app__cbk__t.ht
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">cy_stc_pdstack_app_cbk_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data Structures</a></div></div>  </div>
+<div class="title">cy_stc_pdstack_app_cbk_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data structures</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
 <div class="textblock"><p>Struct to hold the application interface. </p>
-<p>The application is expected to fill the structure with pointers to functions that use the on-board circuitry to accomplish tasks like source/sink power turn on/off. All the functions in this structure must be non-blocking and take minimum execution time.</p>
+<p>The application is expected to fill the structure with pointers to functions that use the onboard circuitry to accomplish tasks such as source/sink power turn ON/OFF. All the functions in this structure must be non-blocking and take minimum execution time.</p>
 <dl class="section warning"><dt>Warning</dt><dd>The application must check the callback pointer passed by the stack is not NULL. </dd></dl>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -100,7 +100,7 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a5cc6604aae5810e3a8275ad4ace694e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set power source voltage in mV units.  <a href="#a5cc6604aae5810e3a8275ad4ace694e6">More...</a><br /></td></tr>
 <tr class="separator:a5cc6604aae5810e3a8275ad4ace694e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add91a8c82b62565760f76894df011107"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#add91a8c82b62565760f76894df011107">psrc_set_current</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, uint16_t cur_10mA)</td></tr>
-<tr class="memdesc:add91a8c82b62565760f76894df011107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set power source current in 10mA units.  <a href="#add91a8c82b62565760f76894df011107">More...</a><br /></td></tr>
+<tr class="memdesc:add91a8c82b62565760f76894df011107"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets power source current in 10 mA units.  <a href="#add91a8c82b62565760f76894df011107">More...</a><br /></td></tr>
 <tr class="separator:add91a8c82b62565760f76894df011107"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84a7eeb5a0f5a70082bb670e00bd450f"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a84a7eeb5a0f5a70082bb670e00bd450f">psrc_enable</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, <a class="el" href="group__group__pdstack__data__structures.html#ga91fb06eaec314d7e33f05f2419f91060">cy_pdstack_pwr_ready_cbk_t</a> pwr_ready_handler)</td></tr>
 <tr class="memdesc:a84a7eeb5a0f5a70082bb670e00bd450f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the power supply.  <a href="#a84a7eeb5a0f5a70082bb670e00bd450f">More...</a><br /></td></tr>
@@ -115,43 +115,43 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a73d2288f5deadf94192422ba638cf735"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn VCONN supply OFF.  <a href="#a73d2288f5deadf94192422ba638cf735">More...</a><br /></td></tr>
 <tr class="separator:a73d2288f5deadf94192422ba638cf735"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7350c6107279cef10a233c4e3d2b6241"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a7350c6107279cef10a233c4e3d2b6241">vconn_is_present</a> )(struct cy_stc_pdstack_context *ptrPdStackContext)</td></tr>
-<tr class="memdesc:a7350c6107279cef10a233c4e3d2b6241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether VConn supply is ON.  <a href="#a7350c6107279cef10a233c4e3d2b6241">More...</a><br /></td></tr>
+<tr class="memdesc:a7350c6107279cef10a233c4e3d2b6241"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the VConn supply is ON.  <a href="#a7350c6107279cef10a233c4e3d2b6241">More...</a><br /></td></tr>
 <tr class="separator:a7350c6107279cef10a233c4e3d2b6241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d7951819852aa04658dcc3d40c124e5"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a0d7951819852aa04658dcc3d40c124e5">vbus_is_present</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, uint16_t volt, int8_t per)</td></tr>
-<tr class="memdesc:a0d7951819852aa04658dcc3d40c124e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether VBus voltage is within expected range.  <a href="#a0d7951819852aa04658dcc3d40c124e5">More...</a><br /></td></tr>
+<tr class="memdesc:a0d7951819852aa04658dcc3d40c124e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether VBus voltage is within the expected range.  <a href="#a0d7951819852aa04658dcc3d40c124e5">More...</a><br /></td></tr>
 <tr class="separator:a0d7951819852aa04658dcc3d40c124e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34e676f5c55cf3c0bcb8e4a3c325cbaf"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a34e676f5c55cf3c0bcb8e4a3c325cbaf">vbus_discharge_on</a> )(struct cy_stc_pdstack_context *ptrPdStackContext)</td></tr>
-<tr class="memdesc:a34e676f5c55cf3c0bcb8e4a3c325cbaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn on VBUS discharge circuit.  <a href="#a34e676f5c55cf3c0bcb8e4a3c325cbaf">More...</a><br /></td></tr>
+<tr class="memdesc:a34e676f5c55cf3c0bcb8e4a3c325cbaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn ON the VBUS discharge circuit.  <a href="#a34e676f5c55cf3c0bcb8e4a3c325cbaf">More...</a><br /></td></tr>
 <tr class="separator:a34e676f5c55cf3c0bcb8e4a3c325cbaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad346349230f45e977fb7b1e8206a41d8"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#ad346349230f45e977fb7b1e8206a41d8">vbus_discharge_off</a> )(struct cy_stc_pdstack_context *ptrPdStackContext)</td></tr>
-<tr class="memdesc:ad346349230f45e977fb7b1e8206a41d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn off VBUS discharge circuit.  <a href="#ad346349230f45e977fb7b1e8206a41d8">More...</a><br /></td></tr>
+<tr class="memdesc:ad346349230f45e977fb7b1e8206a41d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn OFF the VBUS discharge circuit.  <a href="#ad346349230f45e977fb7b1e8206a41d8">More...</a><br /></td></tr>
 <tr class="separator:ad346349230f45e977fb7b1e8206a41d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cb85bff24617311f9db6a70186dfa4b"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a8cb85bff24617311f9db6a70186dfa4b">psnk_set_voltage</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, uint16_t volt_mV)</td></tr>
-<tr class="memdesc:a8cb85bff24617311f9db6a70186dfa4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set power sink voltage, in mV units.  <a href="#a8cb85bff24617311f9db6a70186dfa4b">More...</a><br /></td></tr>
+<tr class="memdesc:a8cb85bff24617311f9db6a70186dfa4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets power sink voltage in mV units.  <a href="#a8cb85bff24617311f9db6a70186dfa4b">More...</a><br /></td></tr>
 <tr class="separator:a8cb85bff24617311f9db6a70186dfa4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a541e44e135baf0511910267261e72676"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a541e44e135baf0511910267261e72676">psnk_set_current</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, uint16_t cur_10mA)</td></tr>
-<tr class="memdesc:a541e44e135baf0511910267261e72676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set power sink current, in 10mA units.  <a href="#a541e44e135baf0511910267261e72676">More...</a><br /></td></tr>
+<tr class="memdesc:a541e44e135baf0511910267261e72676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets power sink current in 10 mA units.  <a href="#a541e44e135baf0511910267261e72676">More...</a><br /></td></tr>
 <tr class="separator:a541e44e135baf0511910267261e72676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a915e4cb818d51b56b2e424bd0e7f85b6"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a915e4cb818d51b56b2e424bd0e7f85b6">psnk_enable</a> )(struct cy_stc_pdstack_context *ptrPdStackContext)</td></tr>
-<tr class="memdesc:a915e4cb818d51b56b2e424bd0e7f85b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable power sink related circuitry.  <a href="#a915e4cb818d51b56b2e424bd0e7f85b6">More...</a><br /></td></tr>
+<tr class="memdesc:a915e4cb818d51b56b2e424bd0e7f85b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables power sink-related circuitry.  <a href="#a915e4cb818d51b56b2e424bd0e7f85b6">More...</a><br /></td></tr>
 <tr class="separator:a915e4cb818d51b56b2e424bd0e7f85b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8c04a6eb53cea46e5b5bb5f5eb6dbf9"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#ae8c04a6eb53cea46e5b5bb5f5eb6dbf9">psnk_disable</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, <a class="el" href="group__group__pdstack__data__structures.html#ga5534a64a195ddf2f8964c0ed77c0cc97">cy_pdstack_sink_discharge_off_cbk_t</a> snk_discharge_off_handler)</td></tr>
-<tr class="memdesc:ae8c04a6eb53cea46e5b5bb5f5eb6dbf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable power sink related circuitry.  <a href="#ae8c04a6eb53cea46e5b5bb5f5eb6dbf9">More...</a><br /></td></tr>
+<tr class="memdesc:ae8c04a6eb53cea46e5b5bb5f5eb6dbf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disables power sink-related circuitry.  <a href="#ae8c04a6eb53cea46e5b5bb5f5eb6dbf9">More...</a><br /></td></tr>
 <tr class="separator:ae8c04a6eb53cea46e5b5bb5f5eb6dbf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1bf5a6331ba02a43a7a3616b1e7a3793"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a1bf5a6331ba02a43a7a3616b1e7a3793">eval_src_cap</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, const <a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a> *srcCap, <a class="el" href="group__group__pdstack__data__structures.html#ga8c52a75c275868c6fe49b5ee9aa9d2fa">cy_pdstack_app_resp_cbk_t</a> app_resp_handler)</td></tr>
-<tr class="memdesc:a1bf5a6331ba02a43a7a3616b1e7a3793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate received source caps and provide the RDO to be used to negotiate contract.  <a href="#a1bf5a6331ba02a43a7a3616b1e7a3793">More...</a><br /></td></tr>
+<tr class="memdesc:a1bf5a6331ba02a43a7a3616b1e7a3793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates received source caps and provides the RDO to be used to negotiate the contract.  <a href="#a1bf5a6331ba02a43a7a3616b1e7a3793">More...</a><br /></td></tr>
 <tr class="separator:a1bf5a6331ba02a43a7a3616b1e7a3793"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a841f848499dfba814324098d2986acf0"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a841f848499dfba814324098d2986acf0">eval_rdo</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, cy_pd_pd_do_t rdo, <a class="el" href="group__group__pdstack__data__structures.html#ga8c52a75c275868c6fe49b5ee9aa9d2fa">cy_pdstack_app_resp_cbk_t</a> app_resp_handler)</td></tr>
-<tr class="memdesc:a841f848499dfba814324098d2986acf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate sink request message.  <a href="#a841f848499dfba814324098d2986acf0">More...</a><br /></td></tr>
+<tr class="memdesc:a841f848499dfba814324098d2986acf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates sink request message.  <a href="#a841f848499dfba814324098d2986acf0">More...</a><br /></td></tr>
 <tr class="separator:a841f848499dfba814324098d2986acf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae97bcb01b1a1c1c54fcbb9f8f0a3ae47"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#ae97bcb01b1a1c1c54fcbb9f8f0a3ae47">eval_dr_swap</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, <a class="el" href="group__group__pdstack__data__structures.html#ga8c52a75c275868c6fe49b5ee9aa9d2fa">cy_pdstack_app_resp_cbk_t</a> app_resp_handler)</td></tr>
-<tr class="memdesc:ae97bcb01b1a1c1c54fcbb9f8f0a3ae47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles DR swap request received by port.  <a href="#ae97bcb01b1a1c1c54fcbb9f8f0a3ae47">More...</a><br /></td></tr>
+<tr class="memdesc:ae97bcb01b1a1c1c54fcbb9f8f0a3ae47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles DR swap request received by the port.  <a href="#ae97bcb01b1a1c1c54fcbb9f8f0a3ae47">More...</a><br /></td></tr>
 <tr class="separator:ae97bcb01b1a1c1c54fcbb9f8f0a3ae47"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad82a8fd1317a56cf3a1c538fb91cb38c"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#ad82a8fd1317a56cf3a1c538fb91cb38c">eval_pr_swap</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, <a class="el" href="group__group__pdstack__data__structures.html#ga8c52a75c275868c6fe49b5ee9aa9d2fa">cy_pdstack_app_resp_cbk_t</a> app_resp_handler)</td></tr>
-<tr class="memdesc:ad82a8fd1317a56cf3a1c538fb91cb38c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pr swap request received by port.  <a href="#ad82a8fd1317a56cf3a1c538fb91cb38c">More...</a><br /></td></tr>
+<tr class="memdesc:ad82a8fd1317a56cf3a1c538fb91cb38c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles pr swap request received by the port.  <a href="#ad82a8fd1317a56cf3a1c538fb91cb38c">More...</a><br /></td></tr>
 <tr class="separator:ad82a8fd1317a56cf3a1c538fb91cb38c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf189373992d8e25119e8cf6f3ff93d8"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#aaf189373992d8e25119e8cf6f3ff93d8">eval_vconn_swap</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, <a class="el" href="group__group__pdstack__data__structures.html#ga8c52a75c275868c6fe49b5ee9aa9d2fa">cy_pdstack_app_resp_cbk_t</a> app_resp_handler)</td></tr>
-<tr class="memdesc:aaf189373992d8e25119e8cf6f3ff93d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles VCONN swap request received by port.  <a href="#aaf189373992d8e25119e8cf6f3ff93d8">More...</a><br /></td></tr>
+<tr class="memdesc:aaf189373992d8e25119e8cf6f3ff93d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles VCONN swap request received by the port.  <a href="#aaf189373992d8e25119e8cf6f3ff93d8">More...</a><br /></td></tr>
 <tr class="separator:aaf189373992d8e25119e8cf6f3ff93d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab434993120c0784ecc0de6a307f276b8"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#ab434993120c0784ecc0de6a307f276b8">eval_vdm</a> )(struct cy_stc_pdstack_context *ptrPdStackContext, const <a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a> *vdm, <a class="el" href="group__group__pdstack__data__structures.html#ga8b81f7d2c09672be9e19584dd67991c7">cy_pdstack_vdm_resp_cbk_t</a> vdm_resp_handler)</td></tr>
 <tr class="memdesc:ab434993120c0784ecc0de6a307f276b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle VDMs (all structured/unstructured VDMs need to be handled) received by the port.  <a href="#ab434993120c0784ecc0de6a307f276b8">More...</a><br /></td></tr>
@@ -160,11 +160,14 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:a39a27f29508a4e118a32c38c39bbf6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle FR swap request received by the specified port.  <a href="#a39a27f29508a4e118a32c38c39bbf6b3">More...</a><br /></td></tr>
 <tr class="separator:a39a27f29508a4e118a32c38c39bbf6b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7360ba0edd674ac892c42c247783a79"><td class="memItemLeft" align="right" valign="top">uint16_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#ab7360ba0edd674ac892c42c247783a79">vbus_get_value</a> )(struct cy_stc_pdstack_context *ptrPdStackContext)</td></tr>
-<tr class="memdesc:ab7360ba0edd674ac892c42c247783a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current VBUS value in mV from application.  <a href="#ab7360ba0edd674ac892c42c247783a79">More...</a><br /></td></tr>
+<tr class="memdesc:ab7360ba0edd674ac892c42c247783a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current VBUS value in mV from the application.  <a href="#ab7360ba0edd674ac892c42c247783a79">More...</a><br /></td></tr>
 <tr class="separator:ab7360ba0edd674ac892c42c247783a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3aea09fd44ab9cc57e36ea377c00370a"><td class="memItemLeft" align="right" valign="top">uint32_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a3aea09fd44ab9cc57e36ea377c00370a">psrc_get_voltage</a> )(struct cy_stc_pdstack_context *ptrPdStackContext)</td></tr>
-<tr class="memdesc:a3aea09fd44ab9cc57e36ea377c00370a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get expected VBUS value in mV from application.  <a href="#a3aea09fd44ab9cc57e36ea377c00370a">More...</a><br /></td></tr>
+<tr class="memdesc:a3aea09fd44ab9cc57e36ea377c00370a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the expected VBUS value in mV from the application.  <a href="#a3aea09fd44ab9cc57e36ea377c00370a">More...</a><br /></td></tr>
 <tr class="separator:a3aea09fd44ab9cc57e36ea377c00370a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a407f3ecaf0baf2e71ba1ac532e4bc786"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__cbk__t.html#a407f3ecaf0baf2e71ba1ac532e4bc786">send_src_info</a> )(struct cy_stc_pdstack_context *ptrPdStackContext)</td></tr>
+<tr class="memdesc:a407f3ecaf0baf2e71ba1ac532e4bc786"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to decide whether to send source info.  <a href="#a407f3ecaf0baf2e71ba1ac532e4bc786">More...</a><br /></td></tr>
+<tr class="separator:a407f3ecaf0baf2e71ba1ac532e4bc786"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="af8dcf52584f271718fe254bf13c29566"></a>
@@ -211,7 +214,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set power source current in 10mA units. </p>
+<p>Sets power source current in 10 mA units. </p>
 
 </div>
 </div>
@@ -294,7 +297,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check whether VConn supply is ON. </p>
+<p>Check whether the VConn supply is ON. </p>
 
 </div>
 </div>
@@ -310,7 +313,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check whether VBus voltage is within expected range. </p>
+<p>Check whether VBus voltage is within the expected range. </p>
 
 </div>
 </div>
@@ -326,7 +329,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Turn on VBUS discharge circuit. </p>
+<p>Turn ON the VBUS discharge circuit. </p>
 
 </div>
 </div>
@@ -342,7 +345,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Turn off VBUS discharge circuit. </p>
+<p>Turn OFF the VBUS discharge circuit. </p>
 
 </div>
 </div>
@@ -358,7 +361,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set power sink voltage, in mV units. </p>
+<p>Sets power sink voltage in mV units. </p>
 
 </div>
 </div>
@@ -374,7 +377,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set power sink current, in 10mA units. </p>
+<p>Sets power sink current in 10 mA units. </p>
 
 </div>
 </div>
@@ -390,7 +393,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enable power sink related circuitry. </p>
+<p>Enables power sink-related circuitry. </p>
 
 </div>
 </div>
@@ -406,7 +409,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Disable power sink related circuitry. </p>
+<p>Disables power sink-related circuitry. </p>
 
 </div>
 </div>
@@ -422,7 +425,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Evaluate received source caps and provide the RDO to be used to negotiate contract. </p>
+<p>Evaluates received source caps and provides the RDO to be used to negotiate the contract. </p>
 
 </div>
 </div>
@@ -438,7 +441,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Evaluate sink request message. </p>
+<p>Evaluates sink request message. </p>
 
 </div>
 </div>
@@ -454,7 +457,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Handles DR swap request received by port. </p>
+<p>Handles DR swap request received by the port. </p>
 
 </div>
 </div>
@@ -470,7 +473,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Handles pr swap request received by port. </p>
+<p>Handles pr swap request received by the port. </p>
 
 </div>
 </div>
@@ -486,7 +489,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Handles VCONN swap request received by port. </p>
+<p>Handles VCONN swap request received by the port. </p>
 
 </div>
 </div>
@@ -534,7 +537,7 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get current VBUS value in mV from application. </p>
+<p>Gets the current VBUS value in mV from the application. </p>
 
 </div>
 </div>
@@ -550,8 +553,24 @@ Data Fields</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get expected VBUS value in mV from application. </p>
+<p>Gets the expected VBUS value in mV from the application. </p>
 <p>This is to include any additional compensation done for drops. </p>
+
+</div>
+</div>
+<a id="a407f3ecaf0baf2e71ba1ac532e4bc786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a407f3ecaf0baf2e71ba1ac532e4bc786">&#9670;&nbsp;</a></span>send_src_info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool(* cy_stc_pdstack_app_cbk_t::send_src_info) (struct cy_stc_pdstack_context *ptrPdStackContext)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to decide whether to send source info. </p>
 
 </div>
 </div>
@@ -561,7 +580,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 2.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.0</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

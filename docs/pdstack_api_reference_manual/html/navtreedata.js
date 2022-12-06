@@ -1,14 +1,14 @@
 var NAVTREE =
 [
-  [ "PDStack Middleware Library 2.0", "index.html", [
-    [ "PDStack Middleware Library", "index.html", [
-      [ "General Description", "index.html#section_pdstack_general_description", null ],
-      [ "Quick Start Guide", "index.html#section_pdstack_quick_start", null ],
-      [ "Configuration Considerations", "index.html#section_pdstack_configuration_considerations", null ],
-      [ "Limitations and Restrictions", "index.html#section_pdstack_miscellaneous", null ],
-      [ "Supported Software and Tools", "index.html#section_pdstack_toolchain", null ],
+  [ "PDStack Middleware Library 3.0", "index.html", [
+    [ "PDStack middleware library", "index.html", [
+      [ "General description", "index.html#section_pdstack_general_description", null ],
+      [ "Quick start guide", "index.html#section_pdstack_quick_start", null ],
+      [ "Configuration considerations", "index.html#section_pdstack_configuration_considerations", null ],
+      [ "Limitations and restrictions", "index.html#section_pdstack_miscellaneous", null ],
+      [ "Supported software and tools", "index.html#section_pdstack_toolchain", null ],
       [ "Changelog", "index.html#section_pdstack_changelog", null ],
-      [ "More Information", "index.html#section_pdstack_more_information", null ]
+      [ "More information", "index.html#section_pdstack_more_information", null ]
     ] ],
     [ "API Reference", "modules.html", "modules" ]
   ] ]
@@ -17,11 +17,11 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "group__group__pdstack__data__structures.html",
-"group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5aa7256aebc3fb265ff9d3e14aa8b27232",
-"group__group__pdstack__enums.html#ggab23f6a4bf15016efed8957def744f3d0ad8b749f867057dcb57e8ce2d18033c25",
-"group__group__pdstack__macros.html#ga07dac132356e2d12b118a1abb6a31f76",
-"structcy__stc__pdstack__dpm__ext__status__t.html#a25d35f9dc39c034caf077ef380a84529",
-"structcy__stc__pdstack__pe__status__t.html#ac2e12f8993d4160d7534a227f18f645a"
+"group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5aa3d91a5e9da117bc666b71407457f7f3",
+"group__group__pdstack__enums.html#ggae2c1c922571761f68889bf4cb4a4ee46a467347b064c4f1258e6dedffe1d44b75",
+"group__group__pdstack__macros.html#ga5ae7a542c20c1290bb50adca7b4e8ec4",
+"structcy__stc__pdstack__dpm__status__t.html#a665d69caf440bc5bd851754553e3eb55",
+"structcy__stc__pdstack__port__cfg__t.html#af33fd64a62770d01bfed3485e5e7d7ba"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

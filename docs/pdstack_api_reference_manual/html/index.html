@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 2.0: PDStack Middleware Library</title>
+<title>PDStack Middleware Library 3.0: PDStack middleware library</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 2.0</div>
+   <div id="projectname">PDStack Middleware Library 3.0</div>
   </td>
  </tr>
  </tbody>
@@ -81,140 +81,142 @@ $(document).ready(function(){initNavTree('index.html','');});
 
 <div class="header">
   <div class="headertitle">
-<div class="title">PDStack Middleware Library </div>  </div>
+<div class="title">PDStack middleware library </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The PDStack middleware implements state machines defined in the <b>Universal Serial Bus Type-C Cable and Connector Specification</b> and the <b>Universal Serial Bus Power Delivery Specification</b>. The middleware provides a set of Device Policy Manager (DPM) APIs through which the application can initialize, monitor and configure the middleware operation.</p>
-<p>The PDStack middleware operates on the top of the USBPD driver included in the MTB PDL CAT2(mtb-pdl-cat2) Peripheral Driver Library</p>
+<div class="textblock"><p>The PDStack middleware implements state machines defined in the <b>Universal Serial Bus Type-C Cable and Connector Specification</b> and the <b>Universal Serial Bus Power Delivery Specification</b>. The middleware provides a set of Device Policy Manager (DPM) APIs through which the application can initialize, monitor, and configure the middleware operation.</p>
+<p>The PDStack middleware operates on top of the USB PD driver included in the MTB PDL CAT2 (mtb-pdl-cat2) peripheral driver library (PDL).</p>
 <p><b>Features:</b></p><ol type="1">
-<li>Support Type-C port configuration and connection detection in the Sink, Source and Dual Role</li>
-<li>Support USBPD Communication with the following features:<ul>
+<li>Supports Type-C port configuration and connection detection in the Sink, source, and dual-role.</li>
+<li>Supports Extended Power Range (EPR) in source and sink roles.</li>
+<li>Support USB PD communication with the following features:<ul>
 <li>USB PD revision 3.1 compliance</li>
 <li>USB PD revision 2.0 compliance (backward compatibility)</li>
-<li>Power contract negotiation in Sink Role</li>
-<li>Ability to respond to SOP and SOP' messages to support designs with a Captive USB-C cable.</li>
+<li>Power contract negotiation in sink and source roles</li>
+<li>Ability to respond to SOP and SOP' messages to support designs with a captive USB-C cable.</li>
 </ul>
 </li>
-<li>Support configuration of the port roles and responses through the EZ-PD Configurator.</li>
-<li>Support Device Policy Manager APIs to initialize, configure, monitor and control the port operation; as well as to send/receive USBPD messages associated with Alternate Mode discovery, Authentication, Firmware update etc. <dl class="section warning"><dt>Warning</dt><dd>This version of the PDStack Middleware supports only the wlc1_pd3_snk library and is intended to be used in any Power-Delivery WLC1 application.</dd></dl>
-</li>
+<li>Supports configuration of the port roles and responses through the EZ-PD(TM) Configurator.</li>
+<li>Support DPM APIs to initialize, configure, monitor, and control the port operation and send/receive USB PD messages associated with alternate mode discovery, authentication, firmware update, etc.</li>
 </ol>
 <h1><a class="anchor" id="section_pdstack_general_description"></a>
-General Description</h1>
-<p>Include cy_pdstack_common.h, cy_pdstack_dpm.h to get access to all functions and other declarations in this library. See the <a class="el" href="index.html#section_pdstack_quick_start">Quick Start Guide</a> to start using the PDStack.</p>
-<p>Refer to the <a class="el" href="index.html#section_pdstack_toolchain">Supported Software and Tools</a> section for compatibility information.</p>
-<p>Refer to the <a class="el" href="index.html#section_pdstack_changelog">Changelog</a> section for change history.</p>
-<p>PDStack operates on the top of the usbpd driver. The usbpd driver has some prerequisites for proper operation. Refer to the "USBPD (USB Power Delivery)" section of the MTB PDL CAT2(mtb-pdl-cat2) Peripheral Driver Library API Reference Manual. Also, refer to the <a class="el" href="index.html#section_pdstack_miscellaneous">Limitations and Restrictions</a> section for the different PDStack middleware restrictions and limitations.</p>
-<p>The PDStack Middleware is released in the form of pre-compiled libraries. The following library variants with different feature set to help limit the memory footprint of the stack in applications are released.</p><ol type="1">
-<li>wlc1_pd3_snk - Library with support for USB Type-C sink operation and USB-PD Revision 3.1 messaging. This library can be used in any Power-Delivery WLC1 application. <dl class="section warning"><dt>Warning</dt><dd>This version of the PDStack Middleware supports only the wlc1_pd3_snk library and is intended to be used in any Power-Delivery WLC1 application.</dd></dl>
-</li>
+General description</h1>
+<p>Include cy_pdstack_common.h, cy_pdstack_dpm.h to get access to all functions and other declarations in this library. See the <a class="el" href="index.html#section_pdstack_quick_start">Quick start guide</a> to start using the PDStack.</p>
+<p>See the <a class="el" href="index.html#section_pdstack_toolchain">Supported software and tools</a> section for compatibility information.</p>
+<p>See the <a class="el" href="index.html#section_pdstack_changelog">Changelog</a> section for change history.</p>
+<p>PDStack operates on top of the USB PD driver. The USB PD driver has some prerequisites for proper operation. See the "USB PD (USB Power Delivery)" section of the MTB PDL CAT2 (mtb-pdl-cat2) peripheral driver library API reference manual. In addition, see the <a class="el" href="index.html#section_pdstack_miscellaneous">Limitations and restrictions</a> section for the different PDStack middleware restrictions and limitations.</p>
+<p>The PDStack middleware is released in the form of pre-compiled libraries. The following library variants with a different feature set to help limit the memory footprint of the stack in applications are released.</p><ol type="1">
+<li>pmg1_pd3_snk_lite - Support USB Type-C sink operation and USB PD Revision 3.1 messaging.</li>
+<li>pmg1_pd2_snk_lite - Supports USB Type-C sink operation and USB PD Revision 2.0 messaging. Using this library reduces the flash (code) memory usage by the application.</li>
+<li>pmg1_pd3_drp - Supports USB Type-C dual-role operation and USB PD Revision 3.1 messaging. This library can be used in any Power Delivery application.</li>
+<li>pmg1_pd3_snk_epr - Supports USB Type-C sink Extended Power Range (EPR). This library can be used in applications that require EPR.</li>
+<li>pmg1_pd3_drp_epr - Supports USB Type-C dual role EPR operation and USB PD Revision 3.1 messaging.</li>
+<li>wlc1_pd3_snk - Library with support for USB Type-C sink operation and USB PD Revision 3.1 messaging. This library can be used in any Power Delivery WLC1 application.</li>
 </ol>
 <h1><a class="anchor" id="section_pdstack_quick_start"></a>
-Quick Start Guide</h1>
-<p>PDStack middleware can be used in various Development Environments such as ModusToolbox, MBED, etc. Refer to the <a class="el" href="index.html#section_pdstack_toolchain">Supported Software and Tools</a> section.</p>
-<p>The below steps describe the simplest way of enabling the PDStack middleware in the application.</p>
+Quick start guide</h1>
+<p>PDStack middleware can be used in various development environments such as ModusToolbo(TM)), MBED, etc. See the <a class="el" href="index.html#section_pdstack_toolchain">Supported software and tools</a> section.</p>
+<p>These steps describe the simplest way of enabling the PDStack middleware in the application.</p>
 <ol type="1">
-<li>Open/Create an application where to add PDStack function</li>
-<li>Add the PDStack middleware to your project. This quick start guide assumes that the environment is configured to use the MTB CAT2 Peripheral Driver Library(PDL) for development and the PDL is included in the project. If you are using the ModusToolbox development environment select the application in the Project Explorer window and select the PDStack Middleware in the Library Manager.</li>
-<li>Include cy_pdstack_common.h, cy_pdstack_dpm.h to get access to all functions and other declarations in this library. <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;cy_pdstack_common.h&quot;</span></div><div class="line"><span class="preprocessor">#include &quot;cy_pdstack_dpm.h&quot;</span></div></div><!-- fragment --></li>
-<li>Define the following data structures required by the PDStack Middleware:<ul>
-<li>USB-C port configuration <div class="fragment"><div class="line"><span class="comment">/*******************************************************************************</span></div><div class="line"><span class="comment">* PD Port Configuration Structure Initialization</span></div><div class="line"><span class="comment">*******************************************************************************/</span></div><div class="line"><span class="keyword">const</span> <a class="code" href="structcy__stc__pdstack__port__cfg__t.html">cy_stc_pdstack_port_cfg_t</a> mtb_usbpd_port0_pdstack_config = </div><div class="line">{</div><div class="line">    .<a class="code" href="structcy__stc__pdstack__port__cfg__t.html#a03e19f4b915a32f14159fcdd8b2a53f6">signature</a> = 0x50445343, <span class="comment">/* PDSC */</span> </div><div class="line">    .version = 0x0100, <span class="comment">/* Configuration table version */</span> </div><div class="line">    .mfgLenInfo = 0x0D, <span class="comment">/* Length of Manufacturer Information */</span> </div><div class="line">    .mfgVid = 0x04B4, <span class="comment">/* Manufacturer Vendor ID */</span> </div><div class="line">    .mfgPid = 0xF501, <span class="comment">/* Manufacturer Product ID */</span> </div><div class="line">    .mfgName = <span class="stringliteral">&quot;Infineon&quot;</span>, <span class="comment">/* Manufacturer Name */</span> </div><div class="line">    .scedbEn = 0, <span class="comment">/* SCEDB enable */</span> </div><div class="line">    .skedbEn = 1, <span class="comment">/* SKEDB enable */</span> </div><div class="line">    .extSrcCap = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}, <span class="comment">/* SCEDB Configuration */</span> </div><div class="line">    .extSnkCap = {0xB4,0x04,0x01,0xF5,0x00,0x00,0x00,0x00,0x01,0x01,0x01,0x00,0x00,0x00,0x00,0x00,0x00,0x0A,0x05,0x05,0x14,0x00,0x00,0x00}, <span class="comment">/* SKEDB Configuration */</span> </div><div class="line">    .portRole = 0, <span class="comment">/* Port role */</span> </div><div class="line">    .defPortRole = 0, <span class="comment">/* Default port role */</span> </div><div class="line">    .curLevel = 2, <span class="comment">/* Current level */</span> </div><div class="line">    .cableDiscCount = 0x14, <span class="comment">/* Cable Discover count */</span> </div><div class="line">    .srcPdoFlags = {0x00,0x00}, <span class="comment">/* Source PDO flags */</span> </div><div class="line">    .snkPdoFlags = {0x00,0x00}, <span class="comment">/* Sink PDO flags */</span> </div><div class="line">    .drpToggleEn = 0, <span class="comment">/* DRP toggle enable */</span> </div><div class="line">    .rpSupported = 0, <span class="comment">/* Rp supported */</span> </div><div class="line">    .pdOpEn = 1, <span class="comment">/* PD operation enable */</span> </div><div class="line">    .prefPwrRole = 0, <span class="comment">/* Preferred Power role */</span> </div><div class="line">    .portDis = 0, <span class="comment">/* Port disable */</span> </div><div class="line">    .cableDiscEn = 0, <span class="comment">/* Cable Discovery Enable */</span> </div><div class="line">    .deadBatSupp = 1, <span class="comment">/* Dead battery support */</span> </div><div class="line">    .errorRecoveryEn = 1, <span class="comment">/* Error recovery enable */</span> </div><div class="line">    .accessoryEn = 1, <span class="comment">/* Accessory mode enable */</span> </div><div class="line">    .rpDetachEn = 1, <span class="comment">/* Rp detach enable */</span> </div><div class="line">    .vconnRetain = 0, <span class="comment">/* VCONN retain */</span> </div><div class="line">    .frsConfig = 0, <span class="comment">/* FRS configuration */</span> </div><div class="line">    .srcPdoCount = 0x00, <span class="comment">/* Source PDO count */</span> </div><div class="line">    .defSrcPdoMask = 0x00, <span class="comment">/* Default Source PDO mask */</span> </div><div class="line">    .snkPdoCount = 0x02, <span class="comment">/* Sink PDO count */</span> </div><div class="line">    .defSnkPdoMask = 0x03, <span class="comment">/* Default Sink PDO mask */</span> </div><div class="line">    .srcPdo = {}, <span class="comment">/* Source PDO */</span> </div><div class="line">    .snkPdo = {0x0001905A,0x9A42305A}, <span class="comment">/* Sink PDO */</span> </div><div class="line">    .snkPdoMinMaxCur = {0x005A,0x005A}, <span class="comment">/* Sink PDO min/max current */</span> </div><div class="line">    .pdRevision = 0x00000002, <span class="comment">/* PD Revision */</span> </div><div class="line">};</div></div><!-- fragment --></li>
+<li>Open/create an application where to add the PDStack function.</li>
+<li>Add the PDStack middleware to your project. This quick start guide assumes that the environment is configured to use the MTB CAT2 peripheral driver library (PDL) for development and the PDL is included in the project. If you are using the ModusToolbox(TM) development environment, select the application in the Project Explorer window and select the PDStack Middleware in the Library Manager.</li>
+<li>Include cy_pdstack_common.h and cy_pdstack_dpm.h to get access to all functions and other declarations in this library. <div class="fragment"><div class="line"><span class="preprocessor">#include &quot;cy_pdstack_common.h&quot;</span></div><div class="line"><span class="preprocessor">#include &quot;cy_pdstack_dpm.h&quot;</span></div></div><!-- fragment --></li>
+<li>Define the following data structures required by the PDStack middleware:<ul>
+<li>USB-C port configuration <div class="fragment"><div class="line"><span class="comment">/*******************************************************************************</span></div><div class="line"><span class="comment">* PD Port Configuration Structure Initialization</span></div><div class="line"><span class="comment">*******************************************************************************/</span></div><div class="line"><span class="keyword">static</span> <span class="keyword">const</span> uint8_t mtb_usbpd_port0_ext_src_cap[] = {0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00}; <span class="comment">/* SCEDB Configuration */</span></div><div class="line"><span class="keyword">static</span> <span class="keyword">const</span> uint8_t mtb_usbpd_port0_ext_snk_cap[] = {0xB4,0x04,0x01,0xF5,0x00,0x00,0x00,0x00,0x01,0x01,0x01,0x00,0x00,0x00,0x00,0x00,0x00,0x0A,0x05,0x05,0x14,0x00,0x00,0x00}; <span class="comment">/* SKEDB Configuration */</span></div><div class="line"><span class="keyword">static</span> <span class="keyword">const</span> uint8_t mtb_usbpd_port0_mfg_name[] = {<span class="stringliteral">&quot;Infineon&quot;</span>}; <span class="comment">/* Manufacturer Name */</span></div><div class="line"></div><div class="line"><span class="keyword">const</span> <a class="code" href="structcy__stc__pdstack__port__cfg__t.html">cy_stc_pdstack_port_cfg_t</a> mtb_usbpd_port0_pdstack_config = </div><div class="line">{</div><div class="line">    .<a class="code" href="structcy__stc__pdstack__port__cfg__t.html#a03e19f4b915a32f14159fcdd8b2a53f6">signature</a> = 0x50445343, <span class="comment">/* PDSC */</span> </div><div class="line">    .version = 0x0100, <span class="comment">/* Configuration table version */</span> </div><div class="line">    .mfgLenInfo = 0x0D, <span class="comment">/* Length of Manufacturer Information */</span> </div><div class="line">    .mfgVid = 0x04B4, <span class="comment">/* Manufacturer Vendor ID */</span> </div><div class="line">    .mfgPid = 0xF501, <span class="comment">/* Manufacturer Product ID */</span> </div><div class="line">    .mfgName = &amp;mtb_usbpd_port0_mfg_name[0], <span class="comment">/* Manufacturer Name */</span></div><div class="line">    .scedbEn = 0, <span class="comment">/* SCEDB enable */</span> </div><div class="line">    .skedbEn = 1, <span class="comment">/* SKEDB enable */</span> </div><div class="line">    .extSrcCap = &amp;mtb_usbpd_port0_ext_src_cap[0], <span class="comment">/* SCEDB Configuration */</span> </div><div class="line">    .extSrcCapSize = 25, <span class="comment">/* Size of extSrcCap in bytes */</span> </div><div class="line">    .extSnkCap = &amp;mtb_usbpd_port0_ext_snk_cap[0], <span class="comment">/* SKEDB Configuration */</span> </div><div class="line">    .extSnkCapSize = 24, <span class="comment">/* Size of extSnkCap in bytes */</span> </div><div class="line">    .portRole = 0, <span class="comment">/* Port role */</span> </div><div class="line">    .defPortRole = 0, <span class="comment">/* Default port role */</span> </div><div class="line">    .curLevel = 2, <span class="comment">/* Current level */</span> </div><div class="line">    .cableDiscCount = 0x14, <span class="comment">/* Cable Discover count */</span> </div><div class="line">    .srcPdoFlags = {0x00,0x00}, <span class="comment">/* Source PDO flags */</span> </div><div class="line">    .snkPdoFlags = {0x00,0x00}, <span class="comment">/* Sink PDO flags */</span> </div><div class="line">    .drpToggleEn = 0, <span class="comment">/* DRP toggle enable */</span> </div><div class="line">    .rpSupported = 0, <span class="comment">/* Rp supported */</span> </div><div class="line">    .pdOpEn = 1, <span class="comment">/* PD operation enable */</span> </div><div class="line">    .prefPwrRole = 0, <span class="comment">/* Preferred Power role */</span> </div><div class="line">    .portDis = 0, <span class="comment">/* Port disable */</span> </div><div class="line">    .cableDiscEn = 0, <span class="comment">/* Cable Discovery Enable */</span> </div><div class="line">    .deadBatSupp = 1, <span class="comment">/* Dead battery support */</span> </div><div class="line">    .errorRecoveryEn = 1, <span class="comment">/* Error recovery enable */</span> </div><div class="line">    .accessoryEn = 1, <span class="comment">/* Accessory mode enable */</span> </div><div class="line">    .rpDetachEn = 1, <span class="comment">/* Rp detach enable */</span> </div><div class="line">    .vconnRetain = 0, <span class="comment">/* VCONN retain */</span> </div><div class="line">    .frsConfig = 0, <span class="comment">/* FRS configuration */</span> </div><div class="line">    .srcPdoCount = 0x00, <span class="comment">/* Source PDO count */</span> </div><div class="line">    .defSrcPdoMask = 0x00, <span class="comment">/* Default Source PDO mask */</span> </div><div class="line">    .snkPdoCount = 0x02, <span class="comment">/* Sink PDO count */</span> </div><div class="line">    .defSnkPdoMask = 0x03, <span class="comment">/* Default Sink PDO mask */</span> </div><div class="line">    .srcPdo = {}, <span class="comment">/* Source PDO */</span> </div><div class="line">    .snkPdo = {0x0001905A,0x9A42305A}, <span class="comment">/* Sink PDO */</span> </div><div class="line">    .snkPdoMinMaxCur = {0x005A,0x005A}, <span class="comment">/* Sink PDO min/max current */</span> </div><div class="line">    .pdRevision = 0x00000002, <span class="comment">/* PD Revision */</span> </div><div class="line">};</div></div><!-- fragment --></li>
 <li>Device Policy Manager parameters <div class="fragment"><div class="line"><span class="keyword">const</span> <a class="code" href="structcy__stc__pdstack__dpm__params__t.html">cy_stc_pdstack_dpm_params_t</a> pdstack_port0_dpm_params =</div><div class="line">{</div><div class="line">        .<a class="code" href="structcy__stc__pdstack__dpm__params__t.html#ae7d3ea9893ed1caf9ef9edbb789d3e8b">dpmSnkWaitCapPeriod</a> = 400,</div><div class="line">        .dpmRpAudioAcc = CY_PD_RP_TERM_RP_CUR_DEF,</div><div class="line">        .dpmDefCableCap = 300,</div><div class="line">        .muxEnableDelayPeriod = 0,</div><div class="line">        .typeCSnkWaitCapPeriod = 0,</div><div class="line">        .defCur = 90</div><div class="line">};</div></div><!-- fragment --></li>
-<li>Register application callback functions <div class="fragment"><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * Application callback functions for the DPM.</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">const</span> <a class="code" href="structcy__stc__pdstack__app__cbk__t.html">cy_stc_pdstack_app_cbk_t</a> appCallback =</div><div class="line">{</div><div class="line">    app_event_handler,</div><div class="line"><span class="preprocessor">#if (!CY_PD_SINK_ONLY)</span></div><div class="line">    psrc_set_voltage,</div><div class="line">    psrc_set_current,</div><div class="line">    psrc_enable,</div><div class="line">    psrc_disable,</div><div class="line"><span class="preprocessor">#endif </span><span class="comment">/* (!CY_PD_SINK_ONLY) */</span><span class="preprocessor">    </span></div><div class="line">    vconn_enable,</div><div class="line">    vconn_disable,</div><div class="line">    vconn_is_present,</div><div class="line">    vbus_is_present,</div><div class="line">    vbus_discharge_on,</div><div class="line">    vbus_discharge_off,</div><div class="line"><span class="preprocessor">#if (!CY_PD_SOURCE_ONLY)    </span></div><div class="line">    psnk_set_voltage,</div><div class="line">    psnk_set_current,</div><div class="line">    psnk_enable,</div><div class="line">    psnk_disable,    </div><div class="line">    eval_src_cap,</div><div class="line"><span class="preprocessor">#endif </span><span class="comment">/* (!CY_PD_SOURCE_ONLY) */</span><span class="preprocessor"></span></div><div class="line"><span class="preprocessor">#if (!CY_PD_SINK_ONLY)</span></div><div class="line">    eval_rdo,</div><div class="line"><span class="preprocessor">#endif </span><span class="comment">/* (!CY_PD_SINK_ONLY) */</span><span class="preprocessor">  </span></div><div class="line">    eval_dr_swap,</div><div class="line">    eval_pr_swap,</div><div class="line">    eval_vconn_swap,</div><div class="line">    eval_vdm,</div><div class="line"><span class="preprocessor">#if ((!(CY_PD_SOURCE_ONLY)) &amp;&amp; (!CY_PD_SINK_ONLY))</span></div><div class="line">    eval_fr_swap,</div><div class="line"><span class="preprocessor">#endif </span><span class="comment">/* ((!(CY_PD_SOURCE_ONLY)) &amp;&amp; (!CY_PD_SINK_ONLY)) */</span><span class="preprocessor">    </span></div><div class="line">    vbus_get_value,</div><div class="line"><span class="preprocessor">#if (!CY_PD_SINK_ONLY)</span></div><div class="line">    psrc_get_voltage,</div><div class="line"><span class="preprocessor">#endif </span><span class="comment">/* (!CY_PD_SINK_ONLY) */</span><span class="preprocessor">    </span></div><div class="line">};</div></div><!-- fragment -->The PDStack library uses these set of callbacks registered by the application to perform board specific tasks such as turning the consumer power path ON/OFF, identifying the optimal source power profile to be used for charging etc. The library also provides notification of various connection and PD policy state changes, so that the rest of the system can be configured as required.</li>
+<li>Register application callback functions <div class="fragment"><div class="line"><span class="comment">/*</span></div><div class="line"><span class="comment"> * Application callback functions for the DPM.</span></div><div class="line"><span class="comment"> */</span></div><div class="line"><span class="keyword">const</span> <a class="code" href="structcy__stc__pdstack__app__cbk__t.html">cy_stc_pdstack_app_cbk_t</a> appCallback =</div><div class="line">{</div><div class="line">    app_event_handler,</div><div class="line"><span class="preprocessor">#if (!CY_PD_SINK_ONLY)</span></div><div class="line">    psrc_set_voltage,</div><div class="line">    psrc_set_current,</div><div class="line">    psrc_enable,</div><div class="line">    psrc_disable,</div><div class="line"><span class="preprocessor">#endif </span><span class="comment">/* (!CY_PD_SINK_ONLY) */</span><span class="preprocessor">    </span></div><div class="line">    vconn_enable,</div><div class="line">    vconn_disable,</div><div class="line">    vconn_is_present,</div><div class="line">    vbus_is_present,</div><div class="line">    vbus_discharge_on,</div><div class="line">    vbus_discharge_off,</div><div class="line"><span class="preprocessor">#if (!CY_PD_SOURCE_ONLY)    </span></div><div class="line">    psnk_set_voltage,</div><div class="line">    psnk_set_current,</div><div class="line">    psnk_enable,</div><div class="line">    psnk_disable,    </div><div class="line">    eval_src_cap,</div><div class="line"><span class="preprocessor">#endif </span><span class="comment">/* (!CY_PD_SOURCE_ONLY) */</span><span class="preprocessor"></span></div><div class="line"><span class="preprocessor">#if (!CY_PD_SINK_ONLY)</span></div><div class="line">    eval_rdo,</div><div class="line"><span class="preprocessor">#endif </span><span class="comment">/* (!CY_PD_SINK_ONLY) */</span><span class="preprocessor">  </span></div><div class="line">    eval_dr_swap,</div><div class="line">    eval_pr_swap,</div><div class="line">    eval_vconn_swap,</div><div class="line">    eval_vdm,</div><div class="line"><span class="preprocessor">#if ((!(CY_PD_SOURCE_ONLY)) &amp;&amp; (!CY_PD_SINK_ONLY))</span></div><div class="line">    eval_fr_swap,</div><div class="line"><span class="preprocessor">#endif </span><span class="comment">/* ((!(CY_PD_SOURCE_ONLY)) &amp;&amp; (!CY_PD_SINK_ONLY)) */</span><span class="preprocessor">    </span></div><div class="line">    vbus_get_value,</div><div class="line"><span class="preprocessor">#if (!CY_PD_SINK_ONLY)</span></div><div class="line">    psrc_get_voltage,</div><div class="line">    send_src_info</div><div class="line"><span class="preprocessor">#endif </span><span class="comment">/* (!CY_PD_SINK_ONLY) */</span><span class="preprocessor">    </span></div><div class="line">};</div></div><!-- fragment -->The PDStack library uses this set of callbacks registered by the application to perform board-specific tasks such as turning the consumer power path ON/OFF, identifying the optimal source power profile to be used for charging, etc. The library also provides notification of various connections and PD policy state changes, therefore, the rest of the system can be configured as required.</li>
 </ul>
 </li>
-<li>Initialize the PDStack middleware once at the start: <div class="fragment"><div class="line">    <a class="code" href="group__group__pdstack__functions.html#ga201503833db097afe5c9e0d18e8e03ea">Cy_PdStack_Dpm_Init</a> (&amp;pdStackContext, </div><div class="line">            &amp;usbPdContext, </div><div class="line">            &amp;mtb_usbpd_port0_pdstack_config,</div><div class="line">            (<a class="code" href="structcy__stc__pdstack__app__cbk__t.html">cy_stc_pdstack_app_cbk_t</a> *)&amp;appCallback, </div><div class="line">            &amp;pdstack_port0_dpm_params, </div><div class="line">            &amp;timerContext);</div></div><!-- fragment --></li>
-<li>Start the device policy manager operation. <div class="fragment"><div class="line">    <a class="code" href="group__group__pdstack__functions.html#gaae9893510cb213c6b799bb490b76d513">Cy_PdStack_Dpm_Start</a>(&amp;pdStackContext);</div></div><!-- fragment --> This initializes the USB-PD block to detect Type-C connection state changes and USB-PD messages and notify the application through callback functions.</li>
-<li>Invoke Cy_PdStack_Dpm_Task function from the main processing loop of the application to handle the device policy tasks for each PD Port. <div class="fragment"><div class="line">    <a class="code" href="group__group__pdstack__functions.html#gaa7461e8739b31c7c212e2af74f230c80">Cy_PdStack_Dpm_Task</a>(&amp;pdStackContext);</div></div><!-- fragment --></li>
+<li>Initialize the PDStack middleware after the start. <div class="fragment"><div class="line">    <a class="code" href="group__group__pdstack__functions.html#ga37024bdc821e5a3065a128a79e51f10d">Cy_PdStack_Dpm_Init</a> (&amp;pdStackContext, </div><div class="line">            &amp;usbPdContext, </div><div class="line">            &amp;mtb_usbpd_port0_pdstack_config,</div><div class="line">            (<a class="code" href="structcy__stc__pdstack__app__cbk__t.html">cy_stc_pdstack_app_cbk_t</a> *)&amp;appCallback, </div><div class="line">            &amp;pdstack_port0_dpm_params, </div><div class="line">            &amp;timerContext);</div></div><!-- fragment --></li>
+<li>Start the DPM operation. <div class="fragment"><div class="line">    <a class="code" href="group__group__pdstack__functions.html#gaae9893510cb213c6b799bb490b76d513">Cy_PdStack_Dpm_Start</a>(&amp;pdStackContext);</div></div><!-- fragment --> Initializes the USB PD block to detect Type-C connection state changes and USB PD messages and notify the application through callback functions.</li>
+<li>Invoke the Cy_PdStack_Dpm_Task function from the main processing loop of the application to handle the device policy tasks for each PD Port. <div class="fragment"><div class="line">    <a class="code" href="group__group__pdstack__functions.html#gaa7461e8739b31c7c212e2af74f230c80">Cy_PdStack_Dpm_Task</a>(&amp;pdStackContext);</div></div><!-- fragment --></li>
 </ol>
 <h1><a class="anchor" id="section_pdstack_configuration_considerations"></a>
-Configuration Considerations</h1>
-<p>This section consists of instructions of how to configure, and use the PDStack Middleware in a design.</p><ol type="1">
-<li>After selecting the PDStack middleware through the library manager, the user can select the library variant by editing the Code Example Makefile:<ul>
+Configuration considerations</h1>
+<p>This section consists of instructions on how to configure, and use the PDStack middleware in a design.</p><ol type="1">
+<li>After selecting the PDStack middleware through the library manager, the user can select the library variant by editing the code example Makefile:<ul>
+<li>Add 'PMG1_PD3_SNK_LITE' to the COMPONENTS for using the pmg1_pd3_snk_lite library</li>
+<li>Add 'PMG1_PD2_SNK_LITE' to the COMPONENTS for using the pmg1_pd2_snk_lite library</li>
+<li>Add 'PMG1_PD3_DRP' to the COMPONENTS for using the pmg1_pd3_drp library</li>
+<li>Add 'PMG1_PD3_SNK_EPR' to the COMPONENTS for using the pmg1_pd3_snk_epr library</li>
+<li>Add 'PMG1_PD3_DRP_EPR' to the COMPONENTS for using the pmg1_pd3_drp_epr library</li>
 <li>Add 'WLC1_PD3_SNK' to the COMPONENTS for using the wlc1_pd3_snk library</li>
 </ul>
 </li>
 <li>Configure the USB-C port properties<ul>
-<li>The USB-C port properties are controlled with the <a class="el" href="structcy__stc__pdstack__port__cfg__t.html" title="Structure to hold PDSTACK Middleware configuration information. ">cy_stc_pdstack_port_cfg_t</a> structure defined in config_table.h or cy_pdstack_port_config.h file. Please see its description to learn about the parameters and values.</li>
-<li>Use the EZ-PD Configurator to configure the properties of the USB-C port including port role and the default response to various USB-PD messages. Refer to step 4 of the <a class="el" href="index.html#section_pdstack_quick_start">Quick Start Guide</a> guide for the reference configuration data.</li>
-<li>For designs supporting EZ-PD Configuration Utility, configure the properties of the USB-C port dynamically through selection of appropriate values in the configuration utility tool. Refer to the <a class="el" href="index.html#section_pdstack_miscellaneous">Limitations and Restrictions</a> for the existing restrictions.</li>
+<li>The USB-C port properties are controlled with the <a class="el" href="structcy__stc__pdstack__port__cfg__t.html" title="Structure to hold PDStack middleware configuration information. ">cy_stc_pdstack_port_cfg_t</a> structure defined in config_table.h or cy_pdstack_port_config.h file. Please see its description to learn about the parameters and values.</li>
+<li>Use the EZ-PD(TM) Configurator to configure the properties of the USB-C port including the port role and the default response to various USB PD messages. See Step 4 of the <a class="el" href="index.html#section_pdstack_quick_start">Quick start guide</a> guide for the reference configuration data.</li>
+<li>For designs supporting EZ-PD(TM) Configuration Utility, configure the properties of the USB-C port dynamically through the selection of appropriate values in the configuration utility tool. See the <a class="el" href="index.html#section_pdstack_miscellaneous">Limitations and restrictions</a> for the existing restrictions.</li>
 </ul>
 </li>
 </ol>
 <h1><a class="anchor" id="section_pdstack_miscellaneous"></a>
-Limitations and Restrictions</h1>
-<ol type="1">
-<li>This version of the PDStack Middleware supports only the wlc1_pd3_snk library.</li>
-</ol>
+Limitations and restrictions</h1>
 <h1><a class="anchor" id="section_pdstack_toolchain"></a>
-Supported Software and Tools</h1>
-<p>This version of the PDStack Middleware was validated for the compatibility with the following software and tools:</p>
+Supported software and tools</h1>
+<p>This version of the PDStack middleware is validated for compatibility with the following software and tools:</p>
 <table class="doxtable">
 <tr>
-<th>Software and Tools </th><th>Version  </th></tr>
+<th>Software and tools </th><th>Version  </th></tr>
 <tr>
-<td>ModusToolbox Software Environment </td><td>2.4  </td></tr>
+<td>ModusToolbox(TM) software </td><td>3.0  </td></tr>
 <tr>
-<td>mtb-pdl-cat2 </td><td>1.6.0  </td></tr>
+<td>mtb-pdl-cat2 </td><td>2.1.0  </td></tr>
 <tr>
-<td>GCC Compiler </td><td>9.3.1  </td></tr>
+<td>GCC compiler </td><td>10.3.1  </td></tr>
 <tr>
-<td>IAR Compiler </td><td>8.42.2  </td></tr>
+<td>IAR compiler </td><td>8.42.2  </td></tr>
 <tr>
-<td>Arm Compiler 6 </td><td>6.13  </td></tr>
+<td>Arm(R) compiler 6 </td><td>6.13  </td></tr>
 </table>
 <h1><a class="anchor" id="section_pdstack_changelog"></a>
 Changelog</h1>
 <table class="doxtable">
 <tr>
-<th>Version</th><th>Changes</th><th>Reason for Change </th></tr>
+<th>Version</th><th>Changes</th><th>Reason for change </th></tr>
 <tr>
-<td>2.0 </td><td>Added WLC1 Sink Library with support for USB Type-C sink operation and USB-PD Revision 3.1 messaging. <dl class="section note"><dt>Note</dt><dd>This version of the PDStack Middleware supports only the wlc1_pd3_snk library and is intended to be used in any Power-Delivery WLC1 application.  </dd></dl>
+<td rowspan="4">3.0 </td><td>Added EZ-PD(TM) PMG1 DRP EPR library compliant to USB PD Revision 3.1.  </td><td>New Library  </td></tr>
+<tr>
+<td>Moved software timer and utility functionality to separate PDUtils middleware library. </td><td>Feature addition  </td></tr>
+<tr>
+<td>Updated PDStack to use 27 ms and 29 ms for the tSenderResponse timer while in PD 2.0 and PD3.x contracts respectively. Added API to update the tSenderResponse value from the application space. </td><td>PD specification updates.  </td></tr>
+<tr>
+<td>EPR Keepalive process is incorrectly getting disabled during some pd transactions. This has been corrected. </td><td>Defect fixes.  </td></tr>
+<tr>
+<td>2.0 </td><td>Added WLC1 sink library with support for USB Type-C sink operation and USB PD Revision 3.1 messaging. <dl class="section note"><dt>Note</dt><dd>This version of the PDStack middleware supports only the wlc1_pd3_snk library and is intended to be used in any Power Delivery WLC1 application.  </dd></dl>
 </td><td>WLC1 device support  </td></tr>
 <tr>
-<td rowspan="3">1.20 </td><td>Added libraries for USB Type-C dual role and sink Extended Power Range (EPR) operation  </td><td>New feature Addition   </td></tr>
+<td rowspan="3">1.20 </td><td>Added libraries for USB Type-C dual role and sink Extended Power Range (EPR) operation  </td><td>New feature addition   </td></tr>
 <tr>
 <td>Updated the library to work with RTOS  </td><td>New feature addition   </td></tr>
 <tr>
-<td>Added APIs for changing source/sink pdo capabilities </td><td>Feature Addition.  </td></tr>
+<td>Added APIs for changing source/sink pdo capabilities </td><td>Feature addition.  </td></tr>
 <tr>
-<td rowspan="4">1.10 </td><td>Updated Type-C Error Recovery period to 250 ms. </td><td>PD compliance specification updates.  </td></tr>
+<td rowspan="4">1.10 </td><td>Updated Type-C error recovery period to 250 ms. </td><td>PD compliance specification updates.  </td></tr>
 <tr>
 <td>Updated the size of the status extended message to 7 bytes. </td><td>PD compliance specification updates.  </td></tr>
 <tr>
-<td>USBPD wakeup interrupt was incorrectly getting disabled as part of the Software timer operation. This has been corrected. </td><td>Defect Fixes.  </td></tr>
+<td>USB PD wakeup interrupt is incorrectly getting disabled as part of the software timer operation. This has been corrected. </td><td>Defect fixes.  </td></tr>
 <tr>
 <td>API description updated. </td><td>Documentation update and clarification.  </td></tr>
 <tr>
-<td>1.0 </td><td>Initial Version </td><td></td></tr>
+<td>1.0 </td><td>Initial version </td><td></td></tr>
 </table>
 <h1><a class="anchor" id="section_pdstack_more_information"></a>
-More Information</h1>
-<p>For more information, refer to the following documents:</p>
+More information</h1>
+<p>For more information, see the following documents:</p>
 <ul>
-<li><a href="https://www.cypress.com/products/modustoolbox-software-environment"><b>ModusToolbox Software Environment, Quick Start Guide, Documentation, and Videos</b> </a></li>
-<li><a href="http://www.cypress.com/an232553"><b>AN232553 Getting Started with PMG1 MCU on ModusToolbox</b> </a></li>
-<li><a href="http://www.cypress.com/an232565"><b>AN232565 EZ-PD PMG1 Hardware Design Guidelines and Checklist</b> </a></li>
-<li><a href="https://infineon.github.io/mtb-pdl-cat2/pdl_api_reference_manual/html/index.html"><b>PDL API Reference</b></a></li>
-<li><a href="https://www.cypress.com/documentation/technical-reference-manuals/pmg1-family-pmg1-s0-architecture-technical-reference"><b>PMG1-S0 Architecture Technical Reference Manual</b> </a></li>
-<li><a href="https://www.cypress.com/documentation/technical-reference-manuals/pmg1-family-pmg1-s0-registers-technical-reference-manual"><b>PMG1-S0 Technical Reference Manual</b> </a></li>
-<li><a href="https://www.cypress.com/documentation/technical-reference-manuals/pmg1-family-pmg1-s1-architecture-technical-reference"><b>PMG1-S1 Architecture Technical Reference Manual</b> </a></li>
-<li><a href="https://www.cypress.com/documentation/technical-reference-manuals/pmg1-family-pmg1-s1-registers-technical-reference-manual"><b>PMG1-S1 Technical Reference Manual</b> </a></li>
-<li><a href="https://www.cypress.com/documentation/technical-reference-manuals/pmg1-family-pmg1-s2-architecture-technical-reference"><b>PMG1-S2 Architecture Technical Reference Manual</b> </a></li>
-<li><a href="https://www.cypress.com/documentation/technical-reference-manuals/pmg1-family-pmg1-s2-registers-technical-reference-manual"><b>PMG1-S2 Technical Reference Manual</b> </a></li>
-<li><a href="http://www.cypress.com/ds231596"><b>PMG1-S0 Datasheet</b> </a></li>
-<li><a href="http://www.cypress.com/ds231597"><b>PMG1-S1 Datasheet</b> </a></li>
-<li><a href="http://www.cypress.com/ds231598"><b>PMG1-S2 Datasheet</b> </a></li>
-<li><a href="http://www.cypress.com"><b>Cypress Semiconductor</b> </a></li>
+<li><a href=" https://www.infineon.com/modustoolbox"><b>ModusToolbox(TM) software, quick start guide, documentation, and videos</b> </a></li>
+<li><a href="https://infineon.github.io/mtb-pdl-cat2/pdl_api_reference_manual/html/index.html"><b>PDL API reference</b></a></li>
 </ul>
-<dl class="section note"><dt>Note</dt><dd>The links to the other software component's documentation (middleware and PDL) point to GitHub to the latest available version of the software. To get documentation of the specified version, download from GitHub and unzip the component archive. The documentation is available in the <em>docs</em> folder. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>The links to the other software component's documentation (middleware and PDL) point to GitHub for the latest available version of the software. To get documentation of the specified version, download from GitHub, and unzip the component archive. The documentation is available in the <em>docs</em> folder. </dd></dl>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 2.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.0</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

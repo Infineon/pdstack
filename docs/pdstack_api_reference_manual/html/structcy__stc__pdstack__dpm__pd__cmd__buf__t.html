@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 2.0: cy_stc_pdstack_dpm_pd_cmd_buf_t Struct Reference</title>
+<title>PDStack Middleware Library 3.0: cy_stc_pdstack_dpm_pd_cmd_buf_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 2.0</div>
+   <div id="projectname">PDStack Middleware Library 3.0</div>
   </td>
  </tr>
  </tbody>
@@ -83,43 +83,118 @@ $(document).ready(function(){initNavTree('structcy__stc__pdstack__dpm__pd__cmd__
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">cy_stc_pdstack_dpm_pd_cmd_buf_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data Structures</a></div></div>  </div>
+<div class="title">cy_stc_pdstack_dpm_pd_cmd_buf_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data structures</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
 <div class="textblock"><p>Struct to hold PD command buffer. </p>
-<dl class="section warning"><dt>Warning</dt><dd>When providing pointer to the extended data make sure original buffer is always 4-byte aligned. i.e, even if 1 byte data is required, 4 bytes should be used to store that data. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>When providing a pointer to the extended data, ensure the original buffer is always 4-byte aligned, i.e, even if 1-byte data is required, 4 bytes should be used to store that data. </dd></dl>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:acd1922324dffe004805935c30f843695"><td class="memItemLeft" align="right" valign="top"><a id="acd1922324dffe004805935c30f843695"></a>
-cy_en_pd_sop_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#acd1922324dffe004805935c30f843695">cmdSop</a></td></tr>
-<tr class="memdesc:acd1922324dffe004805935c30f843695"><td class="mdescLeft">&#160;</td><td class="mdescRight">SOP type. <br /></td></tr>
+<tr class="memitem:acd1922324dffe004805935c30f843695"><td class="memItemLeft" align="right" valign="top">cy_en_pd_sop_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#acd1922324dffe004805935c30f843695">cmdSop</a></td></tr>
+<tr class="memdesc:acd1922324dffe004805935c30f843695"><td class="mdescLeft">&#160;</td><td class="mdescRight">SOP typ.  <a href="#acd1922324dffe004805935c30f843695">More...</a><br /></td></tr>
 <tr class="separator:acd1922324dffe004805935c30f843695"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af49b6ae1556aa0b2b2af4598f5e5724f"><td class="memItemLeft" align="right" valign="top"><a id="af49b6ae1556aa0b2b2af4598f5e5724f"></a>
-<a class="el" href="group__group__pdstack__enums.html#ga24366d7f40b113729af15d81a9828943">cy_en_pdstack_extd_msg_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#af49b6ae1556aa0b2b2af4598f5e5724f">extdType</a></td></tr>
-<tr class="memdesc:af49b6ae1556aa0b2b2af4598f5e5724f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended Message Type. <br /></td></tr>
+<tr class="memitem:af49b6ae1556aa0b2b2af4598f5e5724f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga24366d7f40b113729af15d81a9828943">cy_en_pdstack_extd_msg_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#af49b6ae1556aa0b2b2af4598f5e5724f">extdType</a></td></tr>
+<tr class="memdesc:af49b6ae1556aa0b2b2af4598f5e5724f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended message type.  <a href="#af49b6ae1556aa0b2b2af4598f5e5724f">More...</a><br /></td></tr>
 <tr class="separator:af49b6ae1556aa0b2b2af4598f5e5724f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adcd342e9f361c199d6067f906d22d08e"><td class="memItemLeft" align="right" valign="top"><a id="adcd342e9f361c199d6067f906d22d08e"></a>
-<a class="el" href="unioncy__pdstack__extd__hdr__t.html">cy_pdstack_extd_hdr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#adcd342e9f361c199d6067f906d22d08e">extdHdr</a></td></tr>
-<tr class="memdesc:adcd342e9f361c199d6067f906d22d08e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended Header. <br /></td></tr>
+<tr class="memitem:adcd342e9f361c199d6067f906d22d08e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="unioncy__pdstack__extd__hdr__t.html">cy_pdstack_extd_hdr_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#adcd342e9f361c199d6067f906d22d08e">extdHdr</a></td></tr>
+<tr class="memdesc:adcd342e9f361c199d6067f906d22d08e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended header.  <a href="#adcd342e9f361c199d6067f906d22d08e">More...</a><br /></td></tr>
 <tr class="separator:adcd342e9f361c199d6067f906d22d08e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f0374799a3d73b6802f21eb199ae3b6"><td class="memItemLeft" align="right" valign="top"><a id="a4f0374799a3d73b6802f21eb199ae3b6"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#a4f0374799a3d73b6802f21eb199ae3b6">noOfCmdDo</a></td></tr>
-<tr class="memdesc:a4f0374799a3d73b6802f21eb199ae3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">No of data objects including VDM header. <br /></td></tr>
+<tr class="memitem:a4f0374799a3d73b6802f21eb199ae3b6"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#a4f0374799a3d73b6802f21eb199ae3b6">noOfCmdDo</a></td></tr>
+<tr class="memdesc:a4f0374799a3d73b6802f21eb199ae3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">No of data objects including VDM header.  <a href="#a4f0374799a3d73b6802f21eb199ae3b6">More...</a><br /></td></tr>
 <tr class="separator:a4f0374799a3d73b6802f21eb199ae3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed36805d30d72e561465d1db4bfcbf50"><td class="memItemLeft" align="right" valign="top"><a id="aed36805d30d72e561465d1db4bfcbf50"></a>
-uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#aed36805d30d72e561465d1db4bfcbf50">datPtr</a></td></tr>
-<tr class="memdesc:aed36805d30d72e561465d1db4bfcbf50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data Pointer in case of extended message only. <br /></td></tr>
+<tr class="memitem:aed36805d30d72e561465d1db4bfcbf50"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#aed36805d30d72e561465d1db4bfcbf50">datPtr</a></td></tr>
+<tr class="memdesc:aed36805d30d72e561465d1db4bfcbf50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data pointer in case of the extended message only.  <a href="#aed36805d30d72e561465d1db4bfcbf50">More...</a><br /></td></tr>
 <tr class="separator:aed36805d30d72e561465d1db4bfcbf50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a160686627f1be1a8427230c7712663f4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#a160686627f1be1a8427230c7712663f4">timeout</a></td></tr>
-<tr class="memdesc:a160686627f1be1a8427230c7712663f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timeout value, in ms, for a response.  <a href="#a160686627f1be1a8427230c7712663f4">More...</a><br /></td></tr>
+<tr class="memdesc:a160686627f1be1a8427230c7712663f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timeout value in ms for a response.  <a href="#a160686627f1be1a8427230c7712663f4">More...</a><br /></td></tr>
 <tr class="separator:a160686627f1be1a8427230c7712663f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d4be57f8542b8779eb70b3a0ecdb7a6"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#a0d4be57f8542b8779eb70b3a0ecdb7a6">cmdDo</a> [<a class="el" href="group__group__pdstack__macros.html#ga6e0f4d6200f73e833ea05dc85172ee16">CY_PD_MAX_NO_OF_DO</a>]</td></tr>
 <tr class="memdesc:a0d4be57f8542b8779eb70b3a0ecdb7a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Command data objects.  <a href="#a0d4be57f8542b8779eb70b3a0ecdb7a6">More...</a><br /></td></tr>
 <tr class="separator:a0d4be57f8542b8779eb70b3a0ecdb7a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
+<a id="acd1922324dffe004805935c30f843695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd1922324dffe004805935c30f843695">&#9670;&nbsp;</a></span>cmdSop</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">cy_en_pd_sop_t cy_stc_pdstack_dpm_pd_cmd_buf_t::cmdSop</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SOP typ. </p>
+
+</div>
+</div>
+<a id="af49b6ae1556aa0b2b2af4598f5e5724f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af49b6ae1556aa0b2b2af4598f5e5724f">&#9670;&nbsp;</a></span>extdType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga24366d7f40b113729af15d81a9828943">cy_en_pdstack_extd_msg_t</a> cy_stc_pdstack_dpm_pd_cmd_buf_t::extdType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extended message type. </p>
+
+</div>
+</div>
+<a id="adcd342e9f361c199d6067f906d22d08e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcd342e9f361c199d6067f906d22d08e">&#9670;&nbsp;</a></span>extdHdr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unioncy__pdstack__extd__hdr__t.html">cy_pdstack_extd_hdr_t</a> cy_stc_pdstack_dpm_pd_cmd_buf_t::extdHdr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extended header. </p>
+
+</div>
+</div>
+<a id="a4f0374799a3d73b6802f21eb199ae3b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f0374799a3d73b6802f21eb199ae3b6">&#9670;&nbsp;</a></span>noOfCmdDo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_dpm_pd_cmd_buf_t::noOfCmdDo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>No of data objects including VDM header. </p>
+
+</div>
+</div>
+<a id="aed36805d30d72e561465d1db4bfcbf50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed36805d30d72e561465d1db4bfcbf50">&#9670;&nbsp;</a></span>datPtr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* cy_stc_pdstack_dpm_pd_cmd_buf_t::datPtr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Data pointer in case of the extended message only. </p>
+
+</div>
+</div>
 <a id="a160686627f1be1a8427230c7712663f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a160686627f1be1a8427230c7712663f4">&#9670;&nbsp;</a></span>timeout</h2>
 
@@ -132,8 +207,8 @@ uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
       </table>
 </div><div class="memdoc">
 
-<p>Timeout value, in ms, for a response. </p>
-<p>If set to zero, the PD stack will not wait for a VDM response and jump to ready state after this buffer has been sent. </p>
+<p>Timeout value in ms for a response. </p>
+<p>If set to zero, the PD stack will not wait for a VDM response and jumps to the ready state after this buffer has been sent. </p>
 
 </div>
 </div>
@@ -159,7 +234,7 @@ uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href=
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 2.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.0</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

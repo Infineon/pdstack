@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 2.0: cy_stc_pdstack_pd_packet_t Struct Reference</title>
+<title>PDStack Middleware Library 3.0: cy_stc_pdstack_pd_packet_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 2.0</div>
+   <div id="projectname">PDStack Middleware Library 3.0</div>
   </td>
  </tr>
  </tbody>
@@ -83,7 +83,7 @@ $(document).ready(function(){initNavTree('structcy__stc__pdstack__pd__packet__t.
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">cy_stc_pdstack_pd_packet_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data Structures</a></div></div>  </div>
+<div class="title">cy_stc_pdstack_pd_packet_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data structures</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
@@ -106,9 +106,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a34622b76f6904a7d7e0ed9fba7fc2699"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_hdr_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html#a34622b76f6904a7d7e0ed9fba7fc2699">hdr</a></td></tr>
 <tr class="memdesc:a34622b76f6904a7d7e0ed9fba7fc2699"><td class="mdescLeft">&#160;</td><td class="mdescRight">Message header.  <a href="#a34622b76f6904a7d7e0ed9fba7fc2699">More...</a><br /></td></tr>
 <tr class="separator:a34622b76f6904a7d7e0ed9fba7fc2699"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab26d7ccb5f6aa8ecb76d7c89a042b975"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html#ab26d7ccb5f6aa8ecb76d7c89a042b975">dat</a> [<a class="el" href="group__group__pdstack__macros.html#ga6e0f4d6200f73e833ea05dc85172ee16">CY_PD_MAX_NO_OF_DO</a>]</td></tr>
-<tr class="memdesc:ab26d7ccb5f6aa8ecb76d7c89a042b975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data objects associated with the message.  <a href="#ab26d7ccb5f6aa8ecb76d7c89a042b975">More...</a><br /></td></tr>
-<tr class="separator:ab26d7ccb5f6aa8ecb76d7c89a042b975"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf647567df1e16d9bc85836bf1fa1330"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html#acf647567df1e16d9bc85836bf1fa1330">dat</a> [<a class="el" href="group__group__pdstack__macros.html#ga6e0f4d6200f73e833ea05dc85172ee16">CY_PD_MAX_NO_OF_DO</a>+<a class="el" href="group__group__pdstack__macros.html#ga0b680656c00df03fd94113b78cefde43">CY_PD_MAX_NO_OF_EPR_PDO</a>]</td></tr>
+<tr class="memdesc:acf647567df1e16d9bc85836bf1fa1330"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data objects associated with the message.  <a href="#acf647567df1e16d9bc85836bf1fa1330">More...</a><br /></td></tr>
+<tr class="separator:acf647567df1e16d9bc85836bf1fa1330"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="add66bc50dcce3ea5e6cfd41b8d56b1ae"></a>
@@ -191,14 +191,14 @@ Data Fields</h2></td></tr>
 
 </div>
 </div>
-<a id="ab26d7ccb5f6aa8ecb76d7c89a042b975"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab26d7ccb5f6aa8ecb76d7c89a042b975">&#9670;&nbsp;</a></span>dat</h2>
+<a id="acf647567df1e16d9bc85836bf1fa1330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf647567df1e16d9bc85836bf1fa1330">&#9670;&nbsp;</a></span>dat</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_pd_packet_t::dat[<a class="el" href="group__group__pdstack__macros.html#ga6e0f4d6200f73e833ea05dc85172ee16">CY_PD_MAX_NO_OF_DO</a>]</td>
+          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_pd_packet_t::dat[<a class="el" href="group__group__pdstack__macros.html#ga6e0f4d6200f73e833ea05dc85172ee16">CY_PD_MAX_NO_OF_DO</a>+<a class="el" href="group__group__pdstack__macros.html#ga0b680656c00df03fd94113b78cefde43">CY_PD_MAX_NO_OF_EPR_PDO</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -213,7 +213,7 @@ Data Fields</h2></td></tr>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 2.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.0</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

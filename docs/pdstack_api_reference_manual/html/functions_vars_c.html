@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 2.0: Data Fields - Variables</title>
+<title>PDStack Middleware Library 3.0: Data Fields - Variables</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 2.0</div>
+   <div id="projectname">PDStack Middleware Library 3.0</div>
   </td>
  </tr>
  </tbody>
@@ -90,12 +90,6 @@ $(document).ready(function(){initNavTree('functions_vars_c.html','');});
 <li>cableDiscEn
 : <a class="el" href="structcy__stc__pdstack__port__cfg__t.html#a00e0901288a552e14d03375eccda2a83">cy_stc_pdstack_port_cfg_t</a>
 </li>
-<li>callbackContext
-: <a class="el" href="structcy__timer__t.html#aaa77133407d3317e2d50c1d37610d36f">cy_timer_t</a>
-</li>
-<li>cb
-: <a class="el" href="structcy__timer__t.html#a64450c3d91a2266e7b30c58ee57028a7">cy_timer_t</a>
-</li>
 <li>cbk
 : <a class="el" href="structcy__stc__pdstack__pd__status__t.html#a2f93c500198b261002756f6f33fbe6a2">cy_stc_pdstack_pd_status_t</a>
 </li>
@@ -129,6 +123,9 @@ $(document).ready(function(){initNavTree('functions_vars_c.html','');});
 <li>cblWait
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ae6f5f48baa4496100bfcfeefbd86ae7c">cy_stc_pdstack_dpm_status_t</a>
 </li>
+<li>ccDebouncePeriod
+: <a class="el" href="structcy__stc__pdstack__pd__timer__params__t.html#ab1554c519deae788ed9bd0cdb8c21ff6">cy_stc_pdstack_pd_timer_params_t</a>
+</li>
 <li>ccgSpecRev
 : <a class="el" href="structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a42dd2b86760e5f03516b6389e93f726f">cy_stc_pdstack_pd_port_status_ec_t::PD_PORT_STAT</a>
 </li>
@@ -143,6 +140,9 @@ $(document).ready(function(){initNavTree('functions_vars_c.html','');});
 </li>
 <li>ccStatusDebounced
 : <a class="el" href="structcy__stc__pdstack__typec__status__t.html#acd9eff717cf235e0c5cf5155c156a6fe">cy_stc_pdstack_typec_status_t</a>
+</li>
+<li>chunkDetermined
+: <a class="el" href="structcy__stc__pdstack__pe__status__t.html#aca6a3f5f2d9e0548e979658608af12d1">cy_stc_pdstack_pe_status_t</a>
 </li>
 <li>chunked
 : <a class="el" href="structcy__pdstack__extd__hdr__t_1_1_e_x_t_d___h_d_r___t.html#ada2804e49909b0a5c4e4ebd005bc032b">cy_pdstack_extd_hdr_t::EXTD_HDR_T</a>
@@ -168,9 +168,6 @@ $(document).ready(function(){initNavTree('functions_vars_c.html','');});
 </li>
 <li>contractExist
 : <a class="el" href="structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#ae7cb30275a587ced24f9cbdb8c5912b4">cy_stc_pdstack_pd_port_status_ec_t::PD_PORT_STAT</a>
-</li>
-<li>count
-: <a class="el" href="structcy__timer__t.html#a9106f4f596c08632d458caf1180e3c07">cy_timer_t</a>
 </li>
 <li>ctrs
 : <a class="el" href="structcy__stc__pdstack__pd__status__t.html#a8cfffa18a0d015a4418b7c791def17d9">cy_stc_pdstack_pd_status_t</a>
@@ -203,16 +200,16 @@ $(document).ready(function(){initNavTree('functions_vars_c.html','');});
 : <a class="el" href="structcy__stc__pdstack__pd__status__t.html#a909bca78eef6ae91848411fb7bc4c05b">cy_stc_pdstack_pd_status_t</a>
 </li>
 <li>curSnkMaxMin
-: <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a0a83190ef2e736bd92e14377698e4ff6">cy_stc_pdstack_dpm_status_t</a>
+: <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a48619b4489568200723116ea3121c9cb">cy_stc_pdstack_dpm_status_t</a>
 </li>
 <li>curSnkPdo
-: <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a189125e681b701d465be03f1634feff3">cy_stc_pdstack_dpm_status_t</a>
+: <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ad82cc4ffe862688eb9bb252db0a050eb">cy_stc_pdstack_dpm_status_t</a>
 </li>
 <li>curSnkPdocount
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a6e1760af5d9caac300acdcd720970102">cy_stc_pdstack_dpm_status_t</a>
 </li>
 <li>curSrcPdo
-: <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a45ce464ac7e94fed791ade1d49d5fca1">cy_stc_pdstack_dpm_status_t</a>
+: <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a98cbb57770030f6ebb0bddaf48e9dac3">cy_stc_pdstack_dpm_status_t</a>
 </li>
 <li>curSrcPdocount
 : <a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a963af76e3baf93e2017c21e14874e148">cy_stc_pdstack_dpm_status_t</a>
@@ -224,7 +221,7 @@ $(document).ready(function(){initNavTree('functions_vars_c.html','');});
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 2.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.0</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

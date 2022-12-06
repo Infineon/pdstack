@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 2.0: cy_stc_pdstack_dpm_status_t Struct Reference</title>
+<title>PDStack Middleware Library 3.0: cy_stc_pdstack_dpm_status_t Struct Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 2.0</div>
+   <div id="projectname">PDStack Middleware Library 3.0</div>
   </td>
  </tr>
  </tbody>
@@ -83,20 +83,20 @@ $(document).ready(function(){initNavTree('structcy__stc__pdstack__dpm__status__t
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">cy_stc_pdstack_dpm_status_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data Structures</a></div></div>  </div>
+<div class="title">cy_stc_pdstack_dpm_status_t Struct Reference<div class="ingroups"><a class="el" href="group__group__pdstack__data__structures.html">Data structures</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">Description</h2>
-<div class="textblock"><p>PD Device Policy Status structure. </p>
-<p>This structure holds all of the configuration and status information associated with a port on the PMG1 device. Members of this structure should not be directly modified by any of the application code. </p>
+<div class="textblock"><p>PD device policy status structure. </p>
+<p>This structure holds all of the configuration and status information associated with a port on the EZ-PD(TM) PMG1 device. Members of this structure should not be directly modified by any of the application code. </p>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a263e151e9772a4611ae55923073d037d"><td class="memItemLeft" align="right" valign="top">cy_en_pd_port_role_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a263e151e9772a4611ae55923073d037d">portRole</a></td></tr>
-<tr class="memdesc:a263e151e9772a4611ae55923073d037d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Port role: Sink, Source or Dual.  <a href="#a263e151e9772a4611ae55923073d037d">More...</a><br /></td></tr>
+<tr class="memdesc:a263e151e9772a4611ae55923073d037d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Port role: Sink, source, or dual.  <a href="#a263e151e9772a4611ae55923073d037d">More...</a><br /></td></tr>
 <tr class="separator:a263e151e9772a4611ae55923073d037d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06372360e2b24694c87b3a94dae484b5"><td class="memItemLeft" align="right" valign="top">cy_en_pd_port_role_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a06372360e2b24694c87b3a94dae484b5">dfltPortRole</a></td></tr>
-<tr class="memdesc:a06372360e2b24694c87b3a94dae484b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default port role: Sink or Source.  <a href="#a06372360e2b24694c87b3a94dae484b5">More...</a><br /></td></tr>
+<tr class="memdesc:a06372360e2b24694c87b3a94dae484b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default port role: Sink or source.  <a href="#a06372360e2b24694c87b3a94dae484b5">More...</a><br /></td></tr>
 <tr class="separator:a06372360e2b24694c87b3a94dae484b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f89705d20556829dd3af46140228722"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a2f89705d20556829dd3af46140228722">srcCurLevel</a></td></tr>
 <tr class="memdesc:a2f89705d20556829dd3af46140228722"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type C current level in the source role.  <a href="#a2f89705d20556829dd3af46140228722">More...</a><br /></td></tr>
@@ -120,19 +120,19 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:abf522cc0dfb67272e100d030d20670de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source PDO mask from the config table or updated at runtime by the EC.  <a href="#abf522cc0dfb67272e100d030d20670de">More...</a><br /></td></tr>
 <tr class="separator:abf522cc0dfb67272e100d030d20670de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab662f7a57e732fd1230fce0f7adc2083"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ab662f7a57e732fd1230fce0f7adc2083">snkPdoCount</a></td></tr>
-<tr class="memdesc:ab662f7a57e732fd1230fce0f7adc2083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sink PDO count from the config table or updated at runtime by the EC.  <a href="#ab662f7a57e732fd1230fce0f7adc2083">More...</a><br /></td></tr>
+<tr class="memdesc:ab662f7a57e732fd1230fce0f7adc2083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sink PDO count from the config table or update at runtime by the EC.  <a href="#ab662f7a57e732fd1230fce0f7adc2083">More...</a><br /></td></tr>
 <tr class="separator:ab662f7a57e732fd1230fce0f7adc2083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af952cc4ca924ab702e43c82689186426"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#af952cc4ca924ab702e43c82689186426">snkPdoMask</a></td></tr>
-<tr class="memdesc:af952cc4ca924ab702e43c82689186426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sink PDO mask from the config table or updated at runtime by the EC.  <a href="#af952cc4ca924ab702e43c82689186426">More...</a><br /></td></tr>
+<tr class="memdesc:af952cc4ca924ab702e43c82689186426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sink PDO mask from the config table or update at runtime by the EC.  <a href="#af952cc4ca924ab702e43c82689186426">More...</a><br /></td></tr>
 <tr class="separator:af952cc4ca924ab702e43c82689186426"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af71ae478ede1199c851d5caff2d20795"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#af71ae478ede1199c851d5caff2d20795">rpSupported</a></td></tr>
 <tr class="memdesc:af71ae478ede1199c851d5caff2d20795"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supported Rp values bit mask.  <a href="#af71ae478ede1199c851d5caff2d20795">More...</a><br /></td></tr>
 <tr class="separator:af71ae478ede1199c851d5caff2d20795"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5be6b199d4809509e028d3d2293f5a4c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a5be6b199d4809509e028d3d2293f5a4c">pdSupport</a></td></tr>
-<tr class="memdesc:a5be6b199d4809509e028d3d2293f5a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">USB-PD supported.  <a href="#a5be6b199d4809509e028d3d2293f5a4c">More...</a><br /></td></tr>
+<tr class="memdesc:a5be6b199d4809509e028d3d2293f5a4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">USB PD supported.  <a href="#a5be6b199d4809509e028d3d2293f5a4c">More...</a><br /></td></tr>
 <tr class="separator:a5be6b199d4809509e028d3d2293f5a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac41a1466fca9f6c590a6894a0a37a64f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ac41a1466fca9f6c590a6894a0a37a64f">trySrcSnk</a></td></tr>
-<tr class="memdesc:ac41a1466fca9f6c590a6894a0a37a64f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try Source/ Try Sink control knob.  <a href="#ac41a1466fca9f6c590a6894a0a37a64f">More...</a><br /></td></tr>
+<tr class="memdesc:ac41a1466fca9f6c590a6894a0a37a64f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Try source/sink control knob.  <a href="#ac41a1466fca9f6c590a6894a0a37a64f">More...</a><br /></td></tr>
 <tr class="separator:ac41a1466fca9f6c590a6894a0a37a64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa99de4674ed6296cf7363920533fa3d7"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#aa99de4674ed6296cf7363920533fa3d7">dbSupport</a></td></tr>
 <tr class="memdesc:aa99de4674ed6296cf7363920533fa3d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dead battery support control knob.  <a href="#aa99de4674ed6296cf7363920533fa3d7">More...</a><br /></td></tr>
@@ -144,7 +144,7 @@ Data Fields</h2></td></tr>
 <tr class="memdesc:ab5e5806cb5b4dd15373109c76c9d4fe8"><td class="mdescLeft">&#160;</td><td class="mdescRight">PD port disable flag.  <a href="#ab5e5806cb5b4dd15373109c76c9d4fe8">More...</a><br /></td></tr>
 <tr class="separator:ab5e5806cb5b4dd15373109c76c9d4fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a051c97c792f8c7130298cb0fce3651b5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a051c97c792f8c7130298cb0fce3651b5">frsEnable</a></td></tr>
-<tr class="memdesc:a051c97c792f8c7130298cb0fce3651b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">FRS enable flags.  <a href="#a051c97c792f8c7130298cb0fce3651b5">More...</a><br /></td></tr>
+<tr class="memdesc:a051c97c792f8c7130298cb0fce3651b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">FRS enable flag.  <a href="#a051c97c792f8c7130298cb0fce3651b5">More...</a><br /></td></tr>
 <tr class="separator:a051c97c792f8c7130298cb0fce3651b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9aa2b86e70e34a79e71af8a6e43505e4"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a9aa2b86e70e34a79e71af8a6e43505e4">vconnRetain</a></td></tr>
 <tr class="memdesc:a9aa2b86e70e34a79e71af8a6e43505e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether VConn should be retained in ON state.  <a href="#a9aa2b86e70e34a79e71af8a6e43505e4">More...</a><br /></td></tr>
@@ -165,14 +165,14 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="separator:a76f55b616c669bd5183dd69b87f6ed70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a038b3b9b5d919dce9f20d279044a4445"><td class="memItemLeft" align="right" valign="top"><a id="a038b3b9b5d919dce9f20d279044a4445"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a038b3b9b5d919dce9f20d279044a4445">srcPdoFlags</a> [2]</td></tr>
-<tr class="memdesc:a038b3b9b5d919dce9f20d279044a4445"><td class="mdescLeft">&#160;</td><td class="mdescRight">B29:B20 of the first 5V Fixed Source PDO. <br /></td></tr>
+<tr class="memdesc:a038b3b9b5d919dce9f20d279044a4445"><td class="mdescLeft">&#160;</td><td class="mdescRight">B29:B20 of the first 5 V fixed source PDO. <br /></td></tr>
 <tr class="separator:a038b3b9b5d919dce9f20d279044a4445"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3891a0ac2bec7dbb8fa2b1c5cd6b8858"><td class="memItemLeft" align="right" valign="top"><a id="a3891a0ac2bec7dbb8fa2b1c5cd6b8858"></a>
 uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a3891a0ac2bec7dbb8fa2b1c5cd6b8858">snkPdoFlags</a> [2]</td></tr>
-<tr class="memdesc:a3891a0ac2bec7dbb8fa2b1c5cd6b8858"><td class="mdescLeft">&#160;</td><td class="mdescRight">B29:B20 of the first 5V Fixed Sink PDO. <br /></td></tr>
+<tr class="memdesc:a3891a0ac2bec7dbb8fa2b1c5cd6b8858"><td class="mdescLeft">&#160;</td><td class="mdescRight">B29:B20 of the first 5 V fixed sink PDO. <br /></td></tr>
 <tr class="separator:a3891a0ac2bec7dbb8fa2b1c5cd6b8858"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afefcb126ff0faedf42438a3ff5a869c9"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#afefcb126ff0faedf42438a3ff5a869c9">bootup</a></td></tr>
-<tr class="memdesc:afefcb126ff0faedf42438a3ff5a869c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate chip bootup, used to check dead battery.  <a href="#afefcb126ff0faedf42438a3ff5a869c9">More...</a><br /></td></tr>
+<tr class="memdesc:afefcb126ff0faedf42438a3ff5a869c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate chip bootup used to check dead battery.  <a href="#afefcb126ff0faedf42438a3ff5a869c9">More...</a><br /></td></tr>
 <tr class="separator:afefcb126ff0faedf42438a3ff5a869c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28bbaab544d7568ad7ee65f2105a34e2"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a28bbaab544d7568ad7ee65f2105a34e2">deadBat</a></td></tr>
 <tr class="memdesc:a28bbaab544d7568ad7ee65f2105a34e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate dead battery operation.  <a href="#a28bbaab544d7568ad7ee65f2105a34e2">More...</a><br /></td></tr>
@@ -181,16 +181,16 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
 <tr class="memdesc:a6cdd56fd5ac8a21ecbd221d8c15bcae2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time period for DRP toggling.  <a href="#a6cdd56fd5ac8a21ecbd221d8c15bcae2">More...</a><br /></td></tr>
 <tr class="separator:a6cdd56fd5ac8a21ecbd221d8c15bcae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef802958679f3417222dc77c50c1ed9b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#aef802958679f3417222dc77c50c1ed9b">srcPeriod</a></td></tr>
-<tr class="memdesc:aef802958679f3417222dc77c50c1ed9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time period for which to stay as a SRC for a DRP device.  <a href="#aef802958679f3417222dc77c50c1ed9b">More...</a><br /></td></tr>
+<tr class="memdesc:aef802958679f3417222dc77c50c1ed9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time period for which to stay as an SRC for a DRP device.  <a href="#aef802958679f3417222dc77c50c1ed9b">More...</a><br /></td></tr>
 <tr class="separator:aef802958679f3417222dc77c50c1ed9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ac9cec67e93fe222739a71140f7a89e"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a4ac9cec67e93fe222739a71140f7a89e">snkPeriod</a></td></tr>
-<tr class="memdesc:a4ac9cec67e93fe222739a71140f7a89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time period for which to stay as a SNK for a DRP device.  <a href="#a4ac9cec67e93fe222739a71140f7a89e">More...</a><br /></td></tr>
+<tr class="memdesc:a4ac9cec67e93fe222739a71140f7a89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Time period for which to stay as an SNK for a DRP device.  <a href="#a4ac9cec67e93fe222739a71140f7a89e">More...</a><br /></td></tr>
 <tr class="separator:a4ac9cec67e93fe222739a71140f7a89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11d5528236d68880926f93d9a55ed6fe"><td class="memItemLeft" align="right" valign="top">cy_en_pd_port_role_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a11d5528236d68880926f93d9a55ed6fe">roleAtConnect</a></td></tr>
 <tr class="memdesc:a11d5528236d68880926f93d9a55ed6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Port role when the port moved to the attached state.  <a href="#a11d5528236d68880926f93d9a55ed6fe">More...</a><br /></td></tr>
 <tr class="separator:a11d5528236d68880926f93d9a55ed6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63610f93fc09aabf5650f3a9c1070bec"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a63610f93fc09aabf5650f3a9c1070bec">pdConnected</a></td></tr>
-<tr class="memdesc:a63610f93fc09aabf5650f3a9c1070bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ports are PD connected indication.  <a href="#a63610f93fc09aabf5650f3a9c1070bec">More...</a><br /></td></tr>
+<tr class="memdesc:a63610f93fc09aabf5650f3a9c1070bec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ports are PD-connected indications.  <a href="#a63610f93fc09aabf5650f3a9c1070bec">More...</a><br /></td></tr>
 <tr class="separator:a63610f93fc09aabf5650f3a9c1070bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00746bd1621d301e4c8cd1490352fd9b"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a00746bd1621d301e4c8cd1490352fd9b">pdDisabled</a></td></tr>
 <tr class="memdesc:a00746bd1621d301e4c8cd1490352fd9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">PD disabled indication.  <a href="#a00746bd1621d301e4c8cd1490352fd9b">More...</a><br /></td></tr>
@@ -198,9 +198,8 @@ uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="s
 <tr class="memitem:ad4a9d38522d08ef762457932e3be79b1"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ad4a9d38522d08ef762457932e3be79b1">raPresent</a></td></tr>
 <tr class="memdesc:ad4a9d38522d08ef762457932e3be79b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ra present indication.  <a href="#ad4a9d38522d08ef762457932e3be79b1">More...</a><br /></td></tr>
 <tr class="separator:ad4a9d38522d08ef762457932e3be79b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c8aa837e6a754b2adb3172af03084e5"><td class="memItemLeft" align="right" valign="top"><a id="a3c8aa837e6a754b2adb3172af03084e5"></a>
-bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a3c8aa837e6a754b2adb3172af03084e5">bistCm2Enabled</a></td></tr>
-<tr class="memdesc:a3c8aa837e6a754b2adb3172af03084e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">BIST Carrier Mode 2 going on. <br /></td></tr>
+<tr class="memitem:a3c8aa837e6a754b2adb3172af03084e5"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a3c8aa837e6a754b2adb3172af03084e5">bistCm2Enabled</a></td></tr>
+<tr class="memdesc:a3c8aa837e6a754b2adb3172af03084e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">BIST carrier mode 2 running.  <a href="#a3c8aa837e6a754b2adb3172af03084e5">More...</a><br /></td></tr>
 <tr class="separator:a3c8aa837e6a754b2adb3172af03084e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45b891e879d4bc9fd47da0e4d9d3d1de"><td class="memItemLeft" align="right" valign="top">bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a45b891e879d4bc9fd47da0e4d9d3d1de">bistStmEnabled</a></td></tr>
 <tr class="memdesc:a45b891e879d4bc9fd47da0e4d9d3d1de"><td class="mdescLeft">&#160;</td><td class="mdescRight">BIST_Shared_Test_Mode enabled flag.  <a href="#a45b891e879d4bc9fd47da0e4d9d3d1de">More...</a><br /></td></tr>
@@ -227,16 +226,16 @@ bool volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memdesc:a3be6e86aeff1adc0962c1dea655daaf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores number of cable soft reset tries.  <a href="#a3be6e86aeff1adc0962c1dea655daaf9">More...</a><br /></td></tr>
 <tr class="separator:a3be6e86aeff1adc0962c1dea655daaf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97699af0ef3330bc1cb12a51166a2bf3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga6274d400cdeecb2da1711ded27ba9953">cy_en_pdstack_typec_fsm_state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a97699af0ef3330bc1cb12a51166a2bf3">typecFsmState</a></td></tr>
-<tr class="memdesc:a97699af0ef3330bc1cb12a51166a2bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type C generic FSM state.  <a href="#a97699af0ef3330bc1cb12a51166a2bf3">More...</a><br /></td></tr>
+<tr class="memdesc:a97699af0ef3330bc1cb12a51166a2bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type-C generic FSM state.  <a href="#a97699af0ef3330bc1cb12a51166a2bf3">More...</a><br /></td></tr>
 <tr class="separator:a97699af0ef3330bc1cb12a51166a2bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a261bb12e3a76b1bff552017079826b6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#gaab347ed9d4ea3174377c728e9304fa27">cy_en_pdstack_dpm_pd_cmd_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a261bb12e3a76b1bff552017079826b6d">dpmPdCmd</a></td></tr>
 <tr class="memdesc:a261bb12e3a76b1bff552017079826b6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current DPM PD command.  <a href="#a261bb12e3a76b1bff552017079826b6d">More...</a><br /></td></tr>
 <tr class="separator:a261bb12e3a76b1bff552017079826b6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab97989d97c7a7ea929c5856365b9342a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ab97989d97c7a7ea929c5856365b9342a">dpmPdCmdActive</a></td></tr>
-<tr class="memdesc:ab97989d97c7a7ea929c5856365b9342a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate DPM PD command was registered.  <a href="#ab97989d97c7a7ea929c5856365b9342a">More...</a><br /></td></tr>
+<tr class="memdesc:ab97989d97c7a7ea929c5856365b9342a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates DPM PD command is registered.  <a href="#ab97989d97c7a7ea929c5856365b9342a">More...</a><br /></td></tr>
 <tr class="separator:ab97989d97c7a7ea929c5856365b9342a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88400340ab37bd42269efdfbe3d245d8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a88400340ab37bd42269efdfbe3d245d8">dpmTypecCmdActive</a></td></tr>
-<tr class="memdesc:a88400340ab37bd42269efdfbe3d245d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicate DPM Type C command was registered.  <a href="#a88400340ab37bd42269efdfbe3d245d8">More...</a><br /></td></tr>
+<tr class="memdesc:a88400340ab37bd42269efdfbe3d245d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates DPM Type C command is registered.  <a href="#a88400340ab37bd42269efdfbe3d245d8">More...</a><br /></td></tr>
 <tr class="separator:a88400340ab37bd42269efdfbe3d245d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a158fe82e4b6adf297c06ce1bf831afd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a158fe82e4b6adf297c06ce1bf831afd4">dpmInit</a></td></tr>
 <tr class="memdesc:a158fe82e4b6adf297c06ce1bf831afd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">DPM Initialized flag.  <a href="#a158fe82e4b6adf297c06ce1bf831afd4">More...</a><br /></td></tr>
@@ -292,7 +291,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="memdesc:a51984dbd6ed45bed19bb7ea9272254e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate the a fault condition exists.  <a href="#a51984dbd6ed45bed19bb7ea9272254e2">More...</a><br /></td></tr>
 <tr class="separator:a51984dbd6ed45bed19bb7ea9272254e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0658732465e3ebe26e375b1fe3b1a52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#gadf6ec016657630c1107179e503789e8b">cy_en_pdstack_pe_fsm_state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ad0658732465e3ebe26e375b1fe3b1a52">peFsmState</a></td></tr>
-<tr class="memdesc:ad0658732465e3ebe26e375b1fe3b1a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the current state of Policy Engine (PE).  <a href="#ad0658732465e3ebe26e375b1fe3b1a52">More...</a><br /></td></tr>
+<tr class="memdesc:ad0658732465e3ebe26e375b1fe3b1a52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Holds the current state of policy engine (PE).  <a href="#ad0658732465e3ebe26e375b1fe3b1a52">More...</a><br /></td></tr>
 <tr class="separator:ad0658732465e3ebe26e375b1fe3b1a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06191eee02a4f9dfa727ba51e1f31b68"><td class="memItemLeft" align="right" valign="top">uint32_t volatile&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a06191eee02a4f9dfa727ba51e1f31b68">peEvt</a></td></tr>
 <tr class="memdesc:a06191eee02a4f9dfa727ba51e1f31b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores policy engine events.  <a href="#a06191eee02a4f9dfa727ba51e1f31b68">More...</a><br /></td></tr>
@@ -326,15 +325,15 @@ uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memitem:a7424711b42c965faf8d046e6649af6c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__dpm__pd__cmd__buf__t.html">cy_stc_pdstack_dpm_pd_cmd_buf_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a7424711b42c965faf8d046e6649af6c3">dpmCmdBuf</a></td></tr>
 <tr class="memdesc:a7424711b42c965faf8d046e6649af6c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Local DPM command buffer.  <a href="#a7424711b42c965faf8d046e6649af6c3">More...</a><br /></td></tr>
 <tr class="separator:a7424711b42c965faf8d046e6649af6c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a83190ef2e736bd92e14377698e4ff6"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a0a83190ef2e736bd92e14377698e4ff6">curSnkMaxMin</a> [<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>]</td></tr>
-<tr class="memdesc:a0a83190ef2e736bd92e14377698e4ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max min current/power of current sink capabilities.  <a href="#a0a83190ef2e736bd92e14377698e4ff6">More...</a><br /></td></tr>
-<tr class="separator:a0a83190ef2e736bd92e14377698e4ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45ce464ac7e94fed791ade1d49d5fca1"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a45ce464ac7e94fed791ade1d49d5fca1">curSrcPdo</a> [<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>]</td></tr>
-<tr class="memdesc:a45ce464ac7e94fed791ade1d49d5fca1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current source PDOs sent in source cap messages.  <a href="#a45ce464ac7e94fed791ade1d49d5fca1">More...</a><br /></td></tr>
-<tr class="separator:a45ce464ac7e94fed791ade1d49d5fca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a189125e681b701d465be03f1634feff3"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a189125e681b701d465be03f1634feff3">curSnkPdo</a> [<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>]</td></tr>
-<tr class="memdesc:a189125e681b701d465be03f1634feff3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current sink PDOs sent in sink cap messages.  <a href="#a189125e681b701d465be03f1634feff3">More...</a><br /></td></tr>
-<tr class="separator:a189125e681b701d465be03f1634feff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48619b4489568200723116ea3121c9cb"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a48619b4489568200723116ea3121c9cb">curSnkMaxMin</a> [<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>+<a class="el" href="group__group__pdstack__macros.html#ga0b680656c00df03fd94113b78cefde43">CY_PD_MAX_NO_OF_EPR_PDO</a>]</td></tr>
+<tr class="memdesc:a48619b4489568200723116ea3121c9cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Max min current/power of current sink capabilities.  <a href="#a48619b4489568200723116ea3121c9cb">More...</a><br /></td></tr>
+<tr class="separator:a48619b4489568200723116ea3121c9cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98cbb57770030f6ebb0bddaf48e9dac3"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a98cbb57770030f6ebb0bddaf48e9dac3">curSrcPdo</a> [<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>+<a class="el" href="group__group__pdstack__macros.html#ga0b680656c00df03fd94113b78cefde43">CY_PD_MAX_NO_OF_EPR_PDO</a>]</td></tr>
+<tr class="memdesc:a98cbb57770030f6ebb0bddaf48e9dac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current source PDOs sent in source cap messages.  <a href="#a98cbb57770030f6ebb0bddaf48e9dac3">More...</a><br /></td></tr>
+<tr class="separator:a98cbb57770030f6ebb0bddaf48e9dac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad82cc4ffe862688eb9bb252db0a050eb"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ad82cc4ffe862688eb9bb252db0a050eb">curSnkPdo</a> [<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>+<a class="el" href="group__group__pdstack__macros.html#ga0b680656c00df03fd94113b78cefde43">CY_PD_MAX_NO_OF_EPR_PDO</a>]</td></tr>
+<tr class="memdesc:ad82cc4ffe862688eb9bb252db0a050eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current sink PDOs sent in sink cap messages.  <a href="#ad82cc4ffe862688eb9bb252db0a050eb">More...</a><br /></td></tr>
+<tr class="separator:ad82cc4ffe862688eb9bb252db0a050eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f8a435205c8873f297e6eeaf2d565ab"><td class="memItemLeft" align="right" valign="top"><a id="a2f8a435205c8873f297e6eeaf2d565ab"></a>
 cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a2f8a435205c8873f297e6eeaf2d565ab">srcCurRdo</a></td></tr>
 <tr class="memdesc:a2f8a435205c8873f297e6eeaf2d565ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the current rdo received by source. <br /></td></tr>
@@ -351,23 +350,22 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memdesc:ada79450aaa46cfb0fdc886ef5d9f8cdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Last RDO sent (when operating as a sink) that resulted in a contract. <br /></td></tr>
 <tr class="separator:ada79450aaa46cfb0fdc886ef5d9f8cdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6eef246282966d41c8739b6e9c7f527f"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a6eef246282966d41c8739b6e9c7f527f">snkSelPdo</a></td></tr>
-<tr class="memdesc:a6eef246282966d41c8739b6e9c7f527f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selected PDO which resulted in contract (when sink).  <a href="#a6eef246282966d41c8739b6e9c7f527f">More...</a><br /></td></tr>
+<tr class="memdesc:a6eef246282966d41c8739b6e9c7f527f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selected PDO which resulted in the contract (when sink).  <a href="#a6eef246282966d41c8739b6e9c7f527f">More...</a><br /></td></tr>
 <tr class="separator:a6eef246282966d41c8739b6e9c7f527f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fcdc039f7975bdfb547cf66fe0b3a07"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a7fcdc039f7975bdfb547cf66fe0b3a07">srcSelPdo</a></td></tr>
-<tr class="memdesc:a7fcdc039f7975bdfb547cf66fe0b3a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selected PDO which resulted in contract (when source).  <a href="#a7fcdc039f7975bdfb547cf66fe0b3a07">More...</a><br /></td></tr>
+<tr class="memdesc:a7fcdc039f7975bdfb547cf66fe0b3a07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selected PDO which resulted in the contract (when source).  <a href="#a7fcdc039f7975bdfb547cf66fe0b3a07">More...</a><br /></td></tr>
 <tr class="separator:a7fcdc039f7975bdfb547cf66fe0b3a07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a548d0f8fb5dc948586a4b9ba24e76720"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__pd__packet__t.html">cy_stc_pdstack_pd_packet_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a548d0f8fb5dc948586a4b9ba24e76720">srcCapP</a></td></tr>
 <tr class="memdesc:a548d0f8fb5dc948586a4b9ba24e76720"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the current/last source cap message received.  <a href="#a548d0f8fb5dc948586a4b9ba24e76720">More...</a><br /></td></tr>
 <tr class="separator:a548d0f8fb5dc948586a4b9ba24e76720"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a665d69caf440bc5bd851754553e3eb55"><td class="memItemLeft" align="right" valign="top"><a id="a665d69caf440bc5bd851754553e3eb55"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a665d69caf440bc5bd851754553e3eb55">padval</a></td></tr>
-<tr class="memdesc:a665d69caf440bc5bd851754553e3eb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fields below need to be properly aligned to 4 byte boundary. <br /></td></tr>
+<tr class="memitem:a665d69caf440bc5bd851754553e3eb55"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a665d69caf440bc5bd851754553e3eb55">padval</a></td></tr>
+<tr class="memdesc:a665d69caf440bc5bd851754553e3eb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fields below need to be properly aligned to a 4-byte boundary.  <a href="#a665d69caf440bc5bd851754553e3eb55">More...</a><br /></td></tr>
 <tr class="separator:a665d69caf440bc5bd851754553e3eb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fda26e590777527ec19ed25f250694b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__pd__power__status__t.html">cy_stc_pdstack_pd_power_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a9fda26e590777527ec19ed25f250694b">portStatus</a></td></tr>
 <tr class="memdesc:a9fda26e590777527ec19ed25f250694b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Port power status.  <a href="#a9fda26e590777527ec19ed25f250694b">More...</a><br /></td></tr>
 <tr class="separator:a9fda26e590777527ec19ed25f250694b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25bc34353deb32fe5b96ca5ca625ea3d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a25bc34353deb32fe5b96ca5ca625ea3d">reserved_1</a> [24]</td></tr>
-<tr class="memdesc:a25bc34353deb32fe5b96ca5ca625ea3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserved 24 bytes to match old structure definition for ROM compatibility, the new extSrcCap moved to <a class="el" href="structcy__stc__pdstack__dpm__ext__status__t.html" title="PD Device Latest Policy Status structure. ">cy_stc_pdstack_dpm_ext_status_t</a>.  <a href="#a25bc34353deb32fe5b96ca5ca625ea3d">More...</a><br /></td></tr>
+<tr class="memdesc:a25bc34353deb32fe5b96ca5ca625ea3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserved 24 bytes to match the old structure definition for ROM compatibility, the new extSrcCap moved to <a class="el" href="structcy__stc__pdstack__dpm__ext__status__t.html" title="PD device latest policy status structure. ">cy_stc_pdstack_dpm_ext_status_t</a>.  <a href="#a25bc34353deb32fe5b96ca5ca625ea3d">More...</a><br /></td></tr>
 <tr class="separator:a25bc34353deb32fe5b96ca5ca625ea3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ca388090c82d20ff00114008bae88c5"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a6ca388090c82d20ff00114008bae88c5">ppsStatus</a> [<a class="el" href="group__group__pdstack__macros.html#gab87e9679c569586b243cbca3ebac744e">CY_PD_EXT_PPS_STATUS_SIZE</a>]</td></tr>
 <tr class="memdesc:a6ca388090c82d20ff00114008bae88c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffer to hold PPS status.  <a href="#a6ca388090c82d20ff00114008bae88c5">More...</a><br /></td></tr>
@@ -379,16 +377,16 @@ uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="
 <tr class="memdesc:ae6dde1fe9fa8e0f46357d9d1060934f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether SRC PDOs have been limited due to cable capability.  <a href="#ae6dde1fe9fa8e0f46357d9d1060934f9">More...</a><br /></td></tr>
 <tr class="separator:ae6dde1fe9fa8e0f46357d9d1060934f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ee69a60cfc096e890c743c76ca225f8"><td class="memItemLeft" align="right" valign="top">cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a8ee69a60cfc096e890c743c76ca225f8">cblVdo2</a></td></tr>
-<tr class="memdesc:a8ee69a60cfc096e890c743c76ca225f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the last received Active Cable VDO #2.  <a href="#a8ee69a60cfc096e890c743c76ca225f8">More...</a><br /></td></tr>
+<tr class="memdesc:a8ee69a60cfc096e890c743c76ca225f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the last received active cable VDO #2.  <a href="#a8ee69a60cfc096e890c743c76ca225f8">More...</a><br /></td></tr>
 <tr class="separator:a8ee69a60cfc096e890c743c76ca225f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ca1633f0fbc4276a923ebf6d0c9151d"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a4ca1633f0fbc4276a923ebf6d0c9151d">reserved_2</a> [24]</td></tr>
-<tr class="memdesc:a4ca1633f0fbc4276a923ebf6d0c9151d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserved 24 bytes to match old structure definition for ROM compatibility, the new extSnkCap moved to <a class="el" href="structcy__stc__pdstack__dpm__ext__status__t.html" title="PD Device Latest Policy Status structure. ">cy_stc_pdstack_dpm_ext_status_t</a>.  <a href="#a4ca1633f0fbc4276a923ebf6d0c9151d">More...</a><br /></td></tr>
+<tr class="memdesc:a4ca1633f0fbc4276a923ebf6d0c9151d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reserved 24 bytes to match the old structure definition for ROM compatibility, the new extSnkCap moved to <a class="el" href="structcy__stc__pdstack__dpm__ext__status__t.html" title="PD device latest policy status structure. ">cy_stc_pdstack_dpm_ext_status_t</a>.  <a href="#a4ca1633f0fbc4276a923ebf6d0c9151d">More...</a><br /></td></tr>
 <tr class="separator:a4ca1633f0fbc4276a923ebf6d0c9151d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2164c3ee7d281f6510588ae0c1366aa"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ae2164c3ee7d281f6510588ae0c1366aa">randBase</a></td></tr>
 <tr class="memdesc:ae2164c3ee7d281f6510588ae0c1366aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Temporary variable used for random number generation.  <a href="#ae2164c3ee7d281f6510588ae0c1366aa">More...</a><br /></td></tr>
 <tr class="separator:ae2164c3ee7d281f6510588ae0c1366aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a021496044144bec203ff9578da04391a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a021496044144bec203ff9578da04391a">pd3SrcCcBusy</a></td></tr>
-<tr class="memdesc:a021496044144bec203ff9578da04391a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether we should keep Rp at SinkTxNG as a PD 3.0 Source.  <a href="#a021496044144bec203ff9578da04391a">More...</a><br /></td></tr>
+<tr class="memdesc:a021496044144bec203ff9578da04391a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether to keep Rp at SinkTxNG as a PD 3.0 Source.  <a href="#a021496044144bec203ff9578da04391a">More...</a><br /></td></tr>
 <tr class="separator:a021496044144bec203ff9578da04391a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3e511922850178008aaef6569077ad8"><td class="memItemLeft" align="right" valign="top"><a id="ad3e511922850178008aaef6569077ad8"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ad3e511922850178008aaef6569077ad8">isSolnBusy</a></td></tr>
@@ -398,16 +396,16 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="memdesc:a84bc62eb7b26fafbb56a57dc18c6d7a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that PD Revision 3.0 support is enabled.  <a href="#a84bc62eb7b26fafbb56a57dc18c6d7a0">More...</a><br /></td></tr>
 <tr class="separator:a84bc62eb7b26fafbb56a57dc18c6d7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77784ad3e8e045426c547004da37963b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a77784ad3e8e045426c547004da37963b">hwDrpToggleEn</a></td></tr>
-<tr class="memdesc:a77784ad3e8e045426c547004da37963b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that Hardware based DRP toggling is enabled.  <a href="#a77784ad3e8e045426c547004da37963b">More...</a><br /></td></tr>
+<tr class="memdesc:a77784ad3e8e045426c547004da37963b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that hardware-based DRP toggling is enabled.  <a href="#a77784ad3e8e045426c547004da37963b">More...</a><br /></td></tr>
 <tr class="separator:a77784ad3e8e045426c547004da37963b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa20b2ad0b5f5616fc2c302a9a620e73b"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#aa20b2ad0b5f5616fc2c302a9a620e73b">trySrcSnkDis</a></td></tr>
 <tr class="memdesc:aa20b2ad0b5f5616fc2c302a9a620e73b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that Try.SRC Try.SNK is disabled.  <a href="#aa20b2ad0b5f5616fc2c302a9a620e73b">More...</a><br /></td></tr>
 <tr class="separator:aa20b2ad0b5f5616fc2c302a9a620e73b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a306c131e07e460eb5423f5afe66ec67f"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a306c131e07e460eb5423f5afe66ec67f">frsRxEn</a></td></tr>
-<tr class="memdesc:a306c131e07e460eb5423f5afe66ec67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that FRS as Initial Sink is supported.  <a href="#a306c131e07e460eb5423f5afe66ec67f">More...</a><br /></td></tr>
+<tr class="memdesc:a306c131e07e460eb5423f5afe66ec67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that FRS as an initial sink is supported.  <a href="#a306c131e07e460eb5423f5afe66ec67f">More...</a><br /></td></tr>
 <tr class="separator:a306c131e07e460eb5423f5afe66ec67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a269e8825080597ce13925880a5b5a739"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a269e8825080597ce13925880a5b5a739">frsTxEn</a></td></tr>
-<tr class="memdesc:a269e8825080597ce13925880a5b5a739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that FRS as Initial Source is supported.  <a href="#a269e8825080597ce13925880a5b5a739">More...</a><br /></td></tr>
+<tr class="memdesc:a269e8825080597ce13925880a5b5a739"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that FRS as an initial source is supported.  <a href="#a269e8825080597ce13925880a5b5a739">More...</a><br /></td></tr>
 <tr class="separator:a269e8825080597ce13925880a5b5a739"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d049aa963f8cdb7c02e3fdf3440e901"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a4d049aa963f8cdb7c02e3fdf3440e901">ppsSrcEn</a></td></tr>
 <tr class="memdesc:a4d049aa963f8cdb7c02e3fdf3440e901"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that PPS source is supported.  <a href="#a4d049aa963f8cdb7c02e3fdf3440e901">More...</a><br /></td></tr>
@@ -418,22 +416,20 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stru
 <tr class="memitem:a7dc973f1df83a88d8542df0b2c101a26"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a7dc973f1df83a88d8542df0b2c101a26">typecRpDetachDisabled</a></td></tr>
 <tr class="memdesc:a7dc973f1df83a88d8542df0b2c101a26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag used Rp Detach detect.  <a href="#a7dc973f1df83a88d8542df0b2c101a26">More...</a><br /></td></tr>
 <tr class="separator:a7dc973f1df83a88d8542df0b2c101a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fd308a9d0bb4a9616b0ddf7ac2d8338"><td class="memItemLeft" align="right" valign="top"><a id="a0fd308a9d0bb4a9616b0ddf7ac2d8338"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a0fd308a9d0bb4a9616b0ddf7ac2d8338">typecAccessorySuppDisabled</a></td></tr>
-<tr class="memdesc:a0fd308a9d0bb4a9616b0ddf7ac2d8338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for accessory support. <br /></td></tr>
+<tr class="memitem:a0fd308a9d0bb4a9616b0ddf7ac2d8338"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a0fd308a9d0bb4a9616b0ddf7ac2d8338">typecAccessorySuppDisabled</a></td></tr>
+<tr class="memdesc:a0fd308a9d0bb4a9616b0ddf7ac2d8338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag for accessory support.  <a href="#a0fd308a9d0bb4a9616b0ddf7ac2d8338">More...</a><br /></td></tr>
 <tr class="separator:a0fd308a9d0bb4a9616b0ddf7ac2d8338"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34e9c3c7918bb519347ce06a746ada4c"><td class="memItemLeft" align="right" valign="top"><a id="a34e9c3c7918bb519347ce06a746ada4c"></a>
-uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a34e9c3c7918bb519347ce06a746ada4c">cableDiscCount</a></td></tr>
-<tr class="memdesc:a34e9c3c7918bb519347ce06a746ada4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of cable discovery attempts to be made Range: 0x00 - 0x14. <br /></td></tr>
+<tr class="memitem:a34e9c3c7918bb519347ce06a746ada4c"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a34e9c3c7918bb519347ce06a746ada4c">cableDiscCount</a></td></tr>
+<tr class="memdesc:a34e9c3c7918bb519347ce06a746ada4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of cable discovery attempts to be made.  <a href="#a34e9c3c7918bb519347ce06a746ada4c">More...</a><br /></td></tr>
 <tr class="separator:a34e9c3c7918bb519347ce06a746ada4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2019bd947d15fcb7190b6e3599da4d46"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a2019bd947d15fcb7190b6e3599da4d46">mfgLenInfo</a></td></tr>
-<tr class="memdesc:a2019bd947d15fcb7190b6e3599da4d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of Manufacturer Information.  <a href="#a2019bd947d15fcb7190b6e3599da4d46">More...</a><br /></td></tr>
+<tr class="memdesc:a2019bd947d15fcb7190b6e3599da4d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Length of manufacturer information.  <a href="#a2019bd947d15fcb7190b6e3599da4d46">More...</a><br /></td></tr>
 <tr class="separator:a2019bd947d15fcb7190b6e3599da4d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e8a22ae802177c9d77d4d2c93e997cb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a4e8a22ae802177c9d77d4d2c93e997cb">dWordPad0</a></td></tr>
-<tr class="memdesc:a4e8a22ae802177c9d77d4d2c93e997cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable added for padding to a DWORD aligned address.  <a href="#a4e8a22ae802177c9d77d4d2c93e997cb">More...</a><br /></td></tr>
+<tr class="memdesc:a4e8a22ae802177c9d77d4d2c93e997cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Variable added for padding to a DWORD-aligned address.  <a href="#a4e8a22ae802177c9d77d4d2c93e997cb">More...</a><br /></td></tr>
 <tr class="separator:a4e8a22ae802177c9d77d4d2c93e997cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f8f8a9d682d71d14a6868a36bb16581"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a0f8f8a9d682d71d14a6868a36bb16581">mfgName</a> [26]</td></tr>
-<tr class="memdesc:a0f8f8a9d682d71d14a6868a36bb16581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manufacturer Name.  <a href="#a0f8f8a9d682d71d14a6868a36bb16581">More...</a><br /></td></tr>
+<tr class="memdesc:a0f8f8a9d682d71d14a6868a36bb16581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manufacturer name.  <a href="#a0f8f8a9d682d71d14a6868a36bb16581">More...</a><br /></td></tr>
 <tr class="separator:a0f8f8a9d682d71d14a6868a36bb16581"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a818ae4be0b23f58848381af7090db121"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a818ae4be0b23f58848381af7090db121">ppsSnkEn</a></td></tr>
 <tr class="memdesc:a818ae4be0b23f58848381af7090db121"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating that PPS SINK RDO from EC is supported.  <a href="#a818ae4be0b23f58848381af7090db121">More...</a><br /></td></tr>
@@ -446,11 +442,14 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <tr class="memdesc:a2dcb8710c732c01be6e6b47bf2f3a00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of dpm disable requests active.  <a href="#a2dcb8710c732c01be6e6b47bf2f3a00d">More...</a><br /></td></tr>
 <tr class="separator:a2dcb8710c732c01be6e6b47bf2f3a00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a097cf6a159896c650d5f5b8886787153"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a097cf6a159896c650d5f5b8886787153">swapResponse</a></td></tr>
-<tr class="memdesc:a097cf6a159896c650d5f5b8886787153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response to be sent for each USB-PD SWAP command.  <a href="#a097cf6a159896c650d5f5b8886787153">More...</a><br /></td></tr>
+<tr class="memdesc:a097cf6a159896c650d5f5b8886787153"><td class="mdescLeft">&#160;</td><td class="mdescRight">Response to be sent for each USB PD SWAP command.  <a href="#a097cf6a159896c650d5f5b8886787153">More...</a><br /></td></tr>
 <tr class="separator:a097cf6a159896c650d5f5b8886787153"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e5fe306c059a50c71e1c8557ed9bbe5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#a4e5fe306c059a50c71e1c8557ed9bbe5">autoVcsDisable</a></td></tr>
-<tr class="memdesc:a4e5fe306c059a50c71e1c8557ed9bbe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option to disable Automatic VConn Swap from the Stack.  <a href="#a4e5fe306c059a50c71e1c8557ed9bbe5">More...</a><br /></td></tr>
+<tr class="memdesc:a4e5fe306c059a50c71e1c8557ed9bbe5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option to disable automatic VConn swap from the stack.  <a href="#a4e5fe306c059a50c71e1c8557ed9bbe5">More...</a><br /></td></tr>
 <tr class="separator:a4e5fe306c059a50c71e1c8557ed9bbe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7ba956964d41856130e858fec98cbc2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__status__t.html#ac7ba956964d41856130e858fec98cbc2">dataResetEn</a></td></tr>
+<tr class="memdesc:ac7ba956964d41856130e858fec98cbc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data reset support.  <a href="#ac7ba956964d41856130e858fec98cbc2">More...</a><br /></td></tr>
+<tr class="separator:ac7ba956964d41856130e858fec98cbc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Field Documentation</h2>
 <a id="a263e151e9772a4611ae55923073d037d"></a>
@@ -465,7 +464,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Port role: Sink, Source or Dual. </p>
+<p>Port role: Sink, source, or dual. </p>
 
 </div>
 </div>
@@ -481,7 +480,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Default port role: Sink or Source. </p>
+<p>Default port role: Sink or source. </p>
 
 </div>
 </div>
@@ -609,7 +608,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Sink PDO count from the config table or updated at runtime by the EC. </p>
+<p>Sink PDO count from the config table or update at runtime by the EC. </p>
 
 </div>
 </div>
@@ -625,7 +624,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Sink PDO mask from the config table or updated at runtime by the EC. </p>
+<p>Sink PDO mask from the config table or update at runtime by the EC. </p>
 
 </div>
 </div>
@@ -662,7 +661,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>USB-PD supported. </p>
+<p>USB PD supported. </p>
 
 </div>
 </div>
@@ -678,7 +677,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Try Source/ Try Sink control knob. </p>
+<p>Try source/sink control knob. </p>
 
 </div>
 </div>
@@ -742,7 +741,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>FRS enable flags. </p>
+<p>FRS enable flag. </p>
 
 </div>
 </div>
@@ -806,7 +805,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Flag to indicate chip bootup, used to check dead battery. </p>
+<p>Flag to indicate chip bootup used to check dead battery. </p>
 
 </div>
 </div>
@@ -854,7 +853,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Time period for which to stay as a SRC for a DRP device. </p>
+<p>Time period for which to stay as an SRC for a DRP device. </p>
 
 </div>
 </div>
@@ -870,7 +869,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Time period for which to stay as a SNK for a DRP device. </p>
+<p>Time period for which to stay as an SNK for a DRP device. </p>
 
 </div>
 </div>
@@ -902,7 +901,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Ports are PD connected indication. </p>
+<p>Ports are PD-connected indications. </p>
 
 </div>
 </div>
@@ -935,6 +934,22 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 </div><div class="memdoc">
 
 <p>Ra present indication. </p>
+
+</div>
+</div>
+<a id="a3c8aa837e6a754b2adb3172af03084e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c8aa837e6a754b2adb3172af03084e5">&#9670;&nbsp;</a></span>bistCm2Enabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool volatile cy_stc_pdstack_dpm_status_t::bistCm2Enabled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>BIST carrier mode 2 running. </p>
 
 </div>
 </div>
@@ -1078,7 +1093,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Type C generic FSM state. </p>
+<p>Type-C generic FSM state. </p>
 
 </div>
 </div>
@@ -1110,7 +1125,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Indicate DPM PD command was registered. </p>
+<p>Indicates DPM PD command is registered. </p>
 
 </div>
 </div>
@@ -1126,7 +1141,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Indicate DPM Type C command was registered. </p>
+<p>Indicates DPM Type C command is registered. </p>
 
 </div>
 </div>
@@ -1159,7 +1174,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 </div><div class="memdoc">
 
 <p>DPM safe disable flag. </p>
-<p>Used to make sure that the port is disabled correctly after a fault occurrence. </p>
+<p>Used to ensure that the port is disabled correctly after a fault occurrence. </p>
 
 </div>
 </div>
@@ -1383,7 +1398,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Holds the current state of Policy Engine (PE). </p>
+<p>Holds the current state of policy engine (PE). </p>
 
 </div>
 </div>
@@ -1515,14 +1530,14 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 
 </div>
 </div>
-<a id="a0a83190ef2e736bd92e14377698e4ff6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a83190ef2e736bd92e14377698e4ff6">&#9670;&nbsp;</a></span>curSnkMaxMin</h2>
+<a id="a48619b4489568200723116ea3121c9cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48619b4489568200723116ea3121c9cb">&#9670;&nbsp;</a></span>curSnkMaxMin</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">uint16_t cy_stc_pdstack_dpm_status_t::curSnkMaxMin[<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>]</td>
+          <td class="memname">uint16_t cy_stc_pdstack_dpm_status_t::curSnkMaxMin[<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>+<a class="el" href="group__group__pdstack__macros.html#ga0b680656c00df03fd94113b78cefde43">CY_PD_MAX_NO_OF_EPR_PDO</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1531,14 +1546,14 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 
 </div>
 </div>
-<a id="a45ce464ac7e94fed791ade1d49d5fca1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45ce464ac7e94fed791ade1d49d5fca1">&#9670;&nbsp;</a></span>curSrcPdo</h2>
+<a id="a98cbb57770030f6ebb0bddaf48e9dac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98cbb57770030f6ebb0bddaf48e9dac3">&#9670;&nbsp;</a></span>curSrcPdo</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_dpm_status_t::curSrcPdo[<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>]</td>
+          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_dpm_status_t::curSrcPdo[<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>+<a class="el" href="group__group__pdstack__macros.html#ga0b680656c00df03fd94113b78cefde43">CY_PD_MAX_NO_OF_EPR_PDO</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1547,14 +1562,14 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 
 </div>
 </div>
-<a id="a189125e681b701d465be03f1634feff3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a189125e681b701d465be03f1634feff3">&#9670;&nbsp;</a></span>curSnkPdo</h2>
+<a id="ad82cc4ffe862688eb9bb252db0a050eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad82cc4ffe862688eb9bb252db0a050eb">&#9670;&nbsp;</a></span>curSnkPdo</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_dpm_status_t::curSnkPdo[<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>]</td>
+          <td class="memname">cy_pd_pd_do_t cy_stc_pdstack_dpm_status_t::curSnkPdo[<a class="el" href="group__group__pdstack__macros.html#ga27a9a569d4afb1f8d3d39cfb859c028d">CY_PD_MAX_NO_OF_PDO</a>+<a class="el" href="group__group__pdstack__macros.html#ga0b680656c00df03fd94113b78cefde43">CY_PD_MAX_NO_OF_EPR_PDO</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1591,7 +1606,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Selected PDO which resulted in contract (when sink). </p>
+<p>Selected PDO which resulted in the contract (when sink). </p>
 
 </div>
 </div>
@@ -1607,7 +1622,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Selected PDO which resulted in contract (when source). </p>
+<p>Selected PDO which resulted in the contract (when source). </p>
 
 </div>
 </div>
@@ -1625,6 +1640,22 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 
 <p>Pointer to the current/last source cap message received. </p>
 <p>May be NULL. Data pointed to by this should not be changed. </p>
+
+</div>
+</div>
+<a id="a665d69caf440bc5bd851754553e3eb55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a665d69caf440bc5bd851754553e3eb55">&#9670;&nbsp;</a></span>padval</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t cy_stc_pdstack_dpm_status_t::padval</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fields below need to be properly aligned to a 4-byte boundary. </p>
 
 </div>
 </div>
@@ -1656,7 +1687,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Reserved 24 bytes to match old structure definition for ROM compatibility, the new extSrcCap moved to <a class="el" href="structcy__stc__pdstack__dpm__ext__status__t.html" title="PD Device Latest Policy Status structure. ">cy_stc_pdstack_dpm_ext_status_t</a>. </p>
+<p>Reserved 24 bytes to match the old structure definition for ROM compatibility, the new extSrcCap moved to <a class="el" href="structcy__stc__pdstack__dpm__ext__status__t.html" title="PD device latest policy status structure. ">cy_stc_pdstack_dpm_ext_status_t</a>. </p>
 
 </div>
 </div>
@@ -1720,7 +1751,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Stores the last received Active Cable VDO #2. </p>
+<p>Stores the last received active cable VDO #2. </p>
 
 </div>
 </div>
@@ -1736,7 +1767,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Reserved 24 bytes to match old structure definition for ROM compatibility, the new extSnkCap moved to <a class="el" href="structcy__stc__pdstack__dpm__ext__status__t.html" title="PD Device Latest Policy Status structure. ">cy_stc_pdstack_dpm_ext_status_t</a>. </p>
+<p>Reserved 24 bytes to match the old structure definition for ROM compatibility, the new extSnkCap moved to <a class="el" href="structcy__stc__pdstack__dpm__ext__status__t.html" title="PD device latest policy status structure. ">cy_stc_pdstack_dpm_ext_status_t</a>. </p>
 
 </div>
 </div>
@@ -1768,7 +1799,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Whether we should keep Rp at SinkTxNG as a PD 3.0 Source. </p>
+<p>Checks whether to keep Rp at SinkTxNG as a PD 3.0 Source. </p>
 
 </div>
 </div>
@@ -1800,7 +1831,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Flag indicating that Hardware based DRP toggling is enabled. </p>
+<p>Flag indicating that hardware-based DRP toggling is enabled. </p>
 
 </div>
 </div>
@@ -1832,7 +1863,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Flag indicating that FRS as Initial Sink is supported. </p>
+<p>Flag indicating that FRS as an initial sink is supported. </p>
 
 </div>
 </div>
@@ -1848,7 +1879,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Flag indicating that FRS as Initial Source is supported. </p>
+<p>Flag indicating that FRS as an initial source is supported. </p>
 
 </div>
 </div>
@@ -1900,6 +1931,39 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 
 </div>
 </div>
+<a id="a0fd308a9d0bb4a9616b0ddf7ac2d8338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fd308a9d0bb4a9616b0ddf7ac2d8338">&#9670;&nbsp;</a></span>typecAccessorySuppDisabled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_dpm_status_t::typecAccessorySuppDisabled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flag for accessory support. </p>
+
+</div>
+</div>
+<a id="a34e9c3c7918bb519347ce06a746ada4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34e9c3c7918bb519347ce06a746ada4c">&#9670;&nbsp;</a></span>cableDiscCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t cy_stc_pdstack_dpm_status_t::cableDiscCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Number of cable discovery attempts to be made. </p>
+<p>Range: 0x00 - 0x14. </p>
+
+</div>
+</div>
 <a id="a2019bd947d15fcb7190b6e3599da4d46"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2019bd947d15fcb7190b6e3599da4d46">&#9670;&nbsp;</a></span>mfgLenInfo</h2>
 
@@ -1912,7 +1976,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Length of Manufacturer Information. </p>
+<p>Length of manufacturer information. </p>
 <p>0 - For no information. 5 to 26: For valid information. </p>
 
 </div>
@@ -1929,7 +1993,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Variable added for padding to a DWORD aligned address. </p>
+<p>Variable added for padding to a DWORD-aligned address. </p>
 
 </div>
 </div>
@@ -1945,7 +2009,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Manufacturer Name. </p>
+<p>Manufacturer name. </p>
 <p>Null terminated string. Should be 4-byte aligned. </p>
 
 </div>
@@ -1994,11 +2058,11 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Response to be sent for each USB-PD SWAP command. </p>
+<p>Response to be sent for each USB PD SWAP command. </p>
 <ul>
 <li>Bits 1:0 =&gt; DR_SWAP response.</li>
 <li>Bits 3:2 =&gt; PR_SWAP response.</li>
-<li>Bits 5:4 =&gt; VCONN_SWAP response. Allowed values are: 0=ACCEPT, 1=REJECT, 2=WAIT, 3=NOT_SUPPORTED. </li>
+<li>Bits 5:4 =&gt; VCONN_SWAP response. Allowed values are: 0 = ACCEPT, 1 = REJECT, 2 = WAIT, 3 = NOT_SUPPORTED. </li>
 </ul>
 
 </div>
@@ -2015,7 +2079,23 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
       </table>
 </div><div class="memdoc">
 
-<p>Option to disable Automatic VConn Swap from the Stack. </p>
+<p>Option to disable automatic VConn swap from the stack. </p>
+
+</div>
+</div>
+<a id="ac7ba956964d41856130e858fec98cbc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7ba956964d41856130e858fec98cbc2">&#9670;&nbsp;</a></span>dataResetEn</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cy_stc_pdstack_dpm_status_t::dataResetEn</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Data reset support. </p>
 
 </div>
 </div>
@@ -2025,7 +2105,7 @@ cy_pd_pd_do_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" h
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 2.0</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.0</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

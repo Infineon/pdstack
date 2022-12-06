@@ -45,6 +45,9 @@ var group__group__pdstack__data__structures =
       [ "peerUnchunkSupp", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#ab38454b66593f1a3d1fa1893e008283e", null ],
       [ "emcaSpecRev", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#ae8460cb651b0cd0a6f55bfaabab3e40f", null ],
       [ "emcaType", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a537460474151f0e652d30b86c1f00332", null ],
+      [ "eprStatus", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#abed14efbae4fe44715be5602e45727e2", null ],
+      [ "eprSnkEnable", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a6890fd2ee74f04c956a54b9f0d732996", null ],
+      [ "eprSrcEnable", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a2aa85df8c7563c58cdbcb6bb048db882", null ],
       [ "reserved2", "structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a7bc69b198af127f28065e0a30d79b9ae", null ]
     ] ],
     [ "app_resp_t", "structapp__resp__t.html", [
@@ -80,15 +83,13 @@ var group__group__pdstack__data__structures =
       [ "msg", "structcy__stc__pdstack__pd__packet__t.html#a75e7b3ccd30ccd70297aadfb0c436ba4", null ],
       [ "dataRole", "structcy__stc__pdstack__pd__packet__t.html#a85432e1931c5dd494915685db0ef8068", null ],
       [ "hdr", "structcy__stc__pdstack__pd__packet__t.html#a34622b76f6904a7d7e0ed9fba7fc2699", null ],
-      [ "dat", "structcy__stc__pdstack__pd__packet__t.html#ab26d7ccb5f6aa8ecb76d7c89a042b975", null ]
+      [ "dat", "structcy__stc__pdstack__pd__packet__t.html#acf647567df1e16d9bc85836bf1fa1330", null ]
     ] ],
-    [ "cy_stc_pdstack_pd_packet_epr_t", "structcy__stc__pdstack__pd__packet__epr__t.html", [
-      [ "sop", "structcy__stc__pdstack__pd__packet__epr__t.html#a6e18250ed50dc816252f5b97a31d3d27", null ],
-      [ "len", "structcy__stc__pdstack__pd__packet__epr__t.html#a35ff20457662fc3cbf7e4732a6bf43b5", null ],
-      [ "msg", "structcy__stc__pdstack__pd__packet__epr__t.html#a5ef444313cb819d35f5e62444967427a", null ],
-      [ "dataRole", "structcy__stc__pdstack__pd__packet__epr__t.html#a55a22191c1e7f486101567bfbf2c1039", null ],
-      [ "hdr", "structcy__stc__pdstack__pd__packet__epr__t.html#ae3d1ecba3f718e9500f314977d0ffdb6", null ],
-      [ "dat", "structcy__stc__pdstack__pd__packet__epr__t.html#a9a37d886647aa73d92b13806c8709fba", null ]
+    [ "cy_stc_pdstack_pd_timer_params_t", "structcy__stc__pdstack__pd__timer__params__t.html", [
+      [ "pd2senderRspTimeout", "structcy__stc__pdstack__pd__timer__params__t.html#a14ce1e56b0040e19cba1c904b962d095", null ],
+      [ "pd3senderRspTimeout", "structcy__stc__pdstack__pd__timer__params__t.html#a882d2d53ae7326891b96bb09812ed28c", null ],
+      [ "ccDebouncePeriod", "structcy__stc__pdstack__pd__timer__params__t.html#ab1554c519deae788ed9bd0cdb8c21ff6", null ],
+      [ "errRecovDelay", "structcy__stc__pdstack__pd__timer__params__t.html#ab1ecfdbf283a4db4763a7b875b5d40e1", null ]
     ] ],
     [ "cy_stc_pdstack_app_cbk_t", "structcy__stc__pdstack__app__cbk__t.html", [
       [ "app_event_handler", "structcy__stc__pdstack__app__cbk__t.html#af8dcf52584f271718fe254bf13c29566", null ],
@@ -114,7 +115,8 @@ var group__group__pdstack__data__structures =
       [ "eval_vdm", "structcy__stc__pdstack__app__cbk__t.html#ab434993120c0784ecc0de6a307f276b8", null ],
       [ "eval_fr_swap", "structcy__stc__pdstack__app__cbk__t.html#a39a27f29508a4e118a32c38c39bbf6b3", null ],
       [ "vbus_get_value", "structcy__stc__pdstack__app__cbk__t.html#ab7360ba0edd674ac892c42c247783a79", null ],
-      [ "psrc_get_voltage", "structcy__stc__pdstack__app__cbk__t.html#a3aea09fd44ab9cc57e36ea377c00370a", null ]
+      [ "psrc_get_voltage", "structcy__stc__pdstack__app__cbk__t.html#a3aea09fd44ab9cc57e36ea377c00370a", null ],
+      [ "send_src_info", "structcy__stc__pdstack__app__cbk__t.html#a407f3ecaf0baf2e71ba1ac532e4bc786", null ]
     ] ],
     [ "cy_stc_pdstack_epr_t", "structcy__stc__pdstack__epr__t.html", [
       [ "len", "structcy__stc__pdstack__epr__t.html#a2f484cc11ce6364fcfb5cbeada3040df", null ],
@@ -204,9 +206,9 @@ var group__group__pdstack__data__structures =
       [ "dpmTypecCbk", "structcy__stc__pdstack__dpm__status__t.html#a885905ca33ddf98a3700e0074043f906", null ],
       [ "cmdP", "structcy__stc__pdstack__dpm__status__t.html#ab41827fe2b92b29b42943343f3c986c8", null ],
       [ "dpmCmdBuf", "structcy__stc__pdstack__dpm__status__t.html#a7424711b42c965faf8d046e6649af6c3", null ],
-      [ "curSnkMaxMin", "structcy__stc__pdstack__dpm__status__t.html#a0a83190ef2e736bd92e14377698e4ff6", null ],
-      [ "curSrcPdo", "structcy__stc__pdstack__dpm__status__t.html#a45ce464ac7e94fed791ade1d49d5fca1", null ],
-      [ "curSnkPdo", "structcy__stc__pdstack__dpm__status__t.html#a189125e681b701d465be03f1634feff3", null ],
+      [ "curSnkMaxMin", "structcy__stc__pdstack__dpm__status__t.html#a48619b4489568200723116ea3121c9cb", null ],
+      [ "curSrcPdo", "structcy__stc__pdstack__dpm__status__t.html#a98cbb57770030f6ebb0bddaf48e9dac3", null ],
+      [ "curSnkPdo", "structcy__stc__pdstack__dpm__status__t.html#ad82cc4ffe862688eb9bb252db0a050eb", null ],
       [ "srcCurRdo", "structcy__stc__pdstack__dpm__status__t.html#a2f8a435205c8873f297e6eeaf2d565ab", null ],
       [ "srcLastRdo", "structcy__stc__pdstack__dpm__status__t.html#a36618bfd121d287ab5ef8ff2e522a30d", null ],
       [ "srcRdo", "structcy__stc__pdstack__dpm__status__t.html#a16007cb755f163c4b24e906c01921398", null ],
@@ -242,7 +244,8 @@ var group__group__pdstack__data__structures =
       [ "ppsSnkRdo", "structcy__stc__pdstack__dpm__status__t.html#a37ebef4069b83d47824d285025b82369", null ],
       [ "disReqCount", "structcy__stc__pdstack__dpm__status__t.html#a2dcb8710c732c01be6e6b47bf2f3a00d", null ],
       [ "swapResponse", "structcy__stc__pdstack__dpm__status__t.html#a097cf6a159896c650d5f5b8886787153", null ],
-      [ "autoVcsDisable", "structcy__stc__pdstack__dpm__status__t.html#a4e5fe306c059a50c71e1c8557ed9bbe5", null ]
+      [ "autoVcsDisable", "structcy__stc__pdstack__dpm__status__t.html#a4e5fe306c059a50c71e1c8557ed9bbe5", null ],
+      [ "dataResetEn", "structcy__stc__pdstack__dpm__status__t.html#ac7ba956964d41856130e858fec98cbc2", null ]
     ] ],
     [ "cy_stc_pdstack_dpm_ext_status_t", "structcy__stc__pdstack__dpm__ext__status__t.html", [
       [ "extSrcCap", "structcy__stc__pdstack__dpm__ext__status__t.html#ae23e145f21eb4efd1fe54c3676727489", null ],
@@ -267,6 +270,7 @@ var group__group__pdstack__data__structures =
       [ "curPeriod", "structcy__stc__pdstack__typec__status__t.html#a11f4fab698d57223beebe3e745deec7e", null ],
       [ "toggleOn", "structcy__stc__pdstack__typec__status__t.html#a69a6620ece05ce645bd89ba4d5f45991", null ],
       [ "discharge", "structcy__stc__pdstack__typec__status__t.html#aab5fbf6b2c13a61bd633ee64803afa25", null ],
+      [ "trySnkDeadTime", "structcy__stc__pdstack__typec__status__t.html#a95daa5a3a09ba7d16217bb50a2ed2c80", null ],
       [ "ccStatusDebounced", "structcy__stc__pdstack__typec__status__t.html#acd9eff717cf235e0c5cf5155c156a6fe", null ],
       [ "srcDisableWait", "structcy__stc__pdstack__typec__status__t.html#a84372dc9aa80e6792e6a9ffb4c700549", null ]
     ] ],
@@ -341,8 +345,22 @@ var group__group__pdstack__data__structures =
       [ "psHrDelay", "structcy__stc__pdstack__pe__status__t.html#aaea5291cea1366246d5eac5122daf799", null ],
       [ "sendSrcCapDebounce", "structcy__stc__pdstack__pe__status__t.html#a2c7dfaffeb4c8adadca654e2ef7ec368", null ],
       [ "swapType", "structcy__stc__pdstack__pe__status__t.html#a1cff0aff84de2a97d2879abd83787f11", null ],
+      [ "specRevDetermined", "structcy__stc__pdstack__pe__status__t.html#a0151a2ecdc8f9c86b0877d60362c6461", null ],
+      [ "chunkDetermined", "structcy__stc__pdstack__pe__status__t.html#aca6a3f5f2d9e0548e979658608af12d1", null ],
+      [ "autoExtdMsgType", "structcy__stc__pdstack__pe__status__t.html#ad4157b4420e8b77c92bed9c7af3a8f89", null ],
+      [ "amsTypeTemp", "structcy__stc__pdstack__pe__status__t.html#a97f7b4f940ae5393c1fb45a4a579f777", null ],
+      [ "getSnkCapWait", "structcy__stc__pdstack__pe__status__t.html#aad867d03a50db57a195cfac3124fef36", null ],
+      [ "isGetSnkCapActive", "structcy__stc__pdstack__pe__status__t.html#ab823414bd06537303ec33bea5b77e4cd", null ],
+      [ "getSnkCapCount", "structcy__stc__pdstack__pe__status__t.html#aa2deed52bb0bedb1f4d97c0ef7d7dd3a", null ],
+      [ "usb4DataResetState", "structcy__stc__pdstack__pe__status__t.html#adfaa92a9c7c97814a158fcca23aaf7ee", null ],
       [ "pePsrcEnDelayed", "structcy__stc__pdstack__pe__status__t.html#aefa4f424ceaf65f31cc5c58148ab0edc", null ],
-      [ "peSendHrPending", "structcy__stc__pdstack__pe__status__t.html#a8ae37a44c07bed1a33be2655c6257ebc", null ]
+      [ "peSendHrPending", "structcy__stc__pdstack__pe__status__t.html#a8ae37a44c07bed1a33be2655c6257ebc", null ],
+      [ "eprEnterRespDo", "structcy__stc__pdstack__pe__status__t.html#a77ac22bc6d391fea009e0af620d5a822", null ],
+      [ "eprState", "structcy__stc__pdstack__pe__status__t.html#a945bfb0493cfe1aa3a187d2542231328", null ],
+      [ "eprMultiMessageFlag", "structcy__stc__pdstack__pe__status__t.html#a6bc616851e6a428901a13b4390393281", null ],
+      [ "eprSendcapInSpr", "structcy__stc__pdstack__pe__status__t.html#adc24ebbe869e9e5ad2b93fc0af1444da", null ],
+      [ "eprSnkExtdChunkBuffer", "structcy__stc__pdstack__pe__status__t.html#a1ae5ad680761c98acd5d4f7ef519a51b", null ],
+      [ "eprChunkCount", "structcy__stc__pdstack__pe__status__t.html#aadc73a36c4608acf46a7ab0ddcb43f12", null ]
     ] ],
     [ "cy_stc_pdstack_dpm_params_t", "structcy__stc__pdstack__dpm__params__t.html", [
       [ "defCur", "structcy__stc__pdstack__dpm__params__t.html#a99cf0c18e10e9376edec042f5e96400c", null ],
@@ -367,11 +385,13 @@ var group__group__pdstack__data__structures =
       [ "ptrPortCfg", "structcy__stc__pdstack__context__t.html#ac7b062e413798d98b7d86bc367bb7202", null ],
       [ "ptrUsbPdContext", "structcy__stc__pdstack__context__t.html#a4e888ebeac403fe554c79610e0afe535", null ],
       [ "ptrDpmParams", "structcy__stc__pdstack__context__t.html#a2507db902575bbee76664ae6c721c74b", null ],
-      [ "ptrTimerContext", "structcy__stc__pdstack__context__t.html#adc68381afdd63c93dc0a4218e21ed76a", null ],
+      [ "ptrTimerContext", "structcy__stc__pdstack__context__t.html#a21dd8c573968d93ff13e1a4406b1c13a", null ],
       [ "ptrRtosContext", "structcy__stc__pdstack__context__t.html#ab68de7d651d381267f1f91e6db5ca854", null ],
       [ "dpmExtStat", "structcy__stc__pdstack__context__t.html#a8d54fa7791cf18026fe0ae6fbd748b63", null ],
       [ "ptrAltModeContext", "structcy__stc__pdstack__context__t.html#a5f8f4f4912f623846bdc6455266f2f03", null ],
-      [ "ptrHpiContext", "structcy__stc__pdstack__context__t.html#a0c2bed8fa9e495bc33888fe8ba6d310a", null ]
+      [ "ptrHpiContext", "structcy__stc__pdstack__context__t.html#a0c2bed8fa9e495bc33888fe8ba6d310a", null ],
+      [ "ptrPdTimerParams", "structcy__stc__pdstack__context__t.html#a5eee576c6cd68ef54b521814e7c1011e", null ],
+      [ "senderRspTimeout", "structcy__stc__pdstack__context__t.html#a2a3a56499a55d9c8996820bfa9bcf007", null ]
     ] ],
     [ "cy_pd_stack_conf_t", "structcy__pd__stack__conf__t.html", [
       [ "sourceOnly", "structcy__pd__stack__conf__t.html#a2c46867e53e7be5c37b32154beaacaa0", null ],
@@ -386,11 +406,15 @@ var group__group__pdstack__data__structures =
       [ "reserved0", "structcy__stc__pdstack__port__cfg__t.html#a91be71ae2877f3bfa7e8e4229712ecf2", null ],
       [ "mfgVid", "structcy__stc__pdstack__port__cfg__t.html#afc8462f8bd51d2263a2df5a595275d36", null ],
       [ "mfgPid", "structcy__stc__pdstack__port__cfg__t.html#a1df32bc0daab2228a434f1d9aeee69b3", null ],
-      [ "mfgName", "structcy__stc__pdstack__port__cfg__t.html#a89d125081b3153439695d34a92e51d9a", null ],
+      [ "mfgName", "structcy__stc__pdstack__port__cfg__t.html#aeb4e973878a6416eec0fd56003529821", null ],
       [ "scedbEn", "structcy__stc__pdstack__port__cfg__t.html#a7ba447165926a7298690594d8ea9e115", null ],
       [ "skedbEn", "structcy__stc__pdstack__port__cfg__t.html#a8b5b1967ab84e34462fefedcbed6644c", null ],
-      [ "extSrcCap", "structcy__stc__pdstack__port__cfg__t.html#abfa4580fa56e5845f98add46632d1517", null ],
-      [ "extSnkCap", "structcy__stc__pdstack__port__cfg__t.html#a31170b2dd746e3e60d00d0f085ed2c73", null ],
+      [ "extSrcCap", "structcy__stc__pdstack__port__cfg__t.html#a860fca94eacc5479b24ec58c6bb2ef63", null ],
+      [ "extSrcCapSize", "structcy__stc__pdstack__port__cfg__t.html#aec5f63cd2bd9abb81d956c387b5e4ca2", null ],
+      [ "extSrcCapResvd", "structcy__stc__pdstack__port__cfg__t.html#a99a24d8d42a481893730446e56bd9fa6", null ],
+      [ "extSnkCap", "structcy__stc__pdstack__port__cfg__t.html#a696d63d4bffba9eb66fb665b4933e254", null ],
+      [ "extSnkCapSize", "structcy__stc__pdstack__port__cfg__t.html#afa3f85b85749f99f713001fceaed40f8", null ],
+      [ "extSnkCapResvd", "structcy__stc__pdstack__port__cfg__t.html#a4390b92a537e161c2dae02d3594e70ec", null ],
       [ "portRole", "structcy__stc__pdstack__port__cfg__t.html#a32c2305f18ba7d8842aaedb6410ae64d", null ],
       [ "defPortRole", "structcy__stc__pdstack__port__cfg__t.html#ac1deac9245f0f4ceacb2c72f5f1f886f", null ],
       [ "curLevel", "structcy__stc__pdstack__port__cfg__t.html#ad1675b675602675f8aa0d3c51bd58cca", null ],
@@ -426,24 +450,6 @@ var group__group__pdstack__data__structures =
       [ "eprSrcPdo", "structcy__stc__pdstack__port__cfg__t.html#a86b91989cdf69c6fac6a2ba3d5085a82", null ],
       [ "eprSnkPdo", "structcy__stc__pdstack__port__cfg__t.html#ae1b948fa28ee061e24ec2918f82b7839", null ]
     ] ],
-    [ "cy_timer_t", "structcy__timer__t.html", [
-      [ "count", "structcy__timer__t.html#a9106f4f596c08632d458caf1180e3c07", null ],
-      [ "cb", "structcy__timer__t.html#a64450c3d91a2266e7b30c58ee57028a7", null ],
-      [ "period", "structcy__timer__t.html#a76cf05d043303f05005d9d1c3993e040", null ],
-      [ "id", "structcy__timer__t.html#a789dfdc64283ebf3ad608cf735e323b9", null ],
-      [ "callbackContext", "structcy__timer__t.html#aaa77133407d3317e2d50c1d37610d36f", null ]
-    ] ],
-    [ "cy_stc_sw_timer_t", "structcy__stc__sw__timer__t.html", [
-      [ "sys_clk_freq", "structcy__stc__sw__timer__t.html#a6e0eb02dd9635ffc0acc213b07b6c23d", null ],
-      [ "start_tick", "structcy__stc__sw__timer__t.html#ad475f368df4fba6c797c3bf7a7b13a86", null ],
-      [ "tick_time", "structcy__stc__sw__timer__t.html#a2ab596dbb2d42f9b836b68e543f5f628", null ],
-      [ "match", "structcy__stc__sw__timer__t.html#af70a7f5980298202549c2dd51db23b7c", null ],
-      [ "multiplier", "structcy__stc__sw__timer__t.html#a1366428fa5de817438c36e46d09878e0", null ],
-      [ "timer_handle", "structcy__stc__sw__timer__t.html#a33c6a6fb9046cb87633ab967955f75e2", null ],
-      [ "num_active", "structcy__stc__sw__timer__t.html#a528da98dc0d8431a816fc58177a527bb", null ],
-      [ "total_active", "structcy__stc__sw__timer__t.html#a1f317e5cc3b7defcd3e4e74fc64bb7ea", null ],
-      [ "is_callback", "structcy__stc__sw__timer__t.html#a065c13f8d6cac761793877d28ca6f273", null ]
-    ] ],
     [ "cy_pdstack_pd_cbk_t", "group__group__pdstack__data__structures.html#gaab21fd03092baf7f1511dafe8a0beff0", null ],
     [ "cy_pdstack_dpm_pd_cmd_cbk_t", "group__group__pdstack__data__structures.html#ga8032135e3e0bcc286f569781a51f50a2", null ],
     [ "cy_pdstack_app_resp_cbk_t", "group__group__pdstack__data__structures.html#ga8c52a75c275868c6fe49b5ee9aa9d2fa", null ],
@@ -451,8 +457,6 @@ var group__group__pdstack__data__structures =
     [ "cy_pdstack_pwr_ready_cbk_t", "group__group__pdstack__data__structures.html#ga91fb06eaec314d7e33f05f2419f91060", null ],
     [ "cy_pdstack_sink_discharge_off_cbk_t", "group__group__pdstack__data__structures.html#ga5534a64a195ddf2f8964c0ed77c0cc97", null ],
     [ "cy_pdstack_dpm_typec_cmd_cbk_t", "group__group__pdstack__data__structures.html#ga3f4fb1cb7b6b853659e8d2ea7db20884", null ],
-    [ "cy_timer_id_t", "group__group__pdstack__data__structures.html#ga87a37816b1bb27d6ab0f583a1ac01cdd", null ],
-    [ "cy_cb_timer_t", "group__group__pdstack__data__structures.html#ga677655f9c592cb223c59bf38678c1a1a", null ],
     [ "cy_en_pdstack_pwr_led_t", "group__group__pdstack__data__structures.html#ga0873d60a116607811b3cceae424e8dd2", null ],
     [ "typec_fsm_evt_t", "group__group__pdstack__data__structures.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0", null ]
 ];

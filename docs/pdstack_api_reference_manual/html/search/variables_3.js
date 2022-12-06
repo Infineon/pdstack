@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['dat',['dat',['../structcy__stc__pdstack__pd__packet__t.html#ab26d7ccb5f6aa8ecb76d7c89a042b975',1,'cy_stc_pdstack_pd_packet_t::dat()'],['../structcy__stc__pdstack__pd__packet__epr__t.html#a9a37d886647aa73d92b13806c8709fba',1,'cy_stc_pdstack_pd_packet_epr_t::dat()']]],
-  ['datarole',['dataRole',['../structcy__stc__pdstack__pd__packet__t.html#a85432e1931c5dd494915685db0ef8068',1,'cy_stc_pdstack_pd_packet_t::dataRole()'],['../structcy__stc__pdstack__pd__packet__epr__t.html#a55a22191c1e7f486101567bfbf2c1039',1,'cy_stc_pdstack_pd_packet_epr_t::dataRole()']]],
+  ['dat',['dat',['../structcy__stc__pdstack__pd__packet__t.html#acf647567df1e16d9bc85836bf1fa1330',1,'cy_stc_pdstack_pd_packet_t']]],
+  ['datareseten',['dataResetEn',['../structcy__stc__pdstack__dpm__status__t.html#ac7ba956964d41856130e858fec98cbc2',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['datarole',['dataRole',['../structcy__stc__pdstack__pd__packet__t.html#a85432e1931c5dd494915685db0ef8068',1,'cy_stc_pdstack_pd_packet_t']]],
   ['datasize',['dataSize',['../structcy__pdstack__extd__hdr__t_1_1_e_x_t_d___h_d_r___t.html#a06599e24cab22718d6f25a5cd13646dc',1,'cy_pdstack_extd_hdr_t::EXTD_HDR_T']]],
   ['datptr',['datPtr',['../structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#aed36805d30d72e561465d1db4bfcbf50',1,'cy_stc_pdstack_dpm_pd_cmd_buf_t']]],
   ['dbsupport',['dbSupport',['../structcy__stc__pdstack__dpm__status__t.html#aa99de4674ed6296cf7363920533fa3d7',1,'cy_stc_pdstack_dpm_status_t']]],
