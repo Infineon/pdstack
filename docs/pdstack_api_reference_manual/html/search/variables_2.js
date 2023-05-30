@@ -9,6 +9,7 @@ var searchData=
   ['cblsoftresettried',['cblSoftResetTried',['../structcy__stc__pdstack__dpm__status__t.html#a3be6e86aeff1adc0962c1dea655daaf9',1,'cy_stc_pdstack_dpm_status_t']]],
   ['cblstate',['cblState',['../structcy__stc__pdstack__dpm__status__t.html#ab8242f75328c6f0eddc8362232e1db7f',1,'cy_stc_pdstack_dpm_status_t']]],
   ['cbltype',['cblType',['../structcy__stc__pdstack__dpm__status__t.html#a8953d8d64e94fac2d631946ff41a8654',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['cblvdmminversion',['cblVdmMinVersion',['../structcy__stc__pdstack__context__t.html#a3173221633d4a0ce44f4a6772b9e1ede',1,'cy_stc_pdstack_context_t']]],
   ['cblvdmversion',['cblVdmVersion',['../structcy__stc__pdstack__dpm__status__t.html#a781a0da414dc1dd06989753cb6beac0d',1,'cy_stc_pdstack_dpm_status_t']]],
   ['cblvdo',['cblVdo',['../structcy__stc__pdstack__dpm__status__t.html#a91ad56c9b57954096f8bdbf6a8822d89',1,'cy_stc_pdstack_dpm_status_t']]],
   ['cblvdo2',['cblVdo2',['../structcy__stc__pdstack__dpm__status__t.html#a8ee69a60cfc096e890c743c76ca225f8',1,'cy_stc_pdstack_dpm_status_t']]],

@@ -69,6 +69,7 @@ var group__group__pdstack__functions =
     [ "Cy_PdStack_Dpm_UpdateEprSrcCapMask", "group__group__pdstack__functions.html#gaea15e6a330eab7d64ccbde4566eff6ba", null ],
     [ "Cy_PdStack_Dpm_UpdateEprSnkCap", "group__group__pdstack__functions.html#ga81d70dcf068687970e99777d6119955a", null ],
     [ "Cy_PdStack_Dpm_UpdateEprSnkCapMask", "group__group__pdstack__functions.html#ga96e4125b87b56935a6772547091d19b3", null ],
+    [ "Cy_PdStack_Dpm_UpdateEprSnkMaxMin", "group__group__pdstack__functions.html#ga9012139ea35863f82009a305148331b0", null ],
     [ "Cy_PdStack_Dpm_GetAutoVcsEnabled", "group__group__pdstack__functions.html#ga07c6dcab5d3ddb532a7d69524e14fd48", null ],
     [ "Cy_PdStack_Dpm_UpdateAutoVcsEnable", "group__group__pdstack__functions.html#ga22e36c703fc00cf3ddd00777458e6701", null ],
     [ "Cy_PdStack_Dpm_UpdateVconnRetain", "group__group__pdstack__functions.html#gae4832144f5045d333f4016db3b2b9070", null ],

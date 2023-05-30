@@ -11,6 +11,7 @@ var searchData=
   ['pdrevision',['pdRevision',['../structcy__stc__pdstack__port__cfg__t.html#aff08168ad3a010e981e9b2e1bbc2d0a7',1,'cy_stc_pdstack_port_cfg_t']]],
   ['pdstat',['pdStat',['../structcy__stc__pdstack__context__t.html#ac74346c9df49922a040765d9137102bd',1,'cy_stc_pdstack_context_t']]],
   ['pdsupport',['pdSupport',['../structcy__stc__pdstack__dpm__status__t.html#a5be6b199d4809509e028d3d2293f5a4c',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['pecmdbuf',['peCmdBuf',['../structcy__stc__pdstack__pe__status__t.html#a8f42326966876422363f4790b8bdd92d',1,'cy_stc_pdstack_pe_status_t']]],
   ['peerpd3supp',['peerPd3Supp',['../structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#aa5137f8b8686cabf39bb09edef83b4a1',1,'cy_stc_pdstack_pd_port_status_ec_t::PD_PORT_STAT']]],
   ['peerunchunksupp',['peerUnchunkSupp',['../structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#ab38454b66593f1a3d1fa1893e008283e',1,'cy_stc_pdstack_pd_port_status_ec_t::PD_PORT_STAT']]],
   ['peevt',['peEvt',['../structcy__stc__pdstack__dpm__status__t.html#a06191eee02a4f9dfa727ba51e1f31b68',1,'cy_stc_pdstack_dpm_status_t']]],

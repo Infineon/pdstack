@@ -128,7 +128,8 @@ var group__group__pdstack__data__structures =
       [ "snkEnable", "structcy__stc__pdstack__epr__t.html#ac2b9f2aeb814da6dcea39609842eea67", null ],
       [ "snkPdoMask", "structcy__stc__pdstack__epr__t.html#a464fe18710d3258f64fb06166eb77c00", null ],
       [ "snkPdoCount", "structcy__stc__pdstack__epr__t.html#a06a62f1c9fdad1afc84a521a3d430190", null ],
-      [ "snkPdo", "structcy__stc__pdstack__epr__t.html#a2e7959b630578d12b35545a0cb30a114", null ]
+      [ "snkPdo", "structcy__stc__pdstack__epr__t.html#a2e7959b630578d12b35545a0cb30a114", null ],
+      [ "snkMaxMin", "structcy__stc__pdstack__epr__t.html#af0fe1242175aca73a1e040bb3ddc054d", null ]
     ] ],
     [ "cy_stc_pdstack_dpm_status_t", "structcy__stc__pdstack__dpm__status__t.html", [
       [ "portRole", "structcy__stc__pdstack__dpm__status__t.html#a263e151e9772a4611ae55923073d037d", null ],
@@ -360,7 +361,8 @@ var group__group__pdstack__data__structures =
       [ "eprMultiMessageFlag", "structcy__stc__pdstack__pe__status__t.html#a6bc616851e6a428901a13b4390393281", null ],
       [ "eprSendcapInSpr", "structcy__stc__pdstack__pe__status__t.html#adc24ebbe869e9e5ad2b93fc0af1444da", null ],
       [ "eprSnkExtdChunkBuffer", "structcy__stc__pdstack__pe__status__t.html#a1ae5ad680761c98acd5d4f7ef519a51b", null ],
-      [ "eprChunkCount", "structcy__stc__pdstack__pe__status__t.html#aadc73a36c4608acf46a7ab0ddcb43f12", null ]
+      [ "eprChunkCount", "structcy__stc__pdstack__pe__status__t.html#aadc73a36c4608acf46a7ab0ddcb43f12", null ],
+      [ "peCmdBuf", "structcy__stc__pdstack__pe__status__t.html#a8f42326966876422363f4790b8bdd92d", null ]
     ] ],
     [ "cy_stc_pdstack_dpm_params_t", "structcy__stc__pdstack__dpm__params__t.html", [
       [ "defCur", "structcy__stc__pdstack__dpm__params__t.html#a99cf0c18e10e9376edec042f5e96400c", null ],
@@ -391,7 +393,9 @@ var group__group__pdstack__data__structures =
       [ "ptrAltModeContext", "structcy__stc__pdstack__context__t.html#a5f8f4f4912f623846bdc6455266f2f03", null ],
       [ "ptrHpiContext", "structcy__stc__pdstack__context__t.html#a0c2bed8fa9e495bc33888fe8ba6d310a", null ],
       [ "ptrPdTimerParams", "structcy__stc__pdstack__context__t.html#a5eee576c6cd68ef54b521814e7c1011e", null ],
-      [ "senderRspTimeout", "structcy__stc__pdstack__context__t.html#a2a3a56499a55d9c8996820bfa9bcf007", null ]
+      [ "senderRspTimeout", "structcy__stc__pdstack__context__t.html#a2a3a56499a55d9c8996820bfa9bcf007", null ],
+      [ "srcRecoverTime", "structcy__stc__pdstack__context__t.html#a62b4d54c72b95ccd3b4e610dba062fd8", null ],
+      [ "cblVdmMinVersion", "structcy__stc__pdstack__context__t.html#a3173221633d4a0ce44f4a6772b9e1ede", null ]
     ] ],
     [ "cy_pd_stack_conf_t", "structcy__pd__stack__conf__t.html", [
       [ "sourceOnly", "structcy__pd__stack__conf__t.html#a2c46867e53e7be5c37b32154beaacaa0", null ],

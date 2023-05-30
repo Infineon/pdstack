@@ -1,12 +1,12 @@
 /***************************************************************************//**
 * \file cy_pdstack_dpm.h
-* \version 3.0
+* \version 3.10
 *
 * Header file of Device Policy Manager of the PDStack middleware.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2021-2022, Cypress Semiconductor Corporation. All rights reserved.
+* Copyright 2021-2023, Cypress Semiconductor Corporation. All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -1571,6 +1571,32 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateEprSnkCap (
 cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateEprSnkCapMask (
         cy_stc_pdstack_context_t *ptrPdStackContext,
         uint8_t mask);
+
+/*******************************************************************************
+* Function name: Cy_PdStack_Dpm_UpdateEprSnkMaxMin
+****************************************************************************//**
+*
+* Updates the EPR sink max/min current/power at runtime thereby overriding the
+* generated configuration by EZ-PD(TM) Configurator.
+*
+* \param ptrPdStackContext
+* PDStack library context pointer.
+*
+* \param count
+* Number of PDOs.
+*
+* \param max_min
+* Pointer to max/min current/power array.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if the operation is successful.
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateEprSnkMaxMin (
+    cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t count,
+        uint16_t* max_min);
 
 /*******************************************************************************
 * Function name: Cy_PdStack_Dpm_GetAutoVcsEnabled 

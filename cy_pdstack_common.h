@@ -1,12 +1,12 @@
 /***************************************************************************//**
 * \file cy_pdstack_common.h
-* \version 3.0
+* \version 3.10
 *
 * Common header file of the PDStack middleware.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2021-2022, Cypress Semiconductor Corporation. All rights reserved.
+* Copyright 2021-2023, Cypress Semiconductor Corporation. All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -197,7 +197,7 @@
 *   </tr>
 *   <tr>
 *     <td>mtb-pdl-cat2</td>
-*     <td>2.1.0</td>
+*     <td>2.4.0</td>
 *   </tr>
 *   <tr>
 *     <td>GCC compiler</td>
@@ -219,6 +219,20 @@
 *
 * <table class="doxtable">
 *   <tr><th>Version</th><th>Changes</th><th>Reason for change</th></tr>
+*   <tr>
+*     <td rowspan="3">3.10</td>
+*     <td>Updated to USB PD Revision 3.1 Version 1.7.
+*     </td>
+*     <td>Feature addition.</td>
+*   </tr>
+*   <tr>
+*     <td>Added EPR AVS feature support in the EPR sink library.
+*     <td>Feature Addition.</td>
+*   </tr>
+*   <tr>
+*     <td>Updated the handling of Get Source Info message for DRP.
+*     <td>Defect fixes.</td>
+*   </tr>
 *   <tr>
 *     <td rowspan="4">3.0</td>
 *     <td>Added EZ-PD(TM) PMG1 DRP EPR library compliant to USB PD Revision 3.1.
@@ -377,7 +391,7 @@
 #define CY_PDSTACK_MW_VERSION_MAJOR               (3)
 
 /** PDStack middleware minor version */
-#define CY_PDSTACK_MW_VERSION_MINOR               (0)
+#define CY_PDSTACK_MW_VERSION_MINOR               (10)
 
 /** USB Type-C specification version 2.0 */
 #define CY_PD_TYPE_C_2_0_REVISION                 (0x0200u)
@@ -486,6 +500,9 @@
 
 /** Position of VDM version field in structured VDM header. */
 #define CY_PD_STD_VDM_VERSION_IDX                 (13u)
+
+/** Position of VDM version field in structured VDM header. */
+#define CY_PD_STD_VDM_MINOR_VERSION_IDX           (11u)
 
 /** VDM version 2.0. Used under USB PD Revision 3.0. */
 #define CY_PD_STD_VDM_VERSION_REV3                (1u)
@@ -645,8 +662,8 @@
 /** Src.Recover timer period in ms for EPR mode. */
 #define CY_PD_EPR_SRC_RECOVER_TIMER_PERIOD     (1250u)
 
-/** Sender response timeout period in ms for PD3. See Section 6.6.2 of USB PD spec Rev3 v1.4. */
-#define CY_PD_3_SENDER_RESPONSE_TIMER_PERIOD     (29u)
+/** Sender response timeout period in ms for PD3. See Section 6.6.2 of USB PD spec Rev3 v1.6. */
+#define CY_PD_3_SENDER_RESPONSE_TIMER_PERIOD     (30u)
 
 /** Sender response timeout period in ms for PD2. See Section 6.6.2 of USB PD spec Rev2 v1.2. */
 #define CY_PD_2_SENDER_RESPONSE_TIMER_PERIOD     (27u)
@@ -689,6 +706,9 @@
 
 /** Delay applied before DFP sends Data_Reset_Complete message. */
 #define CY_PD_DATA_RESET_COMPLETION_DELAY      (225u)
+
+/** UFP Data_Reset complete timeout period. */
+#define CY_PD_UFP_DATA_RESET_FAIL_TIMER_PERIOD (500u)
 
 /** Period of VConn monitoring checks done internally. */
 #define CY_PD_VCONN_TURN_ON_TIMER_PERIOD       (10u)
@@ -817,7 +837,7 @@
 #define CY_PD_EXT_EPR_SRCCAP_PDP_INDEX                      (24u)
 
 /** Size of extended sink cap message in bytes. */
-#define CY_PD_EXT_SNKCAP_SIZE                               (25u)
+#define CY_PD_EXT_SNKCAP_SIZE                               (24u)
 
 /** Size of the buffer allocated for extended sink cap data. */
 #define CY_PD_EXT_SNKCAP_BUF_SIZE                           (28u)
@@ -2582,6 +2602,9 @@ typedef struct
     /** EPR SNK PDO data array. */
     cy_pd_pd_do_t  snkPdo[CY_PD_MAX_NO_OF_EPR_PDO];
     
+    /** Max min EPR current from the config table or updated at runtime by the EC.
+     * */
+    uint16_t snkMaxMin[CY_PD_MAX_NO_OF_EPR_PDO];    
 }cy_stc_pdstack_epr_t;
 
 /**
@@ -3064,6 +3087,7 @@ typedef struct
 
     /** Power LED state. */
     uint8_t pwrLed;
+
 } cy_stc_pdstack_dpm_ext_status_t;
 
 /**
@@ -3330,6 +3354,8 @@ typedef struct {
     /** EPR chunked message count. */
     uint8_t eprChunkCount;
 
+    /** PD command buffer to send command from policy engine. */
+    cy_stc_pdstack_dpm_pd_cmd_buf_t peCmdBuf;
 } cy_stc_pdstack_pe_status_t;
 
 /**
@@ -3433,7 +3459,14 @@ typedef struct cy_stc_pdstack_context
     cy_stc_pdstack_pd_timer_params_t *ptrPdTimerParams;
     
     /** Current sender response timer period. */
-    uint8_t  senderRspTimeout;        
+    uint8_t  senderRspTimeout;
+
+    /** Source recovery timer period. */
+    uint16_t srcRecoverTime;
+
+    /** Stores the cable VDM minor version. */
+    cy_en_pdstack_std_minor_vdm_ver_t cblVdmMinVersion;
+
 } cy_stc_pdstack_context_t;
 
 /**

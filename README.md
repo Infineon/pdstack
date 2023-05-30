@@ -1,4 +1,4 @@
-# PDStack middleware library 3.0
+# PDStack middleware library 3.10
 
 ### Overview
 
@@ -33,4 +33,4 @@ For more information, see the following resources:
 * [ModusToolbox&trade; EZ-PD&trade; Configurator user guide](https://www.infineon.com/dgdl/Infineon-ModusToolbox_EZ-PD_Configurator_1.20_User_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c8386267f0183a9608a13597d)
  
 ---
-© 2021-2022, Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation.
+© 2021-2023, Cypress Semiconductor Corporation (an Infineon company) or an affiliate of Cypress Semiconductor Corporation.
