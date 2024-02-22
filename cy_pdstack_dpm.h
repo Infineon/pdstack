@@ -1,12 +1,12 @@
 /***************************************************************************//**
 * \file cy_pdstack_dpm.h
-* \version 3.10
+* \version 3.20
 *
 * Header file of Device Policy Manager of the PDStack middleware.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2021-2023, Cypress Semiconductor Corporation. All rights reserved.
+* Copyright 2021-2024, Cypress Semiconductor Corporation. All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -1108,6 +1108,48 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateSwapResponse(
         uint8_t value);
 
 /*******************************************************************************
+* Function name: Cy_PdStack_Dpm_UpdatePpsSrcEn
+****************************************************************************//**
+*
+* Updates the PD port PPS Source Enable field.
+*
+* \param ptrPdStackContext
+* PDStack library context pointer.
+*
+* \param ppsSrcEn
+* whether to enable PPS Source or not.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if the operation is successful.
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdatePpsSrcEn(
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t ppsSrcEn);
+
+/*******************************************************************************
+* Function name: Cy_PdStack_Dpm_UpdatePpsSnkEn
+****************************************************************************//**
+*
+* Updates the PD port PPS Sink Enable field.
+*
+* \param ptrPdStackContext
+* PDStack library context pointer.
+*
+* \param ppsSnkEn
+* whether to enable PPS Sink or not.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if the operation is successful.
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdatePpsSnkEn(
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t ppsSnkEn);
+
+/*******************************************************************************
 * Function name: Cy_PdStack_Dpm_UpdatePortStatus
 ****************************************************************************//**
 *
@@ -1311,7 +1353,7 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_ChangeEprAvsActiveFlag(
 * Function name: Cy_PdStack_Dpm_IsValidAvsReq
 ****************************************************************************//**
 *
-* Change the state of the EPR AVS mode active flag.
+* Evaluates the AVS RDO with respect to the selected AVS PDO.
 *
 * \param ptrPdStackContext
 * PDStack library context pointer.
@@ -1702,6 +1744,24 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_SetDataReset(cy_stc_pdstack_context_t *ptr
 *
 *******************************************************************************/
 cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateTimingParams(cy_stc_pdstack_context_t *ptrPdStackContext, cy_stc_pdstack_pd_timer_params_t *ptrPdTimerParams);
+
+/*******************************************************************************
+* Function name: Cy_PdStack_Dpm_GetContext
+****************************************************************************//**
+*
+* This API returns the pointer to the \ref cy_stc_pdstack_context_t of the
+* given port. This API should be called after \ref Cy_PdStack_Dpm_Init () has
+* been called.
+* 
+* \param port
+* The selected port.
+*
+* \return
+* Pointer to the PDStack context for a given port. 
+* NULL if the port is invalid
+*
+*******************************************************************************/
+cy_stc_pdstack_context_t* Cy_PdStack_Dpm_GetContext(uint8_t port); 
 
 /** \} group_pdstack_functions */
 

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 3.10: PDStack middleware library</title>
+<title>PDStack Middleware Library 3.20 [INTERNAL ONLY]: PDStack middleware library</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 3.10</div>
+   <div id="projectname">PDStack Middleware Library 3.20 [INTERNAL ONLY]</div>
   </td>
  </tr>
  </tbody>
@@ -111,6 +111,7 @@ General description</h1>
 <li>pmg1_pd3_drp - Supports USB Type-C dual-role operation and USB PD Revision 3.1 messaging. This library can be used in any Power Delivery application.</li>
 <li>pmg1_pd3_snk_epr - Supports USB Type-C sink Extended Power Range (EPR). This library can be used in applications that require EPR.</li>
 <li>pmg1_pd3_drp_epr - Supports USB Type-C dual role EPR operation and USB PD Revision 3.1 messaging.</li>
+<li>pmg1_pd3_drp_epr_cfg - Supports USB Type-C dual role EPR operation, USB PD Revision 3.1 messaging and configurability of stack parameters through the <b>EZ-PD&trade; Configuration Utility</b>.</li>
 <li>wlc1_pd3_snk - Library with support for USB Type-C sink operation and USB PD Revision 3.1 messaging. This library can be used in any Power Delivery WLC1 application.</li>
 </ol>
 <h1><a class="anchor" id="section_pdstack_quick_start"></a>
@@ -140,6 +141,7 @@ Configuration considerations</h1>
 <li>Add 'PMG1_PD3_DRP' to the COMPONENTS for using the pmg1_pd3_drp library</li>
 <li>Add 'PMG1_PD3_SNK_EPR' to the COMPONENTS for using the pmg1_pd3_snk_epr library</li>
 <li>Add 'PMG1_PD3_DRP_EPR' to the COMPONENTS for using the pmg1_pd3_drp_epr library</li>
+<li>Add 'PMG1_PD3_DRP_EPR_CFG' to the COMPONENTS for using the pmg1_pd3_drp_epr_cfg library</li>
 <li>Add 'WLC1_PD3_SNK' to the COMPONENTS for using the wlc1_pd3_snk library</li>
 </ul>
 </li>
@@ -159,9 +161,9 @@ Supported software and tools</h1>
 <tr>
 <th>Software and tools </th><th>Version  </th></tr>
 <tr>
-<td>ModusToolbox(TM) software </td><td>3.0  </td></tr>
+<td>ModusToolbox(TM) software </td><td>3.1  </td></tr>
 <tr>
-<td>mtb-pdl-cat2 </td><td>2.4.0  </td></tr>
+<td>mtb-pdl-cat2 </td><td>2.8.0  </td></tr>
 <tr>
 <td>GCC compiler </td><td>10.3.1  </td></tr>
 <tr>
@@ -174,6 +176,12 @@ Changelog</h1>
 <table class="doxtable">
 <tr>
 <th>Version</th><th>Changes</th><th>Reason for change </th></tr>
+<tr>
+<td rowspan="3">3.20 </td><td>Updated to USB PD Revision 3.1 Version 1.8.  </td><td>Feature addition.  </td></tr>
+<tr>
+<td>Added a new library variant 'pmg1_pd3_drp_epr_cfg' that supports configurability of stack parameters through the EZ-PD&trade; Configuration Utility.  </td><td>Feature addition.  </td></tr>
+<tr>
+<td>PdStack has been updated to send Hard Reset if the PDO value in the EPR Request does not match the value of the PDO sent in the EPR_Source_Capabilities.  </td><td>Defect fixes   </td></tr>
 <tr>
 <td rowspan="3">3.10 </td><td>Updated to USB PD Revision 3.1 Version 1.7.  </td><td>Feature addition.  </td></tr>
 <tr>
@@ -222,7 +230,7 @@ More information</h1>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 3.10</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.20 [INTERNAL ONLY]</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

@@ -47,7 +47,9 @@ var group__group__pdstack__macros =
     [ "CY_PD_VOLT_PER_UNIT", "group__group__pdstack__macros.html#ga3112b1d5c2f9b78c0795c1ec9e0110d5", null ],
     [ "CY_PD_VOLT_PER_UNIT_PPS", "group__group__pdstack__macros.html#ga9ceeb8b972a8bb3e514ada2f66a5eada", null ],
     [ "CY_PD_CURRENT_PPS_MULTIPLIER", "group__group__pdstack__macros.html#gac00aa1f050ad8b1c75de09f2809ca391", null ],
+    [ "CY_PD_VOLT_PPS_MULTIPLIER", "group__group__pdstack__macros.html#ga9b11db009571024c2f0b088dde708e8e", null ],
     [ "CY_PD_CURRENT_AVS_MULTIPLIER", "group__group__pdstack__macros.html#ga713eb87fb71bcd20e835295cd13e6f26", null ],
+    [ "CY_PD_VOLT_AVS_MULTIPLIER", "group__group__pdstack__macros.html#ga9fb15674638d5ef43e99917bd4aef493", null ],
     [ "CY_PD_ISAFE_0A", "group__group__pdstack__macros.html#ga82af4edb72acd4382338eaa42ced3dfa", null ],
     [ "CY_PD_ISAFE_DEF", "group__group__pdstack__macros.html#ga2de57d0f1d5d38a36c7b95cc594de3c1", null ],
     [ "CY_PD_I_0P9A", "group__group__pdstack__macros.html#ga232295a101c4e2611976654c06e6165d", null ],
@@ -177,5 +179,6 @@ var group__group__pdstack__macros =
     [ "CY_PD_DP_HPD_TYPE_VIRTUAL", "group__group__pdstack__macros.html#gaf8a2077fb31c70f4173bde087f91562d", null ],
     [ "CY_PD_HOST_SBU_CFG_FULL", "group__group__pdstack__macros.html#ga2340fe4f3ab093d2520727026ad789db", null ],
     [ "CY_PD_HOST_SBU_CFG_FIXED_POL", "group__group__pdstack__macros.html#ga4d03121309c383723ff80000d7c34755", null ],
-    [ "CY_PD_HOST_SBU_CFG_PASS_THROUGH", "group__group__pdstack__macros.html#ga3c294c67114d0aa9613e7beed72fbfa0", null ]
+    [ "CY_PD_HOST_SBU_CFG_PASS_THROUGH", "group__group__pdstack__macros.html#ga3c294c67114d0aa9613e7beed72fbfa0", null ],
+    [ "CY_PD_PDO_UNCONSTRAINED_BIT_MASK", "group__group__pdstack__macros.html#gaa9ad07ced289672cb898dbd3e1d69a44", null ]
 ];

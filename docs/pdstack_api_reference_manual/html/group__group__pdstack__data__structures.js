@@ -395,13 +395,34 @@ var group__group__pdstack__data__structures =
       [ "ptrPdTimerParams", "structcy__stc__pdstack__context__t.html#a5eee576c6cd68ef54b521814e7c1011e", null ],
       [ "senderRspTimeout", "structcy__stc__pdstack__context__t.html#a2a3a56499a55d9c8996820bfa9bcf007", null ],
       [ "srcRecoverTime", "structcy__stc__pdstack__context__t.html#a62b4d54c72b95ccd3b4e610dba062fd8", null ],
-      [ "cblVdmMinVersion", "structcy__stc__pdstack__context__t.html#a3173221633d4a0ce44f4a6772b9e1ede", null ]
+      [ "cblVdmMinVersion", "structcy__stc__pdstack__context__t.html#a3173221633d4a0ce44f4a6772b9e1ede", null ],
+      [ "peDpmCmdRequest", "structcy__stc__pdstack__context__t.html#a4a0b8816556657894062e6610c3759b7", null ]
     ] ],
     [ "cy_pd_stack_conf_t", "structcy__pd__stack__conf__t.html", [
       [ "sourceOnly", "structcy__pd__stack__conf__t.html#a2c46867e53e7be5c37b32154beaacaa0", null ],
       [ "pdRev3", "structcy__pd__stack__conf__t.html#a8bcf8818886823bba8864b63ea96e9cb", null ],
       [ "frsRx", "structcy__pd__stack__conf__t.html#abad8613e5b1f1cc266f7babefc09aa5d", null ],
       [ "frsTx", "structcy__pd__stack__conf__t.html#a58b9c93ce20341c8d0838033860d7983", null ]
+    ] ],
+    [ "cy_stc_pdstack_app_status_t", "structcy__stc__pdstack__app__status__t.html", [
+      [ "faultStatus", "structcy__stc__pdstack__app__status__t.html#aa60df1cc1ff4992b62857b5bf5415d0d", null ],
+      [ "vdmVersion", "structcy__stc__pdstack__app__status__t.html#a7ebfdcc3242a971154cf7466207a79a7", null ],
+      [ "isVdmPending", "structcy__stc__pdstack__app__status__t.html#a633d6ccb9d45e03aef04ac576d1e1688", null ],
+      [ "vdmMinorVersion", "structcy__stc__pdstack__app__status__t.html#aa2f11d6b132473917e773e37448394a8", null ],
+      [ "vdmIdVdoCnt", "structcy__stc__pdstack__app__status__t.html#a394f3376764d85ec08c5805918d192c4", null ],
+      [ "vdmSvidVdoCnt", "structcy__stc__pdstack__app__status__t.html#ae3e9dca2fe7d9359640c73462e03554d", null ],
+      [ "vdmModeDataLen", "structcy__stc__pdstack__app__status__t.html#a5cc8523482b6989787d3221e3edb9e50", null ],
+      [ "keepVconnSrc", "structcy__stc__pdstack__app__status__t.html#a12f21f55ed7a67c5384e5d7bd007bbfc", null ],
+      [ "sysPwrState", "structcy__stc__pdstack__app__status__t.html#ac45fcdacbf7204185b17342c812356a3", null ],
+      [ "rsvd", "structcy__stc__pdstack__app__status__t.html#a107d40da30c2cd53a708fb8405b60220", null ],
+      [ "vdmIdVdoP", "structcy__stc__pdstack__app__status__t.html#aae75b23d3cb645218fbc4fa1a6aa8da9", null ],
+      [ "vdmSvidVdoP", "structcy__stc__pdstack__app__status__t.html#aa02f7103f040f34c6ec3c8177d8788d1", null ],
+      [ "vdmModeDataP", "structcy__stc__pdstack__app__status__t.html#ab8cc2d1aa6ca01b1a0852cbab75c7b8d", null ],
+      [ "vdmRespCbk", "structcy__stc__pdstack__app__status__t.html#a8c73888c0b8d9643684cabf917984d12", null ],
+      [ "vdmIdVdoResp", "structcy__stc__pdstack__app__status__t.html#af5b45476841e6fb7a2e10a9b236a0f97", null ],
+      [ "vdmSvidVdoResp", "structcy__stc__pdstack__app__status__t.html#aa7e427238d2a4bc3f6ea84e79de2fe4a", null ],
+      [ "vdmModeResp", "structcy__stc__pdstack__app__status__t.html#a62268e9dcaaf2199a382efc2d9634e75", null ],
+      [ "vdmResp", "structcy__stc__pdstack__app__status__t.html#a0c682a04c60775c4a94b0e2b3c87cb17", null ]
     ] ],
     [ "cy_stc_pdstack_port_cfg_t", "structcy__stc__pdstack__port__cfg__t.html", [
       [ "signature", "structcy__stc__pdstack__port__cfg__t.html#a03e19f4b915a32f14159fcdd8b2a53f6", null ],
@@ -462,5 +483,6 @@ var group__group__pdstack__data__structures =
     [ "cy_pdstack_sink_discharge_off_cbk_t", "group__group__pdstack__data__structures.html#ga5534a64a195ddf2f8964c0ed77c0cc97", null ],
     [ "cy_pdstack_dpm_typec_cmd_cbk_t", "group__group__pdstack__data__structures.html#ga3f4fb1cb7b6b853659e8d2ea7db20884", null ],
     [ "cy_en_pdstack_pwr_led_t", "group__group__pdstack__data__structures.html#ga0873d60a116607811b3cceae424e8dd2", null ],
+    [ "pe_fsm_evt_t", "group__group__pdstack__data__structures.html#ga54617837cb1e71d408568d9554a7a416", null ],
     [ "typec_fsm_evt_t", "group__group__pdstack__data__structures.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0", null ]
 ];

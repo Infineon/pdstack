@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 3.10: Macros</title>
+<title>PDStack Middleware Library 3.20 [INTERNAL ONLY]: Macros</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 3.10</div>
+   <div id="projectname">PDStack Middleware Library 3.20 [INTERNAL ONLY]</div>
   </td>
  </tr>
  </tbody>
@@ -96,7 +96,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga848bef4fd40557887b03085e652b7c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">PDStack middleware major version. <br /></td></tr>
 <tr class="separator:ga848bef4fd40557887b03085e652b7c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga19659b37cb2ae1efb0d7201b79de3411"><td class="memItemLeft" align="right" valign="top"><a id="ga19659b37cb2ae1efb0d7201b79de3411"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__macros.html#ga19659b37cb2ae1efb0d7201b79de3411">CY_PDSTACK_MW_VERSION_MINOR</a>&#160;&#160;&#160;(10)</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__macros.html#ga19659b37cb2ae1efb0d7201b79de3411">CY_PDSTACK_MW_VERSION_MINOR</a>&#160;&#160;&#160;(20)</td></tr>
 <tr class="memdesc:ga19659b37cb2ae1efb0d7201b79de3411"><td class="mdescLeft">&#160;</td><td class="mdescRight">PDStack middleware minor version. <br /></td></tr>
 <tr class="separator:ga19659b37cb2ae1efb0d7201b79de3411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafc849c8f19cd638ade15f45ed7fcfe15"><td class="memItemLeft" align="right" valign="top"><a id="gafc849c8f19cd638ade15f45ed7fcfe15"></a>
@@ -236,9 +236,15 @@ Macros</h2></td></tr>
 <tr class="memitem:gac00aa1f050ad8b1c75de09f2809ca391"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__macros.html#gac00aa1f050ad8b1c75de09f2809ca391">CY_PD_CURRENT_PPS_MULTIPLIER</a>&#160;&#160;&#160;(5u)</td></tr>
 <tr class="memdesc:gac00aa1f050ad8b1c75de09f2809ca391"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplier used to convert from the current unit used in other PDOs to that used in PPS PDO/RDO.  <a href="#gac00aa1f050ad8b1c75de09f2809ca391">More...</a><br /></td></tr>
 <tr class="separator:gac00aa1f050ad8b1c75de09f2809ca391"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga713eb87fb71bcd20e835295cd13e6f26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__macros.html#ga713eb87fb71bcd20e835295cd13e6f26">CY_PD_CURRENT_AVS_MULTIPLIER</a>&#160;&#160;&#160;(4u)</td></tr>
+<tr class="memitem:ga9b11db009571024c2f0b088dde708e8e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__macros.html#ga9b11db009571024c2f0b088dde708e8e">CY_PD_VOLT_PPS_MULTIPLIER</a>&#160;&#160;&#160;(5u)</td></tr>
+<tr class="memdesc:ga9b11db009571024c2f0b088dde708e8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplier used to convert from the voltage unit used in PPS PDO to RDO.  <a href="#ga9b11db009571024c2f0b088dde708e8e">More...</a><br /></td></tr>
+<tr class="separator:ga9b11db009571024c2f0b088dde708e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga713eb87fb71bcd20e835295cd13e6f26"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__macros.html#ga713eb87fb71bcd20e835295cd13e6f26">CY_PD_CURRENT_AVS_MULTIPLIER</a>&#160;&#160;&#160;(5u)</td></tr>
 <tr class="memdesc:ga713eb87fb71bcd20e835295cd13e6f26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplier used to convert from the current unit used in other PDOs to that used in AVS PDO/RDO.  <a href="#ga713eb87fb71bcd20e835295cd13e6f26">More...</a><br /></td></tr>
 <tr class="separator:ga713eb87fb71bcd20e835295cd13e6f26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9fb15674638d5ef43e99917bd4aef493"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__macros.html#ga9fb15674638d5ef43e99917bd4aef493">CY_PD_VOLT_AVS_MULTIPLIER</a>&#160;&#160;&#160;(4u)</td></tr>
+<tr class="memdesc:ga9fb15674638d5ef43e99917bd4aef493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Multiplier used to convert from the voltage unit used in AVS PDO to RDO.  <a href="#ga9fb15674638d5ef43e99917bd4aef493">More...</a><br /></td></tr>
+<tr class="separator:ga9fb15674638d5ef43e99917bd4aef493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga82af4edb72acd4382338eaa42ced3dfa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__macros.html#ga82af4edb72acd4382338eaa42ced3dfa">CY_PD_ISAFE_0A</a>&#160;&#160;&#160;(0u)</td></tr>
 <tr class="memdesc:ga82af4edb72acd4382338eaa42ced3dfa"><td class="mdescLeft">&#160;</td><td class="mdescRight">VBus current usage = 0 A.  <a href="#ga82af4edb72acd4382338eaa42ced3dfa">More...</a><br /></td></tr>
 <tr class="separator:ga82af4edb72acd4382338eaa42ced3dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -637,6 +643,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ga3c294c67114d0aa9613e7beed72fbfa0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__macros.html#ga3c294c67114d0aa9613e7beed72fbfa0">CY_PD_HOST_SBU_CFG_PASS_THROUGH</a>&#160;&#160;&#160;(2u)</td></tr>
 <tr class="memdesc:ga3c294c67114d0aa9613e7beed72fbfa0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pass through SBU MUX (AUX only) connection.  <a href="#ga3c294c67114d0aa9613e7beed72fbfa0">More...</a><br /></td></tr>
 <tr class="separator:ga3c294c67114d0aa9613e7beed72fbfa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa9ad07ced289672cb898dbd3e1d69a44"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__macros.html#gaa9ad07ced289672cb898dbd3e1d69a44">CY_PD_PDO_UNCONSTRAINED_BIT_MASK</a>&#160;&#160;&#160;(0x80u)</td></tr>
+<tr class="memdesc:gaa9ad07ced289672cb898dbd3e1d69a44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unconstrained bit mask.  <a href="#gaa9ad07ced289672cb898dbd3e1d69a44">More...</a><br /></td></tr>
+<tr class="separator:gaa9ad07ced289672cb898dbd3e1d69a44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="ga0439cbd8dd15a37c4347f88a7405dff7"></a>
@@ -1339,6 +1348,22 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="ga9b11db009571024c2f0b088dde708e8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9b11db009571024c2f0b088dde708e8e">&#9670;&nbsp;</a></span>CY_PD_VOLT_PPS_MULTIPLIER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CY_PD_VOLT_PPS_MULTIPLIER&#160;&#160;&#160;(5u)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplier used to convert from the voltage unit used in PPS PDO to RDO. </p>
+
+</div>
+</div>
 <a id="ga713eb87fb71bcd20e835295cd13e6f26"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga713eb87fb71bcd20e835295cd13e6f26">&#9670;&nbsp;</a></span>CY_PD_CURRENT_AVS_MULTIPLIER</h2>
 
@@ -1346,12 +1371,28 @@ Macros</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define CY_PD_CURRENT_AVS_MULTIPLIER&#160;&#160;&#160;(4u)</td>
+          <td class="memname">#define CY_PD_CURRENT_AVS_MULTIPLIER&#160;&#160;&#160;(5u)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Multiplier used to convert from the current unit used in other PDOs to that used in AVS PDO/RDO. </p>
+
+</div>
+</div>
+<a id="ga9fb15674638d5ef43e99917bd4aef493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9fb15674638d5ef43e99917bd4aef493">&#9670;&nbsp;</a></span>CY_PD_VOLT_AVS_MULTIPLIER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CY_PD_VOLT_AVS_MULTIPLIER&#160;&#160;&#160;(4u)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Multiplier used to convert from the voltage unit used in AVS PDO to RDO. </p>
 
 </div>
 </div>
@@ -3340,13 +3381,29 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="gaa9ad07ced289672cb898dbd3e1d69a44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa9ad07ced289672cb898dbd3e1d69a44">&#9670;&nbsp;</a></span>CY_PD_PDO_UNCONSTRAINED_BIT_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CY_PD_PDO_UNCONSTRAINED_BIT_MASK&#160;&#160;&#160;(0x80u)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unconstrained bit mask. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 3.10</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.20 [INTERNAL ONLY]</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

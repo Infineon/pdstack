@@ -1,12 +1,12 @@
 /***************************************************************************//**
 * \file cy_pdstack_timer_id.h
-* \version 1.0
+* \version 3.20
 *
 * Provides soft timer identifier definitions for PDStack.
 *
 ********************************************************************************
 * \copyright
-* Copyright 2022-2023, Cypress Semiconductor Corporation. All rights reserved.
+* Copyright 2022-2024, Cypress Semiconductor Corporation. All rights reserved.
 * You may use this file only in accordance with the license, terms, conditions,
 * disclaimers, and limitations in the end user license agreement accompanying
 * the software package with which this file was provided.
@@ -126,8 +126,8 @@ typedef enum {
     CY_PDSTACK_PD_VCONN_OCP_DEBOUNCE_TIMER,
     /**< 0x11D: Timer used for FW debounce of VConn OCP. */
 
-    CY_PDSTACK_PD_TIMER_RESERVED_30,
-    /**< 0x11E: Reserved for future use. */
+    CY_PDSTACK_PD_VCONN_RECOVERY_TIMER,
+    /**< 0x11E: Timer used for Vconn recovery. */
 
     CY_PDSTACK_PD_TIMER_RESERVED_31,
     /**< 0x11F: Reserved for future use. */
@@ -230,6 +230,9 @@ typedef enum {
 
     CY_PDSTACK_PD1_VCONN_OCP_DEBOUNCE_TIMER,
     /**< 0x21D: Timer used for FW debounce of VConn OCP. */
+
+    CY_PDSTACK_PD1_VCONN_RECOVERY_TIMER,
+    /**< 0x21E: Timer used for Vconn recovery. */
 
 } cy_en_pdstack_timer_id_t;
 

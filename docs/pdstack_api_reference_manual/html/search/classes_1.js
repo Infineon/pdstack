@@ -3,6 +3,7 @@ var searchData=
   ['cy_5fpd_5fstack_5fconf_5ft',['cy_pd_stack_conf_t',['../structcy__pd__stack__conf__t.html',1,'']]],
   ['cy_5fpdstack_5fextd_5fhdr_5ft',['cy_pdstack_extd_hdr_t',['../unioncy__pdstack__extd__hdr__t.html',1,'']]],
   ['cy_5fstc_5fpdstack_5fapp_5fcbk_5ft',['cy_stc_pdstack_app_cbk_t',['../structcy__stc__pdstack__app__cbk__t.html',1,'']]],
+  ['cy_5fstc_5fpdstack_5fapp_5fstatus_5ft',['cy_stc_pdstack_app_status_t',['../structcy__stc__pdstack__app__status__t.html',1,'']]],
   ['cy_5fstc_5fpdstack_5fcontext_5ft',['cy_stc_pdstack_context_t',['../structcy__stc__pdstack__context__t.html',1,'']]],
   ['cy_5fstc_5fpdstack_5fcontract_5ft',['cy_stc_pdstack_contract_t',['../structcy__stc__pdstack__contract__t.html',1,'']]],
   ['cy_5fstc_5fpdstack_5fdpm_5fext_5fstatus_5ft',['cy_stc_pdstack_dpm_ext_status_t',['../structcy__stc__pdstack__dpm__ext__status__t.html',1,'']]],

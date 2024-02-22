@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 3.10: Enumerated types</title>
+<title>PDStack Middleware Library 3.20 [INTERNAL ONLY]: Enumerated types</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 3.10</div>
+   <div id="projectname">PDStack Middleware Library 3.20 [INTERNAL ONLY]</div>
   </td>
  </tr>
  </tbody>
@@ -633,6 +633,22 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:ga3c11177a1f484833fe980077183014ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the USB host capabilities masks.  <a href="group__group__pdstack__enums.html#ga3c11177a1f484833fe980077183014ca">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ga3c11177a1f484833fe980077183014ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4dae02f21c49758b5fc6fde761d0d958"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#ga4dae02f21c49758b5fc6fde761d0d958">cy_en_pdstack_sys_pwr_state_t</a> { <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga4dae02f21c49758b5fc6fde761d0d958adecf29edbbb28f5e6090d0e209476c74">CY_PDSTACK_SYS_PWR_STATE_S0</a> = 0, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga4dae02f21c49758b5fc6fde761d0d958a1f646bdae2a3e2ae6c6443f8593fb56a">CY_PDSTACK_SYS_PWR_STATE_S3</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga4dae02f21c49758b5fc6fde761d0d958afff7000db1357262da75628c3ef83efc">CY_PDSTACK_SYS_PWR_STATE_S4</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga4dae02f21c49758b5fc6fde761d0d958ab6f4eabf292148aa5e86936b986d04ba">CY_PDSTACK_SYS_PWR_STATE_S5</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga4dae02f21c49758b5fc6fde761d0d958a958faedbe85b2e3c83e99772236ec781">CY_PDSTACK_SYS_PWR_STATE_MOD_STBY</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga4dae02f21c49758b5fc6fde761d0d958a447e8258677d4f670e33ee1b2b3aa96d">CY_PDSTACK_SYS_PWR_STATE_G3</a>
+<br />
+ }<tr class="memdesc:ga4dae02f21c49758b5fc6fde761d0d958"><td class="mdescLeft">&#160;</td><td class="mdescRight">This enumeration defines the values that are used to specify system power states.  <a href="group__group__pdstack__enums.html#ga4dae02f21c49758b5fc6fde761d0d958">More...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:ga4dae02f21c49758b5fc6fde761d0d958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7766cdeebc0d2da0916334d0e6adbcc2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#ga7766cdeebc0d2da0916334d0e6adbcc2">cy_en_pdstack_usb_role_t</a> { <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga7766cdeebc0d2da0916334d0e6adbcc2a4474639b1106242aa01f8b51e7ad2dc0">CY_PDSTACK_USB_ROLE_DEV</a> = 0, 
 <br />
@@ -1054,6 +1070,8 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab99ac36ea56d33251e70df9b934f892a467c2e98d64f99fe30d0be7715f59a92">CY_PDSTACK_USB_GEN_3_SUPP</a>, 
 <br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab99ac36ea56d33251e70df9b934f892ac364bf8dd2c83ff90e05ec55c085788c">CY_PDSTACK_USB_GEN_4_SUPP</a>, 
+<br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab99ac36ea56d33251e70df9b934f892ac4b0bbf5e20a21b718bcc73017585103">CY_PDSTACK_USB_BB_SUPP</a>, 
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggaab99ac36ea56d33251e70df9b934f892a13dad44f45c3a94875ea189ba50374c3">CY_PDSTACK_USB_SIG_UNKNOWN</a>
@@ -1131,52 +1149,6 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:ga03f6696c0f77d53184148bbaa3ea8af2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enumeration of data fields in EPR enter mode data object with EPR_MODE_ENTER_FAILED action field.  <a href="group__group__pdstack__enums.html#ga03f6696c0f77d53184148bbaa3ea8af2">More...</a><br /></td></tr>
 </td></tr>
 <tr class="separator:ga03f6696c0f77d53184148bbaa3ea8af2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2472529e1b96331ec1d118a4e3f123b1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#ga2472529e1b96331ec1d118a4e3f123b1">cy_en_pdstack_intel_pf_type_t</a> { <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1a53fae429da3e3fe74a13b814d1782ae7">CY_PDSTACK_PF_THUNDERBOLT</a> = 0, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1a7a14d43fbabdfbe02560ec4e37861a8a">CY_PDSTACK_PF_ICE_LAKE</a>, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1aa25f035573b9223d4fbe99fcfaeb8e85">CY_PDSTACK_PF_TIGER_LAKE</a>, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1a627ccbfd1a7a713e2a46a0a868266fea">CY_PDSTACK_PF_MAPLE_RIDGE</a>, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1a1e6f3ac297c3f94b227278818922b1a3">CY_PDSTACK_PF_METEOR_LAKE</a>, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga2472529e1b96331ec1d118a4e3f123b1a1335a5cb95f067377bcb801dad08ada3">CY_PDSTACK_PF_BARLOW_RIDGE</a>
-<br />
- }<tr class="memdesc:ga2472529e1b96331ec1d118a4e3f123b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of Intel TBT/USB platform types in which the EZ-PD(TM) CCG device is used.  <a href="group__group__pdstack__enums.html#ga2472529e1b96331ec1d118a4e3f123b1">More...</a><br /></td></tr>
-</td></tr>
-<tr class="separator:ga2472529e1b96331ec1d118a4e3f123b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab2ef7b0b589d5cef8e46ffe5cdcaeb47"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#gab2ef7b0b589d5cef8e46ffe5cdcaeb47">cy_en_pdstack_amd_pf_type_t</a> { <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab2ef7b0b589d5cef8e46ffe5cdcaeb47a997f5cb81859bdfc7eb8d3707fb031ce">CY_PDSTACK_AMD_PF_RENOIR</a> = 0, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab2ef7b0b589d5cef8e46ffe5cdcaeb47ae8579b3221ba0cdb49bdc9640a77fc9e">CY_PDSTACK_AMD_PF_REMBRANDT_A0</a>, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab2ef7b0b589d5cef8e46ffe5cdcaeb47a1cad5b01793923c67f91345d3fb1b4b7">CY_PDSTACK_AMD_PF_REMBRANDT_B0</a>, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggab2ef7b0b589d5cef8e46ffe5cdcaeb47afbf50275a489b1483684837390b53a2b">CY_PDSTACK_AMD_PF_PHOENIX</a>
-<br />
- }<tr class="memdesc:gab2ef7b0b589d5cef8e46ffe5cdcaeb47"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of AMD platform types in which the EZ-PD(TM) CCG device is used.  <a href="group__group__pdstack__enums.html#gab2ef7b0b589d5cef8e46ffe5cdcaeb47">More...</a><br /></td></tr>
-</td></tr>
-<tr class="separator:gab2ef7b0b589d5cef8e46ffe5cdcaeb47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadb40c602b90b2432cdc63f8d375628b1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#gadb40c602b90b2432cdc63f8d375628b1">cy_en_pdstack_amd_rtmr_type_t</a> { <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1ab2f47056e774359ff46025fc1f1ace21">CY_PDSTACK_AMD_RETIMER_NONE</a> = 0, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a884f3067e6f8e07c66e287a385d93995">CY_PDSTACK_AMD_RETIMER_PI3DPX1205A</a>, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a4bd2b2db78de9e7af59e67605daa790c">CY_PDSTACK_AMD_RETIMER_PS8828</a>, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a851b0a7b853bbbba16e42a0de3eaaae6">CY_PDSTACK_AMD_RETIMER_PS8830</a>, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1ab8c2b1466e3f57849e935488b01a4f39">CY_PDSTACK_AMD_RETIMER_AUTO_PS8828A_OR_PS8830</a>, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a1441f73f24fe03547fcf66e4bad88ce5">CY_PDSTACK_AMD_RETIMER_KB800X_B0</a>, 
-<br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggadb40c602b90b2432cdc63f8d375628b1a9c20c9110a3fcd60682d1b6b62c6612b">CY_PDSTACK_AMD_RETIMER_KB800X_B1</a>
-<br />
- }<tr class="memdesc:gadb40c602b90b2432cdc63f8d375628b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of retimer types which could be used via AMD projects.  <a href="group__group__pdstack__enums.html#gadb40c602b90b2432cdc63f8d375628b1">More...</a><br /></td></tr>
-</td></tr>
-<tr class="separator:gadb40c602b90b2432cdc63f8d375628b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga66c076f3b12cb3f10ebd67565c690593"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__enums.html#ga66c076f3b12cb3f10ebd67565c690593">cy_en_pdstack_pdo_sel_alg_t</a> { <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#gga66c076f3b12cb3f10ebd67565c690593a1f408d437122ed64a2d1d2958accd71e">CY_PDSTACK_HIGHEST_POWER</a> = 1, 
 <br />
@@ -1304,7 +1276,7 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggae2c1c922571761f68889bf4cb4a4ee46afee3d3e2b6fec885948f3ad365ba635b">CY_PDSTACK_PD_VCONN_OCP_DEBOUNCE_TIMER</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggae2c1c922571761f68889bf4cb4a4ee46ae3da4965d75a0eab2744fa44aba68640">CY_PDSTACK_PD_TIMER_RESERVED_30</a>, 
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggae2c1c922571761f68889bf4cb4a4ee46aba0a201bbb853d503f810d0bf40ce401">CY_PDSTACK_PD_VCONN_RECOVERY_TIMER</a>, 
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggae2c1c922571761f68889bf4cb4a4ee46abe21d6389e484595430d8bc028005217">CY_PDSTACK_PD_TIMER_RESERVED_31</a>, 
 <br />
@@ -1372,7 +1344,9 @@ Enumerations</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggae2c1c922571761f68889bf4cb4a4ee46aa5953f7ec8a1b523a1f05512c4090911">CY_PDSTACK_HPD1_RX_ACTIVITY_TIMER_ID</a>, 
 <br />
-&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggae2c1c922571761f68889bf4cb4a4ee46a127ad2d84019a1adc5d842afd27bf85e">CY_PDSTACK_PD1_VCONN_OCP_DEBOUNCE_TIMER</a>
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggae2c1c922571761f68889bf4cb4a4ee46a127ad2d84019a1adc5d842afd27bf85e">CY_PDSTACK_PD1_VCONN_OCP_DEBOUNCE_TIMER</a>, 
+<br />
+&#160;&#160;<a class="el" href="group__group__pdstack__enums.html#ggae2c1c922571761f68889bf4cb4a4ee46ad14f18063b9302c8100df2010fb4469a">CY_PDSTACK_PD1_VCONN_RECOVERY_TIMER</a>
 <br />
  }<tr class="memdesc:gae2c1c922571761f68889bf4cb4a4ee46"><td class="mdescLeft">&#160;</td><td class="mdescRight">List of soft timer IDs defined for PDStack.  <a href="group__group__pdstack__enums.html#gae2c1c922571761f68889bf4cb4a4ee46">More...</a><br /></td></tr>
 </td></tr>
@@ -2397,6 +2371,36 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a id="ga4dae02f21c49758b5fc6fde761d0d958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4dae02f21c49758b5fc6fde761d0d958">&#9670;&nbsp;</a></span>cy_en_pdstack_sys_pwr_state_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#ga4dae02f21c49758b5fc6fde761d0d958">cy_en_pdstack_sys_pwr_state_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This enumeration defines the values that are used to specify system power states. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga4dae02f21c49758b5fc6fde761d0d958adecf29edbbb28f5e6090d0e209476c74"></a>CY_PDSTACK_SYS_PWR_STATE_S0&#160;</td><td class="fielddoc"><p>System is in active (S0) state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4dae02f21c49758b5fc6fde761d0d958a1f646bdae2a3e2ae6c6443f8593fb56a"></a>CY_PDSTACK_SYS_PWR_STATE_S3&#160;</td><td class="fielddoc"><p>System is in sleep (S3) state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4dae02f21c49758b5fc6fde761d0d958afff7000db1357262da75628c3ef83efc"></a>CY_PDSTACK_SYS_PWR_STATE_S4&#160;</td><td class="fielddoc"><p>System is in hibernate (S4) state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4dae02f21c49758b5fc6fde761d0d958ab6f4eabf292148aa5e86936b986d04ba"></a>CY_PDSTACK_SYS_PWR_STATE_S5&#160;</td><td class="fielddoc"><p>System is in off (S5) state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4dae02f21c49758b5fc6fde761d0d958a958faedbe85b2e3c83e99772236ec781"></a>CY_PDSTACK_SYS_PWR_STATE_MOD_STBY&#160;</td><td class="fielddoc"><p>System is in modern standby state. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="gga4dae02f21c49758b5fc6fde761d0d958a447e8258677d4f670e33ee1b2b3aa96d"></a>CY_PDSTACK_SYS_PWR_STATE_G3&#160;</td><td class="fielddoc"><p>System is in mechanical off (G3) state. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a id="ga7766cdeebc0d2da0916334d0e6adbcc2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga7766cdeebc0d2da0916334d0e6adbcc2">&#9670;&nbsp;</a></span>cy_en_pdstack_usb_role_t</h2>
 
@@ -2985,6 +2989,8 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ggaab99ac36ea56d33251e70df9b934f892a467c2e98d64f99fe30d0be7715f59a92"></a>CY_PDSTACK_USB_GEN_3_SUPP&#160;</td><td class="fielddoc"><p>USB 4 Gen3 (20 Gbps) support. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ggaab99ac36ea56d33251e70df9b934f892ac364bf8dd2c83ff90e05ec55c085788c"></a>CY_PDSTACK_USB_GEN_4_SUPP&#160;</td><td class="fielddoc"><p>USB 4 Gen4 (40 Gbps) support. </p>
+</td></tr>
 <tr><td class="fieldname"><a id="ggaab99ac36ea56d33251e70df9b934f892ac4b0bbf5e20a21b718bcc73017585103"></a>CY_PDSTACK_USB_BB_SUPP&#160;</td><td class="fielddoc"><p>USB Billboard device support. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggaab99ac36ea56d33251e70df9b934f892a13dad44f45c3a94875ea189ba50374c3"></a>CY_PDSTACK_USB_SIG_UNKNOWN&#160;</td><td class="fielddoc"><p>USB data signaling support unknown. </p>
@@ -3115,94 +3121,6 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="gga03f6696c0f77d53184148bbaa3ea8af2a48e4e3b9cdb7e81e027cb5c5661b55ce"></a>CY_PDSTACK_EPR_ENTER_SUCCESS&#160;</td><td class="fielddoc"><p>Enter succeeded. </p>
 <p>No failures. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="ga2472529e1b96331ec1d118a4e3f123b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2472529e1b96331ec1d118a4e3f123b1">&#9670;&nbsp;</a></span>cy_en_pdstack_intel_pf_type_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#ga2472529e1b96331ec1d118a4e3f123b1">cy_en_pdstack_intel_pf_type_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>List of Intel TBT/USB platform types in which the EZ-PD(TM) CCG device is used. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga2472529e1b96331ec1d118a4e3f123b1a53fae429da3e3fe74a13b814d1782ae7"></a>CY_PDSTACK_PF_THUNDERBOLT&#160;</td><td class="fielddoc"><p>Thunderbolt platforms such as Alpine Ridge or Titan Ridge. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga2472529e1b96331ec1d118a4e3f123b1a7a14d43fbabdfbe02560ec4e37861a8a"></a>CY_PDSTACK_PF_ICE_LAKE&#160;</td><td class="fielddoc"><p>Intel IceLake platform. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga2472529e1b96331ec1d118a4e3f123b1aa25f035573b9223d4fbe99fcfaeb8e85"></a>CY_PDSTACK_PF_TIGER_LAKE&#160;</td><td class="fielddoc"><p>Intel TigerLake platform. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga2472529e1b96331ec1d118a4e3f123b1a627ccbfd1a7a713e2a46a0a868266fea"></a>CY_PDSTACK_PF_MAPLE_RIDGE&#160;</td><td class="fielddoc"><p>Intel RocketLake + Maple Ridge platform. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga2472529e1b96331ec1d118a4e3f123b1a1e6f3ac297c3f94b227278818922b1a3"></a>CY_PDSTACK_PF_METEOR_LAKE&#160;</td><td class="fielddoc"><p>Intel MeteorLake platform. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="gga2472529e1b96331ec1d118a4e3f123b1a1335a5cb95f067377bcb801dad08ada3"></a>CY_PDSTACK_PF_BARLOW_RIDGE&#160;</td><td class="fielddoc"><p>Intel Barlow Ridge platform. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="gab2ef7b0b589d5cef8e46ffe5cdcaeb47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab2ef7b0b589d5cef8e46ffe5cdcaeb47">&#9670;&nbsp;</a></span>cy_en_pdstack_amd_pf_type_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#gab2ef7b0b589d5cef8e46ffe5cdcaeb47">cy_en_pdstack_amd_pf_type_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>List of AMD platform types in which the EZ-PD(TM) CCG device is used. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggab2ef7b0b589d5cef8e46ffe5cdcaeb47a997f5cb81859bdfc7eb8d3707fb031ce"></a>CY_PDSTACK_AMD_PF_RENOIR&#160;</td><td class="fielddoc"><p>AMD Renoir-based platform. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggab2ef7b0b589d5cef8e46ffe5cdcaeb47ae8579b3221ba0cdb49bdc9640a77fc9e"></a>CY_PDSTACK_AMD_PF_REMBRANDT_A0&#160;</td><td class="fielddoc"><p>AMD Rembrandt A0 based platform. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggab2ef7b0b589d5cef8e46ffe5cdcaeb47a1cad5b01793923c67f91345d3fb1b4b7"></a>CY_PDSTACK_AMD_PF_REMBRANDT_B0&#160;</td><td class="fielddoc"><p>AMD Rembrandt B0 based platform. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggab2ef7b0b589d5cef8e46ffe5cdcaeb47afbf50275a489b1483684837390b53a2b"></a>CY_PDSTACK_AMD_PF_PHOENIX&#160;</td><td class="fielddoc"><p>AMD Phoenix-based platform. </p>
-</td></tr>
-</table>
-
-</div>
-</div>
-<a id="gadb40c602b90b2432cdc63f8d375628b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadb40c602b90b2432cdc63f8d375628b1">&#9670;&nbsp;</a></span>cy_en_pdstack_amd_rtmr_type_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="group__group__pdstack__enums.html#gadb40c602b90b2432cdc63f8d375628b1">cy_en_pdstack_amd_rtmr_type_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>List of retimer types which could be used via AMD projects. </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1ab2f47056e774359ff46025fc1f1ace21"></a>CY_PDSTACK_AMD_RETIMER_NONE&#160;</td><td class="fielddoc"><p>No retimer. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1a884f3067e6f8e07c66e287a385d93995"></a>CY_PDSTACK_AMD_RETIMER_PI3DPX1205A&#160;</td><td class="fielddoc"><p>Retimer PI3DPX1205A. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1a4bd2b2db78de9e7af59e67605daa790c"></a>CY_PDSTACK_AMD_RETIMER_PS8828&#160;</td><td class="fielddoc"><p>Retimer PS8828. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1a851b0a7b853bbbba16e42a0de3eaaae6"></a>CY_PDSTACK_AMD_RETIMER_PS8830&#160;</td><td class="fielddoc"><p>Retimer PS8830. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1ab8c2b1466e3f57849e935488b01a4f39"></a>CY_PDSTACK_AMD_RETIMER_AUTO_PS8828A_OR_PS8830&#160;</td><td class="fielddoc"><p>Retimer type should be discovered. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1a1441f73f24fe03547fcf66e4bad88ce5"></a>CY_PDSTACK_AMD_RETIMER_KB800X_B0&#160;</td><td class="fielddoc"><p>Retimer KB800X B0. </p>
-</td></tr>
-<tr><td class="fieldname"><a id="ggadb40c602b90b2432cdc63f8d375628b1a9c20c9110a3fcd60682d1b6b62c6612b"></a>CY_PDSTACK_AMD_RETIMER_KB800X_B1&#160;</td><td class="fielddoc"><p>Retimer KB800X B1. </p>
 </td></tr>
 </table>
 
@@ -3378,7 +3296,7 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ggae2c1c922571761f68889bf4cb4a4ee46afee3d3e2b6fec885948f3ad365ba635b"></a>CY_PDSTACK_PD_VCONN_OCP_DEBOUNCE_TIMER&#160;</td><td class="fielddoc"><p>0x11D: Timer used for FW debounce of VConn OCP. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ggae2c1c922571761f68889bf4cb4a4ee46ae3da4965d75a0eab2744fa44aba68640"></a>CY_PDSTACK_PD_TIMER_RESERVED_30&#160;</td><td class="fielddoc"><p>0x11E: Reserved for future use. </p>
+<tr><td class="fieldname"><a id="ggae2c1c922571761f68889bf4cb4a4ee46aba0a201bbb853d503f810d0bf40ce401"></a>CY_PDSTACK_PD_VCONN_RECOVERY_TIMER&#160;</td><td class="fielddoc"><p>0x11E: Timer used for Vconn recovery. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ggae2c1c922571761f68889bf4cb4a4ee46abe21d6389e484595430d8bc028005217"></a>CY_PDSTACK_PD_TIMER_RESERVED_31&#160;</td><td class="fielddoc"><p>0x11F: Reserved for future use. </p>
 </td></tr>
@@ -3448,6 +3366,8 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="ggae2c1c922571761f68889bf4cb4a4ee46a127ad2d84019a1adc5d842afd27bf85e"></a>CY_PDSTACK_PD1_VCONN_OCP_DEBOUNCE_TIMER&#160;</td><td class="fielddoc"><p>0x21D: Timer used for FW debounce of VConn OCP. </p>
 </td></tr>
+<tr><td class="fieldname"><a id="ggae2c1c922571761f68889bf4cb4a4ee46ad14f18063b9302c8100df2010fb4469a"></a>CY_PDSTACK_PD1_VCONN_RECOVERY_TIMER&#160;</td><td class="fielddoc"><p>0x21E: Timer used for Vconn recovery. </p>
+</td></tr>
 </table>
 
 </div>
@@ -3458,7 +3378,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 3.10</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.20 [INTERNAL ONLY]</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

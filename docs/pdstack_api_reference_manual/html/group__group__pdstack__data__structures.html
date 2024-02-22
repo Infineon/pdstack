@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PDStack Middleware Library 3.10: Data structures</title>
+<title>PDStack Middleware Library 3.20 [INTERNAL ONLY]: Data structures</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><a href="http://www.cypress.com/"><img alt="Logo" src="logo.png"/></a></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">PDStack Middleware Library 3.10</div>
+   <div id="projectname">PDStack Middleware Library 3.20 [INTERNAL ONLY]</div>
   </td>
  </tr>
  </tbody>
@@ -165,6 +165,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__pd__stack__conf__t.html">cy_pd_stack_conf_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure used to fetch the PD stack configuration supported by the library that is currently in use.  <a href="structcy__pd__stack__conf__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__app__status__t.html">cy_stc_pdstack_app_status_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure used by altmode and application layers for VDM related information.  <a href="structcy__stc__pdstack__app__status__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__port__cfg__t.html">cy_stc_pdstack_port_cfg_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold PDStack middleware configuration information.  <a href="structcy__stc__pdstack__port__cfg__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,6 +210,50 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:ga0873d60a116607811b3cceae424e8dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the power LED States. <br /></td></tr>
 </td></tr>
 <tr class="separator:ga0873d60a116607811b3cceae424e8dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54617837cb1e71d408568d9554a7a416"><td class="memItemLeft" align="right" valign="top"><a id="ga54617837cb1e71d408568d9554a7a416"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga54617837cb1e71d408568d9554a7a416">pe_fsm_evt_t</a> { <br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_HARD_RESET_RCVD</b> = 0, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_SOFT_RESET_RCVD</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_ENTRY</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_TX_SUCCESS</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_TX_DISCARDED</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_TX_FAIL</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_PKT_RCVD</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_PWR_RDY</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_TIMEOUT</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_DPM_CMD_RCVD</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_APP_RESP_RCVD</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_VDM_RESP_RCVD</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_CABLE_TIMEOUT</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_NO_RESP_TIMEOUT</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_FR_SIGNAL_RCVD</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_FR_SIGNAL_SENT</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_PPS_TIMEOUT</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_CRC_ERROR</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_DRST_COMPLETE</b>, 
+<br />
+&#160;&#160;<b>CY_PDSTACK_PE_FSM_PE_MAX_EVTS</b>
+<br />
+ }<tr class="memdesc:ga54617837cb1e71d408568d9554a7a416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to hold Policy engine events id. <br /></td></tr>
+</td></tr>
+<tr class="separator:ga54617837cb1e71d408568d9554a7a416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5acbddfbccb6ec6309a2cc1be7cd46e0"><td class="memItemLeft" align="right" valign="top"><a id="ga5acbddfbccb6ec6309a2cc1be7cd46e0"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0">typec_fsm_evt_t</a> { <br />
 &#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_ERR_RECOVERY</b> = 0, 
 <br />
@@ -404,7 +451,7 @@ Enumerations</h2></td></tr>
 <div id="nav-path" class="navpath">
     <ul>
         <li class="footer">
-            Generated for <b>PDStack Middleware Library 3.10</b> by <b>Cypress Semiconductor Corporation</b>.
+            Generated for <b>PDStack Middleware Library 3.20 [INTERNAL ONLY]</b> by <b>Cypress Semiconductor Corporation</b>.
             All rights reserved.
         </li>
     </ul>

@@ -1,7 +1,25 @@
 var searchData=
 [
-  ['unchunksuplive',['unchunkSupLive',['../structcy__stc__pdstack__dpm__status__t.html#a5997785f5eaf769d7e240d3281f0064d',1,'cy_stc_pdstack_dpm_status_t']]],
-  ['unchunksuppeer',['unchunkSupPeer',['../structcy__stc__pdstack__dpm__status__t.html#a2cd4a669005281550e718e84df4216ff',1,'cy_stc_pdstack_dpm_status_t']]],
-  ['usb4dataresetstate',['usb4DataResetState',['../structcy__stc__pdstack__pe__status__t.html#adfaa92a9c7c97814a158fcca23aaf7ee',1,'cy_stc_pdstack_pe_status_t']]],
-  ['usb4en',['usb4En',['../structcy__stc__pdstack__dpm__status__t.html#af230fd64195fc4c9d41b54937f0dba4b',1,'cy_stc_pdstack_dpm_status_t']]]
+  ['tempdo',['tempDo',['../structcy__stc__pdstack__pe__status__t.html#a58616c49e019a542a0d8ef188789b431',1,'cy_stc_pdstack_pe_status_t']]],
+  ['tempstatus',['tempStatus',['../structcy__stc__pdstack__pd__power__status__t.html#aed84693117d81566b267eafa987b1275',1,'cy_stc_pdstack_pd_power_status_t']]],
+  ['timeout',['timeout',['../structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#a160686627f1be1a8427230c7712663f4',1,'cy_stc_pdstack_dpm_pd_cmd_buf_t']]],
+  ['toggleon',['toggleOn',['../structcy__stc__pdstack__typec__status__t.html#a69a6620ece05ce645bd89ba4d5f45991',1,'cy_stc_pdstack_typec_status_t']]],
+  ['trmsgid',['trMsgId',['../structcy__stc__pdstack__prl__cntrs__t.html#a1e777aea7df3ea1875cbbfa3aaadcd7d',1,'cy_stc_pdstack_prl_cntrs_t']]],
+  ['trysnkdeadtime',['trySnkDeadTime',['../structcy__stc__pdstack__typec__status__t.html#a95daa5a3a09ba7d16217bb50a2ed2c80',1,'cy_stc_pdstack_typec_status_t']]],
+  ['trysrcsnk',['trySrcSnk',['../structcy__stc__pdstack__dpm__status__t.html#ac41a1466fca9f6c590a6894a0a37a64f',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['trysrcsnkdis',['trySrcSnkDis',['../structcy__stc__pdstack__dpm__status__t.html#aa20b2ad0b5f5616fc2c302a9a620e73b',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['txbuf',['txBuf',['../structcy__stc__pdstack__pd__status__t.html#a29293860972681df39b542e8dd50128d',1,'cy_stc_pdstack_pd_status_t']]],
+  ['txbusy',['txBusy',['../structcy__stc__pdstack__pd__status__t.html#a6c62902f1f9e12735d447bc65244f334',1,'cy_stc_pdstack_pd_status_t']]],
+  ['txcount',['txCount',['../structcy__stc__pdstack__pd__status__t.html#a43580dd8ff6556d7a3ae163685c113db',1,'cy_stc_pdstack_pd_status_t']]],
+  ['txextd',['txExtd',['../structcy__stc__pdstack__pd__status__t.html#a2f15a4aa8197c5be3b95b3db36eb8202',1,'cy_stc_pdstack_pd_status_t']]],
+  ['txextdhdr',['txExtdHdr',['../structcy__stc__pdstack__pd__status__t.html#aa96aaa75a5d49ca3cc5838c14a731464',1,'cy_stc_pdstack_pd_status_t']]],
+  ['txheader',['txHeader',['../structcy__stc__pdstack__pd__status__t.html#aead221f71d85914c0051c17dee2d3b6c',1,'cy_stc_pdstack_pd_status_t']]],
+  ['txmsgtype',['txMsgType',['../structcy__stc__pdstack__pd__status__t.html#ac742c80d582975764f2583e27295bbd6',1,'cy_stc_pdstack_pd_status_t']]],
+  ['txsop',['txSop',['../structcy__stc__pdstack__pd__status__t.html#af71fe2e6123f502c43a5031cfada8bd0',1,'cy_stc_pdstack_pd_status_t']]],
+  ['typec_5ffsm_5fevt_5ft',['typec_fsm_evt_t',['../group__group__pdstack__data__structures.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0',1,'cy_pdstack_typec_manager.h']]],
+  ['typecaccessorysuppdisabled',['typecAccessorySuppDisabled',['../structcy__stc__pdstack__dpm__status__t.html#a0fd308a9d0bb4a9616b0ddf7ac2d8338',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['typecfsmstate',['typecFsmState',['../structcy__stc__pdstack__dpm__status__t.html#a97699af0ef3330bc1cb12a51166a2bf3',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['typecrpdetachdisabled',['typecRpDetachDisabled',['../structcy__stc__pdstack__dpm__status__t.html#a7dc973f1df83a88d8542df0b2c101a26',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['typecsnkwaitcapperiod',['typeCSnkWaitCapPeriod',['../structcy__stc__pdstack__dpm__params__t.html#a9ca9281a6a2a41ea365bd2548f3fd5c1',1,'cy_stc_pdstack_dpm_params_t']]],
+  ['typecstat',['typecStat',['../structcy__stc__pdstack__context__t.html#a0501b393119e65d1d355a2e8c84d7f30',1,'cy_stc_pdstack_context_t']]]
 ];

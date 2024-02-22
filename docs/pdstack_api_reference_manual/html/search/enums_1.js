@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['cy_5fen_5fpdstack_5famd_5fpf_5ftype_5ft',['cy_en_pdstack_amd_pf_type_t',['../group__group__pdstack__enums.html#gab2ef7b0b589d5cef8e46ffe5cdcaeb47',1,'cy_pdstack_common.h']]],
-  ['cy_5fen_5fpdstack_5famd_5frtmr_5ftype_5ft',['cy_en_pdstack_amd_rtmr_type_t',['../group__group__pdstack__enums.html#gadb40c602b90b2432cdc63f8d375628b1',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fams_5ftype_5ft',['cy_en_pdstack_ams_type_t',['../group__group__pdstack__enums.html#gaab529053dcdc1680eef0910ab36d2b47',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fapdo_5ft',['cy_en_pdstack_apdo_t',['../group__group__pdstack__enums.html#ga10fc7e5964a1a445042223338fe12f04',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fapp_5fevt_5ft',['cy_en_pdstack_app_evt_t',['../group__group__pdstack__enums.html#ga3e748bd09a1b449496b48177f30f8dc5',1,'cy_pdstack_common.h']]],
@@ -27,7 +25,6 @@ var searchData=
   ['cy_5fen_5fpdstack_5fextd_5fmsg_5ft',['cy_en_pdstack_extd_msg_t',['../group__group__pdstack__enums.html#ga24366d7f40b113729af15d81a9828943',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5ffr_5fswap_5fsupp_5ft',['cy_en_pdstack_fr_swap_supp_t',['../group__group__pdstack__enums.html#gac4527fb80897776339421e97c3f75fdd',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fhard_5freset_5freason_5ft',['cy_en_pdstack_hard_reset_reason_t',['../group__group__pdstack__enums.html#ga473e59cf028fdde48d9e830841d167f8',1,'cy_pdstack_common.h']]],
-  ['cy_5fen_5fpdstack_5fintel_5fpf_5ftype_5ft',['cy_en_pdstack_intel_pf_type_t',['../group__group__pdstack__enums.html#ga2472529e1b96331ec1d118a4e3f123b1',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fpd_5fmsg_5fclass_5ft',['cy_en_pdstack_pd_msg_class_t',['../group__group__pdstack__enums.html#ga60e47a0cdd4dc6061a214a1efb8a5d2a',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fpdo_5fsel_5falg_5ft',['cy_en_pdstack_pdo_sel_alg_t',['../group__group__pdstack__enums.html#ga66c076f3b12cb3f10ebd67565c690593',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fpdo_5ft',['cy_en_pdstack_pdo_t',['../group__group__pdstack__enums.html#gaf045cdaa6d7beeacaa51b1b38aefb1d5',1,'cy_pdstack_common.h']]],
@@ -45,6 +42,7 @@ var searchData=
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fconn_5ft',['cy_en_pdstack_std_vdm_conn_t',['../group__group__pdstack__enums.html#ga142edc9bc0664da1f462a9c79b052df1',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fprod_5ft',['cy_en_pdstack_std_vdm_prod_t',['../group__group__pdstack__enums.html#gaff3eff181dd5d5951fb7176a3efdf72a',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5fstd_5fvdm_5fver_5ft',['cy_en_pdstack_std_vdm_ver_t',['../group__group__pdstack__enums.html#ga764f0200a8f0a733f24f9a733196acea',1,'cy_pdstack_common.h']]],
+  ['cy_5fen_5fpdstack_5fsys_5fpwr_5fstate_5ft',['cy_en_pdstack_sys_pwr_state_t',['../group__group__pdstack__enums.html#ga4dae02f21c49758b5fc6fde761d0d958',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5ftimer_5fid_5ft',['cy_en_pdstack_timer_id_t',['../group__group__pdstack__enums.html#gae2c1c922571761f68889bf4cb4a4ee46',1,'cy_pdstack_timer_id.h']]],
   ['cy_5fen_5fpdstack_5ftry_5fsrc_5fsnk_5ft',['cy_en_pdstack_try_src_snk_t',['../group__group__pdstack__enums.html#gaad0c1d0faab6bcaa247d967358ef01be',1,'cy_pdstack_common.h']]],
   ['cy_5fen_5fpdstack_5ftypec_5ffsm_5fstate_5ft',['cy_en_pdstack_typec_fsm_state_t',['../group__group__pdstack__enums.html#ga6274d400cdeecb2da1711ded27ba9953',1,'cy_pdstack_common.h']]],

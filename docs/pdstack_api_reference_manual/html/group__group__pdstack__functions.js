@@ -48,6 +48,8 @@ var group__group__pdstack__functions =
     [ "Cy_PdStack_Dpm_SendHardReset", "group__group__pdstack__functions.html#gac2a9e4f4eeba2731d2b5b8975a8d26ff", null ],
     [ "Cy_PdStack_Dpm_GetPdPortStatus", "group__group__pdstack__functions.html#ga84f1ac9c5ac5daabd0f6c595ca5c4030", null ],
     [ "Cy_PdStack_Dpm_UpdateSwapResponse", "group__group__pdstack__functions.html#ga58a9f9d874e6b7c7ca5ed97a3af6c51c", null ],
+    [ "Cy_PdStack_Dpm_UpdatePpsSrcEn", "group__group__pdstack__functions.html#ga4d7eed6ad1652de1ee7820c6cfde5930", null ],
+    [ "Cy_PdStack_Dpm_UpdatePpsSnkEn", "group__group__pdstack__functions.html#ga0593312d5081edf5df11e925f4cbfb5d", null ],
     [ "Cy_PdStack_Dpm_UpdatePortStatus", "group__group__pdstack__functions.html#ga5f2e5817362e6038f8f78e590a6f9fd6", null ],
     [ "Cy_PdStack_Dpm_RefreshSrcCap", "group__group__pdstack__functions.html#gaee99d68d74bf06861cbf567dbd41b485", null ],
     [ "Cy_PdStack_Dpm_RefreshSnkCap", "group__group__pdstack__functions.html#ga28c70ec7de4272a2634f3d8477834276", null ],
@@ -74,5 +76,6 @@ var group__group__pdstack__functions =
     [ "Cy_PdStack_Dpm_UpdateAutoVcsEnable", "group__group__pdstack__functions.html#ga22e36c703fc00cf3ddd00777458e6701", null ],
     [ "Cy_PdStack_Dpm_UpdateVconnRetain", "group__group__pdstack__functions.html#gae4832144f5045d333f4016db3b2b9070", null ],
     [ "Cy_PdStack_Dpm_SetDataReset", "group__group__pdstack__functions.html#ga97724cfbab85affa826f8a012bc6e0de", null ],
-    [ "Cy_PdStack_Dpm_UpdateTimingParams", "group__group__pdstack__functions.html#ga21dcdd21f06231e5bfa002a592097a17", null ]
+    [ "Cy_PdStack_Dpm_UpdateTimingParams", "group__group__pdstack__functions.html#ga21dcdd21f06231e5bfa002a592097a17", null ],
+    [ "Cy_PdStack_Dpm_GetContext", "group__group__pdstack__functions.html#ga442cb9938faf82fccb6aa2b6d4663218", null ]
 ];

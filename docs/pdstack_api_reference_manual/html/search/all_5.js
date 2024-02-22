@@ -1,6 +1,7 @@
 var searchData=
 [
   ['faultactive',['faultActive',['../structcy__stc__pdstack__dpm__status__t.html#a51984dbd6ed45bed19bb7ea9272254e2',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['faultstatus',['faultStatus',['../structcy__stc__pdstack__app__status__t.html#aa60df1cc1ff4992b62857b5bf5415d0d',1,'cy_stc_pdstack_app_status_t']]],
   ['firstmsgrcvd',['firstMsgRcvd',['../structcy__stc__pdstack__prl__cntrs__t.html#addaf6323a10b9dfae6a0436c096dd461',1,'cy_stc_pdstack_prl_cntrs_t']]],
   ['frrxdisabled',['frRxDisabled',['../structcy__stc__pdstack__dpm__status__t.html#a969d16d387954fd0a9da3f754b9552e5',1,'cy_stc_pdstack_dpm_status_t']]],
   ['frsconfig',['frsConfig',['../structcy__stc__pdstack__port__cfg__t.html#a82f4c352baefa32fafc730164c327778',1,'cy_stc_pdstack_port_cfg_t']]],
