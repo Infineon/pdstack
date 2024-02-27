@@ -1,4 +1,4 @@
-# PDStack middleware library 3.20
+# PDStack middleware library 3.20.1
 
 ### What's included?
 See the [README.md](./README.md).
@@ -11,6 +11,7 @@ See the [README.md](./README.md).
 ### Defect fixes
 
 - PdStack has been updated to send Hard Reset if the PDO value in the EPR Request does not match the value of the PDO sent in the EPR_Source_Capabilities.
+- Corrected page header of API reference manual.
 
 ### Supported software and tools
 This version of the PDStack middleware is validated for compatibility with the following software and tools:

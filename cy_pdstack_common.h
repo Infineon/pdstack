@@ -224,6 +224,12 @@
 * <table class="doxtable">
 *   <tr><th>Version</th><th>Changes</th><th>Reason for change</th></tr>
 *   <tr>
+*     <td> 3.20.1</td>
+*     <td> Corrected page header of API reference manual.
+*     </td>
+*     <td>Defect fix.</td>
+*   </tr>
+*   <tr>
 *     <td rowspan="3">3.20</td>
 *     <td>Updated to USB PD Revision 3.1 Version 1.8.
 *     </td>
