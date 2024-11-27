@@ -16,7 +16,7 @@ var searchData=
   ['txheader',['txHeader',['../structcy__stc__pdstack__pd__status__t.html#aead221f71d85914c0051c17dee2d3b6c',1,'cy_stc_pdstack_pd_status_t']]],
   ['txmsgtype',['txMsgType',['../structcy__stc__pdstack__pd__status__t.html#ac742c80d582975764f2583e27295bbd6',1,'cy_stc_pdstack_pd_status_t']]],
   ['txsop',['txSop',['../structcy__stc__pdstack__pd__status__t.html#af71fe2e6123f502c43a5031cfada8bd0',1,'cy_stc_pdstack_pd_status_t']]],
-  ['typec_5ffsm_5fevt_5ft',['typec_fsm_evt_t',['../group__group__pdstack__data__structures.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0',1,'cy_pdstack_typec_manager.h']]],
+  ['typec_5ffsm_5fevt_5ft',['typec_fsm_evt_t',['../group__group__pdstack__enums.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0',1,'cy_pdstack_common_default.h']]],
   ['typecaccessorysuppdisabled',['typecAccessorySuppDisabled',['../structcy__stc__pdstack__dpm__status__t.html#a0fd308a9d0bb4a9616b0ddf7ac2d8338',1,'cy_stc_pdstack_dpm_status_t']]],
   ['typecfsmstate',['typecFsmState',['../structcy__stc__pdstack__dpm__status__t.html#a97699af0ef3330bc1cb12a51166a2bf3',1,'cy_stc_pdstack_dpm_status_t']]],
   ['typecrpdetachdisabled',['typecRpDetachDisabled',['../structcy__stc__pdstack__dpm__status__t.html#a7dc973f1df83a88d8542df0b2c101a26',1,'cy_stc_pdstack_dpm_status_t']]],

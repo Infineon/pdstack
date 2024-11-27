@@ -18,7 +18,7 @@ var searchData=
   ['reserved_5f2',['reserved_2',['../structcy__stc__pdstack__dpm__status__t.html#a4ca1633f0fbc4276a923ebf6d0c9151d',1,'cy_stc_pdstack_dpm_status_t']]],
   ['respbuf',['respBuf',['../structvdm__resp__t.html#a6569d8984e16639703ad080ad978ec90',1,'vdm_resp_t']]],
   ['respdo',['respDo',['../structapp__resp__t.html#a427b10e49fef56b19b50a9e89d81553c',1,'app_resp_t']]],
-  ['rev3en',['rev3En',['../structcy__stc__pdstack__dpm__status__t.html#a84bc62eb7b26fafbb56a57dc18c6d7a0',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['rev3en',['rev3En',['../structcy__stc__pdstack__dpm__status__t.html#a84bc62eb7b26fafbb56a57dc18c6d7a0',1,'cy_stc_pdstack_dpm_status_t::rev3En()'],['../unioncy__stc__pdstack__dpm__ctrl__flags__t.html#a6b90fe18f2a35ae72d5013b612929687',1,'cy_stc_pdstack_dpm_ctrl_flags_t::rev3En()']]],
   ['rev3enable',['rev3Enable',['../structcy__stc__pdstack__pd__status__t.html#ae0ae12298982163d5001e50f44e89d6f',1,'cy_stc_pdstack_pd_status_t']]],
   ['revision',['revision',['../structcy__stc__pdstack__dpm__ext__status__t.html#a8cdf09e189429ad51b71e4e11d5f5f44',1,'cy_stc_pdstack_dpm_ext_status_t']]],
   ['roleatconnect',['roleAtConnect',['../structcy__stc__pdstack__dpm__status__t.html#a11d5528236d68880926f93d9a55ed6fe',1,'cy_stc_pdstack_dpm_status_t']]],

@@ -61,6 +61,7 @@ var group__group__pdstack__functions =
     [ "Cy_PdStack_Dpm_IsEprAvsModeActive", "group__group__pdstack__functions.html#gaae911bf71e2bf34e10ddead31588d74b", null ],
     [ "Cy_PdStack_Dpm_ChangeEprAvsActiveFlag", "group__group__pdstack__functions.html#ga1df6fdf79498cef6df1815bbdee6248b", null ],
     [ "Cy_PdStack_Dpm_IsValidAvsReq", "group__group__pdstack__functions.html#gabe86f56a7117cd31bf55f25ebc706e1c", null ],
+    [ "Cy_PdStack_Dpm_IsValidSprAvsReq", "group__group__pdstack__functions.html#ga56e3376fdc66b5110df9f14292fdd395", null ],
     [ "Cy_PdStack_Dpm_EprSnkSendKeepAliveCb", "group__group__pdstack__functions.html#gac66faebea2dbaf5915cf59d71bc94454", null ],
     [ "Cy_PdStack_Dpm_UpdateSnkMaxMin", "group__group__pdstack__functions.html#gaff5593f490badca6dc53a2d5b9941ea7", null ],
     [ "Cy_PdStack_Dpm_UpdateSnkCapMask", "group__group__pdstack__functions.html#gacfa6c9ebe83b586dc059244db086ed95", null ],
@@ -77,5 +78,7 @@ var group__group__pdstack__functions =
     [ "Cy_PdStack_Dpm_UpdateVconnRetain", "group__group__pdstack__functions.html#gae4832144f5045d333f4016db3b2b9070", null ],
     [ "Cy_PdStack_Dpm_SetDataReset", "group__group__pdstack__functions.html#ga97724cfbab85affa826f8a012bc6e0de", null ],
     [ "Cy_PdStack_Dpm_UpdateTimingParams", "group__group__pdstack__functions.html#ga21dcdd21f06231e5bfa002a592097a17", null ],
-    [ "Cy_PdStack_Dpm_GetContext", "group__group__pdstack__functions.html#ga442cb9938faf82fccb6aa2b6d4663218", null ]
+    [ "Cy_PdStack_Dpm_GetContext", "group__group__pdstack__functions.html#ga442cb9938faf82fccb6aa2b6d4663218", null ],
+    [ "Cy_PdStack_Dpm_SetEprCblBypass", "group__group__pdstack__functions.html#ga7e30e1cb9edccd06804d119bb4b33632", null ],
+    [ "Cy_PdStack_Dpm_GoToErrorRecovery", "group__group__pdstack__functions.html#ga06aeb1b1b545834a38c9c1d6a033c579", null ]
 ];

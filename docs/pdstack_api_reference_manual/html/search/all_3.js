@@ -1,7 +1,7 @@
 var searchData=
 [
   ['dat',['dat',['../structcy__stc__pdstack__pd__packet__t.html#acf647567df1e16d9bc85836bf1fa1330',1,'cy_stc_pdstack_pd_packet_t']]],
-  ['datareseten',['dataResetEn',['../structcy__stc__pdstack__dpm__status__t.html#ac7ba956964d41856130e858fec98cbc2',1,'cy_stc_pdstack_dpm_status_t']]],
+  ['datareseten',['dataResetEn',['../structcy__stc__pdstack__dpm__status__t.html#ac7ba956964d41856130e858fec98cbc2',1,'cy_stc_pdstack_dpm_status_t::dataResetEn()'],['../unioncy__stc__pdstack__dpm__ctrl__flags__t.html#af6fe4fc145d11dc8125185c27c868df4',1,'cy_stc_pdstack_dpm_ctrl_flags_t::dataResetEn()']]],
   ['datarole',['dataRole',['../structcy__stc__pdstack__pd__packet__t.html#a85432e1931c5dd494915685db0ef8068',1,'cy_stc_pdstack_pd_packet_t']]],
   ['datasize',['dataSize',['../structcy__pdstack__extd__hdr__t_1_1_e_x_t_d___h_d_r___t.html#a06599e24cab22718d6f25a5cd13646dc',1,'cy_pdstack_extd_hdr_t::EXTD_HDR_T']]],
   ['datptr',['datPtr',['../structcy__stc__pdstack__dpm__pd__cmd__buf__t.html#aed36805d30d72e561465d1db4bfcbf50',1,'cy_stc_pdstack_dpm_pd_cmd_buf_t']]],
@@ -24,6 +24,7 @@ var searchData=
   ['dpm_5frtos_5fevt_5ftake',['dpm_rtos_evt_take',['../structcy__stc__pdstack__rtos__context__t.html#a59becdcd401db7e89fa4e91174bd53e1',1,'cy_stc_pdstack_rtos_context_t']]],
   ['dpmcmdbuf',['dpmCmdBuf',['../structcy__stc__pdstack__dpm__status__t.html#a7424711b42c965faf8d046e6649af6c3',1,'cy_stc_pdstack_dpm_status_t']]],
   ['dpmconfig',['dpmConfig',['../structcy__stc__pdstack__context__t.html#a6a2c4e9709ff1b74dfe74264e3835e47',1,'cy_stc_pdstack_context_t']]],
+  ['dpmctrlflags',['dpmCtrlFlags',['../structcy__stc__pdstack__dpm__params__t.html#a97e77234bdf1b8e7782f1e37cbd9e89c',1,'cy_stc_pdstack_dpm_params_t']]],
   ['dpmdefcablecap',['dpmDefCableCap',['../structcy__stc__pdstack__dpm__params__t.html#a5a0902ac6780e04a581d572d72c38b25',1,'cy_stc_pdstack_dpm_params_t']]],
   ['dpmerrinfo',['dpmErrInfo',['../structcy__stc__pdstack__dpm__status__t.html#a3cf6e815907c5cd04996c8aa7f0edc7e',1,'cy_stc_pdstack_dpm_status_t']]],
   ['dpmextstat',['dpmExtStat',['../structcy__stc__pdstack__context__t.html#a8d54fa7791cf18026fe0ae6fbd748b63',1,'cy_stc_pdstack_context_t']]],

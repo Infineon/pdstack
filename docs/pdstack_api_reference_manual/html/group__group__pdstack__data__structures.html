@@ -153,6 +153,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__pe__status__t.html">cy_stc_pdstack_pe_status_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold the policy engine status.  <a href="structcy__stc__pdstack__pe__status__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">union &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unioncy__stc__pdstack__dpm__ctrl__flags__t.html">cy_stc_pdstack_dpm_ctrl_flags_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold device policy manager control flags.  <a href="unioncy__stc__pdstack__dpm__ctrl__flags__t.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__dpm__params__t.html">cy_stc_pdstack_dpm_params_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to hold device policy manager parameters.  <a href="structcy__stc__pdstack__dpm__params__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,72 +213,6 @@ Enumerations</h2></td></tr>
  }<tr class="memdesc:ga0873d60a116607811b3cceae424e8dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum of the power LED States. <br /></td></tr>
 </td></tr>
 <tr class="separator:ga0873d60a116607811b3cceae424e8dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga54617837cb1e71d408568d9554a7a416"><td class="memItemLeft" align="right" valign="top"><a id="ga54617837cb1e71d408568d9554a7a416"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga54617837cb1e71d408568d9554a7a416">pe_fsm_evt_t</a> { <br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_HARD_RESET_RCVD</b> = 0, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_SOFT_RESET_RCVD</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_ENTRY</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_TX_SUCCESS</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_TX_DISCARDED</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_TX_FAIL</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_PKT_RCVD</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_PWR_RDY</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_TIMEOUT</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_DPM_CMD_RCVD</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_APP_RESP_RCVD</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_VDM_RESP_RCVD</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_CABLE_TIMEOUT</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_NO_RESP_TIMEOUT</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_FR_SIGNAL_RCVD</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_FR_SIGNAL_SENT</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_PPS_TIMEOUT</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_CRC_ERROR</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_EVT_DRST_COMPLETE</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_PE_FSM_PE_MAX_EVTS</b>
-<br />
- }<tr class="memdesc:ga54617837cb1e71d408568d9554a7a416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to hold Policy engine events id. <br /></td></tr>
-</td></tr>
-<tr class="separator:ga54617837cb1e71d408568d9554a7a416"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5acbddfbccb6ec6309a2cc1be7cd46e0"><td class="memItemLeft" align="right" valign="top"><a id="ga5acbddfbccb6ec6309a2cc1be7cd46e0"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__data__structures.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0">typec_fsm_evt_t</a> { <br />
-&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_ERR_RECOVERY</b> = 0, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_ENTRY</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_DETACH</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_ATTACH</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_PWR_RDY</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_TIMEOUT1</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_TIMEOUT2</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_EVT_DPM_COMMAND</b>, 
-<br />
-&#160;&#160;<b>CY_PDSTACK_TYPEC_FSM_MAX_EVTS</b>
-<br />
- }<tr class="memdesc:ga5acbddfbccb6ec6309a2cc1be7cd46e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to hold Type-C events ID. <br /></td></tr>
-</td></tr>
-<tr class="separator:ga5acbddfbccb6ec6309a2cc1be7cd46e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="gaab21fd03092baf7f1511dafe8a0beff0"></a>

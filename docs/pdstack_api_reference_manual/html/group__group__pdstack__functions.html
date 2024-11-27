@@ -87,7 +87,7 @@ $(document).ready(function(){initNavTree('group__group__pdstack__functions.html'
 </div><!--header-->
 <div class="contents">
 <a name="details" id="details"></a><h2 class="groupheader">General Description</h2>
-<p>Describes the PDStack Function prototypes. </p>
+<p>Describes the PDStack function prototypes. </p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -274,6 +274,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gabe86f56a7117cd31bf55f25ebc706e1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gabe86f56a7117cd31bf55f25ebc706e1c">Cy_PdStack_Dpm_IsValidAvsReq</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, uint8_t src_pdo_index, cy_pd_pd_do_t rdo)</td></tr>
 <tr class="memdesc:gabe86f56a7117cd31bf55f25ebc706e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the AVS RDO with respect to the selected AVS PDO.  <a href="#gabe86f56a7117cd31bf55f25ebc706e1c">More...</a><br /></td></tr>
 <tr class="separator:gabe86f56a7117cd31bf55f25ebc706e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga56e3376fdc66b5110df9f14292fdd395"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga56e3376fdc66b5110df9f14292fdd395">Cy_PdStack_Dpm_IsValidSprAvsReq</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, uint8_t src_pdo_index, cy_pd_pd_do_t rdo)</td></tr>
+<tr class="memdesc:ga56e3376fdc66b5110df9f14292fdd395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluates the SPR AVS RDO with respect to the selected SPR AVS PDO.  <a href="#ga56e3376fdc66b5110df9f14292fdd395">More...</a><br /></td></tr>
+<tr class="separator:ga56e3376fdc66b5110df9f14292fdd395"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac66faebea2dbaf5915cf59d71bc94454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#gac66faebea2dbaf5915cf59d71bc94454">Cy_PdStack_Dpm_EprSnkSendKeepAliveCb</a> (cy_timer_id_t id, void *ptrContext)</td></tr>
 <tr class="memdesc:gac66faebea2dbaf5915cf59d71bc94454"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callbacks to initiate the Keepalive message.  <a href="#gac66faebea2dbaf5915cf59d71bc94454">More...</a><br /></td></tr>
 <tr class="separator:gac66faebea2dbaf5915cf59d71bc94454"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -325,6 +328,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga442cb9938faf82fccb6aa2b6d4663218"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga442cb9938faf82fccb6aa2b6d4663218">Cy_PdStack_Dpm_GetContext</a> (uint8_t port)</td></tr>
 <tr class="memdesc:ga442cb9938faf82fccb6aa2b6d4663218"><td class="mdescLeft">&#160;</td><td class="mdescRight">This API returns the pointer to the <a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> of the given port.  <a href="#ga442cb9938faf82fccb6aa2b6d4663218">More...</a><br /></td></tr>
 <tr class="separator:ga442cb9938faf82fccb6aa2b6d4663218"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e30e1cb9edccd06804d119bb4b33632"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga7e30e1cb9edccd06804d119bb4b33632">Cy_PdStack_Dpm_SetEprCblBypass</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext, bool status)</td></tr>
+<tr class="memdesc:ga7e30e1cb9edccd06804d119bb4b33632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to bypass cable communication requirement for EPR mode entry.  <a href="#ga7e30e1cb9edccd06804d119bb4b33632">More...</a><br /></td></tr>
+<tr class="separator:ga7e30e1cb9edccd06804d119bb4b33632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06aeb1b1b545834a38c9c1d6a033c579"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__group__pdstack__functions.html#ga06aeb1b1b545834a38c9c1d6a033c579">Cy_PdStack_Dpm_GoToErrorRecovery</a> (<a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *ptrPdStackContext)</td></tr>
+<tr class="memdesc:ga06aeb1b1b545834a38c9c1d6a033c579"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to go to Error Recovery FSM state.  <a href="#ga06aeb1b1b545834a38c9c1d6a033c579">More...</a><br /></td></tr>
+<tr class="separator:ga06aeb1b1b545834a38c9c1d6a033c579"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga37024bdc821e5a3065a128a79e51f10d"></a>
@@ -2561,6 +2570,51 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga56e3376fdc66b5110df9f14292fdd395"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga56e3376fdc66b5110df9f14292fdd395">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_IsValidSprAvsReq()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_IsValidSprAvsReq </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>src_pdo_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">cy_pd_pd_do_t&#160;</td>
+          <td class="paramname"><em>rdo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluates the SPR AVS RDO with respect to the selected SPR AVS PDO. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PDStack library context pointer.</td></tr>
+    <tr><td class="paramname">src_pdo_index</td><td>SRC PDO index.</td></tr>
+    <tr><td class="paramname">rdo</td><td>Requests data object received from the port partner.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if the operation is successful. CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
 <a id="gac66faebea2dbaf5915cf59d71bc94454"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gac66faebea2dbaf5915cf59d71bc94454">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_EprSnkSendKeepAliveCb()</h2>
 
@@ -3226,6 +3280,72 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to the PDStack context for a given port. NULL if the port is invalid </dd></dl>
+
+</div>
+</div>
+<a id="ga7e30e1cb9edccd06804d119bb4b33632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e30e1cb9edccd06804d119bb4b33632">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_SetEprCblBypass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_SetEprCblBypass </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to bypass cable communication requirement for EPR mode entry. </p>
+<p>This is to enable applications where the cable does not support EMCA but is capable of supporting EPR.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+    <tr><td class="paramname">status</td><td>Enable/Disable flag</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
+
+</div>
+</div>
+<a id="ga06aeb1b1b545834a38c9c1d6a033c579"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga06aeb1b1b545834a38c9c1d6a033c579">&#9670;&nbsp;</a></span>Cy_PdStack_Dpm_GoToErrorRecovery()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__group__pdstack__enums.html#ga2115782809414a20b28e6f5df83b7a7f">cy_en_pdstack_status_t</a> Cy_PdStack_Dpm_GoToErrorRecovery </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcy__stc__pdstack__context__t.html">cy_stc_pdstack_context_t</a> *&#160;</td>
+          <td class="paramname"><em>ptrPdStackContext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to go to Error Recovery FSM state. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrPdStackContext</td><td>PdStack Library Context pointer.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>CY_PDSTACK_STAT_SUCCESS if operation is successful, CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid. </dd></dl>
 
 </div>
 </div>

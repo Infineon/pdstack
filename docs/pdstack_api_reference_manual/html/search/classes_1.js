@@ -6,6 +6,7 @@ var searchData=
   ['cy_5fstc_5fpdstack_5fapp_5fstatus_5ft',['cy_stc_pdstack_app_status_t',['../structcy__stc__pdstack__app__status__t.html',1,'']]],
   ['cy_5fstc_5fpdstack_5fcontext_5ft',['cy_stc_pdstack_context_t',['../structcy__stc__pdstack__context__t.html',1,'']]],
   ['cy_5fstc_5fpdstack_5fcontract_5ft',['cy_stc_pdstack_contract_t',['../structcy__stc__pdstack__contract__t.html',1,'']]],
+  ['cy_5fstc_5fpdstack_5fdpm_5fctrl_5fflags_5ft',['cy_stc_pdstack_dpm_ctrl_flags_t',['../unioncy__stc__pdstack__dpm__ctrl__flags__t.html',1,'']]],
   ['cy_5fstc_5fpdstack_5fdpm_5fext_5fstatus_5ft',['cy_stc_pdstack_dpm_ext_status_t',['../structcy__stc__pdstack__dpm__ext__status__t.html',1,'']]],
   ['cy_5fstc_5fpdstack_5fdpm_5fparams_5ft',['cy_stc_pdstack_dpm_params_t',['../structcy__stc__pdstack__dpm__params__t.html',1,'']]],
   ['cy_5fstc_5fpdstack_5fdpm_5fpd_5fcmd_5fbuf_5ft',['cy_stc_pdstack_dpm_pd_cmd_buf_t',['../structcy__stc__pdstack__dpm__pd__cmd__buf__t.html',1,'']]],

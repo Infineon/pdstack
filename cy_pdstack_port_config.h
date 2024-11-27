@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_pdstack_port_config.h
-* \version 3.20
+* \version 4.0
 *
 * PD port configuration structure header file for the PDStack middleware.
 *
@@ -220,6 +220,9 @@ typedef struct
 
     /** EPR sink PDO list. */
     uint32_t eprSnkPdo[6];
+
+    /** EPR Sink PDO Min/Max Current list */
+    uint16_t eprSnkPdoMinMaxCur[6];
 
 } cy_stc_pdstack_port_cfg_t;
 #endif /* !CY_USE_CONFIG_TABLE */

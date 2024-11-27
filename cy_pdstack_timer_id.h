@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_pdstack_timer_id.h
-* \version 3.20
+* \version 4.0
 *
 * Provides soft timer identifier definitions for PDStack.
 *

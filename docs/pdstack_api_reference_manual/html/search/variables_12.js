@@ -1,6 +1,7 @@
 var searchData=
 [
   ['val',['val',['../unioncy__pdstack__extd__hdr__t.html#a66d8602064c340a3d9bb353d7fa35b2c',1,'cy_pdstack_extd_hdr_t::val()'],['../unioncy__stc__pdstack__pd__port__status__ec__t.html#a9c8ecad426af89d770fa0fd758ecfcdc',1,'cy_stc_pdstack_pd_port_status_ec_t::val()']]],
+  ['value',['value',['../unioncy__stc__pdstack__dpm__ctrl__flags__t.html#a567b0b79682b3c6fcfa3f15722e802a0',1,'cy_stc_pdstack_dpm_ctrl_flags_t']]],
   ['vbus_5fdischarge_5foff',['vbus_discharge_off',['../structcy__stc__pdstack__app__cbk__t.html#ad346349230f45e977fb7b1e8206a41d8',1,'cy_stc_pdstack_app_cbk_t']]],
   ['vbus_5fdischarge_5fon',['vbus_discharge_on',['../structcy__stc__pdstack__app__cbk__t.html#a34e676f5c55cf3c0bcb8e4a3c325cbaf',1,'cy_stc_pdstack_app_cbk_t']]],
   ['vbus_5fget_5fvalue',['vbus_get_value',['../structcy__stc__pdstack__app__cbk__t.html#ab7360ba0edd674ac892c42c247783a79',1,'cy_stc_pdstack_app_cbk_t']]],

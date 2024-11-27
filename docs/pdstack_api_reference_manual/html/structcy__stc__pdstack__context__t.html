@@ -143,12 +143,12 @@ cy_stc_pdutils_sw_timer_t *&#160;</td><td class="memItemRight" valign="bottom"><
 <tr class="memitem:a2a3a56499a55d9c8996820bfa9bcf007"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__context__t.html#a2a3a56499a55d9c8996820bfa9bcf007">senderRspTimeout</a></td></tr>
 <tr class="memdesc:a2a3a56499a55d9c8996820bfa9bcf007"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current sender response timer period.  <a href="#a2a3a56499a55d9c8996820bfa9bcf007">More...</a><br /></td></tr>
 <tr class="separator:a2a3a56499a55d9c8996820bfa9bcf007"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62b4d54c72b95ccd3b4e610dba062fd8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__context__t.html#a62b4d54c72b95ccd3b4e610dba062fd8">srcRecoverTime</a></td></tr>
-<tr class="memdesc:a62b4d54c72b95ccd3b4e610dba062fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source recovery timer period.  <a href="#a62b4d54c72b95ccd3b4e610dba062fd8">More...</a><br /></td></tr>
-<tr class="separator:a62b4d54c72b95ccd3b4e610dba062fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3173221633d4a0ce44f4a6772b9e1ede"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__group__pdstack__enums.html#ga691827e709ecdcd79f77107fcf917b10">cy_en_pdstack_std_minor_vdm_ver_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__context__t.html#a3173221633d4a0ce44f4a6772b9e1ede">cblVdmMinVersion</a></td></tr>
 <tr class="memdesc:a3173221633d4a0ce44f4a6772b9e1ede"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the cable VDM minor version.  <a href="#a3173221633d4a0ce44f4a6772b9e1ede">More...</a><br /></td></tr>
 <tr class="separator:a3173221633d4a0ce44f4a6772b9e1ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62b4d54c72b95ccd3b4e610dba062fd8"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__context__t.html#a62b4d54c72b95ccd3b4e610dba062fd8">srcRecoverTime</a></td></tr>
+<tr class="memdesc:a62b4d54c72b95ccd3b4e610dba062fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Source recovery timer period.  <a href="#a62b4d54c72b95ccd3b4e610dba062fd8">More...</a><br /></td></tr>
+<tr class="separator:a62b4d54c72b95ccd3b4e610dba062fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a0b8816556657894062e6610c3759b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcy__stc__pdstack__context__t.html#a4a0b8816556657894062e6610c3759b7">peDpmCmdRequest</a></td></tr>
 <tr class="memdesc:a4a0b8816556657894062e6610c3759b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to indicate DPM command request from policy engine.  <a href="#a4a0b8816556657894062e6610c3759b7">More...</a><br /></td></tr>
 <tr class="separator:a4a0b8816556657894062e6610c3759b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -410,22 +410,6 @@ cy_stc_pdutils_sw_timer_t *&#160;</td><td class="memItemRight" valign="bottom"><
 
 </div>
 </div>
-<a id="a62b4d54c72b95ccd3b4e610dba062fd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62b4d54c72b95ccd3b4e610dba062fd8">&#9670;&nbsp;</a></span>srcRecoverTime</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint16_t cy_stc_pdstack_context_t::srcRecoverTime</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Source recovery timer period. </p>
-
-</div>
-</div>
 <a id="a3173221633d4a0ce44f4a6772b9e1ede"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3173221633d4a0ce44f4a6772b9e1ede">&#9670;&nbsp;</a></span>cblVdmMinVersion</h2>
 
@@ -439,6 +423,22 @@ cy_stc_pdutils_sw_timer_t *&#160;</td><td class="memItemRight" valign="bottom"><
 </div><div class="memdoc">
 
 <p>Stores the cable VDM minor version. </p>
+
+</div>
+</div>
+<a id="a62b4d54c72b95ccd3b4e610dba062fd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62b4d54c72b95ccd3b4e610dba062fd8">&#9670;&nbsp;</a></span>srcRecoverTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t cy_stc_pdstack_context_t::srcRecoverTime</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Source recovery timer period. </p>
 
 </div>
 </div>

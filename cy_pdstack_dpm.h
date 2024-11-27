@@ -1,6 +1,6 @@
 /***************************************************************************//**
 * \file cy_pdstack_dpm.h
-* \version 3.20
+* \version 4.0
 *
 * Header file of Device Policy Manager of the PDStack middleware.
 *
@@ -1373,7 +1373,32 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_IsValidAvsReq(
         cy_stc_pdstack_context_t *ptrPdStackContext, 
         uint8_t src_pdo_index,
         cy_pd_pd_do_t rdo);
-
+        
+/*******************************************************************************
+* Function name: Cy_PdStack_Dpm_IsValidSprAvsReq
+****************************************************************************//**
+*
+* Evaluates the SPR AVS RDO with respect to the selected SPR AVS PDO.
+*
+* \param ptrPdStackContext
+* PDStack library context pointer.
+*
+* \param src_pdo_index
+* SRC PDO index.
+*
+* \param rdo
+* Requests data object received from the port partner.
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if the operation is successful.
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_IsValidSprAvsReq (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        uint8_t src_pdo_index,
+        cy_pd_pd_do_t rdo);
+        
 /*******************************************************************************
 * Function name: Cy_PdStack_Dpm_EprSnkSendKeepAliveCb
 ****************************************************************************//**
@@ -1763,6 +1788,44 @@ cy_en_pdstack_status_t Cy_PdStack_Dpm_UpdateTimingParams(cy_stc_pdstack_context_
 *******************************************************************************/
 cy_stc_pdstack_context_t* Cy_PdStack_Dpm_GetContext(uint8_t port); 
 
+/*******************************************************************************
+* Function Name: Cy_PdStack_Dpm_SetEprCblBypass
+****************************************************************************//**
+*
+* Function to bypass cable communication requirement for EPR mode entry. This is to enable applications where the 
+* cable does not support EMCA but is capable of supporting EPR.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+* \param status
+* Enable/Disable flag
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_SetEprCblBypass (
+        cy_stc_pdstack_context_t *ptrPdStackContext,
+        bool status);
+
+/*******************************************************************************       
+* Function Name: Cy_PdStack_Dpm_GoToErrorRecovery
+****************************************************************************//**
+*
+* Function to go to Error Recovery FSM state.
+*
+* \param ptrPdStackContext
+* PdStack Library Context pointer.
+*
+*
+* \return
+* CY_PDSTACK_STAT_SUCCESS if operation is successful,
+* CY_PDSTACK_STAT_BAD_PARAM if the parameters are invalid.
+*
+*******************************************************************************/
+cy_en_pdstack_status_t Cy_PdStack_Dpm_GoToErrorRecovery(cy_stc_pdstack_context_t *ptrPdStackContext);
 /** \} group_pdstack_functions */
 
 #endif /* CY_PDSTACK_DPM_H */

@@ -246,7 +246,8 @@ var group__group__pdstack__data__structures =
       [ "disReqCount", "structcy__stc__pdstack__dpm__status__t.html#a2dcb8710c732c01be6e6b47bf2f3a00d", null ],
       [ "swapResponse", "structcy__stc__pdstack__dpm__status__t.html#a097cf6a159896c650d5f5b8886787153", null ],
       [ "autoVcsDisable", "structcy__stc__pdstack__dpm__status__t.html#a4e5fe306c059a50c71e1c8557ed9bbe5", null ],
-      [ "dataResetEn", "structcy__stc__pdstack__dpm__status__t.html#ac7ba956964d41856130e858fec98cbc2", null ]
+      [ "dataResetEn", "structcy__stc__pdstack__dpm__status__t.html#ac7ba956964d41856130e858fec98cbc2", null ],
+      [ "enEprCblBypass", "structcy__stc__pdstack__dpm__status__t.html#ae7633f28c3492ac0c7ba4e87099fd6e4", null ]
     ] ],
     [ "cy_stc_pdstack_dpm_ext_status_t", "structcy__stc__pdstack__dpm__ext__status__t.html", [
       [ "extSrcCap", "structcy__stc__pdstack__dpm__ext__status__t.html#ae23e145f21eb4efd1fe54c3676727489", null ],
@@ -273,7 +274,9 @@ var group__group__pdstack__data__structures =
       [ "discharge", "structcy__stc__pdstack__typec__status__t.html#aab5fbf6b2c13a61bd633ee64803afa25", null ],
       [ "trySnkDeadTime", "structcy__stc__pdstack__typec__status__t.html#a95daa5a3a09ba7d16217bb50a2ed2c80", null ],
       [ "ccStatusDebounced", "structcy__stc__pdstack__typec__status__t.html#acd9eff717cf235e0c5cf5155c156a6fe", null ],
-      [ "srcDisableWait", "structcy__stc__pdstack__typec__status__t.html#a84372dc9aa80e6792e6a9ffb4c700549", null ]
+      [ "srcDisableWait", "structcy__stc__pdstack__typec__status__t.html#a84372dc9aa80e6792e6a9ffb4c700549", null ],
+      [ "moistureDetected", "structcy__stc__pdstack__typec__status__t.html#aa532ac3df12404b1d1dff8a851f7197f", null ],
+      [ "moisturePresent", "structcy__stc__pdstack__typec__status__t.html#ab4d92c00267516ce3a85d47fadce980e", null ]
     ] ],
     [ "cy_stc_pdstack_prl_cntrs_t", "structcy__stc__pdstack__prl__cntrs__t.html", [
       [ "trMsgId", "structcy__stc__pdstack__prl__cntrs__t.html#a1e777aea7df3ea1875cbbfa3aaadcd7d", null ],
@@ -364,13 +367,23 @@ var group__group__pdstack__data__structures =
       [ "eprChunkCount", "structcy__stc__pdstack__pe__status__t.html#aadc73a36c4608acf46a7ab0ddcb43f12", null ],
       [ "peCmdBuf", "structcy__stc__pdstack__pe__status__t.html#a8f42326966876422363f4790b8bdd92d", null ]
     ] ],
+    [ "cy_stc_pdstack_dpm_ctrl_flags_t", "unioncy__stc__pdstack__dpm__ctrl__flags__t.html", [
+      [ "value", "unioncy__stc__pdstack__dpm__ctrl__flags__t.html#a567b0b79682b3c6fcfa3f15722e802a0", null ],
+      [ "rev3En", "unioncy__stc__pdstack__dpm__ctrl__flags__t.html#a6b90fe18f2a35ae72d5013b612929687", null ],
+      [ "usb4En", "unioncy__stc__pdstack__dpm__ctrl__flags__t.html#afba6f001fee34dad47e9a5319b2f2fc1", null ],
+      [ "dataResetEn", "unioncy__stc__pdstack__dpm__ctrl__flags__t.html#af6fe4fc145d11dc8125185c27c868df4", null ],
+      [ "hwDrpToggleEn", "unioncy__stc__pdstack__dpm__ctrl__flags__t.html#a9edd5dcf9bef0dbd40002655bd40c341", null ],
+      [ "frsRxEn", "unioncy__stc__pdstack__dpm__ctrl__flags__t.html#affe578b5e506859bce5f41619d062695", null ],
+      [ "frsTxEn", "unioncy__stc__pdstack__dpm__ctrl__flags__t.html#aa46664658eb2190cdf36f35c882d5078", null ]
+    ] ],
     [ "cy_stc_pdstack_dpm_params_t", "structcy__stc__pdstack__dpm__params__t.html", [
       [ "defCur", "structcy__stc__pdstack__dpm__params__t.html#a99cf0c18e10e9376edec042f5e96400c", null ],
       [ "typeCSnkWaitCapPeriod", "structcy__stc__pdstack__dpm__params__t.html#a9ca9281a6a2a41ea365bd2548f3fd5c1", null ],
       [ "muxEnableDelayPeriod", "structcy__stc__pdstack__dpm__params__t.html#a71d6fced40e218558d23fec473594aba", null ],
       [ "dpmDefCableCap", "structcy__stc__pdstack__dpm__params__t.html#a5a0902ac6780e04a581d572d72c38b25", null ],
       [ "dpmRpAudioAcc", "structcy__stc__pdstack__dpm__params__t.html#ac353cbf233da02b3b8fe95529d3535c3", null ],
-      [ "dpmSnkWaitCapPeriod", "structcy__stc__pdstack__dpm__params__t.html#ae7d3ea9893ed1caf9ef9edbb789d3e8b", null ]
+      [ "dpmSnkWaitCapPeriod", "structcy__stc__pdstack__dpm__params__t.html#ae7d3ea9893ed1caf9ef9edbb789d3e8b", null ],
+      [ "dpmCtrlFlags", "structcy__stc__pdstack__dpm__params__t.html#a97e77234bdf1b8e7782f1e37cbd9e89c", null ]
     ] ],
     [ "cy_stc_pdstack_rtos_context_t", "structcy__stc__pdstack__rtos__context__t.html", [
       [ "dpm_rtos_evt_give", "structcy__stc__pdstack__rtos__context__t.html#a3493f785d4e65fac7bdf051f0b43c8a3", null ],
@@ -394,8 +407,8 @@ var group__group__pdstack__data__structures =
       [ "ptrHpiContext", "structcy__stc__pdstack__context__t.html#a0c2bed8fa9e495bc33888fe8ba6d310a", null ],
       [ "ptrPdTimerParams", "structcy__stc__pdstack__context__t.html#a5eee576c6cd68ef54b521814e7c1011e", null ],
       [ "senderRspTimeout", "structcy__stc__pdstack__context__t.html#a2a3a56499a55d9c8996820bfa9bcf007", null ],
-      [ "srcRecoverTime", "structcy__stc__pdstack__context__t.html#a62b4d54c72b95ccd3b4e610dba062fd8", null ],
       [ "cblVdmMinVersion", "structcy__stc__pdstack__context__t.html#a3173221633d4a0ce44f4a6772b9e1ede", null ],
+      [ "srcRecoverTime", "structcy__stc__pdstack__context__t.html#a62b4d54c72b95ccd3b4e610dba062fd8", null ],
       [ "peDpmCmdRequest", "structcy__stc__pdstack__context__t.html#a4a0b8816556657894062e6610c3759b7", null ]
     ] ],
     [ "cy_pd_stack_conf_t", "structcy__pd__stack__conf__t.html", [
@@ -473,7 +486,8 @@ var group__group__pdstack__data__structures =
       [ "eprSnkPdoCount", "structcy__stc__pdstack__port__cfg__t.html#a559c81c8a041cebf78fa8c4fee016edf", null ],
       [ "eprSnkPdoMask", "structcy__stc__pdstack__port__cfg__t.html#abd4cc39dbdb3c1064fd5d16ace10d83c", null ],
       [ "eprSrcPdo", "structcy__stc__pdstack__port__cfg__t.html#a86b91989cdf69c6fac6a2ba3d5085a82", null ],
-      [ "eprSnkPdo", "structcy__stc__pdstack__port__cfg__t.html#ae1b948fa28ee061e24ec2918f82b7839", null ]
+      [ "eprSnkPdo", "structcy__stc__pdstack__port__cfg__t.html#ae1b948fa28ee061e24ec2918f82b7839", null ],
+      [ "eprSnkPdoMinMaxCur", "structcy__stc__pdstack__port__cfg__t.html#a2fcc736bcc63005561869a5a23bd9619", null ]
     ] ],
     [ "cy_pdstack_pd_cbk_t", "group__group__pdstack__data__structures.html#gaab21fd03092baf7f1511dafe8a0beff0", null ],
     [ "cy_pdstack_dpm_pd_cmd_cbk_t", "group__group__pdstack__data__structures.html#ga8032135e3e0bcc286f569781a51f50a2", null ],
@@ -482,7 +496,5 @@ var group__group__pdstack__data__structures =
     [ "cy_pdstack_pwr_ready_cbk_t", "group__group__pdstack__data__structures.html#ga91fb06eaec314d7e33f05f2419f91060", null ],
     [ "cy_pdstack_sink_discharge_off_cbk_t", "group__group__pdstack__data__structures.html#ga5534a64a195ddf2f8964c0ed77c0cc97", null ],
     [ "cy_pdstack_dpm_typec_cmd_cbk_t", "group__group__pdstack__data__structures.html#ga3f4fb1cb7b6b853659e8d2ea7db20884", null ],
-    [ "cy_en_pdstack_pwr_led_t", "group__group__pdstack__data__structures.html#ga0873d60a116607811b3cceae424e8dd2", null ],
-    [ "pe_fsm_evt_t", "group__group__pdstack__data__structures.html#ga54617837cb1e71d408568d9554a7a416", null ],
-    [ "typec_fsm_evt_t", "group__group__pdstack__data__structures.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0", null ]
+    [ "cy_en_pdstack_pwr_led_t", "group__group__pdstack__data__structures.html#ga0873d60a116607811b3cceae424e8dd2", null ]
 ];

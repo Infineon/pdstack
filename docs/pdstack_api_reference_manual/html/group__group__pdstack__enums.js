@@ -1,5 +1,7 @@
 var group__group__pdstack__enums =
 [
+    [ "typec_fsm_evt_t", "group__group__pdstack__enums.html#ga5acbddfbccb6ec6309a2cc1be7cd46e0", null ],
+    [ "pe_fsm_evt_t", "group__group__pdstack__enums.html#ga54617837cb1e71d408568d9554a7a416", null ],
     [ "cy_en_pdstack_err_recov_reason_t", "group__group__pdstack__enums.html#ga542cdf0f5bd5499086034b13771c76f4", [
       [ "CY_PDSTACK_ERR_RECOV_REASON_NONE", "group__group__pdstack__enums.html#gga542cdf0f5bd5499086034b13771c76f4a1429188d22706533dc74dd4a8785a7f4", null ],
       [ "CY_PDSTACK_ERR_RECOV_HR_FAIL", "group__group__pdstack__enums.html#gga542cdf0f5bd5499086034b13771c76f4addb40a17f3363714a9bb07cb163eacde", null ],
@@ -102,7 +104,7 @@ var group__group__pdstack__enums =
     [ "cy_en_pdstack_apdo_t", "group__group__pdstack__enums.html#ga10fc7e5964a1a445042223338fe12f04", [
       [ "CY_PDSTACK_APDO_PPS", "group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04ad8fb66f2e273e61ccc6bc372b98dc5af", null ],
       [ "CY_PDSTACK_APDO_AVS", "group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04af59ec86edc5e2f08513cc2d4b9780d84", null ],
-      [ "CY_PDSTACK_APDO_RSVD2", "group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04ad94d3b4ac6d6e2a8e6dc2c9b2b573db9", null ],
+      [ "CY_PDSTACK_APDO_SPR_AVS", "group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04a3632f1f9d3bef1738a760f42599e1034", null ],
       [ "CY_PDSTACK_APDO_RSVD3", "group__group__pdstack__enums.html#gga10fc7e5964a1a445042223338fe12f04aa3730d2018f83f459a445681e7020389", null ]
     ] ],
     [ "cy_en_pdstack_epr_avs_t", "group__group__pdstack__enums.html#ga27c25d722a97fec720f2df80ed261b8b", [
@@ -314,7 +316,7 @@ var group__group__pdstack__enums =
       [ "CY_PDSTACK_TYPEC_FSM_UNATTACHED_SRC", "group__group__pdstack__enums.html#gga6274d400cdeecb2da1711ded27ba9953a5e1e80509e87938274303107df8352f8", null ],
       [ "CY_PDSTACK_TYPEC_FSM_UNATTACHED_SNK", "group__group__pdstack__enums.html#gga6274d400cdeecb2da1711ded27ba9953af05e8ff62e8951f044f31442bcf1c70e", null ],
       [ "CY_PDSTACK_TYPEC_FSM_UNATTACHED_WAIT_SRC", "group__group__pdstack__enums.html#gga6274d400cdeecb2da1711ded27ba9953a63823775a3e4a9c80b5d950c8ff2466d", null ],
-      [ "CY_PDSTACK_TYPEC_FSM_AUD_ACC", "group__group__pdstack__enums.html#gga6274d400cdeecb2da1711ded27ba9953ac793c63974530078d137a4c1bf1a3347", null ],
+      [ "CY_PDSTACK_TYPEC_FSM_CORROSION_MITIGATION", "group__group__pdstack__enums.html#gga6274d400cdeecb2da1711ded27ba9953a31b1ab4b87dd91d48439c8e59704408f", null ],
       [ "CY_PDSTACK_TYPEC_FSM_DBG_ACC", "group__group__pdstack__enums.html#gga6274d400cdeecb2da1711ded27ba9953a14998c4a0b4175fa125b4c7519b31255", null ],
       [ "CY_PDSTACK_TYPEC_FSM_ATTACHED_SRC", "group__group__pdstack__enums.html#gga6274d400cdeecb2da1711ded27ba9953afa1fc5abcd8a310a6261105a24c8cd32", null ],
       [ "CY_PDSTACK_TYPEC_FSM_ATTACHED_SNK", "group__group__pdstack__enums.html#gga6274d400cdeecb2da1711ded27ba9953a24eeb8c0acfa8df434bbb2e57df1e467", null ],
@@ -467,6 +469,7 @@ var group__group__pdstack__enums =
       [ "APP_EVT_EPR_MODE_ENTER_FAILED", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a7210113aa445364f4d3ecfee606350cf", null ],
       [ "APP_EVT_EPR_MODE_EXIT", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a6a944c5edd4eb4d81dbcc04f09439245", null ],
       [ "APP_EVT_VCONN_SWAP_FAILED", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a4a9231c99408656dbb914aed25a969f4", null ],
+      [ "APP_EVT_CORROSION_FAULT", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a8426828216b37cadc1641bc6d6379bd5", null ],
       [ "APP_TOTAL_EVENTS", "group__group__pdstack__enums.html#gga3e748bd09a1b449496b48177f30f8dc5a34d355bf67316b12305a178a3e228e0e", null ]
     ] ],
     [ "cy_en_pdstack_ams_type_t", "group__group__pdstack__enums.html#gaab529053dcdc1680eef0910ab36d2b47", [

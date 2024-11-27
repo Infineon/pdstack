@@ -7,6 +7,8 @@ var searchData=
   ['mfgvid',['mfgVid',['../structcy__stc__pdstack__port__cfg__t.html#afc8462f8bd51d2263a2df5a595275d36',1,'cy_stc_pdstack_port_cfg_t']]],
   ['minstate',['minState',['../structcy__stc__pdstack__pd__port__status__ec__t_1_1_p_d___p_o_r_t___s_t_a_t.html#a8d5a0a330e0ee6fdad8b5ab2c2456809',1,'cy_stc_pdstack_pd_port_status_ec_t::PD_PORT_STAT']]],
   ['minvolt',['minVolt',['../structcy__stc__pdstack__contract__t.html#ae1fccef1a154b04f32d08a327ebccdbe',1,'cy_stc_pdstack_contract_t']]],
+  ['moisturedetected',['moistureDetected',['../structcy__stc__pdstack__typec__status__t.html#aa532ac3df12404b1d1dff8a851f7197f',1,'cy_stc_pdstack_typec_status_t']]],
+  ['moisturepresent',['moisturePresent',['../structcy__stc__pdstack__typec__status__t.html#ab4d92c00267516ce3a85d47fadce980e',1,'cy_stc_pdstack_typec_status_t']]],
   ['msg',['msg',['../structcy__stc__pdstack__pd__packet__t.html#a75e7b3ccd30ccd70297aadfb0c436ba4',1,'cy_stc_pdstack_pd_packet_t']]],
   ['muxenabledelayperiod',['muxEnableDelayPeriod',['../structcy__stc__pdstack__dpm__params__t.html#a71d6fced40e218558d23fec473594aba',1,'cy_stc_pdstack_dpm_params_t']]]
 ];
